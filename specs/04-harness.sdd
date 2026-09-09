@@ -1,0 +1,41 @@
+# SDD: Migration harness
+status: active-draft
+authority: migration-harness
+date: 2026-09-08
+
+## Feedforward
+
+- Pack `AGENTS.md`, `PROMPT-GROK-MASTER.md`, `pr.md`, `prompt.md`
+- This `specs/` tree (copied to `cronus-kernel/migration/specs/`)
+- `LANGUAGE.md` (update only after REAL)
+- `CONTRACT.md` intent → `03-ui-contract.sdd`
+- Parity CSV/JSON
+- `07-first-slice.sdd` and later per-component contracts
+
+## Deterministic sensors (kernel)
+
+Must be `cargo test` first. Then add focused tests, not a second JS toolchain.
+
+| Sensor | First slice |
+|---|---|
+| Parser valid/invalid | theme/token + Button invocation |
+| HTML snapshot | each Button variant/size |
+| Semantic DOM | `[data-slot=button]`, disabled, type, href→a |
+| Token CSS | `--cronus-primary` etc. present in light+dark |
+| Forbidden color | `components.rs` button path has no `bg-amber`, `neutral-800`, `#0a0a0a` |
+| Full `cargo test` | no demo parse regression (`cronus parse` when binary exists) |
+| LANGUAGE.md vs code | manual in review; later a check script |
+
+Later waves: a11y static, keyboard (browser), RTL, visual, CLI golden, compose determinism, parity completeness, no-React/no-node_modules scan on runtime artifacts.
+
+## Error shape
+
+`CRONUS-UI-PARITY C014: Button[variant=destructive][mode=dark] lost visible focus ring. Expected semantic ring token; selector [data-slot=button]:focus-visible has no ring rule.`
+
+## Evidence
+
+`migration/evidence/<wave>/<feature>/`
+
+## Rule
+
+Failing sensor → fix or change SDD. No silencing. No snapshot update without behavior review.

@@ -1,0 +1,45 @@
+# SDD: Language / runtime / renderer gap analysis
+status: inventoried
+authority: migration-language-gap
+date: 2026-09-08
+
+Trust **code** over LANGUAGE.md when they disagree. LANGUAGE.md §6 (components LIMITED / Counter not implemented) is **stale**: parser + `main.rs` already interpolate `component Name(params)`, `template`, `state`, `@click` (tiny per-instance JS). Demo: `demos/component-test/v2.cronus`.
+
+`src/components.rs` already has HTML helpers (button, input, …). They are **not** cronus-ui parity: mixed CSS vars (`--foreground`) and **forbidden palettes** (`bg-amber-500`, `#0a0a0a`, `neutral-800`).
+
+## Classification key
+
+ALREADY_NATIVE · EXPRESSIBLE_WITH_EXISTING_CRONUS · NEEDS_LANGUAGE_EXTENSION · NEEDS_RUNTIME_EXTENSION · NEEDS_RENDERER_EXTENSION · NEEDS_CLI_EXTENSION · NEEDS_NEW_TEST/HARNESS · INTENTIONALLY_NOT_PORTED
+
+## Table (migration-relevant)
+
+| Capability | Class | Notes |
+|---|---|---|
+| Pages, layout shell, 39 sections | ALREADY_NATIVE | Keep; not DS primitives |
+| Entity forms / CRUD POST | EXPRESSIBLE | Not Field/Form DS contract |
+| Modal/sheet HTML | EXPRESSIBLE | Not Radix a11y/keyboard parity |
+| `components.rs::button` | NEEDS_RENDERER_EXTENSION | Exists; wrong variants, no data-slot, no focus-visible ring token, uppercase, danger≠destructive, no link/icon sizes |
+| `icon_button` / `input` helpers | NEEDS_RENDERER_EXTENSION | Raw palette — fail source contract |
+| Semantic token set (`--cronus-*`, 5×2 + looks) | NEEDS_LANGUAGE_EXTENSION + RUNTIME | `theme.rs` + `tailwind_config` JS + Obsidian hex defaults. Avoid JS as SoT |
+| Runtime theme/look/overrides | NEEDS_RUNTIME_EXTENSION | `dark-mode` section + localStorage exists; not aurora/neutral/looks/overrides model |
+| Typed variant enums | NEEDS_RENDERER_EXTENSION first | AST props are strings; validate in renderer/lint before new grammar |
+| Slots | NEEDS_RENDERER_EXTENSION | `slot` in OFFICIAL_ITEM_TYPES; no renderer |
+| `ref` / `forwardRef` | INTENTIONALLY_NOT_PORTED | React-only |
+| `asChild` | EXPRESSIBLE | kernel button already `<a>` if href |
+| RHF / Zod | INTENTIONALLY_NOT_PORTED | Native validation later |
+| TanStack / Recharts / visx / motion | INTENTIONALLY_NOT_PORTED as deps | Native SVG/runtime instead |
+| React/Next/Bun runtime | INTENTIONALLY_NOT_PORTED | Invariant |
+| RTL | NEEDS_RENDERER_EXTENSION | Kernel: none |
+| i18n module | NEEDS_RUNTIME_EXTENSION | `src/i18n.rs` orphan |
+| CLI init/add/theme/upgrade | NEEDS_CLI_EXTENSION | Do not reuse `compose`/`new` without SDD |
+| Registry as React source | INTENTIONALLY_NOT_PORTED | Native catalog / `.cronus` assets |
+| apps/pro origin | INTENTIONALLY_NOT_PORTED pending | ADR 0005/0006 |
+| `src/server/router.rs` | INTENTIONALLY_NOT_PORTED | Dead; do not patch |
+| Component tests in `.cronus` | SCAFFOLDED | Parsed; `test_cmd` “runtime execution coming soon” — NEEDS_RUNTIME + HARNESS |
+| Harness (snapshots, a11y, forbidden color) | NEEDS_NEW_TEST/HARNESS | `src/ui` almost untested |
+
+## First language decision (slice 1)
+
+**No new keyword.** Align `ThemeTokens` CSS vars with `--cronus-*` and make `components.rs::button` (plus a `.cronus` invocation path) consume them. Document REAL in LANGUAGE.md only after tests.
+
+If invocation cannot reach `components.rs::button` without a new grammar, use existing PascalCase `component` with a **kernel-provided** `Button` primitive registered in the renderer — still no new tokenizer keyword.

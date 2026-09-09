@@ -1,0 +1,44 @@
+# SDD: Parity Model
+status: draft
+authority: migration-parity
+
+## Goal
+Provide complete, auditable coverage from source capability to CRONUS-native implementation.
+
+## Required statuses
+NOT_STARTED
+INVENTORIED
+SPECIFIED
+KERNEL_GAP
+IMPLEMENTING
+FUNCTIONAL_PARITY
+VISUAL_PARITY
+VERIFIED
+BLOCKED
+INTENTIONAL_DIFFERENCE
+
+## Rule
+Only VERIFIED counts as migrated.
+
+## Scope categories
+tokens
+theme
+component-foundation
+component-forms
+component-overlays-navigation
+component-data-display
+component-premium
+registry
+cli
+compose
+scaffold
+stack-builder
+ai-kit
+mcp
+docs
+examples
+e2e
+release-tooling
+
+## Evidence
+Each VERIFIED row must reference tests and, where UI-visible, representative runtime/visual evidence.

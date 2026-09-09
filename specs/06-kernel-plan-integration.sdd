@@ -1,0 +1,29 @@
+# SDD: Integration with existing kernel plan
+status: active
+authority: migration-integration
+date: 2026-09-08
+
+## Existing authority (do not overwrite)
+
+- `.cronus/PLAN-2026-04-10.md` — **active**, kernel-only, language-focused.
+- `LANGUAGE.md` — factual reality check (2026-04-10).
+- `AGENTS.md` — agent cheatsheet; defers to LANGUAGE.md.
+
+## Conflicts identified
+
+| Kernel plan invariant | Migration pressure | Resolution |
+|---|---|---|
+| Scope is language, not a second product repo | We port *capabilities* into the language/renderer | Work stays inside `cronus-kernel`. Source `cronus-ui` is evidence-only. |
+| `src/ui/**` has zero tests; layout/page recently rewritten | We must touch renderer | **Any** `src/ui` edit ships with regression tests in the same change |
+| Dead server/router must not be patched | Easy to “fix” unused files | Forbidden. Live path is `main.rs::handle_request_inner` |
+| `#![allow(dead_code)]` hid rot | Tempting to silence new code | Forbidden as a shortcut |
+| Docs overstate `component` | Tempting to implement the documented Counter syntax first | Prefer smallest primitive catalog; do not implement docs-only React-like widgets as the first grammar |
+| `compose` / `new` already exist | Master prompt suggests similar CLI names | New CLI verbs require a dedicated SDD; no name reuse without inventory |
+| Single binary crate, no workspace | Design-system crate split | Stay one crate. Catalog is Rust modules + `.cronus` examples, not a new package |
+| LANGUAGE.md last verified 2026-04-10 | We will change language | Update LANGUAGE.md only after REAL tests; bump the verified date |
+
+## Integration rule
+
+When PLAN-2026-04-10 and this migration disagree on *priority*, record the decision in `migration/SESSION-HANDOFF.md`. Default: **correctness of language + tests** wins over speed of UI port.
+
+Do not archive or rewrite PLAN-2026-04-10 in this migration.

@@ -1,0 +1,39 @@
+# SDD: Migration Harness
+status: draft
+authority: migration-harness
+
+## Feedforward guides
+- AGENTS.md
+- SDD hierarchy
+- UI contract
+- language reference
+- migration playbooks
+- parity ledger
+
+## Deterministic sensors
+- cargo tests
+- parser/AST conformance
+- HTML golden/snapshot tests
+- semantic DOM assertions
+- token/style checks
+- forbidden dependency checks
+- CLI golden tests
+- compose determinism
+- docs example validation
+- parity ledger completeness
+
+## Behavioral sensors
+- keyboard navigation
+- focus behavior
+- overlay dismissal
+- form validation
+- theme switching
+- RTL
+- reduced motion
+- responsive behavior
+
+## Visual sensors
+Canonical screenshots for light/dark/default/focus/disabled/mobile/desktop and component-specific states.
+
+## Rule
+A failing sensor creates a corrective loop. Do not bypass or silence the sensor without changing the SDD and documenting why.

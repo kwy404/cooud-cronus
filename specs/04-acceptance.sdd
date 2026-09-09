@@ -1,0 +1,21 @@
+# SDD: Migration Acceptance
+status: draft
+authority: migration-acceptance
+
+## Release gates
+- Complete source inventory.
+- All parity rows VERIFIED or approved INTENTIONAL_DIFFERENCE.
+- Native `.cronus` examples for migrated capabilities.
+- No React/Next/Node runtime requirement.
+- Semantic token/theme system verified.
+- Component waves 0–4 verified.
+- Interactive keyboard behavior verified.
+- Accessibility checks green.
+- Theme/light/dark/runtime override behavior green.
+- Existing kernel tests and demos remain green.
+- One documented harness command reproduces verification.
+- `LANGUAGE.md` matches reality.
+- FINAL-REPORT contains counts and evidence.
+
+## Completion rule
+No qualitative "mostly done". Use measurable counts.

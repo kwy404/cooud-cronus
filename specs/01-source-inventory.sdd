@@ -1,0 +1,59 @@
+# SDD: Source inventory — cronus-ui @ b9c8635
+status: inventoried
+authority: migration-source
+date: 2026-09-08
+
+Product: **product UI system** (ADR 0003). Version **0.7.3**.
+Barrel: `packages/ui/src/index.ts`. Contract: `CONTRACT.md` (gated by `scripts/contract-check.mjs`).
+
+## Tokens / theme / looks
+
+- Themes: aurora, neutral, midnight, sunset, emerald
+- Modes: light, dark (10 combinations)
+- Looks (ADR 0004, orthogonal): default, brutalist, glass → `data-cronus-look`
+- Provider: `CronusUIProvider` (`asRoot`, `overrides`, `storageKey`)
+- Script: `CronusThemeScript` (FOUC)
+- CSS vars: `--cronus-*`
+
+## CLI (`cronus-ui`)
+
+init, add, compose, add-page, list, diff, upgrade, theme set, theme add, ai
+
+Templates: saas (default, ADR 0007), store, landing*, mail, chat, finance, admin, docs
+
+## Apps / tooling
+
+- apps/www :4747 OSS docs
+- apps/pro :4748 Pro origin — **inventory only until in-scope decision**
+- stack, ai-kit, mcp, create-cronus-app, create-cronus-stack
+- registry generated; do not hand-edit
+- examples: smoke-next, smoke-vite
+- e2e: axe, contrast×10, visual gallery, keyboard, looks
+
+## Forms / charts (libs to replace, not embed)
+
+- Form: RHF + optional Zod resolver. Field works without RHF.
+- DataTable: TanStack Table
+- Charts: Recharts (main barrel) AND visx (`@cronus-ui/ui/charts`)
+- Motion: `motion` (Framer) + presets
+- Overlays: Radix / vaul / cmdk / sonner
+
+## Public component families (barrel)
+
+Foundation: Button, ButtonGroup, SplitButton, CopyButton, Badge, Chip, Kbd, Spinner, Skeleton, Progress, StatusDot, Separator, AspectRatio, ScrollArea
+
+Forms: Label, Input, Textarea, InputGroup, InputOTP, PasswordInput, NumberInput, FloatingLabelInput, PhoneInput, CurrencyInput, CreditCardInput, Checkbox, Switch, RadioGroup, Slider, Select, Combobox, Autocomplete, MultiSelect, TagsInput, FileDropzone, ColorPicker, Rating, SignaturePad, Field, Form, Toggle, ToggleGroup, SegmentedControl, Calendar, DatePicker, DateRangePicker, TimePicker, RichTextEditor
+
+Overlays/nav: Dialog, AlertDialog, ConfirmationDialog, InviteDialog, Sheet, Drawer, Popover, HoverCard, Tooltip, DropdownMenu, ContextMenu, Menubar, NavigationMenu, Command, Accordion, Collapsible, Tabs, Breadcrumb, Pagination, Sidebar, AppShell, ModeToggle, WorkspaceSwitcher, PillNav, TableOfContents, Dock, Fab, Toolbar, Stepper, ExpandableTabs
+
+Data: Card, Alert, Banner, Empty, Avatar, AvatarGroup, Table, DataTable, DescriptionList, Metric, Heatmap, JsonViewer, CodeBlock, CodeTabs, Timeline, Kanban, TreeView, Scheduler, Carousel, Masonry, Resizable, Frame, Lightbox, ImageZoom, ComparisonSlider, VideoPlayer, Countdown, UsageMeter, NotificationCenter, Toaster/sonner, Terminal
+
+Charts (Recharts wrappers): Chart*, Area, Bar, Line, LiveLine, Composed, Candlestick, Funnel, Gauge, Pie, Ring, Radar, Scatter, Sankey, ProfitLoss, Choropleth, Sunburst, HeatmapChart, Sparkline
+
+Premium/motion: AnimatedButton, Magnetic, ClickSpark, GlareHover, Reveal, ScrollProgress, AnimatedList, CardStack, FlipCard, TiltCard, SpotlightCard, GlassCard, GradientBorder, BorderBeam, StarBorder, AnimatedNumber, GradientText, TextEffect, TypingText, WordRotate, ScrambleText, ShinyText, SparklesText, SpinningText, Highlighter, Shimmer, AuroraBackground, DotPattern, GridPattern, FlickeringGrid, RetroGrid, Noise, Particles, Meteors, LightRays, Ripple, Orbit, Confetti, Marquee, LogoCarousel, ProgressiveBlur, MorphingPopover, DynamicIsland
+
+**Also:** visx chart kit (subpath, not main barrel); registry **blocks** (login, hero, pricing, …) are compose units, not primitives.
+
+## Seed matrix gap
+
+Original 68-row seed is a subset. Missing rows must be added as INVENTORIED (this drop). Registry blocks are a second ledger (compose), not silent drops.
