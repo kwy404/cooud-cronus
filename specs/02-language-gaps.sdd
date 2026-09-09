@@ -1,0 +1,36 @@
+# SDD: Language and Runtime Gap Policy
+status: draft
+authority: migration-language-gap
+
+## Principle
+Do not emulate React. Model reusable UI semantics natively.
+
+## Investigate first-class support for
+- typed component parameters/props
+- slots/content
+- variants
+- state
+- events
+- conditional/repeated rendering
+- semantic attributes and ARIA
+- keyboard/focus primitives
+- overlays/portals
+- form state and validation
+- reusable semantic style tokens
+- animation/reduced-motion
+- responsive behavior
+
+## Every language extension requires
+- grammar spec
+- parser tests
+- AST tests
+- invalid syntax tests
+- renderer/runtime tests
+- backwards-compatibility analysis
+- executable `.cronus` example
+- LANGUAGE.md update after implementation is real
+
+## Prohibited shortcuts
+- arbitrary embedded JS as universal escape hatch
+- one special keyword per React component without reusable semantics
+- documentation-only features marked as implemented

@@ -1,0 +1,76 @@
+# SDD: CRONUS UI → CRONUS Kernel Migration
+status: active-draft
+authority: migration-master
+date: 2026-09-08
+
+## Purpose
+
+Absorb the **product UI system** capabilities of `cronus-ui` into the CRONUS language and `cronus-kernel` so equivalent product interfaces are authored in `.cronus`, rendered by Rust, and verified by a harness — without React, Next.js, Bun, or `node_modules` on the runtime path.
+
+This is capability migration, not JSX transliteration.
+
+## Scope
+
+- Semantic tokens and runtime theme (5 presets × light/dark + overrides).
+- Design-system primitives (source Waves 0–6), mapped to CRONUS primitives/sections.
+- Authoring contract intent (`CONTRACT.md`) as CRONUS-native rules.
+- Developer workflows: add/compose/theme/upgrade/scaffold/registry/docs — mapped onto existing `cronus` CLI after SDD.
+- Harness, parity ledger, evidence, LANGUAGE.md truthfulness.
+
+## Non-goals
+
+- Blind `.tsx` → `.cronus` conversion.
+- Pixel-identical screenshots as the implementation.
+- React/Next/Node as an undeclared runtime.
+- One new keyword per React component.
+- Patching dead kernel paths (`src/server/router.rs`, `src/server/api.rs`, unused `CronusServer`).
+- Overwriting `.cronus/PLAN-2026-04-10.md`.
+- Marking LANGUAGE.md REAL before tests prove it.
+- Porting `apps/pro` until explicitly confirmed in-scope (ADR 0005/0006: Pro is additive/origin). Default: **inventory, do not port Pro-only origin** until decided.
+
+## Boundaries
+
+| | |
+|---|---|
+| Source | `../cronus-ui` — **read only** |
+| Runtime | `../cronus-kernel` — **read only** (LANGUAGE.md + parser/renderer as they exist) |
+| **Converted product** | **this folder** `cooud/cronus-ui-in-cronus-language/output/` |
+
+Do not edit `cronus-ui` or `cronus-kernel`. Express cronus-ui in `.cronus` here, using the language the kernel already has.
+
+## Compatibility principles
+
+1. LANGUAGE.md is the reality check. Code wins over stale docs.
+2. Existing kernel demos/templates must keep parsing.
+3. Prefer wiring **existing AST** (`ComponentNode.params/state/template`) over new grammar.
+4. Semantic tokens > Tailwind palette > hex in renderer.
+5. Accessibility is a release gate, not a polish pass.
+6. `INTENTIONALLY_NOT_PORTED` requires justification in the parity row.
+
+## Required invariants
+
+- `.cronus` is the primary authoring surface.
+- Migrated runtime does not require React/Next/Node.
+- Theme change propagates via CSS custom properties.
+- Visible focus, disabled states, semantic HTML, reduced motion.
+- Sensitive-field / HTML-escape / owner-isolation kernel rules stay intact.
+- No blanket `allow(dead_code)` expansions.
+
+## Waves
+
+See `FIRST-DELIVERABLE.md` §5 and `07-first-slice.sdd`. Order: tokens → foundation → forms → overlays → data → premium → layout/motion leftover → tooling → docs.
+
+## Definition of done
+
+`05-parity-acceptance.sdd` + master prompt §21. No row is done unless status = `VERIFIED` or approved `INTENTIONAL_DIFFERENCE`.
+
+## Rollback / recovery
+
+- Small commits; each slice resumable.
+- `migration/SESSION-HANDOFF.md` always names the next action.
+- If a language change breaks demos: revert the slice commit, keep the SDD.
+- Baseline failures are recorded separately and never “fixed” by weakening tests.
+
+## Conflict with existing kernel SDD
+
+See `06-kernel-plan-integration.sdd`. PLAN-2026-04-10 remains the language-quality tactical plan. This migration adds `migration/` and must add tests when touching `src/ui/**` (currently zero coverage).
