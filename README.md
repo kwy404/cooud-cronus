@@ -4,7 +4,15 @@ Cronus UI autorado em `.cronus`. Destino da conversão.
 
 Repo: [kwy404/cooud-cronus](https://github.com/kwy404/cooud-cronus) · **58** famílias em `output/components/` · showcase `output/preview/showcase.html`
 
-## Prints
+## Dashboard (block Analytics)
+
+Igual ao block `dashboard` do Cronus UI: AppShell, sidebar, KPIs `demo-saas`, revenue bars Jan–Jul, activity table.
+
+Fonte: `output/blocks/dashboard.cronus`
+
+![Dashboard Analytics](output/preview/dashboard.png)
+
+## Prints — catálogo
 
 ### Wave 0 — Foundation
 Button, Input, Label, Badge, Card, Spinner, Skeleton, Separator, Kbd
