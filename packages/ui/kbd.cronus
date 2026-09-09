@@ -1,0 +1,7 @@
+## Kbd — foundation
+## source: packages/ui/src/components/kbd.tsx
+
+component Kbd layout:inline style:kbd {
+  label "Kbd"
+  variant "default"
+}

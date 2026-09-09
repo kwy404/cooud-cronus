@@ -1,0 +1,7 @@
+## Combobox — forms
+## source: packages/ui/src/components/combobox.tsx
+
+component Combobox layout:inline style:combobox {
+  label "Combobox"
+  variant "searchable"
+}

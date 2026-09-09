@@ -1,0 +1,7 @@
+## GradientText — premium
+## source: packages/ui/src/components/gradient-text.tsx
+
+component GradientText layout:inline style:gradient-text {
+  label "GradientText"
+  variant "aurora"
+}

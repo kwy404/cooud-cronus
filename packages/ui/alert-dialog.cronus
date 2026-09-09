@@ -1,0 +1,7 @@
+## AlertDialog — overlays
+## source: packages/ui/src/components/alert-dialog.tsx
+
+component AlertDialog layout:inline style:alert-dialog {
+  label "AlertDialog"
+  variant "confirm"
+}

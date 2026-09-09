@@ -1,0 +1,7 @@
+## Calendar — data
+## source: packages/ui/src/components/calendar.tsx
+
+component Calendar layout:inline style:calendar {
+  label "Calendar"
+  variant "month"
+}

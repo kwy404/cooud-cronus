@@ -1,0 +1,7 @@
+## Skeleton — foundation
+## source: packages/ui/src/components/skeleton.tsx
+
+component Skeleton layout:inline style:skeleton {
+  label "Skeleton"
+  variant "pulse"
+}

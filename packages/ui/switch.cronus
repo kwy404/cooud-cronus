@@ -1,0 +1,7 @@
+## Switch — forms
+## source: packages/ui/src/components/switch.tsx
+
+component Switch layout:inline style:switch {
+  label "Switch"
+  variant "checked"
+}

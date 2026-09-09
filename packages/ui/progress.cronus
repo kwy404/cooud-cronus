@@ -1,0 +1,7 @@
+## Progress — data
+## source: packages/ui/src/components/progress.tsx
+
+component Progress layout:inline style:progress {
+  label "Progress"
+  variant "0-100"
+}

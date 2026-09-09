@@ -1,0 +1,7 @@
+## Chart — data
+## source: packages/ui/src/components/chart.tsx
+
+component Chart layout:inline style:chart {
+  label "Chart"
+  variant "bar"
+}

@@ -1,0 +1,21 @@
+## @cooud-cronus/ui — component catalog
+## import "button.cronus" etc. Authoring only; renderer lives in the kernel.
+
+import "button.cronus"
+import "input.cronus"
+import "label.cronus"
+import "badge.cronus"
+import "card.cronus"
+import "separator.cronus"
+import "skeleton.cronus"
+import "spinner.cronus"
+import "alert.cronus"
+import "checkbox.cronus"
+import "switch.cronus"
+import "textarea.cronus"
+import "select.cronus"
+import "dialog.cronus"
+import "tabs.cronus"
+import "table.cronus"
+import "metric.cronus"
+import "progress.cronus"

@@ -1,0 +1,7 @@
+## InputOTP — forms
+## source: packages/ui/src/components/input-otp.tsx
+
+component InputOtp layout:inline style:input-otp {
+  label "InputOTP"
+  variant "slots"
+}

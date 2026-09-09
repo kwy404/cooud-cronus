@@ -8,3 +8,8 @@ scripts/screenshot-preview.mjs
 scripts/shot-showcase.mjs
 scripts/shot-dashboard.mjs
 scripts/shot-cooud.mjs
+bin/cronus
+bin/cronus.exe
+compiler/cronus-kernel/target/
+compiler/cronus-kernel/data.db
+apps/dashboard/*.db

@@ -1,0 +1,9 @@
+## @cooud-cronus/tokens
+## Semantic roles from cronus-ui packages/tokens (aurora / dark default).
+
+style {
+  theme dark
+  preset aurora
+  accent white
+  font "Inter"
+}

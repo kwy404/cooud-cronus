@@ -1,0 +1,7 @@
+## ScrollArea — data
+## source: packages/ui/src/components/scroll-area.tsx
+
+component ScrollArea layout:inline style:scroll-area {
+  label "ScrollArea"
+  variant "bar"
+}

@@ -1,0 +1,7 @@
+## Field — forms
+## source: packages/ui/src/components/field.tsx
+
+component Field layout:inline style:field {
+  label "Field"
+  variant "label"
+}

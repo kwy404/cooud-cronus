@@ -1,0 +1,7 @@
+## Empty — data
+## source: packages/ui/src/components/empty.tsx
+
+component Empty layout:inline style:empty {
+  label "Empty"
+  variant "title"
+}
