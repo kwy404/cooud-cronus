@@ -34,9 +34,10 @@ SKIP_DIRS = {
     "compiler",
     "bin",
     ".git",
-    "forbidden-html",
     "node_modules",
 }
+
+FORBIDDEN_EXTS = {".html", ".htm", ".css", ".tsx", ".jsx", ".vue", ".scss"}
 
 
 def iter_cronus() -> list[Path]:
@@ -46,6 +47,32 @@ def iter_cronus() -> list[Path]:
             continue
         out.append(p)
     return sorted(out)
+
+
+def scan_forbidden_files() -> list[str]:
+    hits = []
+    for child in ROOT.iterdir():
+        if child.name in SKIP_DIRS or child.name.startswith("."):
+            continue
+        stack = [child] if child.is_dir() else []
+        if child.is_file() and child.suffix.lower() in FORBIDDEN_EXTS:
+            hits.append(child.name)
+        while stack:
+            d = stack.pop()
+            if d.name in SKIP_DIRS:
+                continue
+            try:
+                entries = list(d.iterdir())
+            except OSError:
+                continue
+            for p in entries:
+                if p.name in SKIP_DIRS or p.name == "node_modules":
+                    continue
+                if p.is_dir():
+                    stack.append(p)
+                elif p.is_file() and p.suffix.lower() in FORBIDDEN_EXTS:
+                    hits.append(str(p.relative_to(ROOT)).replace("\\", "/"))
+    return sorted(hits)
 
 
 def scan_forbidden(paths: list[Path]) -> list[dict]:
@@ -135,9 +162,17 @@ def write_report(data: dict) -> Path:
         "## Gate: no TSX / HTML / CSS in `.cronus`",
         "",
         f"status: **{data['forbidden_status']}**",
-        f"hits: {len(hits)}",
+        f"hits in .cronus: {len(hits)}",
+        f"html/css/tsx files in repo: {len(data.get('forbidden_files') or [])}",
         "",
     ]
+    file_hits = data.get("forbidden_files") or []
+    if file_hits:
+        lines.append("Forbidden files (HTML/CSS/TSX must not live here):")
+        lines.append("")
+        for f in file_hits:
+            lines.append(f"- `{f}`")
+        lines.append("")
     if hits:
         lines.append("| file | line | excerpt |")
         lines.append("|---|---|---|")
@@ -212,9 +247,10 @@ def write_report(data: dict) -> Path:
 def main() -> int:
     cronus_files = iter_cronus()
     hits = scan_forbidden(cronus_files)
+    file_hits = scan_forbidden_files()
     inv = inventory()
     parse = try_parse()
-    forbidden_status = "FAIL" if hits else "PASS"
+    forbidden_status = "FAIL" if hits or file_hits else "PASS"
     parse_ok = parse.get("status") in {"PASS", "SKIPPED"}
     overall = "PASS" if forbidden_status == "PASS" and parse_ok else "FAIL"
     if parse.get("status") == "SKIPPED" and forbidden_status == "PASS":
@@ -223,13 +259,17 @@ def main() -> int:
         "generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "cronus_files": len(cronus_files),
         "forbidden": hits,
+        "forbidden_files": file_hits,
         "forbidden_status": forbidden_status,
         "inventory": inv,
         "parse": parse,
         "overall": overall,
     }
     path = write_report(data)
-    print(f"files={len(cronus_files)} forbidden={len(hits)} parse={parse.get('status')} overall={overall}")
+    print(
+        f"files={len(cronus_files)} forbidden_lines={len(hits)} "
+        f"forbidden_files={len(file_hits)} parse={parse.get('status')} overall={overall}"
+    )
     print(path)
     if forbidden_status == "FAIL":
         return 2

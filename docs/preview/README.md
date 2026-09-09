@@ -1,4 +1,3 @@
-PNG files here are visual *targets* (dashboard.cooud.com), not the source of truth.
+PNG = alvo visual. Fonte = `apps/dashboard/app.cronus`.
 
-Authoring is `apps/dashboard/app.cronus` — native `.cronus` only.
-HTML mocks were moved to `migration/evidence/forbidden-html/`.
+Nao ha HTML neste repo. O kernel emite HTML por tras, no `cronus run`.
