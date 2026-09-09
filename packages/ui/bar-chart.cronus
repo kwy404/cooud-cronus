@@ -1,0 +1,6 @@
+## BarChart
+## source: packages/ui/src/components/bar-chart.tsx
+
+component BarChart layout:inline style:bar-chart {
+  label "BarChart"
+}

@@ -1,0 +1,6 @@
+## Ripple
+## source: packages/ui/src/components/ripple.tsx
+
+component Ripple layout:inline style:ripple {
+  label "Ripple"
+}

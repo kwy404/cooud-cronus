@@ -1,0 +1,6 @@
+## Block SettingsWorkspace
+## source: registry/settings--workspace.json
+
+component SettingsWorkspaceBlock layout:stack style:settings--workspace {
+  label "SettingsWorkspace"
+}

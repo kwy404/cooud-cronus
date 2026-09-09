@@ -1,0 +1,6 @@
+## Block FeatureGridBento
+## source: registry/feature-grid--bento.json
+
+component FeatureGridBentoBlock layout:stack style:feature-grid--bento {
+  label "FeatureGridBento"
+}

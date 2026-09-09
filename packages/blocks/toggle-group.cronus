@@ -1,0 +1,6 @@
+## Block ToggleGroup
+## source: registry/toggle-group.json
+
+component ToggleGroupBlock layout:stack style:toggle-group {
+  label "ToggleGroup"
+}

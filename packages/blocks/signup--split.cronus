@@ -1,0 +1,6 @@
+## Block SignupSplit
+## source: registry/signup--split.json
+
+component SignupSplitBlock layout:stack style:signup--split {
+  label "SignupSplit"
+}

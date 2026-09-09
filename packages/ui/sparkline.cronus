@@ -1,0 +1,6 @@
+## Sparkline
+## source: packages/ui/src/components/sparkline.tsx
+
+component Sparkline layout:inline style:sparkline {
+  label "Sparkline"
+}

@@ -1,0 +1,6 @@
+## Block Countdown
+## source: registry/countdown.json
+
+component CountdownBlock layout:stack style:countdown {
+  label "Countdown"
+}

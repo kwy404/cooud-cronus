@@ -1,0 +1,6 @@
+## ModeToggle
+## source: packages/ui/src/components/mode-toggle.tsx
+
+component ModeToggle layout:inline style:mode-toggle {
+  label "ModeToggle"
+}

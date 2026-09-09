@@ -1,0 +1,6 @@
+## Block RingChart
+## source: registry/ring-chart.json
+
+component RingChartBlock layout:stack style:ring-chart {
+  label "RingChart"
+}

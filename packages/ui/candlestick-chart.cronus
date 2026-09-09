@@ -1,0 +1,6 @@
+## CandlestickChart
+## source: packages/ui/src/components/candlestick-chart.tsx
+
+component CandlestickChart layout:inline style:candlestick-chart {
+  label "CandlestickChart"
+}

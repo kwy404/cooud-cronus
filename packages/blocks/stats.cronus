@@ -1,0 +1,6 @@
+## Block Stats
+## source: registry/stats.json
+
+component StatsBlock layout:stack style:stats {
+  label "Stats"
+}

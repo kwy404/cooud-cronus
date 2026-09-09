@@ -1,0 +1,6 @@
+## Block Slider
+## source: registry/slider.json
+
+component SliderBlock layout:stack style:slider {
+  label "Slider"
+}

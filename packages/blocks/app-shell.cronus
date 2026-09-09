@@ -1,0 +1,6 @@
+## Block AppShell
+## source: registry/app-shell.json
+
+component AppShellBlock layout:stack style:app-shell {
+  label "AppShell"
+}

@@ -1,0 +1,6 @@
+## Block ManageSubscription
+## source: registry/manage-subscription.json
+
+component ManageSubscriptionBlock layout:stack style:manage-subscription {
+  label "ManageSubscription"
+}

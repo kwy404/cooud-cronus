@@ -1,0 +1,6 @@
+## Block Tabs
+## source: registry/tabs.json
+
+component TabsBlock layout:stack style:tabs {
+  label "Tabs"
+}

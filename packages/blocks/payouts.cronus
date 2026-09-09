@@ -1,0 +1,6 @@
+## Block Payouts
+## source: registry/payouts.json
+
+component PayoutsBlock layout:stack style:payouts {
+  label "Payouts"
+}

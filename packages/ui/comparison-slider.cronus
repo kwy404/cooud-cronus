@@ -1,0 +1,6 @@
+## ComparisonSlider
+## source: packages/ui/src/components/comparison-slider.tsx
+
+component ComparisonSlider layout:inline style:comparison-slider {
+  label "ComparisonSlider"
+}

@@ -1,0 +1,6 @@
+## Toolbar
+## source: packages/ui/src/components/toolbar.tsx
+
+component Toolbar layout:inline style:toolbar {
+  label "Toolbar"
+}

@@ -1,0 +1,6 @@
+## Block Textarea
+## source: registry/textarea.json
+
+component TextareaBlock layout:stack style:textarea {
+  label "Textarea"
+}

@@ -1,0 +1,6 @@
+## ScatterChart
+## source: packages/ui/src/components/scatter-chart.tsx
+
+component ScatterChart layout:inline style:scatter-chart {
+  label "ScatterChart"
+}

@@ -1,0 +1,6 @@
+## GridPattern
+## source: packages/ui/src/components/grid-pattern.tsx
+
+component GridPattern layout:inline style:grid-pattern {
+  label "GridPattern"
+}

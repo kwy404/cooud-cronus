@@ -1,0 +1,6 @@
+## Block TagsInput
+## source: registry/tags-input.json
+
+component TagsInputBlock layout:stack style:tags-input {
+  label "TagsInput"
+}

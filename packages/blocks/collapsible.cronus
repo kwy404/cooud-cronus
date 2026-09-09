@@ -1,0 +1,6 @@
+## Block Collapsible
+## source: registry/collapsible.json
+
+component CollapsibleBlock layout:stack style:collapsible {
+  label "Collapsible"
+}

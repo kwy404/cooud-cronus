@@ -1,0 +1,6 @@
+## Block CurrencyInput
+## source: registry/currency-input.json
+
+component CurrencyInputBlock layout:stack style:currency-input {
+  label "CurrencyInput"
+}

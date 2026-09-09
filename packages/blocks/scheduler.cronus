@@ -1,0 +1,6 @@
+## Block Scheduler
+## source: registry/scheduler.json
+
+component SchedulerBlock layout:stack style:scheduler {
+  label "Scheduler"
+}

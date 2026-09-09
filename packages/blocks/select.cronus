@@ -1,0 +1,6 @@
+## Block Select
+## source: registry/select.json
+
+component SelectBlock layout:stack style:select {
+  label "Select"
+}

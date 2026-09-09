@@ -1,0 +1,6 @@
+## Block Stepper
+## source: registry/stepper.json
+
+component StepperBlock layout:stack style:stepper {
+  label "Stepper"
+}

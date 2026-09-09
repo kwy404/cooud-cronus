@@ -1,0 +1,6 @@
+## SplitButton
+## source: packages/ui/src/components/split-button.tsx
+
+component SplitButton layout:inline style:split-button {
+  label "SplitButton"
+}

@@ -1,0 +1,6 @@
+## Block Integrations
+## source: registry/integrations.json
+
+component IntegrationsBlock layout:stack style:integrations {
+  label "Integrations"
+}

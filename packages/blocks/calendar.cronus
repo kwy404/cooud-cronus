@@ -1,0 +1,6 @@
+## Block Calendar
+## source: registry/calendar.json
+
+component CalendarBlock layout:stack style:calendar {
+  label "Calendar"
+}

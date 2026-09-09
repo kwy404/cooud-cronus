@@ -1,0 +1,6 @@
+## Block MagicLinkSent
+## source: registry/magic-link--sent.json
+
+component MagicLinkSentBlock layout:stack style:magic-link--sent {
+  label "MagicLinkSent"
+}

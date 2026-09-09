@@ -1,0 +1,6 @@
+## Block TypingText
+## source: registry/typing-text.json
+
+component TypingTextBlock layout:stack style:typing-text {
+  label "TypingText"
+}

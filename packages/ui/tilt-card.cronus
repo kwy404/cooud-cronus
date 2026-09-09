@@ -1,0 +1,6 @@
+## TiltCard
+## source: packages/ui/src/components/tilt-card.tsx
+
+component TiltCard layout:inline style:tilt-card {
+  label "TiltCard"
+}

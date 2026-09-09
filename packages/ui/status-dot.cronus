@@ -1,0 +1,6 @@
+## StatusDot
+## source: packages/ui/src/components/status-dot.tsx
+
+component StatusDot layout:inline style:status-dot {
+  label "StatusDot"
+}

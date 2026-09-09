@@ -1,0 +1,6 @@
+## Block Reviews
+## source: registry/reviews.json
+
+component ReviewsBlock layout:stack style:reviews {
+  label "Reviews"
+}

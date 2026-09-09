@@ -1,0 +1,6 @@
+## LiveLineChart
+## source: packages/ui/src/components/live-line-chart.tsx
+
+component LiveLineChart layout:inline style:live-line-chart {
+  label "LiveLineChart"
+}

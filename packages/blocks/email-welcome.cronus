@@ -1,0 +1,6 @@
+## Block EmailWelcome
+## source: registry/email-welcome.json
+
+component EmailWelcomeBlock layout:stack style:email-welcome {
+  label "EmailWelcome"
+}

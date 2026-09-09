@@ -1,0 +1,6 @@
+## Block SignupSplitProof
+## source: registry/signup--split-proof.json
+
+component SignupSplitProofBlock layout:stack style:signup--split-proof {
+  label "SignupSplitProof"
+}

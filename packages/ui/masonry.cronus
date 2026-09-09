@@ -1,0 +1,6 @@
+## Masonry
+## source: packages/ui/src/components/masonry.tsx
+
+component Masonry layout:inline style:masonry {
+  label "Masonry"
+}

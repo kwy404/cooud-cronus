@@ -1,0 +1,6 @@
+## Block Badge
+## source: registry/badge.json
+
+component BadgeBlock layout:stack style:badge {
+  label "Badge"
+}

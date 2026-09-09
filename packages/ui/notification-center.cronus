@@ -1,0 +1,6 @@
+## NotificationCenter
+## source: packages/ui/src/components/notification-center.tsx
+
+component NotificationCenter layout:inline style:notification-center {
+  label "NotificationCenter"
+}

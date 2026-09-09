@@ -1,0 +1,6 @@
+## CreditCardInput
+## source: packages/ui/src/components/credit-card-input.tsx
+
+component CreditCardInput layout:inline style:credit-card-input {
+  label "CreditCardInput"
+}

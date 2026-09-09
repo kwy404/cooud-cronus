@@ -1,0 +1,6 @@
+## CurrencyInput
+## source: packages/ui/src/components/currency-input.tsx
+
+component CurrencyInput layout:inline style:currency-input {
+  label "CurrencyInput"
+}

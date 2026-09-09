@@ -1,0 +1,6 @@
+## Block NotificationPreferencesSimple
+## source: registry/notification-preferences--simple.json
+
+component NotificationPreferencesSimpleBlock layout:stack style:notification-preferences--simple {
+  label "NotificationPreferencesSimple"
+}

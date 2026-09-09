@@ -1,0 +1,6 @@
+## Block GlassCard
+## source: registry/glass-card.json
+
+component GlassCardBlock layout:stack style:glass-card {
+  label "GlassCard"
+}

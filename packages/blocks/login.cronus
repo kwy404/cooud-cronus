@@ -1,0 +1,6 @@
+## Block Login
+## source: registry/login.json
+
+component LoginBlock layout:stack style:login {
+  label "Login"
+}

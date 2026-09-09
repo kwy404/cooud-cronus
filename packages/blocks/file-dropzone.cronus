@@ -1,0 +1,6 @@
+## Block FileDropzone
+## source: registry/file-dropzone.json
+
+component FileDropzoneBlock layout:stack style:file-dropzone {
+  label "FileDropzone"
+}

@@ -1,0 +1,6 @@
+## Block Signup
+## source: registry/signup.json
+
+component SignupBlock layout:stack style:signup {
+  label "Signup"
+}

@@ -1,0 +1,6 @@
+## Block DateRangePicker
+## source: registry/date-range-picker.json
+
+component DateRangePickerBlock layout:stack style:date-range-picker {
+  label "DateRangePicker"
+}

@@ -1,0 +1,6 @@
+## Block ModeToggle
+## source: registry/mode-toggle.json
+
+component ModeToggleBlock layout:stack style:mode-toggle {
+  label "ModeToggle"
+}

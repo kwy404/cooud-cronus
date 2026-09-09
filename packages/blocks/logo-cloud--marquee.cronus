@@ -1,0 +1,6 @@
+## Block LogoCloudMarquee
+## source: registry/logo-cloud--marquee.json
+
+component LogoCloudMarqueeBlock layout:stack style:logo-cloud--marquee {
+  label "LogoCloudMarquee"
+}

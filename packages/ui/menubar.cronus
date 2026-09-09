@@ -1,0 +1,6 @@
+## Menubar
+## source: packages/ui/src/components/menubar.tsx
+
+component Menubar layout:inline style:menubar {
+  label "Menubar"
+}

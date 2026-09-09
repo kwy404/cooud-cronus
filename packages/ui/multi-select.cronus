@@ -1,0 +1,6 @@
+## MultiSelect
+## source: packages/ui/src/components/multi-select.tsx
+
+component MultiSelect layout:inline style:multi-select {
+  label "MultiSelect"
+}

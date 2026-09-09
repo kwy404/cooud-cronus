@@ -1,0 +1,6 @@
+## Block KanbanBoardCompact
+## source: registry/kanban-board--compact.json
+
+component KanbanBoardCompactBlock layout:stack style:kanban-board--compact {
+  label "KanbanBoardCompact"
+}

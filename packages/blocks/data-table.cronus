@@ -1,0 +1,6 @@
+## Block DataTable
+## source: registry/data-table.json
+
+component DataTableBlock layout:stack style:data-table {
+  label "DataTable"
+}

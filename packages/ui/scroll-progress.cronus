@@ -1,0 +1,6 @@
+## ScrollProgress
+## source: packages/ui/src/components/scroll-progress.tsx
+
+component ScrollProgress layout:inline style:scroll-progress {
+  label "ScrollProgress"
+}

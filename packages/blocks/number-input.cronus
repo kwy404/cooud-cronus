@@ -1,0 +1,6 @@
+## Block NumberInput
+## source: registry/number-input.json
+
+component NumberInputBlock layout:stack style:number-input {
+  label "NumberInput"
+}

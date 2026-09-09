@@ -1,0 +1,6 @@
+## Block FooterMinimal
+## source: registry/footer--minimal.json
+
+component FooterMinimalBlock layout:stack style:footer--minimal {
+  label "FooterMinimal"
+}

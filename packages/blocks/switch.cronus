@@ -1,0 +1,6 @@
+## Block Switch
+## source: registry/switch.json
+
+component SwitchBlock layout:stack style:switch {
+  label "Switch"
+}

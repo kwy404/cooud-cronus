@@ -1,0 +1,6 @@
+## Collapsible
+## source: packages/ui/src/components/collapsible.tsx
+
+component Collapsible layout:inline style:collapsible {
+  label "Collapsible"
+}

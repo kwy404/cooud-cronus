@@ -1,0 +1,6 @@
+## Block Welcome
+## source: registry/welcome.json
+
+component WelcomeBlock layout:stack style:welcome {
+  label "Welcome"
+}

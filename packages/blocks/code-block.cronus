@@ -1,0 +1,6 @@
+## Block CodeBlock
+## source: registry/code-block.json
+
+component CodeBlockBlock layout:stack style:code-block {
+  label "CodeBlock"
+}

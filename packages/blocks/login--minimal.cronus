@@ -1,0 +1,6 @@
+## Block LoginMinimal
+## source: registry/login--minimal.json
+
+component LoginMinimalBlock layout:stack style:login--minimal {
+  label "LoginMinimal"
+}

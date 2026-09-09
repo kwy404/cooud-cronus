@@ -1,0 +1,6 @@
+## Block Input
+## source: registry/input.json
+
+component InputBlock layout:stack style:input {
+  label "Input"
+}

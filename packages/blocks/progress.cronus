@@ -1,0 +1,6 @@
+## Block Progress
+## source: registry/progress.json
+
+component ProgressBlock layout:stack style:progress {
+  label "Progress"
+}

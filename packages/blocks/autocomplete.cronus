@@ -1,0 +1,6 @@
+## Block Autocomplete
+## source: registry/autocomplete.json
+
+component AutocompleteBlock layout:stack style:autocomplete {
+  label "Autocomplete"
+}

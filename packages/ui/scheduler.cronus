@@ -1,0 +1,6 @@
+## Scheduler
+## source: packages/ui/src/components/scheduler.tsx
+
+component Scheduler layout:inline style:scheduler {
+  label "Scheduler"
+}

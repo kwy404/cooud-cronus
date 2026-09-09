@@ -1,0 +1,6 @@
+## CopyButton
+## source: packages/ui/src/components/copy-button.tsx
+
+component CopyButton layout:inline style:copy-button {
+  label "CopyButton"
+}

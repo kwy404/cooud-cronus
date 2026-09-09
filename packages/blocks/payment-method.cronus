@@ -1,0 +1,6 @@
+## Block PaymentMethod
+## source: registry/payment-method.json
+
+component PaymentMethodBlock layout:stack style:payment-method {
+  label "PaymentMethod"
+}

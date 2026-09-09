@@ -1,0 +1,6 @@
+## Resizable
+## source: packages/ui/src/components/resizable.tsx
+
+component Resizable layout:inline style:resizable {
+  label "Resizable"
+}

@@ -1,0 +1,6 @@
+## Block ScatterChart
+## source: registry/scatter-chart.json
+
+component ScatterChartBlock layout:stack style:scatter-chart {
+  label "ScatterChart"
+}

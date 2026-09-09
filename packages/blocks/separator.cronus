@@ -1,0 +1,6 @@
+## Block Separator
+## source: registry/separator.json
+
+component SeparatorBlock layout:stack style:separator {
+  label "Separator"
+}

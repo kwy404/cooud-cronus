@@ -1,0 +1,6 @@
+## Block BorderBeam
+## source: registry/border-beam.json
+
+component BorderBeamBlock layout:stack style:border-beam {
+  label "BorderBeam"
+}

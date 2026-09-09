@@ -1,0 +1,6 @@
+## Block SignaturePad
+## source: registry/signature-pad.json
+
+component SignaturePadBlock layout:stack style:signature-pad {
+  label "SignaturePad"
+}

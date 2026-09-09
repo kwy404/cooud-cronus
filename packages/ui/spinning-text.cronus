@@ -1,0 +1,6 @@
+## SpinningText
+## source: packages/ui/src/components/spinning-text.tsx
+
+component SpinningText layout:inline style:spinning-text {
+  label "SpinningText"
+}

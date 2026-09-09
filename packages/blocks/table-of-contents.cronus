@@ -1,0 +1,6 @@
+## Block TableOfContents
+## source: registry/table-of-contents.json
+
+component TableOfContentsBlock layout:stack style:table-of-contents {
+  label "TableOfContents"
+}

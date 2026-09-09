@@ -1,0 +1,6 @@
+## SegmentedControl
+## source: packages/ui/src/components/segmented-control.tsx
+
+component SegmentedControl layout:inline style:segmented-control {
+  label "SegmentedControl"
+}

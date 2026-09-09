@@ -1,0 +1,6 @@
+## Block CardStack
+## source: registry/card-stack.json
+
+component CardStackBlock layout:stack style:card-stack {
+  label "CardStack"
+}

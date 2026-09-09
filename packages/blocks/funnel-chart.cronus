@@ -1,0 +1,6 @@
+## Block FunnelChart
+## source: registry/funnel-chart.json
+
+component FunnelChartBlock layout:stack style:funnel-chart {
+  label "FunnelChart"
+}

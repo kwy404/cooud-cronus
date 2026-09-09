@@ -1,0 +1,6 @@
+## TextEffect
+## source: packages/ui/src/components/text-effect.tsx
+
+component TextEffect layout:inline style:text-effect {
+  label "TextEffect"
+}

@@ -1,0 +1,6 @@
+## Orbit
+## source: packages/ui/src/components/orbit.tsx
+
+component Orbit layout:inline style:orbit {
+  label "Orbit"
+}

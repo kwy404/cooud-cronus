@@ -1,0 +1,6 @@
+## UsageMeter
+## source: packages/ui/src/components/usage-meter.tsx
+
+component UsageMeter layout:inline style:usage-meter {
+  label "UsageMeter"
+}

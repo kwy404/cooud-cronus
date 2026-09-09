@@ -1,0 +1,6 @@
+## Block FlipCard
+## source: registry/flip-card.json
+
+component FlipCardBlock layout:stack style:flip-card {
+  label "FlipCard"
+}

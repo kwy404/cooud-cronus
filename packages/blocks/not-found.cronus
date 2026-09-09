@@ -1,0 +1,6 @@
+## Block NotFound
+## source: registry/not-found.json
+
+component NotFoundBlock layout:stack style:not-found {
+  label "NotFound"
+}

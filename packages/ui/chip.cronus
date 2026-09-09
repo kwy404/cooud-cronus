@@ -1,0 +1,6 @@
+## Chip
+## source: packages/ui/src/components/chip.tsx
+
+component Chip layout:inline style:chip {
+  label "Chip"
+}

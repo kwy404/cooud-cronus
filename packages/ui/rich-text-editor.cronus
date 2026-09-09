@@ -1,0 +1,6 @@
+## RichTextEditor
+## source: packages/ui/src/components/rich-text-editor.tsx
+
+component RichTextEditor layout:inline style:rich-text-editor {
+  label "RichTextEditor"
+}

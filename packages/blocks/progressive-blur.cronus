@@ -1,0 +1,6 @@
+## Block ProgressiveBlur
+## source: registry/progressive-blur.json
+
+component ProgressiveBlurBlock layout:stack style:progressive-blur {
+  label "ProgressiveBlur"
+}

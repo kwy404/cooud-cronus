@@ -1,0 +1,6 @@
+## Magnetic
+## source: packages/ui/src/components/magnetic.tsx
+
+component Magnetic layout:inline style:magnetic {
+  label "Magnetic"
+}

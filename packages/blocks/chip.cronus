@@ -1,0 +1,6 @@
+## Block Chip
+## source: registry/chip.json
+
+component ChipBlock layout:stack style:chip {
+  label "Chip"
+}

@@ -1,0 +1,6 @@
+## Block LineChart
+## source: registry/line-chart.json
+
+component LineChartBlock layout:stack style:line-chart {
+  label "LineChart"
+}

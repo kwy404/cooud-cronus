@@ -1,0 +1,6 @@
+## Block NotificationPreferences
+## source: registry/notification-preferences.json
+
+component NotificationPreferencesBlock layout:stack style:notification-preferences {
+  label "NotificationPreferences"
+}

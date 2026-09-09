@@ -1,0 +1,6 @@
+## Block AlertDialog
+## source: registry/alert-dialog.json
+
+component AlertDialogBlock layout:stack style:alert-dialog {
+  label "AlertDialog"
+}

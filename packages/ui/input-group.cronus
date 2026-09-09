@@ -1,0 +1,6 @@
+## InputGroup
+## source: packages/ui/src/components/input-group.tsx
+
+component InputGroup layout:inline style:input-group {
+  label "InputGroup"
+}

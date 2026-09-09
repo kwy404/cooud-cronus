@@ -1,0 +1,6 @@
+## Block Alert
+## source: registry/alert.json
+
+component AlertBlock layout:stack style:alert {
+  label "Alert"
+}

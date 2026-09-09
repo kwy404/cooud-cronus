@@ -1,0 +1,6 @@
+## Block Skeleton
+## source: registry/skeleton.json
+
+component SkeletonBlock layout:stack style:skeleton {
+  label "Skeleton"
+}

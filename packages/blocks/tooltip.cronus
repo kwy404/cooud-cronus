@@ -1,0 +1,6 @@
+## Block Tooltip
+## source: registry/tooltip.json
+
+component TooltipBlock layout:stack style:tooltip {
+  label "Tooltip"
+}

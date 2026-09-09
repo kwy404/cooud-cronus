@@ -1,0 +1,6 @@
+## Block Toolbar
+## source: registry/toolbar.json
+
+component ToolbarBlock layout:stack style:toolbar {
+  label "Toolbar"
+}

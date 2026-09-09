@@ -1,0 +1,6 @@
+## Block Maintenance
+## source: registry/maintenance.json
+
+component MaintenanceBlock layout:stack style:maintenance {
+  label "Maintenance"
+}

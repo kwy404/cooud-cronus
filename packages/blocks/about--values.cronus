@@ -1,0 +1,6 @@
+## Block AboutValues
+## source: registry/about--values.json
+
+component AboutValuesBlock layout:stack style:about--values {
+  label "AboutValues"
+}

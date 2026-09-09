@@ -1,0 +1,6 @@
+## Block PhoneInput
+## source: registry/phone-input.json
+
+component PhoneInputBlock layout:stack style:phone-input {
+  label "PhoneInput"
+}

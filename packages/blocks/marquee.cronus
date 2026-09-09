@@ -1,0 +1,6 @@
+## Block Marquee
+## source: registry/marquee.json
+
+component MarqueeBlock layout:stack style:marquee {
+  label "Marquee"
+}

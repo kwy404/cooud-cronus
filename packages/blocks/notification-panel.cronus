@@ -1,0 +1,6 @@
+## Block NotificationPanel
+## source: registry/notification-panel.json
+
+component NotificationPanelBlock layout:stack style:notification-panel {
+  label "NotificationPanel"
+}

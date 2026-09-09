@@ -1,0 +1,6 @@
+## Block Toggle
+## source: registry/toggle.json
+
+component ToggleBlock layout:stack style:toggle {
+  label "Toggle"
+}

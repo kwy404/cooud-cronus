@@ -1,0 +1,6 @@
+## Block SetupChecklist
+## source: registry/setup-checklist.json
+
+component SetupChecklistBlock layout:stack style:setup-checklist {
+  label "SetupChecklist"
+}

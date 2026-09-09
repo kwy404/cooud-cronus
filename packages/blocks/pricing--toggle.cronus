@@ -1,0 +1,6 @@
+## Block PricingToggle
+## source: registry/pricing--toggle.json
+
+component PricingToggleBlock layout:stack style:pricing--toggle {
+  label "PricingToggle"
+}

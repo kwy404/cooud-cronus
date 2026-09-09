@@ -1,0 +1,6 @@
+## Block GaugeChart
+## source: registry/gauge-chart.json
+
+component GaugeChartBlock layout:stack style:gauge-chart {
+  label "GaugeChart"
+}

@@ -1,0 +1,6 @@
+## Block Checkbox
+## source: registry/checkbox.json
+
+component CheckboxBlock layout:stack style:checkbox {
+  label "Checkbox"
+}

@@ -1,0 +1,6 @@
+## WordRotate
+## source: packages/ui/src/components/word-rotate.tsx
+
+component WordRotate layout:inline style:word-rotate {
+  label "WordRotate"
+}

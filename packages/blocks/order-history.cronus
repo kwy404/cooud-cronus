@@ -1,0 +1,6 @@
+## Block OrderHistory
+## source: registry/order-history.json
+
+component OrderHistoryBlock layout:stack style:order-history {
+  label "OrderHistory"
+}

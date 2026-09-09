@@ -1,0 +1,6 @@
+## BorderBeam
+## source: packages/ui/src/components/border-beam.tsx
+
+component BorderBeam layout:inline style:border-beam {
+  label "BorderBeam"
+}

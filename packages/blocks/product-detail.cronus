@@ -1,0 +1,6 @@
+## Block ProductDetail
+## source: registry/product-detail.json
+
+component ProductDetailBlock layout:stack style:product-detail {
+  label "ProductDetail"
+}

@@ -1,0 +1,6 @@
+## Block Faq
+## source: registry/faq.json
+
+component FaqBlock layout:stack style:faq {
+  label "Faq"
+}

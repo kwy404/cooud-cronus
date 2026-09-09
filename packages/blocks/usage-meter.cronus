@@ -1,0 +1,6 @@
+## Block UsageMeter
+## source: registry/usage-meter.json
+
+component UsageMeterBlock layout:stack style:usage-meter {
+  label "UsageMeter"
+}

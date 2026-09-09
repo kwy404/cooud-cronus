@@ -1,0 +1,6 @@
+## Block SparklesText
+## source: registry/sparkles-text.json
+
+component SparklesTextBlock layout:stack style:sparkles-text {
+  label "SparklesText"
+}

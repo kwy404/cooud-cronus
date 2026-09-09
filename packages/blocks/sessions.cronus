@@ -1,0 +1,6 @@
+## Block Sessions
+## source: registry/sessions.json
+
+component SessionsBlock layout:stack style:sessions {
+  label "Sessions"
+}

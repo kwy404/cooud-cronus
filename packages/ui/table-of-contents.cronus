@@ -1,0 +1,6 @@
+## TableOfContents
+## source: packages/ui/src/components/table-of-contents.tsx
+
+component TableOfContents layout:inline style:table-of-contents {
+  label "TableOfContents"
+}

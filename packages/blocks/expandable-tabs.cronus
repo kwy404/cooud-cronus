@@ -1,0 +1,6 @@
+## Block ExpandableTabs
+## source: registry/expandable-tabs.json
+
+component ExpandableTabsBlock layout:stack style:expandable-tabs {
+  label "ExpandableTabs"
+}

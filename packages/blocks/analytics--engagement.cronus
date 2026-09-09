@@ -1,0 +1,6 @@
+## Block AnalyticsEngagement
+## source: registry/analytics--engagement.json
+
+component AnalyticsEngagementBlock layout:stack style:analytics--engagement {
+  label "AnalyticsEngagement"
+}

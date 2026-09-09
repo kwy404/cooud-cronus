@@ -1,0 +1,6 @@
+## FlickeringGrid
+## source: packages/ui/src/components/flickering-grid.tsx
+
+component FlickeringGrid layout:inline style:flickering-grid {
+  label "FlickeringGrid"
+}

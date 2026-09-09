@@ -1,0 +1,6 @@
+## Block SegmentedControl
+## source: registry/segmented-control.json
+
+component SegmentedControlBlock layout:stack style:segmented-control {
+  label "SegmentedControl"
+}

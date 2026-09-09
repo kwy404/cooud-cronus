@@ -1,0 +1,6 @@
+## Block AuroraBackground
+## source: registry/aurora-background.json
+
+component AuroraBackgroundBlock layout:stack style:aurora-background {
+  label "AuroraBackground"
+}

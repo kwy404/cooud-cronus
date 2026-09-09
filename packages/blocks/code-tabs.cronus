@@ -1,0 +1,6 @@
+## Block CodeTabs
+## source: registry/code-tabs.json
+
+component CodeTabsBlock layout:stack style:code-tabs {
+  label "CodeTabs"
+}

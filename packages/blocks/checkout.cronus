@@ -1,0 +1,6 @@
+## Block Checkout
+## source: registry/checkout.json
+
+component CheckoutBlock layout:stack style:checkout {
+  label "Checkout"
+}

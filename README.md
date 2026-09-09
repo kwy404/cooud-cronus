@@ -22,18 +22,22 @@ cd cooud-cronus
 
 Precisa de **Rust** (`https://rustup.rs`) e **Git**. Sem isso o parse não roda — os arquivos `.cronus` continuam no repo.
 
-## Packages
+## Packages (tudo no git)
 
 ```
 packages/
-  tokens/     ← @cronus-ui/tokens  (semântico aurora)
-  ui/         ← @cronus-ui/ui      (Button, Input, Dialog, Table, …)
+  tokens/     @cronus-ui/tokens
+  theme/      aurora / neutral / midnight / sunset / emerald
+  ui/         173 famílias (barrel inteiro do cronus-ui)
+  blocks/     307 blocks do registry
+  stack/      scaffold nativo
+  cli/        → bin/cronus.exe (não npm)
+  mcp/        intenção, sem Node
+  ai-kit/     doutrina
 apps/
-  dashboard/  ← dashboard.cooud.com
-compiler/     ← cronus-kernel (clone no setup)
+  dashboard/  dashboard.cooud.com
+compiler/     cronus-kernel (clone no setup)
 ```
-
-Não há `packages/cli` npm. O CLI é `cronus` (Rust).
 
 ## Cooud Dashboard
 

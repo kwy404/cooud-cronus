@@ -1,0 +1,6 @@
+## Block RichTextEditor
+## source: registry/rich-text-editor.json
+
+component RichTextEditorBlock layout:stack style:rich-text-editor {
+  label "RichTextEditor"
+}

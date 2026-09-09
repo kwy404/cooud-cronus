@@ -1,0 +1,6 @@
+## Block DropdownMenu
+## source: registry/dropdown-menu.json
+
+component DropdownMenuBlock layout:stack style:dropdown-menu {
+  label "DropdownMenu"
+}

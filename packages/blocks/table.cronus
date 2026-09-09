@@ -1,0 +1,6 @@
+## Block Table
+## source: registry/table.json
+
+component TableBlock layout:stack style:table {
+  label "Table"
+}

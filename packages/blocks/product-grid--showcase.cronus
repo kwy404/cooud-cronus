@@ -1,0 +1,6 @@
+## Block ProductGridShowcase
+## source: registry/product-grid--showcase.json
+
+component ProductGridShowcaseBlock layout:stack style:product-grid--showcase {
+  label "ProductGridShowcase"
+}

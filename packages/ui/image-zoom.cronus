@@ -1,0 +1,6 @@
+## ImageZoom
+## source: packages/ui/src/components/image-zoom.tsx
+
+component ImageZoom layout:inline style:image-zoom {
+  label "ImageZoom"
+}

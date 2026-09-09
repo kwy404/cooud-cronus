@@ -1,0 +1,6 @@
+## Heatmap
+## source: packages/ui/src/components/heatmap.tsx
+
+component Heatmap layout:inline style:heatmap {
+  label "Heatmap"
+}

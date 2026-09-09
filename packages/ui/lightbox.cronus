@@ -1,0 +1,6 @@
+## Lightbox
+## source: packages/ui/src/components/lightbox.tsx
+
+component Lightbox layout:inline style:lightbox {
+  label "Lightbox"
+}

@@ -1,0 +1,6 @@
+## Block FeedbackForm
+## source: registry/feedback-form.json
+
+component FeedbackFormBlock layout:stack style:feedback-form {
+  label "FeedbackForm"
+}

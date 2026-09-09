@@ -1,0 +1,6 @@
+## Block SuccessState
+## source: registry/success-state.json
+
+component SuccessStateBlock layout:stack style:success-state {
+  label "SuccessState"
+}

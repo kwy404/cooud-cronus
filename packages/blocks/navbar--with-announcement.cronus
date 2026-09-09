@@ -1,0 +1,6 @@
+## Block NavbarWithAnnouncement
+## source: registry/navbar--with-announcement.json
+
+component NavbarWithAnnouncementBlock layout:stack style:navbar--with-announcement {
+  label "NavbarWithAnnouncement"
+}

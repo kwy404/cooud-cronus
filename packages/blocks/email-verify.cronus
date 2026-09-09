@@ -1,0 +1,6 @@
+## Block EmailVerify
+## source: registry/email-verify.json
+
+component EmailVerifyBlock layout:stack style:email-verify {
+  label "EmailVerify"
+}

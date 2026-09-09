@@ -1,0 +1,6 @@
+## Block EmptyStateError
+## source: registry/empty-state--error.json
+
+component EmptyStateErrorBlock layout:stack style:empty-state--error {
+  label "EmptyStateError"
+}

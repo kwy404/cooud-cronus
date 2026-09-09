@@ -1,0 +1,6 @@
+## Block ToastStack
+## source: registry/toast-stack.json
+
+component ToastStackBlock layout:stack style:toast-stack {
+  label "ToastStack"
+}

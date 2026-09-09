@@ -1,0 +1,6 @@
+## Block SessionsTable
+## source: registry/sessions--table.json
+
+component SessionsTableBlock layout:stack style:sessions--table {
+  label "SessionsTable"
+}

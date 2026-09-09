@@ -1,0 +1,6 @@
+## Block Footer
+## source: registry/footer.json
+
+component FooterBlock layout:stack style:footer {
+  label "Footer"
+}

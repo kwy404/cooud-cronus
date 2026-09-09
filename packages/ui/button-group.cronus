@@ -1,0 +1,6 @@
+## ButtonGroup
+## source: packages/ui/src/components/button-group.tsx
+
+component ButtonGroup layout:inline style:button-group {
+  label "ButtonGroup"
+}

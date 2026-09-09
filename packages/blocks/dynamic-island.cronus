@@ -1,0 +1,6 @@
+## Block DynamicIsland
+## source: registry/dynamic-island.json
+
+component DynamicIslandBlock layout:stack style:dynamic-island {
+  label "DynamicIsland"
+}

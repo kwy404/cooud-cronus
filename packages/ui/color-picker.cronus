@@ -1,0 +1,6 @@
+## ColorPicker
+## source: packages/ui/src/components/color-picker.tsx
+
+component ColorPicker layout:inline style:color-picker {
+  label "ColorPicker"
+}

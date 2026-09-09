@@ -1,0 +1,6 @@
+## Block StarBorder
+## source: registry/star-border.json
+
+component StarBorderBlock layout:stack style:star-border {
+  label "StarBorder"
+}

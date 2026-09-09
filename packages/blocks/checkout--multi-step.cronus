@@ -1,0 +1,6 @@
+## Block CheckoutMultiStep
+## source: registry/checkout--multi-step.json
+
+component CheckoutMultiStepBlock layout:stack style:checkout--multi-step {
+  label "CheckoutMultiStep"
+}

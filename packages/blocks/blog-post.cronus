@@ -1,0 +1,6 @@
+## Block BlogPost
+## source: registry/blog-post.json
+
+component BlogPostBlock layout:stack style:blog-post {
+  label "BlogPost"
+}

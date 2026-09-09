@@ -1,0 +1,6 @@
+## Sidebar
+## source: packages/ui/src/components/sidebar.tsx
+
+component Sidebar layout:inline style:sidebar {
+  label "Sidebar"
+}

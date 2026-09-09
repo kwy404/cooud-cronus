@@ -1,0 +1,6 @@
+## Block Analytics
+## source: registry/analytics.json
+
+component AnalyticsBlock layout:stack style:analytics {
+  label "Analytics"
+}

@@ -1,0 +1,6 @@
+## Block MotionPresets
+## source: registry/motion-presets.json
+
+component MotionPresetsBlock layout:stack style:motion-presets {
+  label "MotionPresets"
+}

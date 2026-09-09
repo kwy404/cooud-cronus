@@ -1,0 +1,6 @@
+## Block ClickSpark
+## source: registry/click-spark.json
+
+component ClickSparkBlock layout:stack style:click-spark {
+  label "ClickSpark"
+}

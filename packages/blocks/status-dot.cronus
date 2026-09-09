@@ -1,0 +1,6 @@
+## Block StatusDot
+## source: registry/status-dot.json
+
+component StatusDotBlock layout:stack style:status-dot {
+  label "StatusDot"
+}

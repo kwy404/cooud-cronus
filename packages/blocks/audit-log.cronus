@@ -1,0 +1,6 @@
+## Block AuditLog
+## source: registry/audit-log.json
+
+component AuditLogBlock layout:stack style:audit-log {
+  label "AuditLog"
+}

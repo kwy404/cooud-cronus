@@ -1,0 +1,6 @@
+## FunnelChart
+## source: packages/ui/src/components/funnel-chart.tsx
+
+component FunnelChart layout:inline style:funnel-chart {
+  label "FunnelChart"
+}

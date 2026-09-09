@@ -1,0 +1,6 @@
+## Particles
+## source: packages/ui/src/components/particles.tsx
+
+component Particles layout:inline style:particles {
+  label "Particles"
+}

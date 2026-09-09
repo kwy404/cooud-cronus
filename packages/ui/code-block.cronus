@@ -1,0 +1,6 @@
+## CodeBlock
+## source: packages/ui/src/components/code-block.tsx
+
+component CodeBlock layout:inline style:code-block {
+  label "CodeBlock"
+}

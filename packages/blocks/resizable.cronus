@@ -1,0 +1,6 @@
+## Block Resizable
+## source: registry/resizable.json
+
+component ResizableBlock layout:stack style:resizable {
+  label "Resizable"
+}

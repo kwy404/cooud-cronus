@@ -1,0 +1,6 @@
+## Block ColorPicker
+## source: registry/color-picker.json
+
+component ColorPickerBlock layout:stack style:color-picker {
+  label "ColorPicker"
+}

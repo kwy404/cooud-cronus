@@ -1,0 +1,6 @@
+## Block AvatarGroup
+## source: registry/avatar-group.json
+
+component AvatarGroupBlock layout:stack style:avatar-group {
+  label "AvatarGroup"
+}

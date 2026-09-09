@@ -1,0 +1,6 @@
+## Block AiResponse
+## source: registry/ai-response.json
+
+component AiResponseBlock layout:stack style:ai-response {
+  label "AiResponse"
+}

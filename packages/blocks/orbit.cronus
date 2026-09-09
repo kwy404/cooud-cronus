@@ -1,0 +1,6 @@
+## Block Orbit
+## source: registry/orbit.json
+
+component OrbitBlock layout:stack style:orbit {
+  label "Orbit"
+}

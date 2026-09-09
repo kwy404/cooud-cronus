@@ -1,0 +1,6 @@
+## Block ApiKeysCreate
+## source: registry/api-keys--create.json
+
+component ApiKeysCreateBlock layout:stack style:api-keys--create {
+  label "ApiKeysCreate"
+}

@@ -1,0 +1,6 @@
+## Block Breadcrumb
+## source: registry/breadcrumb.json
+
+component BreadcrumbBlock layout:stack style:breadcrumb {
+  label "Breadcrumb"
+}

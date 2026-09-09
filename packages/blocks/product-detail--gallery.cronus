@@ -1,0 +1,6 @@
+## Block ProductDetailGallery
+## source: registry/product-detail--gallery.json
+
+component ProductDetailGalleryBlock layout:stack style:product-detail--gallery {
+  label "ProductDetailGallery"
+}

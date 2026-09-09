@@ -1,0 +1,6 @@
+## Block About
+## source: registry/about.json
+
+component AboutBlock layout:stack style:about {
+  label "About"
+}

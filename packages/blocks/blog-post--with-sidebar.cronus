@@ -1,0 +1,6 @@
+## Block BlogPostWithSidebar
+## source: registry/blog-post--with-sidebar.json
+
+component BlogPostWithSidebarBlock layout:stack style:blog-post--with-sidebar {
+  label "BlogPostWithSidebar"
+}

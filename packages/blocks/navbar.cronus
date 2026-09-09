@@ -1,0 +1,6 @@
+## Block Navbar
+## source: registry/navbar.json
+
+component NavbarBlock layout:stack style:navbar {
+  label "Navbar"
+}

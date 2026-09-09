@@ -1,0 +1,6 @@
+## Block Frame
+## source: registry/frame.json
+
+component FrameBlock layout:stack style:frame {
+  label "Frame"
+}

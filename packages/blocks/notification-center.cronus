@@ -1,0 +1,6 @@
+## Block NotificationCenter
+## source: registry/notification-center.json
+
+component NotificationCenterBlock layout:stack style:notification-center {
+  label "NotificationCenter"
+}

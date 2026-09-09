@@ -1,0 +1,6 @@
+## Block Waitlist
+## source: registry/waitlist.json
+
+component WaitlistBlock layout:stack style:waitlist {
+  label "Waitlist"
+}

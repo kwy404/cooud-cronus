@@ -1,0 +1,6 @@
+## Block PaymentMethodAddCard
+## source: registry/payment-method--add-card.json
+
+component PaymentMethodAddCardBlock layout:stack style:payment-method--add-card {
+  label "PaymentMethodAddCard"
+}

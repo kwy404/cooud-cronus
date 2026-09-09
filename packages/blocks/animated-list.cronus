@@ -1,0 +1,6 @@
+## Block AnimatedList
+## source: registry/animated-list.json
+
+component AnimatedListBlock layout:stack style:animated-list {
+  label "AnimatedList"
+}

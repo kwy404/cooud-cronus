@@ -1,0 +1,6 @@
+## Dock
+## source: packages/ui/src/components/dock.tsx
+
+component Dock layout:inline style:dock {
+  label "Dock"
+}

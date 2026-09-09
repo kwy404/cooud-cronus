@@ -1,0 +1,6 @@
+## Block Dock
+## source: registry/dock.json
+
+component DockBlock layout:stack style:dock {
+  label "Dock"
+}

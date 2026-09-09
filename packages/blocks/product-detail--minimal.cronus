@@ -1,0 +1,6 @@
+## Block ProductDetailMinimal
+## source: registry/product-detail--minimal.json
+
+component ProductDetailMinimalBlock layout:stack style:product-detail--minimal {
+  label "ProductDetailMinimal"
+}

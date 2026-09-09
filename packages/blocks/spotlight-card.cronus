@@ -1,0 +1,6 @@
+## Block SpotlightCard
+## source: registry/spotlight-card.json
+
+component SpotlightCardBlock layout:stack style:spotlight-card {
+  label "SpotlightCard"
+}

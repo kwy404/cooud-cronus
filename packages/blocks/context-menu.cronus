@@ -1,0 +1,6 @@
+## Block ContextMenu
+## source: registry/context-menu.json
+
+component ContextMenuBlock layout:stack style:context-menu {
+  label "ContextMenu"
+}

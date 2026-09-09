@@ -1,0 +1,6 @@
+## AvatarGroup
+## source: packages/ui/src/components/avatar-group.tsx
+
+component AvatarGroup layout:inline style:avatar-group {
+  label "AvatarGroup"
+}

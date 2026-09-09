@@ -1,0 +1,6 @@
+## Block Changelog
+## source: registry/changelog.json
+
+component ChangelogBlock layout:stack style:changelog {
+  label "Changelog"
+}

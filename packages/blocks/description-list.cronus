@@ -1,0 +1,6 @@
+## Block DescriptionList
+## source: registry/description-list.json
+
+component DescriptionListBlock layout:stack style:description-list {
+  label "DescriptionList"
+}

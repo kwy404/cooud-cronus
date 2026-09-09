@@ -1,0 +1,6 @@
+## ProgressiveBlur
+## source: packages/ui/src/components/progressive-blur.tsx
+
+component ProgressiveBlur layout:inline style:progressive-blur {
+  label "ProgressiveBlur"
+}

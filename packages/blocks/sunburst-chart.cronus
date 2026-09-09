@@ -1,0 +1,6 @@
+## Block SunburstChart
+## source: registry/sunburst-chart.json
+
+component SunburstChartBlock layout:stack style:sunburst-chart {
+  label "SunburstChart"
+}

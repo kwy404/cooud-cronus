@@ -1,0 +1,6 @@
+## ChoroplethChart
+## source: packages/ui/src/components/choropleth-chart.tsx
+
+component ChoroplethChart layout:inline style:choropleth-chart {
+  label "ChoroplethChart"
+}

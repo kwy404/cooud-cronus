@@ -1,0 +1,6 @@
+## Block Command
+## source: registry/command.json
+
+component CommandBlock layout:stack style:command {
+  label "Command"
+}

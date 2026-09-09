@@ -1,0 +1,6 @@
+## Block GlareHover
+## source: registry/glare-hover.json
+
+component GlareHoverBlock layout:stack style:glare-hover {
+  label "GlareHover"
+}

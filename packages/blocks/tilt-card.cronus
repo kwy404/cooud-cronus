@@ -1,0 +1,6 @@
+## Block TiltCard
+## source: registry/tilt-card.json
+
+component TiltCardBlock layout:stack style:tilt-card {
+  label "TiltCard"
+}
