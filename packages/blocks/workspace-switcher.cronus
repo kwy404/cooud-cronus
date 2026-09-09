@@ -1,0 +1,6 @@
+## Block WorkspaceSwitcher
+## source: registry/workspace-switcher.json
+
+component WorkspaceSwitcherBlock layout:stack style:workspace-switcher {
+  label "WorkspaceSwitcher"
+}

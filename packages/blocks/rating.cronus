@@ -1,0 +1,6 @@
+## Block Rating
+## source: registry/rating.json
+
+component RatingBlock layout:stack style:rating {
+  label "Rating"
+}

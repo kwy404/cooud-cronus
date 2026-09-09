@@ -1,0 +1,6 @@
+## Highlighter
+## source: packages/ui/src/components/highlighter.tsx
+
+component Highlighter layout:inline style:highlighter {
+  label "Highlighter"
+}

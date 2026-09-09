@@ -1,0 +1,6 @@
+## Block NavigationMenu
+## source: registry/navigation-menu.json
+
+component NavigationMenuBlock layout:stack style:navigation-menu {
+  label "NavigationMenu"
+}

@@ -1,0 +1,6 @@
+## Block OrderHistoryCards
+## source: registry/order-history--cards.json
+
+component OrderHistoryCardsBlock layout:stack style:order-history--cards {
+  label "OrderHistoryCards"
+}

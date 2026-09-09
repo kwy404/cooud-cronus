@@ -1,0 +1,6 @@
+## Block EmailReceipt
+## source: registry/email-receipt.json
+
+component EmailReceiptBlock layout:stack style:email-receipt {
+  label "EmailReceipt"
+}

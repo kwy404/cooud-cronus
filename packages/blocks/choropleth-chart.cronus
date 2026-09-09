@@ -1,0 +1,6 @@
+## Block ChoroplethChart
+## source: registry/choropleth-chart.json
+
+component ChoroplethChartBlock layout:stack style:choropleth-chart {
+  label "ChoroplethChart"
+}

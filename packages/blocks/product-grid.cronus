@@ -1,0 +1,6 @@
+## Block ProductGrid
+## source: registry/product-grid.json
+
+component ProductGridBlock layout:stack style:product-grid {
+  label "ProductGrid"
+}

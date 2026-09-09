@@ -1,0 +1,6 @@
+## Block Dialog
+## source: registry/dialog.json
+
+component DialogBlock layout:stack style:dialog {
+  label "Dialog"
+}

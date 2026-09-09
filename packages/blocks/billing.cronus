@@ -1,0 +1,6 @@
+## Block Billing
+## source: registry/billing.json
+
+component BillingBlock layout:stack style:billing {
+  label "Billing"
+}

@@ -1,0 +1,6 @@
+## Block StatsPipelineFunnel
+## source: registry/stats--pipeline-funnel.json
+
+component StatsPipelineFunnelBlock layout:stack style:stats--pipeline-funnel {
+  label "StatsPipelineFunnel"
+}

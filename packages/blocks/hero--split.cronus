@@ -1,0 +1,6 @@
+## Block HeroSplit
+## source: registry/hero--split.json
+
+component HeroSplitBlock layout:stack style:hero--split {
+  label "HeroSplit"
+}

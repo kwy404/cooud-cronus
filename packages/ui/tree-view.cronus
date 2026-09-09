@@ -1,0 +1,6 @@
+## TreeView
+## source: packages/ui/src/components/tree-view.tsx
+
+component TreeView layout:inline style:tree-view {
+  label "TreeView"
+}

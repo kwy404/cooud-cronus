@@ -1,0 +1,6 @@
+## GlareHover
+## source: packages/ui/src/components/glare-hover.tsx
+
+component GlareHover layout:inline style:glare-hover {
+  label "GlareHover"
+}

@@ -1,0 +1,6 @@
+## Block FeatureGrid
+## source: registry/feature-grid.json
+
+component FeatureGridBlock layout:stack style:feature-grid {
+  label "FeatureGrid"
+}

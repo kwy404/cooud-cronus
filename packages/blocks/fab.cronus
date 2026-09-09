@@ -1,0 +1,6 @@
+## Block Fab
+## source: registry/fab.json
+
+component FabBlock layout:stack style:fab {
+  label "Fab"
+}

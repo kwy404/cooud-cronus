@@ -1,0 +1,6 @@
+## Block Heatmap
+## source: registry/heatmap.json
+
+component HeatmapBlock layout:stack style:heatmap {
+  label "Heatmap"
+}

@@ -1,0 +1,6 @@
+## Block OrderTrackingDelayed
+## source: registry/order-tracking--delayed.json
+
+component OrderTrackingDelayedBlock layout:stack style:order-tracking--delayed {
+  label "OrderTrackingDelayed"
+}

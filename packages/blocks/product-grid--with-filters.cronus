@@ -1,0 +1,6 @@
+## Block ProductGridWithFilters
+## source: registry/product-grid--with-filters.json
+
+component ProductGridWithFiltersBlock layout:stack style:product-grid--with-filters {
+  label "ProductGridWithFilters"
+}

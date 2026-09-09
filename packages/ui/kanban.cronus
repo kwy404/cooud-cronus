@@ -1,0 +1,6 @@
+## Kanban
+## source: packages/ui/src/components/kanban.tsx
+
+component Kanban layout:inline style:kanban {
+  label "Kanban"
+}

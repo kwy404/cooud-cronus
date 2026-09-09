@@ -1,0 +1,6 @@
+## Block Sheet
+## source: registry/sheet.json
+
+component SheetBlock layout:stack style:sheet {
+  label "Sheet"
+}

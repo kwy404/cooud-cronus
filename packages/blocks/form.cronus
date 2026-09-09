@@ -1,0 +1,6 @@
+## Block Form
+## source: registry/form.json
+
+component FormBlock layout:stack style:form {
+  label "Form"
+}

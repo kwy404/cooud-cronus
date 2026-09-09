@@ -1,0 +1,6 @@
+## Block CtaSplitVisual
+## source: registry/cta--split-visual.json
+
+component CtaSplitVisualBlock layout:stack style:cta--split-visual {
+  label "CtaSplitVisual"
+}

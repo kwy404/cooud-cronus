@@ -1,0 +1,6 @@
+## Marquee
+## source: packages/ui/src/components/marquee.tsx
+
+component Marquee layout:inline style:marquee {
+  label "Marquee"
+}

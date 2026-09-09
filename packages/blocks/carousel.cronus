@@ -1,0 +1,6 @@
+## Block Carousel
+## source: registry/carousel.json
+
+component CarouselBlock layout:stack style:carousel {
+  label "Carousel"
+}

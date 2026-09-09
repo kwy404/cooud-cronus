@@ -1,0 +1,6 @@
+## Block CartDrawer
+## source: registry/cart--drawer.json
+
+component CartDrawerBlock layout:stack style:cart--drawer {
+  label "CartDrawer"
+}

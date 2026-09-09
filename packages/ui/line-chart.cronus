@@ -1,0 +1,6 @@
+## LineChart
+## source: packages/ui/src/components/line-chart.tsx
+
+component LineChart layout:inline style:line-chart {
+  label "LineChart"
+}

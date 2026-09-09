@@ -1,0 +1,6 @@
+## Block Shimmer
+## source: registry/shimmer.json
+
+component ShimmerBlock layout:stack style:shimmer {
+  label "Shimmer"
+}

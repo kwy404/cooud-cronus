@@ -1,0 +1,6 @@
+## Sonner
+## source: packages/ui/src/components/sonner.tsx
+
+component Sonner layout:inline style:sonner {
+  label "Sonner"
+}

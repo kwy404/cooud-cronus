@@ -1,0 +1,6 @@
+## WorkspaceSwitcher
+## source: packages/ui/src/components/workspace-switcher.tsx
+
+component WorkspaceSwitcher layout:inline style:workspace-switcher {
+  label "WorkspaceSwitcher"
+}

@@ -1,0 +1,6 @@
+## PillNav
+## source: packages/ui/src/components/pill-nav.tsx
+
+component PillNav layout:inline style:pill-nav {
+  label "PillNav"
+}

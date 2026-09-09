@@ -1,0 +1,6 @@
+## SignaturePad
+## source: packages/ui/src/components/signature-pad.tsx
+
+component SignaturePad layout:inline style:signature-pad {
+  label "SignaturePad"
+}

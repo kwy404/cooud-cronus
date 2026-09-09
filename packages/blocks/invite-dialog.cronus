@@ -1,0 +1,6 @@
+## Block InviteDialog
+## source: registry/invite-dialog.json
+
+component InviteDialogBlock layout:stack style:invite-dialog {
+  label "InviteDialog"
+}

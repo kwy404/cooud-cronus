@@ -1,0 +1,6 @@
+## Block FeatureMatrix
+## source: registry/feature-matrix.json
+
+component FeatureMatrixBlock layout:stack style:feature-matrix {
+  label "FeatureMatrix"
+}

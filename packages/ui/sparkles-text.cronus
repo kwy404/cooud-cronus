@@ -1,0 +1,6 @@
+## SparklesText
+## source: packages/ui/src/components/sparkles-text.tsx
+
+component SparklesText layout:inline style:sparkles-text {
+  label "SparklesText"
+}

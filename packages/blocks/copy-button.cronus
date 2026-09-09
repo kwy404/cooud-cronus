@@ -1,0 +1,6 @@
+## Block CopyButton
+## source: registry/copy-button.json
+
+component CopyButtonBlock layout:stack style:copy-button {
+  label "CopyButton"
+}

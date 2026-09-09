@@ -1,0 +1,6 @@
+## ScrambleText
+## source: packages/ui/src/components/scramble-text.tsx
+
+component ScrambleText layout:inline style:scramble-text {
+  label "ScrambleText"
+}

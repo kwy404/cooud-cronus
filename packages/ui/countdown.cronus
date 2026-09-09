@@ -1,0 +1,6 @@
+## Countdown
+## source: packages/ui/src/components/countdown.tsx
+
+component Countdown layout:inline style:countdown {
+  label "Countdown"
+}

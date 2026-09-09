@@ -1,0 +1,6 @@
+## Block Ripple
+## source: registry/ripple.json
+
+component RippleBlock layout:stack style:ripple {
+  label "Ripple"
+}

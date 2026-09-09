@@ -1,0 +1,6 @@
+## Confetti
+## source: packages/ui/src/components/confetti.tsx
+
+component Confetti layout:inline style:confetti {
+  label "Confetti"
+}

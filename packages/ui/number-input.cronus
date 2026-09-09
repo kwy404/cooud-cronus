@@ -1,0 +1,6 @@
+## NumberInput
+## source: packages/ui/src/components/number-input.tsx
+
+component NumberInput layout:inline style:number-input {
+  label "NumberInput"
+}

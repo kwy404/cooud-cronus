@@ -1,0 +1,6 @@
+## AreaChart
+## source: packages/ui/src/components/area-chart.tsx
+
+component AreaChart layout:inline style:area-chart {
+  label "AreaChart"
+}

@@ -1,0 +1,6 @@
+## Block Dashboard
+## source: registry/dashboard.json
+
+component DashboardBlock layout:stack style:dashboard {
+  label "Dashboard"
+}

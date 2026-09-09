@@ -1,0 +1,6 @@
+## Block HeroCompact
+## source: registry/hero--compact.json
+
+component HeroCompactBlock layout:stack style:hero--compact {
+  label "HeroCompact"
+}

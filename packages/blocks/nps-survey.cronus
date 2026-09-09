@@ -1,0 +1,6 @@
+## Block NpsSurvey
+## source: registry/nps-survey.json
+
+component NpsSurveyBlock layout:stack style:nps-survey {
+  label "NpsSurvey"
+}

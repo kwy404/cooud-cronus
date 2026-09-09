@@ -1,0 +1,6 @@
+## RetroGrid
+## source: packages/ui/src/components/retro-grid.tsx
+
+component RetroGrid layout:inline style:retro-grid {
+  label "RetroGrid"
+}

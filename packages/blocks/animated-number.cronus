@@ -1,0 +1,6 @@
+## Block AnimatedNumber
+## source: registry/animated-number.json
+
+component AnimatedNumberBlock layout:stack style:animated-number {
+  label "AnimatedNumber"
+}

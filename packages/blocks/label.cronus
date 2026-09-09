@@ -1,0 +1,6 @@
+## Block Label
+## source: registry/label.json
+
+component LabelBlock layout:stack style:label {
+  label "Label"
+}

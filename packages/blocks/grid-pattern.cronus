@@ -1,0 +1,6 @@
+## Block GridPattern
+## source: registry/grid-pattern.json
+
+component GridPatternBlock layout:stack style:grid-pattern {
+  label "GridPattern"
+}

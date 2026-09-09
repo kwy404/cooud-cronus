@@ -1,0 +1,6 @@
+## Block Settings
+## source: registry/settings.json
+
+component SettingsBlock layout:stack style:settings {
+  label "Settings"
+}

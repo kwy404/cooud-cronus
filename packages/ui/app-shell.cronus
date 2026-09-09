@@ -1,0 +1,6 @@
+## AppShell
+## source: packages/ui/src/components/app-shell.tsx
+
+component AppShell layout:inline style:app-shell {
+  label "AppShell"
+}

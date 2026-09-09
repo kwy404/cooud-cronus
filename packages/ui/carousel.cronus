@@ -1,0 +1,6 @@
+## Carousel
+## source: packages/ui/src/components/carousel.tsx
+
+component Carousel layout:inline style:carousel {
+  label "Carousel"
+}

@@ -1,0 +1,6 @@
+## Block Sonner
+## source: registry/sonner.json
+
+component SonnerBlock layout:stack style:sonner {
+  label "Sonner"
+}

@@ -1,0 +1,6 @@
+## Block ContactForm
+## source: registry/contact-form.json
+
+component ContactFormBlock layout:stack style:contact-form {
+  label "ContactForm"
+}

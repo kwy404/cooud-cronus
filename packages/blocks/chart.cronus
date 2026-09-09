@@ -1,0 +1,6 @@
+## Block Chart
+## source: registry/chart.json
+
+component ChartBlock layout:stack style:chart {
+  label "Chart"
+}

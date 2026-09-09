@@ -1,0 +1,6 @@
+## Block FooterMega
+## source: registry/footer--mega.json
+
+component FooterMegaBlock layout:stack style:footer--mega {
+  label "FooterMega"
+}

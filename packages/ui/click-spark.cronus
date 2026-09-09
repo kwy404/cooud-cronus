@@ -1,0 +1,6 @@
+## ClickSpark
+## source: packages/ui/src/components/click-spark.tsx
+
+component ClickSpark layout:inline style:click-spark {
+  label "ClickSpark"
+}

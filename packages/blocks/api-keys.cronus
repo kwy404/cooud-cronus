@@ -1,0 +1,6 @@
+## Block ApiKeys
+## source: registry/api-keys.json
+
+component ApiKeysBlock layout:stack style:api-keys {
+  label "ApiKeys"
+}

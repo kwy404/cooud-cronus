@@ -1,0 +1,6 @@
+## LightRays
+## source: packages/ui/src/components/light-rays.tsx
+
+component LightRays layout:inline style:light-rays {
+  label "LightRays"
+}

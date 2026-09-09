@@ -1,0 +1,6 @@
+## Block StatsCompactSummary
+## source: registry/stats--compact-summary.json
+
+component StatsCompactSummaryBlock layout:stack style:stats--compact-summary {
+  label "StatsCompactSummary"
+}

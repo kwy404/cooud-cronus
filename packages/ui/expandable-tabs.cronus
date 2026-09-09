@@ -1,0 +1,6 @@
+## ExpandableTabs
+## source: packages/ui/src/components/expandable-tabs.tsx
+
+component ExpandableTabs layout:inline style:expandable-tabs {
+  label "ExpandableTabs"
+}

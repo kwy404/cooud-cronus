@@ -1,0 +1,6 @@
+## Block Lightbox
+## source: registry/lightbox.json
+
+component LightboxBlock layout:stack style:lightbox {
+  label "Lightbox"
+}

@@ -1,0 +1,6 @@
+## Block Field
+## source: registry/field.json
+
+component FieldBlock layout:stack style:field {
+  label "Field"
+}

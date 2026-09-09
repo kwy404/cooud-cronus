@@ -1,0 +1,6 @@
+## Block PageHeaderWithTabs
+## source: registry/page-header--with-tabs.json
+
+component PageHeaderWithTabsBlock layout:stack style:page-header--with-tabs {
+  label "PageHeaderWithTabs"
+}

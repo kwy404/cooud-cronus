@@ -1,0 +1,6 @@
+## Block Particles
+## source: registry/particles.json
+
+component ParticlesBlock layout:stack style:particles {
+  label "Particles"
+}

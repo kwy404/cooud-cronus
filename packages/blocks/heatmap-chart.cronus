@@ -1,0 +1,6 @@
+## Block HeatmapChart
+## source: registry/heatmap-chart.json
+
+component HeatmapChartBlock layout:stack style:heatmap-chart {
+  label "HeatmapChart"
+}

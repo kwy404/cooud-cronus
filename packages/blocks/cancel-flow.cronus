@@ -1,0 +1,6 @@
+## Block CancelFlow
+## source: registry/cancel-flow.json
+
+component CancelFlowBlock layout:stack style:cancel-flow {
+  label "CancelFlow"
+}

@@ -1,0 +1,6 @@
+## AspectRatio
+## source: packages/ui/src/components/aspect-ratio.tsx
+
+component AspectRatio layout:inline style:aspect-ratio {
+  label "AspectRatio"
+}

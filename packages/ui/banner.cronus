@@ -1,0 +1,6 @@
+## Banner
+## source: packages/ui/src/components/banner.tsx
+
+component Banner layout:inline style:banner {
+  label "Banner"
+}

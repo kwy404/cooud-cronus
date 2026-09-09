@@ -1,0 +1,6 @@
+## Terminal
+## source: packages/ui/src/components/terminal.tsx
+
+component Terminal layout:inline style:terminal {
+  label "Terminal"
+}

@@ -1,0 +1,6 @@
+## Block HoverCard
+## source: registry/hover-card.json
+
+component HoverCardBlock layout:stack style:hover-card {
+  label "HoverCard"
+}

@@ -1,0 +1,6 @@
+## CardStack
+## source: packages/ui/src/components/card-stack.tsx
+
+component CardStack layout:inline style:card-stack {
+  label "CardStack"
+}

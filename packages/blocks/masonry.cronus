@@ -1,0 +1,6 @@
+## Block Masonry
+## source: registry/masonry.json
+
+component MasonryBlock layout:stack style:masonry {
+  label "Masonry"
+}

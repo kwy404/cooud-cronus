@@ -1,0 +1,6 @@
+## Block UsageDashboardPeriod
+## source: registry/usage-dashboard--period.json
+
+component UsageDashboardPeriodBlock layout:stack style:usage-dashboard--period {
+  label "UsageDashboardPeriod"
+}

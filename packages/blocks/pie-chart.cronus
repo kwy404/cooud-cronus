@@ -1,0 +1,6 @@
+## Block PieChart
+## source: registry/pie-chart.json
+
+component PieChartBlock layout:stack style:pie-chart {
+  label "PieChart"
+}

@@ -1,0 +1,6 @@
+## Block CandlestickChart
+## source: registry/candlestick-chart.json
+
+component CandlestickChartBlock layout:stack style:candlestick-chart {
+  label "CandlestickChart"
+}

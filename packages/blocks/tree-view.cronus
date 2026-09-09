@@ -1,0 +1,6 @@
+## Block TreeView
+## source: registry/tree-view.json
+
+component TreeViewBlock layout:stack style:tree-view {
+  label "TreeView"
+}

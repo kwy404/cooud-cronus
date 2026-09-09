@@ -1,0 +1,6 @@
+## Block OrderTracking
+## source: registry/order-tracking.json
+
+component OrderTrackingBlock layout:stack style:order-tracking {
+  label "OrderTracking"
+}

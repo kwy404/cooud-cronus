@@ -1,0 +1,6 @@
+## ConfirmationDialog
+## source: packages/ui/src/components/confirmation-dialog.tsx
+
+component ConfirmationDialog layout:inline style:confirmation-dialog {
+  label "ConfirmationDialog"
+}

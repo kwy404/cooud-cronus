@@ -1,0 +1,6 @@
+## Block JsonViewer
+## source: registry/json-viewer.json
+
+component JsonViewerBlock layout:stack style:json-viewer {
+  label "JsonViewer"
+}

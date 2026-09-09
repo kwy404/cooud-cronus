@@ -1,0 +1,6 @@
+## ContextMenu
+## source: packages/ui/src/components/context-menu.tsx
+
+component ContextMenu layout:inline style:context-menu {
+  label "ContextMenu"
+}

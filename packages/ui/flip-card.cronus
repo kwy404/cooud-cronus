@@ -1,0 +1,6 @@
+## FlipCard
+## source: packages/ui/src/components/flip-card.tsx
+
+component FlipCard layout:inline style:flip-card {
+  label "FlipCard"
+}

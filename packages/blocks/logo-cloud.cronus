@@ -1,0 +1,6 @@
+## Block LogoCloud
+## source: registry/logo-cloud.json
+
+component LogoCloudBlock layout:stack style:logo-cloud {
+  label "LogoCloud"
+}

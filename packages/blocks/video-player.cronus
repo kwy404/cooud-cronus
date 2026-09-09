@@ -1,0 +1,6 @@
+## Block VideoPlayer
+## source: registry/video-player.json
+
+component VideoPlayerBlock layout:stack style:video-player {
+  label "VideoPlayer"
+}

@@ -1,0 +1,6 @@
+## NavigationMenu
+## source: packages/ui/src/components/navigation-menu.tsx
+
+component NavigationMenu layout:inline style:navigation-menu {
+  label "NavigationMenu"
+}

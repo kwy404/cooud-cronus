@@ -1,0 +1,6 @@
+## Stepper
+## source: packages/ui/src/components/stepper.tsx
+
+component Stepper layout:inline style:stepper {
+  label "Stepper"
+}

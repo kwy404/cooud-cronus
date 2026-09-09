@@ -1,0 +1,6 @@
+## Block AreaChart
+## source: registry/area-chart.json
+
+component AreaChartBlock layout:stack style:area-chart {
+  label "AreaChart"
+}

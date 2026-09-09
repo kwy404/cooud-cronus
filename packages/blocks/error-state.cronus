@@ -1,0 +1,6 @@
+## Block ErrorState
+## source: registry/error-state.json
+
+component ErrorStateBlock layout:stack style:error-state {
+  label "ErrorState"
+}

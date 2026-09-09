@@ -1,0 +1,6 @@
+## Block RadarChart
+## source: registry/radar-chart.json
+
+component RadarChartBlock layout:stack style:radar-chart {
+  label "RadarChart"
+}

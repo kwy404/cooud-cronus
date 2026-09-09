@@ -1,0 +1,6 @@
+## Block ConfirmationDialog
+## source: registry/confirmation-dialog.json
+
+component ConfirmationDialogBlock layout:stack style:confirmation-dialog {
+  label "ConfirmationDialog"
+}

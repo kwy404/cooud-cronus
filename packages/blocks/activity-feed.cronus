@@ -1,0 +1,6 @@
+## Block ActivityFeed
+## source: registry/activity-feed.json
+
+component ActivityFeedBlock layout:stack style:activity-feed {
+  label "ActivityFeed"
+}

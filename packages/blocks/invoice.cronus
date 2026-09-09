@@ -1,0 +1,6 @@
+## Block Invoice
+## source: registry/invoice.json
+
+component InvoiceBlock layout:stack style:invoice {
+  label "Invoice"
+}

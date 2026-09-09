@@ -1,0 +1,6 @@
+## Fab
+## source: packages/ui/src/components/fab.tsx
+
+component Fab layout:inline style:fab {
+  label "Fab"
+}

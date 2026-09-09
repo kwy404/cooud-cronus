@@ -1,0 +1,6 @@
+## Block CtaBanner
+## source: registry/cta--banner.json
+
+component CtaBannerBlock layout:stack style:cta--banner {
+  label "CtaBanner"
+}

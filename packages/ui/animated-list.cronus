@@ -1,0 +1,6 @@
+## AnimatedList
+## source: packages/ui/src/components/animated-list.tsx
+
+component AnimatedList layout:inline style:animated-list {
+  label "AnimatedList"
+}

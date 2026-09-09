@@ -1,0 +1,6 @@
+## Block ImageZoom
+## source: registry/image-zoom.json
+
+component ImageZoomBlock layout:stack style:image-zoom {
+  label "ImageZoom"
+}

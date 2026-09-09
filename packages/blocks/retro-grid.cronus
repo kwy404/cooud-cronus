@@ -1,0 +1,6 @@
+## Block RetroGrid
+## source: registry/retro-grid.json
+
+component RetroGridBlock layout:stack style:retro-grid {
+  label "RetroGrid"
+}

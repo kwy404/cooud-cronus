@@ -1,0 +1,6 @@
+## Block ScrollArea
+## source: registry/scroll-area.json
+
+component ScrollAreaBlock layout:stack style:scroll-area {
+  label "ScrollArea"
+}

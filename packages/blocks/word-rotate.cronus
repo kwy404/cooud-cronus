@@ -1,0 +1,6 @@
+## Block WordRotate
+## source: registry/word-rotate.json
+
+component WordRotateBlock layout:stack style:word-rotate {
+  label "WordRotate"
+}

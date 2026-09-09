@@ -1,0 +1,6 @@
+## Block HeroAtmosphere
+## source: registry/hero--atmosphere.json
+
+component HeroAtmosphereBlock layout:stack style:hero--atmosphere {
+  label "HeroAtmosphere"
+}

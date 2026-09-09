@@ -1,0 +1,6 @@
+## Block MorphingPopover
+## source: registry/morphing-popover.json
+
+component MorphingPopoverBlock layout:stack style:morphing-popover {
+  label "MorphingPopover"
+}

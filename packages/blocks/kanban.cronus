@@ -1,0 +1,6 @@
+## Block Kanban
+## source: registry/kanban.json
+
+component KanbanBlock layout:stack style:kanban {
+  label "Kanban"
+}

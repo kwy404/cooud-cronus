@@ -1,0 +1,6 @@
+## Block GradientText
+## source: registry/gradient-text.json
+
+component GradientTextBlock layout:stack style:gradient-text {
+  label "GradientText"
+}

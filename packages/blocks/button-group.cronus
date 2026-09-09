@@ -1,0 +1,6 @@
+## Block ButtonGroup
+## source: registry/button-group.json
+
+component ButtonGroupBlock layout:stack style:button-group {
+  label "ButtonGroup"
+}

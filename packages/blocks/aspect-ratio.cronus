@@ -1,0 +1,6 @@
+## Block AspectRatio
+## source: registry/aspect-ratio.json
+
+component AspectRatioBlock layout:stack style:aspect-ratio {
+  label "AspectRatio"
+}

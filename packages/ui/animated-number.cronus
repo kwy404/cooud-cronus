@@ -1,0 +1,6 @@
+## AnimatedNumber
+## source: packages/ui/src/components/animated-number.tsx
+
+component AnimatedNumber layout:inline style:animated-number {
+  label "AnimatedNumber"
+}

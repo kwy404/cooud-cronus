@@ -1,0 +1,6 @@
+## Block Testimonials
+## source: registry/testimonials.json
+
+component TestimonialsBlock layout:stack style:testimonials {
+  label "Testimonials"
+}

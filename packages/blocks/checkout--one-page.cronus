@@ -1,0 +1,6 @@
+## Block CheckoutOnePage
+## source: registry/checkout--one-page.json
+
+component CheckoutOnePageBlock layout:stack style:checkout--one-page {
+  label "CheckoutOnePage"
+}

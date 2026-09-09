@@ -1,0 +1,6 @@
+## Block MultiSelect
+## source: registry/multi-select.json
+
+component MultiSelectBlock layout:stack style:multi-select {
+  label "MultiSelect"
+}

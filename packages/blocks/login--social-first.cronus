@@ -1,0 +1,6 @@
+## Block LoginSocialFirst
+## source: registry/login--social-first.json
+
+component LoginSocialFirstBlock layout:stack style:login--social-first {
+  label "LoginSocialFirst"
+}

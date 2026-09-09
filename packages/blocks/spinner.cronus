@@ -1,0 +1,6 @@
+## Block Spinner
+## source: registry/spinner.json
+
+component SpinnerBlock layout:stack style:spinner {
+  label "Spinner"
+}

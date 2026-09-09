@@ -1,0 +1,6 @@
+## Block Terminal
+## source: registry/terminal.json
+
+component TerminalBlock layout:stack style:terminal {
+  label "Terminal"
+}

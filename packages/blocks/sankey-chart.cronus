@@ -1,0 +1,6 @@
+## Block SankeyChart
+## source: registry/sankey-chart.json
+
+component SankeyChartBlock layout:stack style:sankey-chart {
+  label "SankeyChart"
+}

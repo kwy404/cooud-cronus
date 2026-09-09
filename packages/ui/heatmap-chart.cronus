@@ -1,0 +1,6 @@
+## HeatmapChart
+## source: packages/ui/src/components/heatmap-chart.tsx
+
+component HeatmapChart layout:inline style:heatmap-chart {
+  label "HeatmapChart"
+}

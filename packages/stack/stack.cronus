@@ -1,0 +1,6 @@
+## @cooud-cronus/stack
+## Stack builder intent — generated apps run on cronus-kernel, not npm.
+
+app "Stack" {
+  port 5175
+}

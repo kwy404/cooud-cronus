@@ -1,0 +1,6 @@
+## Block CreditCardInput
+## source: registry/credit-card-input.json
+
+component CreditCardInputBlock layout:stack style:credit-card-input {
+  label "CreditCardInput"
+}

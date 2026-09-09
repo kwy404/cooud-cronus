@@ -1,0 +1,6 @@
+## Block Reveal
+## source: registry/reveal.json
+
+component RevealBlock layout:stack style:reveal {
+  label "Reveal"
+}

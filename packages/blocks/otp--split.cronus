@@ -1,0 +1,6 @@
+## Block OtpSplit
+## source: registry/otp--split.json
+
+component OtpSplitBlock layout:stack style:otp--split {
+  label "OtpSplit"
+}

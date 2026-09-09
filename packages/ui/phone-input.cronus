@@ -1,0 +1,6 @@
+## PhoneInput
+## source: packages/ui/src/components/phone-input.tsx
+
+component PhoneInput layout:inline style:phone-input {
+  label "PhoneInput"
+}

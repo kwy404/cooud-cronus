@@ -1,0 +1,6 @@
+## DateRangePicker
+## source: packages/ui/src/components/date-range-picker.tsx
+
+component DateRangePicker layout:inline style:date-range-picker {
+  label "DateRangePicker"
+}

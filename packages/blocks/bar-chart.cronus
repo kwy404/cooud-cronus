@@ -1,0 +1,6 @@
+## Block BarChart
+## source: registry/bar-chart.json
+
+component BarChartBlock layout:stack style:bar-chart {
+  label "BarChart"
+}

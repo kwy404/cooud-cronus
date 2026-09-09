@@ -1,0 +1,6 @@
+## Block UsageDashboard
+## source: registry/usage-dashboard.json
+
+component UsageDashboardBlock layout:stack style:usage-dashboard {
+  label "UsageDashboard"
+}

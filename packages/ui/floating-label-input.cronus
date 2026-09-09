@@ -1,0 +1,6 @@
+## FloatingLabelInput
+## source: packages/ui/src/components/floating-label-input.tsx
+
+component FloatingLabelInput layout:inline style:floating-label-input {
+  label "FloatingLabelInput"
+}

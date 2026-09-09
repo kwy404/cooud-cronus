@@ -1,0 +1,6 @@
+## Block SetupWizard
+## source: registry/setup-wizard.json
+
+component SetupWizardBlock layout:stack style:setup-wizard {
+  label "SetupWizard"
+}

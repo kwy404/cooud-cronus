@@ -1,0 +1,6 @@
+## TimePicker
+## source: packages/ui/src/components/time-picker.tsx
+
+component TimePicker layout:inline style:time-picker {
+  label "TimePicker"
+}

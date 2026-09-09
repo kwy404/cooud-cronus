@@ -1,0 +1,6 @@
+## TypingText
+## source: packages/ui/src/components/typing-text.tsx
+
+component TypingText layout:inline style:typing-text {
+  label "TypingText"
+}

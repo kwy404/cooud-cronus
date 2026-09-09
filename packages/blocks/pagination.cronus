@@ -1,0 +1,6 @@
+## Block Pagination
+## source: registry/pagination.json
+
+component PaginationBlock layout:stack style:pagination {
+  label "Pagination"
+}

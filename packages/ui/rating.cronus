@@ -1,0 +1,6 @@
+## Rating
+## source: packages/ui/src/components/rating.tsx
+
+component Rating layout:inline style:rating {
+  label "Rating"
+}

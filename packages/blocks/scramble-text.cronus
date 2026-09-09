@@ -1,0 +1,6 @@
+## Block ScrambleText
+## source: registry/scramble-text.json
+
+component ScrambleTextBlock layout:stack style:scramble-text {
+  label "ScrambleText"
+}

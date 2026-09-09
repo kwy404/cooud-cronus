@@ -1,0 +1,6 @@
+## Block InputGroup
+## source: registry/input-group.json
+
+component InputGroupBlock layout:stack style:input-group {
+  label "InputGroup"
+}

@@ -1,0 +1,6 @@
+## ComposedChart
+## source: packages/ui/src/components/composed-chart.tsx
+
+component ComposedChart layout:inline style:composed-chart {
+  label "ComposedChart"
+}

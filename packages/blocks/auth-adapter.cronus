@@ -1,0 +1,6 @@
+## Block AuthAdapter
+## source: registry/auth-adapter.json
+
+component AuthAdapterBlock layout:stack style:auth-adapter {
+  label "AuthAdapter"
+}

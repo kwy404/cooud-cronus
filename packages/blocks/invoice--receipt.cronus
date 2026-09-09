@@ -1,0 +1,6 @@
+## Block InvoiceReceipt
+## source: registry/invoice--receipt.json
+
+component InvoiceReceiptBlock layout:stack style:invoice--receipt {
+  label "InvoiceReceipt"
+}

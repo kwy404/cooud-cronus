@@ -1,0 +1,6 @@
+## Block Pricing
+## source: registry/pricing.json
+
+component PricingBlock layout:stack style:pricing {
+  label "Pricing"
+}

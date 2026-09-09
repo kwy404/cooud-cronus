@@ -1,0 +1,6 @@
+## Block TestimonialsGrid
+## source: registry/testimonials--grid.json
+
+component TestimonialsGridBlock layout:stack style:testimonials--grid {
+  label "TestimonialsGrid"
+}

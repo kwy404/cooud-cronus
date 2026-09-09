@@ -1,0 +1,6 @@
+## DotPattern
+## source: packages/ui/src/components/dot-pattern.tsx
+
+component DotPattern layout:inline style:dot-pattern {
+  label "DotPattern"
+}

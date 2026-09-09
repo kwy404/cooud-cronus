@@ -1,0 +1,6 @@
+## Block Avatar
+## source: registry/avatar.json
+
+component AvatarBlock layout:stack style:avatar {
+  label "Avatar"
+}

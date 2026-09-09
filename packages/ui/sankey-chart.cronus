@@ -1,0 +1,6 @@
+## SankeyChart
+## source: packages/ui/src/components/sankey-chart.tsx
+
+component SankeyChart layout:inline style:sankey-chart {
+  label "SankeyChart"
+}

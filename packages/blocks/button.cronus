@@ -1,0 +1,6 @@
+## Block Button
+## source: registry/button.json
+
+component ButtonBlock layout:stack style:button {
+  label "Button"
+}

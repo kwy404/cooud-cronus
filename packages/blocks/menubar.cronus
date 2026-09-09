@@ -1,0 +1,6 @@
+## Block Menubar
+## source: registry/menubar.json
+
+component MenubarBlock layout:stack style:menubar {
+  label "Menubar"
+}

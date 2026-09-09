@@ -1,0 +1,6 @@
+## RingChart
+## source: packages/ui/src/components/ring-chart.tsx
+
+component RingChart layout:inline style:ring-chart {
+  label "RingChart"
+}

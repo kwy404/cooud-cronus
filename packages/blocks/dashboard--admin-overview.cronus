@@ -1,0 +1,6 @@
+## Block DashboardAdminOverview
+## source: registry/dashboard--admin-overview.json
+
+component DashboardAdminOverviewBlock layout:stack style:dashboard--admin-overview {
+  label "DashboardAdminOverview"
+}

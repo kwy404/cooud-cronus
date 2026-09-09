@@ -1,0 +1,6 @@
+## Block Accordion
+## source: registry/accordion.json
+
+component AccordionBlock layout:stack style:accordion {
+  label "Accordion"
+}

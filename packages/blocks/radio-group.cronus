@@ -1,0 +1,6 @@
+## Block RadioGroup
+## source: registry/radio-group.json
+
+component RadioGroupBlock layout:stack style:radio-group {
+  label "RadioGroup"
+}

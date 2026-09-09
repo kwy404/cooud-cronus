@@ -1,0 +1,6 @@
+## Block Hero
+## source: registry/hero.json
+
+component HeroBlock layout:stack style:hero {
+  label "Hero"
+}

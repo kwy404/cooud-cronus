@@ -1,0 +1,6 @@
+## ProfitLossChart
+## source: packages/ui/src/components/profit-loss-chart.tsx
+
+component ProfitLossChart layout:inline style:profit-loss-chart {
+  label "ProfitLossChart"
+}

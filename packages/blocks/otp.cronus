@@ -1,0 +1,6 @@
+## Block Otp
+## source: registry/otp.json
+
+component OtpBlock layout:stack style:otp {
+  label "Otp"
+}

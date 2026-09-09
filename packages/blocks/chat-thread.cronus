@@ -1,0 +1,6 @@
+## Block ChatThread
+## source: registry/chat-thread.json
+
+component ChatThreadBlock layout:stack style:chat-thread {
+  label "ChatThread"
+}

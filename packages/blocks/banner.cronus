@@ -1,0 +1,6 @@
+## Block Banner
+## source: registry/banner.json
+
+component BannerBlock layout:stack style:banner {
+  label "Banner"
+}

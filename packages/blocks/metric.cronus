@@ -1,0 +1,6 @@
+## Block Metric
+## source: registry/metric.json
+
+component MetricBlock layout:stack style:metric {
+  label "Metric"
+}

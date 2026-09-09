@@ -1,0 +1,6 @@
+## Block MagicLink
+## source: registry/magic-link.json
+
+component MagicLinkBlock layout:stack style:magic-link {
+  label "MagicLink"
+}

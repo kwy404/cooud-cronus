@@ -1,0 +1,6 @@
+## Block DatePicker
+## source: registry/date-picker.json
+
+component DatePickerBlock layout:stack style:date-picker {
+  label "DatePicker"
+}

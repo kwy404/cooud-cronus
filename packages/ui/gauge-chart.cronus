@@ -1,0 +1,6 @@
+## GaugeChart
+## source: packages/ui/src/components/gauge-chart.tsx
+
+component GaugeChart layout:inline style:gauge-chart {
+  label "GaugeChart"
+}

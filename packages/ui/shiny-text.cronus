@@ -1,0 +1,6 @@
+## ShinyText
+## source: packages/ui/src/components/shiny-text.tsx
+
+component ShinyText layout:inline style:shiny-text {
+  label "ShinyText"
+}

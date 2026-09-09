@@ -1,0 +1,6 @@
+## PieChart
+## source: packages/ui/src/components/pie-chart.tsx
+
+component PieChart layout:inline style:pie-chart {
+  label "PieChart"
+}

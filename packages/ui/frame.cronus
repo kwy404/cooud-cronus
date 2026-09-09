@@ -1,0 +1,6 @@
+## Frame
+## source: packages/ui/src/components/frame.tsx
+
+component Frame layout:inline style:frame {
+  label "Frame"
+}

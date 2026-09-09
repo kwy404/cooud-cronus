@@ -1,0 +1,6 @@
+## Block ScrollProgress
+## source: registry/scroll-progress.json
+
+component ScrollProgressBlock layout:stack style:scroll-progress {
+  label "ScrollProgress"
+}

@@ -1,0 +1,6 @@
+## Block Drawer
+## source: registry/drawer.json
+
+component DrawerBlock layout:stack style:drawer {
+  label "Drawer"
+}

@@ -1,0 +1,6 @@
+## Block Popover
+## source: registry/popover.json
+
+component PopoverBlock layout:stack style:popover {
+  label "Popover"
+}

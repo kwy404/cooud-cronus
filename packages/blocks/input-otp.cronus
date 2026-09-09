@@ -1,0 +1,6 @@
+## Block InputOtp
+## source: registry/input-otp.json
+
+component InputOtpBlock layout:stack style:input-otp {
+  label "InputOtp"
+}

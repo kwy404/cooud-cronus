@@ -1,0 +1,6 @@
+## Block LightRays
+## source: registry/light-rays.json
+
+component LightRaysBlock layout:stack style:light-rays {
+  label "LightRays"
+}

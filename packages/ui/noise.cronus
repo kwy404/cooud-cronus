@@ -1,0 +1,6 @@
+## Noise
+## source: packages/ui/src/components/noise.tsx
+
+component Noise layout:inline style:noise {
+  label "Noise"
+}

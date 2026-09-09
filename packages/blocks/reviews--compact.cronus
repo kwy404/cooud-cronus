@@ -1,0 +1,6 @@
+## Block ReviewsCompact
+## source: registry/reviews--compact.json
+
+component ReviewsCompactBlock layout:stack style:reviews--compact {
+  label "ReviewsCompact"
+}

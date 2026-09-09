@@ -1,0 +1,6 @@
+## Timeline
+## source: packages/ui/src/components/timeline.tsx
+
+component Timeline layout:inline style:timeline {
+  label "Timeline"
+}

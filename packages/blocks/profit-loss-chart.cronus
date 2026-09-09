@@ -1,0 +1,6 @@
+## Block ProfitLossChart
+## source: registry/profit-loss-chart.json
+
+component ProfitLossChartBlock layout:stack style:profit-loss-chart {
+  label "ProfitLossChart"
+}

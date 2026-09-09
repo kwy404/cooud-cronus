@@ -1,0 +1,6 @@
+## Block FilterBar
+## source: registry/filter-bar.json
+
+component FilterBarBlock layout:stack style:filter-bar {
+  label "FilterBar"
+}

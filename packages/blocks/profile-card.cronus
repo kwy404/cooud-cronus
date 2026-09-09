@@ -1,0 +1,6 @@
+## Block ProfileCard
+## source: registry/profile-card.json
+
+component ProfileCardBlock layout:stack style:profile-card {
+  label "ProfileCard"
+}

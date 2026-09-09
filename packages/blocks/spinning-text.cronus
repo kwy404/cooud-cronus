@@ -1,0 +1,6 @@
+## Block SpinningText
+## source: registry/spinning-text.json
+
+component SpinningTextBlock layout:stack style:spinning-text {
+  label "SpinningText"
+}

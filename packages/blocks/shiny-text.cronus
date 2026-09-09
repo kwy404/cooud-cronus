@@ -1,0 +1,6 @@
+## Block ShinyText
+## source: registry/shiny-text.json
+
+component ShinyTextBlock layout:stack style:shiny-text {
+  label "ShinyText"
+}

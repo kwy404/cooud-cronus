@@ -1,0 +1,6 @@
+## Block BlogList
+## source: registry/blog--list.json
+
+component BlogListBlock layout:stack style:blog--list {
+  label "BlogList"
+}

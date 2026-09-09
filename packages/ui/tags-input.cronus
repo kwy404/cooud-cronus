@@ -1,0 +1,6 @@
+## TagsInput
+## source: packages/ui/src/components/tags-input.tsx
+
+component TagsInput layout:inline style:tags-input {
+  label "TagsInput"
+}

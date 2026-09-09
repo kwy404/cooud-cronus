@@ -1,0 +1,6 @@
+## Block Cta
+## source: registry/cta.json
+
+component CtaBlock layout:stack style:cta {
+  label "Cta"
+}

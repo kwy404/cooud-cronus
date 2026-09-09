@@ -1,0 +1,6 @@
+## Block SplitButton
+## source: registry/split-button.json
+
+component SplitButtonBlock layout:stack style:split-button {
+  label "SplitButton"
+}

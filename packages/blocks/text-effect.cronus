@@ -1,0 +1,6 @@
+## Block TextEffect
+## source: registry/text-effect.json
+
+component TextEffectBlock layout:stack style:text-effect {
+  label "TextEffect"
+}

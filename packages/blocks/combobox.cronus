@@ -1,0 +1,6 @@
+## Block Combobox
+## source: registry/combobox.json
+
+component ComboboxBlock layout:stack style:combobox {
+  label "Combobox"
+}

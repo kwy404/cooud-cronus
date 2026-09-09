@@ -1,0 +1,6 @@
+## Block LogoCarousel
+## source: registry/logo-carousel.json
+
+component LogoCarouselBlock layout:stack style:logo-carousel {
+  label "LogoCarousel"
+}

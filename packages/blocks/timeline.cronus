@@ -1,0 +1,6 @@
+## Block Timeline
+## source: registry/timeline.json
+
+component TimelineBlock layout:stack style:timeline {
+  label "Timeline"
+}

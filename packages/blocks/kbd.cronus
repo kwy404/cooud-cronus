@@ -1,0 +1,6 @@
+## Block Kbd
+## source: registry/kbd.json
+
+component KbdBlock layout:stack style:kbd {
+  label "Kbd"
+}

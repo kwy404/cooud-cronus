@@ -1,0 +1,6 @@
+## Block AccountSecurity
+## source: registry/account-security.json
+
+component AccountSecurityBlock layout:stack style:account-security {
+  label "AccountSecurity"
+}

@@ -1,0 +1,6 @@
+## Block FaqSplit
+## source: registry/faq--split.json
+
+component FaqSplitBlock layout:stack style:faq--split {
+  label "FaqSplit"
+}

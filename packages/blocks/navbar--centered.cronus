@@ -1,0 +1,6 @@
+## Block NavbarCentered
+## source: registry/navbar--centered.json
+
+component NavbarCenteredBlock layout:stack style:navbar--centered {
+  label "NavbarCentered"
+}

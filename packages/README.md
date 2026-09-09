@@ -1,10 +1,16 @@
 # packages
 
-Não é npm. São pacotes **`.cronus`**.
+Pacotes nativos `.cronus` (nao npm).
 
-| Pasta | Equivale a (fonte) | O que é |
+| Pasta | Fonte | Conteudo |
 |---|---|---|
-| `tokens/` | `@cronus-ui/tokens` | tokens semânticos aurora/neutral |
-| `ui/` | `@cronus-ui/ui` | 58 famílias (Button, Input, Dialog, …) |
+| `tokens/` | `@cronus-ui/tokens` | tokens semânticos |
+| `theme/` | `@cronus-ui/theme` | aurora/neutral/midnight/sunset/emerald |
+| `ui/` | `@cronus-ui/ui` | **173** familias |
+| `blocks/` | `registry/*.json` | **307** blocks |
+| `stack/` | `@cronus-ui/stack` | scaffold nativo |
+| `cli/` | `cronus-ui` CLI | aponta para `bin/cronus.exe` |
+| `mcp/` | `packages/mcp` | intencao, sem Node |
+| `ai-kit/` | `@cronus-ui/ai-kit` | doutrina |
 
-O compilador **não** está aqui. Está em `compiler/cronus-kernel` (submodule do [cronus-kernel](https://github.com/cronusmaster/cronus-kernel)).
+Compilador: `scripts/setup.ps1` → `compiler/cronus-kernel` → `bin/cronus.exe`.

@@ -1,0 +1,6 @@
+## Block Confetti
+## source: registry/confetti.json
+
+component ConfettiBlock layout:stack style:confetti {
+  label "Confetti"
+}

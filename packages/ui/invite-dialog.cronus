@@ -1,0 +1,6 @@
+## InviteDialog
+## source: packages/ui/src/components/invite-dialog.tsx
+
+component InviteDialog layout:inline style:invite-dialog {
+  label "InviteDialog"
+}

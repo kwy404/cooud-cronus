@@ -1,0 +1,6 @@
+## Block StatusPage
+## source: registry/status-page.json
+
+component StatusPageBlock layout:stack style:status-page {
+  label "StatusPage"
+}

@@ -1,0 +1,6 @@
+## Block EmptyState
+## source: registry/empty-state.json
+
+component EmptyStateBlock layout:stack style:empty-state {
+  label "EmptyState"
+}

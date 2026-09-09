@@ -1,0 +1,6 @@
+## CodeTabs
+## source: packages/ui/src/components/code-tabs.tsx
+
+component CodeTabs layout:inline style:code-tabs {
+  label "CodeTabs"
+}

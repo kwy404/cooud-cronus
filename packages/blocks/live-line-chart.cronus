@@ -1,0 +1,6 @@
+## Block LiveLineChart
+## source: registry/live-line-chart.json
+
+component LiveLineChartBlock layout:stack style:live-line-chart {
+  label "LiveLineChart"
+}

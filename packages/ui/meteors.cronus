@@ -1,0 +1,6 @@
+## Meteors
+## source: packages/ui/src/components/meteors.tsx
+
+component Meteors layout:inline style:meteors {
+  label "Meteors"
+}

@@ -1,0 +1,6 @@
+## Block PricingUsage
+## source: registry/pricing--usage.json
+
+component PricingUsageBlock layout:stack style:pricing--usage {
+  label "PricingUsage"
+}

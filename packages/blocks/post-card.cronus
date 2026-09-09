@@ -1,0 +1,6 @@
+## Block PostCard
+## source: registry/post-card.json
+
+component PostCardBlock layout:stack style:post-card {
+  label "PostCard"
+}

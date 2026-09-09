@@ -1,0 +1,6 @@
+## MorphingPopover
+## source: packages/ui/src/components/morphing-popover.tsx
+
+component MorphingPopover layout:inline style:morphing-popover {
+  label "MorphingPopover"
+}

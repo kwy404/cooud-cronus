@@ -1,0 +1,6 @@
+## Block ComposedChart
+## source: registry/composed-chart.json
+
+component ComposedChartBlock layout:stack style:composed-chart {
+  label "ComposedChart"
+}

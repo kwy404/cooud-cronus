@@ -1,0 +1,6 @@
+## Block PromptBox
+## source: registry/prompt-box.json
+
+component PromptBoxBlock layout:stack style:prompt-box {
+  label "PromptBox"
+}

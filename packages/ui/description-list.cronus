@@ -1,0 +1,6 @@
+## DescriptionList
+## source: packages/ui/src/components/description-list.tsx
+
+component DescriptionList layout:inline style:description-list {
+  label "DescriptionList"
+}

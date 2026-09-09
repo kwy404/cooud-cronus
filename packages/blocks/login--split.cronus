@@ -1,0 +1,6 @@
+## Block LoginSplit
+## source: registry/login--split.json
+
+component LoginSplitBlock layout:stack style:login--split {
+  label "LoginSplit"
+}

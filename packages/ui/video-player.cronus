@@ -1,0 +1,6 @@
+## VideoPlayer
+## source: packages/ui/src/components/video-player.tsx
+
+component VideoPlayer layout:inline style:video-player {
+  label "VideoPlayer"
+}

@@ -1,0 +1,6 @@
+## StarBorder
+## source: packages/ui/src/components/star-border.tsx
+
+component StarBorder layout:inline style:star-border {
+  label "StarBorder"
+}

@@ -1,0 +1,6 @@
+## Block PageHeader
+## source: registry/page-header.json
+
+component PageHeaderBlock layout:stack style:page-header {
+  label "PageHeader"
+}

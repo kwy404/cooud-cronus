@@ -1,0 +1,6 @@
+## SunburstChart
+## source: packages/ui/src/components/sunburst-chart.tsx
+
+component SunburstChart layout:inline style:sunburst-chart {
+  label "SunburstChart"
+}

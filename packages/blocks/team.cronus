@@ -1,0 +1,6 @@
+## Block Team
+## source: registry/team.json
+
+component TeamBlock layout:stack style:team {
+  label "Team"
+}

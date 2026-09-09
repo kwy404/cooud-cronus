@@ -1,0 +1,6 @@
+## JsonViewer
+## source: packages/ui/src/components/json-viewer.tsx
+
+component JsonViewer layout:inline style:json-viewer {
+  label "JsonViewer"
+}

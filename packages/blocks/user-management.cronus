@@ -1,0 +1,6 @@
+## Block UserManagement
+## source: registry/user-management.json
+
+component UserManagementBlock layout:stack style:user-management {
+  label "UserManagement"
+}

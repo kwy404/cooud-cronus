@@ -1,0 +1,6 @@
+## DynamicIsland
+## source: packages/ui/src/components/dynamic-island.tsx
+
+component DynamicIsland layout:inline style:dynamic-island {
+  label "DynamicIsland"
+}

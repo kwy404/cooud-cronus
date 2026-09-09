@@ -1,0 +1,6 @@
+## Block CommentThread
+## source: registry/comment-thread.json
+
+component CommentThreadBlock layout:stack style:comment-thread {
+  label "CommentThread"
+}

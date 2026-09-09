@@ -1,0 +1,6 @@
+## Block FloatingLabelInput
+## source: registry/floating-label-input.json
+
+component FloatingLabelInputBlock layout:stack style:floating-label-input {
+  label "FloatingLabelInput"
+}
