@@ -1,5 +1,7 @@
 ## Block Card
 ## source: registry/card.json
+## type: registry:ui
+## registryDependencies: cn
 
 component CardBlock layout:stack style:card {
   label "Card"

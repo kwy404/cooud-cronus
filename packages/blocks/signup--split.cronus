@@ -1,5 +1,8 @@
 ## Block SignupSplit
 ## source: registry/signup--split.json
+## type: registry:block
+## registryDependencies: auth-adapter
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component SignupSplitBlock layout:stack style:signup--split {
   label "SignupSplit"

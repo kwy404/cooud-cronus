@@ -1,5 +1,8 @@
 ## Block Lightbox
 ## source: registry/lightbox.json
+## type: registry:ui
+## registryDependencies: cn, dialog
+## npm: lucide-react@^0.577.0
 
 component LightboxBlock layout:stack style:lightbox {
   label "Lightbox"

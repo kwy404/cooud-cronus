@@ -1,0 +1,23 @@
+## @cooud-cronus/mcp
+## Registry MCP do cronus-ui (Node) nao e o runtime. Descoberta nativa:
+##   cronus CLI + packages/ui + packages/blocks + packages/tokens
+##
+## tools (intencao, sem Node):
+##   list_components
+##   list_blocks
+##   list_catalog
+##   match_catalog
+##   search_registry
+##   get_design_context
+##   get_component
+##   get_install_command
+##   install_component
+##   upgrade_components
+##   apply_theme
+##   compose_app
+##   add_page
+##   set_theme
+
+app "Mcp" {
+  port 4750
+}

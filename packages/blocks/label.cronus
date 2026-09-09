@@ -1,5 +1,8 @@
 ## Block Label
 ## source: registry/label.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: @radix-ui/react-label@^2.1.7
 
 component LabelBlock layout:stack style:label {
   label "Label"

@@ -1,5 +1,8 @@
 ## Block ProductDetailGallery
 ## source: registry/product-detail--gallery.json
+## type: registry:block
+## registryDependencies: demo-store
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component ProductDetailGalleryBlock layout:stack style:product-detail--gallery {
   label "ProductDetailGallery"

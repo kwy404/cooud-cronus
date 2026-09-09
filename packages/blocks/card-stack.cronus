@@ -1,5 +1,8 @@
 ## Block CardStack
 ## source: registry/card-stack.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: motion@^12.23.0
 
 component CardStackBlock layout:stack style:card-stack {
   label "CardStack"

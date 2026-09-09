@@ -1,6 +1,13 @@
 ## Masonry
 ## source: packages/ui/src/components/masonry.tsx
+## wave 1 - forms
+## exports: MasonryColumns, Masonry
+## slots: masonry
 
-component Masonry layout:inline style:masonry {
+component Masonry(label: text) layout:inline style:masonry {
   label "Masonry"
+}
+
+component MasonryColumns(label: text) layout:inline style:masonry-columns {
+  label "MasonryColumns"
 }

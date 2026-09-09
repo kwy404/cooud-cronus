@@ -1,5 +1,7 @@
 ## Block ScrambleText
 ## source: registry/scramble-text.json
+## type: registry:ui
+## registryDependencies: cn
 
 component ScrambleTextBlock layout:stack style:scramble-text {
   label "ScrambleText"

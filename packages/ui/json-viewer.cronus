@@ -1,6 +1,9 @@
 ## JsonViewer
 ## source: packages/ui/src/components/json-viewer.tsx
+## wave 1 - forms
+## exports: JsonViewer
+## slots: json-viewer, json-viewer-branch, json-viewer-children, json-viewer-closer, json-viewer-hint, json-viewer-key, json-viewer-row, json-viewer-summary, json-viewer-toggle, json-viewer-value
 
-component JsonViewer layout:inline style:json-viewer {
+component JsonViewer(label: text) layout:stack style:json-viewer {
   label "JsonViewer"
 }

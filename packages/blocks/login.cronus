@@ -1,5 +1,8 @@
 ## Block Login
 ## source: registry/login.json
+## type: registry:block
+## registryDependencies: auth-adapter
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component LoginBlock layout:stack style:login {
   label "Login"

@@ -1,5 +1,7 @@
 ## Block Meteors
 ## source: registry/meteors.json
+## type: registry:ui
+## registryDependencies: cn
 
 component MeteorsBlock layout:stack style:meteors {
   label "Meteors"

@@ -1,5 +1,8 @@
 ## Block DropdownMenu
 ## source: registry/dropdown-menu.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: @radix-ui/react-dropdown-menu@^2.1.15, lucide-react@^0.577.0
 
 component DropdownMenuBlock layout:stack style:dropdown-menu {
   label "DropdownMenu"

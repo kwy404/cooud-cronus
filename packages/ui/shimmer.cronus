@@ -1,7 +1,9 @@
-## Shimmer — premium
+## Shimmer
 ## source: packages/ui/src/components/shimmer.tsx
+## wave 1 - forms
+## exports: Shimmer
+## slots: shimmer
 
-component Shimmer layout:inline style:shimmer {
+component Shimmer(label: text) layout:inline style:shimmer {
   label "Shimmer"
-  variant "reduced-motion"
 }

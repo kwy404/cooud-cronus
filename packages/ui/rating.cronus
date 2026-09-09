@@ -1,6 +1,12 @@
 ## Rating
 ## source: packages/ui/src/components/rating.tsx
+## wave 1 - forms
+## exports: Rating
+## slots: rating, rating-item, rating-star
+## variants.size: sm, md, lg
+## defaults: size=md
 
-component Rating layout:inline style:rating {
+component Rating(label: text, size: text) layout:inline style:rating {
   label "Rating"
+  size "md"
 }

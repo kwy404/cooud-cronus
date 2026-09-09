@@ -1,6 +1,17 @@
 ## Terminal
 ## source: packages/ui/src/components/terminal.tsx
+## wave 1 - forms
+## exports: TerminalLine, TerminalMotionPreference, Terminal
+## slots: terminal, terminal-body, terminal-chrome, terminal-cursor, terminal-line, terminal-prompt, terminal-screen, terminal-sizer, terminal-title, terminal-transcript
 
-component Terminal layout:inline style:terminal {
+component Terminal(label: text) layout:stack style:terminal {
   label "Terminal"
+}
+
+component TerminalLine(label: text) layout:inline style:terminal-line {
+  label "TerminalLine"
+}
+
+component TerminalMotionPreference(label: text) layout:inline style:terminal-motion-preference {
+  label "TerminalMotionPreference"
 }

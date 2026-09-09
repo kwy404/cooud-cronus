@@ -1,6 +1,25 @@
 ## FlipCard
 ## source: packages/ui/src/components/flip-card.tsx
+## wave 1 - forms
+## exports: FlipCardTrigger, FlipCardAxis, FlipCard, FlipCardFront, FlipCardBack
+## slots: flip-card, flip-card-back, flip-card-front
 
-component FlipCard layout:inline style:flip-card {
+component FlipCard(label: text) layout:stack style:flip-card {
   label "FlipCard"
+}
+
+component FlipCardTrigger(label: text) layout:inline style:flip-card-trigger {
+  label "FlipCardTrigger"
+}
+
+component FlipCardAxis(label: text) layout:inline style:flip-card-axis {
+  label "FlipCardAxis"
+}
+
+component FlipCardFront(label: text) layout:inline style:flip-card-front {
+  label "FlipCardFront"
+}
+
+component FlipCardBack(label: text) layout:inline style:flip-card-back {
+  label "FlipCardBack"
 }

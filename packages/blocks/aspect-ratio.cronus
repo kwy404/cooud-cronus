@@ -1,5 +1,7 @@
 ## Block AspectRatio
 ## source: registry/aspect-ratio.json
+## type: registry:ui
+## registryDependencies: cn
 
 component AspectRatioBlock layout:stack style:aspect-ratio {
   label "AspectRatio"

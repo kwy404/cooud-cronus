@@ -1,6 +1,9 @@
 ## AreaChart
 ## source: packages/ui/src/components/area-chart.tsx
+## wave 5 - layout & app navigation
+## exports: AreaChart
+## slots: area-chart
 
-component AreaChart layout:inline style:area-chart {
+component AreaChart(label: text) layout:stack style:area-chart {
   label "AreaChart"
 }

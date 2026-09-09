@@ -1,6 +1,9 @@
 ## AnimatedNumber
 ## source: packages/ui/src/components/animated-number.tsx
+## wave 6 - motion harvest
+## exports: AnimatedNumber
+## slots: animated-number
 
-component AnimatedNumber layout:inline style:animated-number {
+component AnimatedNumber(label: text) layout:inline style:animated-number {
   label "AnimatedNumber"
 }

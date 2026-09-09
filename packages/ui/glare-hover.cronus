@@ -1,6 +1,9 @@
 ## GlareHover
 ## source: packages/ui/src/components/glare-hover.tsx
+## wave 1 - forms
+## exports: GlareHover
+## slots: glare-hover
 
-component GlareHover layout:inline style:glare-hover {
+component GlareHover(label: text) layout:inline style:glare-hover {
   label "GlareHover"
 }

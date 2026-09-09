@@ -1,7 +1,9 @@
-## Checkbox — forms
+## Checkbox
 ## source: packages/ui/src/components/checkbox.tsx
+## wave 1 - forms
+## exports: Checkbox
+## slots: checkbox
 
-component Checkbox layout:inline style:checkbox {
+component Checkbox(label: text) layout:inline style:checkbox {
   label "Checkbox"
-  variant "checked"
 }

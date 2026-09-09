@@ -1,5 +1,7 @@
 ## Block Noise
 ## source: registry/noise.json
+## type: registry:ui
+## registryDependencies: cn
 
 component NoiseBlock layout:stack style:noise {
   label "Noise"

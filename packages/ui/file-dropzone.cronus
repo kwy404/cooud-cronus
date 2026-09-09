@@ -1,7 +1,9 @@
-## FileDropzone — forms
+## FileDropzone
 ## source: packages/ui/src/components/file-dropzone.tsx
+## wave 1 - forms
+## exports: FileDropzone
+## slots: file-dropzone
 
-component FileDropzone layout:inline style:file-dropzone {
+component FileDropzone(label: text) layout:inline style:file-dropzone {
   label "FileDropzone"
-  variant "idle"
 }

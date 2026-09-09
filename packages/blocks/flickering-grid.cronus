@@ -1,5 +1,7 @@
 ## Block FlickeringGrid
 ## source: registry/flickering-grid.json
+## type: registry:ui
+## registryDependencies: cn
 
 component FlickeringGridBlock layout:stack style:flickering-grid {
   label "FlickeringGrid"

@@ -1,5 +1,7 @@
 ## Block ChoroplethChart
 ## source: registry/choropleth-chart.json
+## type: registry:ui
+## registryDependencies: cn
 
 component ChoroplethChartBlock layout:stack style:choropleth-chart {
   label "ChoroplethChart"

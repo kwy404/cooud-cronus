@@ -1,5 +1,8 @@
 ## Block DateRangePicker
 ## source: registry/date-range-picker.json
+## type: registry:ui
+## registryDependencies: button, calendar, cn, popover
+## npm: date-fns@^4.4.0, lucide-react@^0.577.0, react-day-picker@^10.0.1
 
 component DateRangePickerBlock layout:stack style:date-range-picker {
   label "DateRangePicker"

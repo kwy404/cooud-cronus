@@ -1,6 +1,9 @@
 ## NumberInput
 ## source: packages/ui/src/components/number-input.tsx
+## wave 1 - forms
+## exports: NumberInput
+## slots: number-input, number-input-decrement, number-input-field, number-input-increment
 
-component NumberInput layout:inline style:number-input {
+component NumberInput(label: text) layout:inline style:number-input {
   label "NumberInput"
 }

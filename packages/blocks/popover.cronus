@@ -1,5 +1,8 @@
 ## Block Popover
 ## source: registry/popover.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: @radix-ui/react-popover@^1.1.14
 
 component PopoverBlock layout:stack style:popover {
   label "Popover"

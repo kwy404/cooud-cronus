@@ -1,5 +1,7 @@
 ## Block Ripple
 ## source: registry/ripple.json
+## type: registry:ui
+## registryDependencies: cn
 
 component RippleBlock layout:stack style:ripple {
   label "Ripple"

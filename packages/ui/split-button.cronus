@@ -1,6 +1,13 @@
 ## SplitButton
 ## source: packages/ui/src/components/split-button.tsx
+## wave 1 - forms
+## exports: SplitButtonItem, SplitButton
+## slots: split-button
 
-component SplitButton layout:inline style:split-button {
+component SplitButton(label: text) layout:inline style:split-button {
   label "SplitButton"
+}
+
+component SplitButtonItem(label: text) layout:inline style:split-button-item {
+  label "SplitButtonItem"
 }

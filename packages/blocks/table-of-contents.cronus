@@ -1,5 +1,7 @@
 ## Block TableOfContents
 ## source: registry/table-of-contents.json
+## type: registry:ui
+## registryDependencies: cn
 
 component TableOfContentsBlock layout:stack style:table-of-contents {
   label "TableOfContents"

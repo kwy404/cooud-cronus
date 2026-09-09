@@ -1,5 +1,8 @@
 ## Block Metric
 ## source: registry/metric.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: lucide-react@^0.577.0
 
 component MetricBlock layout:stack style:metric {
   label "Metric"

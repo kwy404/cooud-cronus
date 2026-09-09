@@ -1,5 +1,7 @@
 ## Block Masonry
 ## source: registry/masonry.json
+## type: registry:ui
+## registryDependencies: cn
 
 component MasonryBlock layout:stack style:masonry {
   label "Masonry"

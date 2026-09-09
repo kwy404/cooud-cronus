@@ -1,7 +1,9 @@
-## GradientBorder — premium
+## GradientBorder
 ## source: packages/ui/src/components/gradient-border.tsx
+## wave 1 - forms
+## exports: GradientBorder
+## slots: gradient-border
 
-component GradientBorder layout:inline style:gradient-border {
+component GradientBorder(label: text) layout:inline style:gradient-border {
   label "GradientBorder"
-  variant "aurora"
 }

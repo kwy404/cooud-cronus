@@ -1,6 +1,17 @@
 ## Orbit
 ## source: packages/ui/src/components/orbit.tsx
+## wave 1 - forms
+## exports: Orbit, OrbitRing, OrbitItem
+## slots: orbit, orbit-holder, orbit-item, orbit-positioner, orbit-ring
 
-component Orbit layout:inline style:orbit {
+component Orbit(label: text) layout:inline style:orbit {
   label "Orbit"
+}
+
+component OrbitRing(label: text) layout:inline style:orbit-ring {
+  label "OrbitRing"
+}
+
+component OrbitItem(label: text) layout:inline style:orbit-item {
+  label "OrbitItem"
 }

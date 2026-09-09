@@ -1,6 +1,9 @@
 ## ConfirmationDialog
 ## source: packages/ui/src/components/confirmation-dialog.tsx
+## wave 1 - forms
+## exports: ConfirmationDialog
+## slots: confirmation-dialog, confirmation-dialog-confirm, confirmation-dialog-error, confirmation-dialog-icon
 
-component ConfirmationDialog layout:inline style:confirmation-dialog {
+component ConfirmationDialog(label: text) layout:overlay style:confirmation-dialog {
   label "ConfirmationDialog"
 }

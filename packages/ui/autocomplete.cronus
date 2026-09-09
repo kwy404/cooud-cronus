@@ -1,6 +1,9 @@
 ## Autocomplete
 ## source: packages/ui/src/components/autocomplete.tsx
+## wave 5 - layout & app navigation
+## exports: Autocomplete
+## slots: autocomplete, autocomplete-command, autocomplete-content, autocomplete-input, autocomplete-loading, autocomplete-spinner
 
-component Autocomplete layout:inline style:autocomplete {
+component Autocomplete(label: text) layout:inline style:autocomplete {
   label "Autocomplete"
 }

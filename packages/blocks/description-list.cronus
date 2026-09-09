@@ -1,5 +1,8 @@
 ## Block DescriptionList
 ## source: registry/description-list.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: class-variance-authority@^0.7.1
 
 component DescriptionListBlock layout:stack style:description-list {
   label "DescriptionList"

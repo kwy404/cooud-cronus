@@ -1,5 +1,8 @@
 ## Block LoginMinimal
 ## source: registry/login--minimal.json
+## type: registry:block
+## registryDependencies: auth-adapter
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component LoginMinimalBlock layout:stack style:login--minimal {
   label "LoginMinimal"

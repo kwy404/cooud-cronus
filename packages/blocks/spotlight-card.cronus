@@ -1,5 +1,7 @@
 ## Block SpotlightCard
 ## source: registry/spotlight-card.json
+## type: registry:ui
+## registryDependencies: cn
 
 component SpotlightCardBlock layout:stack style:spotlight-card {
   label "SpotlightCard"

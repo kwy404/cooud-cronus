@@ -1,6 +1,9 @@
 ## ClickSpark
 ## source: packages/ui/src/components/click-spark.tsx
+## wave 1 - forms
+## exports: ClickSpark
+## slots: click-spark
 
-component ClickSpark layout:inline style:click-spark {
+component ClickSpark(label: text) layout:inline style:click-spark {
   label "ClickSpark"
 }

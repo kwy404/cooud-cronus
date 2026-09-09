@@ -1,6 +1,9 @@
 ## AnimatedList
 ## source: packages/ui/src/components/animated-list.tsx
+## wave 6 - motion harvest
+## exports: AnimatedList
+## slots: animated-list, animated-list-item
 
-component AnimatedList layout:inline style:animated-list {
+component AnimatedList(label: text) layout:inline style:animated-list {
   label "AnimatedList"
 }

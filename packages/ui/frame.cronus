@@ -1,6 +1,9 @@
 ## Frame
 ## source: packages/ui/src/components/frame.tsx
+## wave 1 - forms
+## exports: Frame
+## slots: frame, frame-address-bar, frame-chrome, frame-content
 
-component Frame layout:inline style:frame {
+component Frame(label: text) layout:inline style:frame {
   label "Frame"
 }

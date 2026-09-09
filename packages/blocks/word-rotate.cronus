@@ -1,5 +1,8 @@
 ## Block WordRotate
 ## source: registry/word-rotate.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: motion@^12.23.0
 
 component WordRotateBlock layout:stack style:word-rotate {
   label "WordRotate"

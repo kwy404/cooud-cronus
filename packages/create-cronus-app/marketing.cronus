@@ -1,0 +1,30 @@
+## template marketing — landing nativa
+
+app "Marketing" {
+  port 3000
+  theme dark
+}
+
+style {
+  theme dark
+  preset aurora
+  accent white
+  font "Inter"
+}
+
+page "/" {
+  section hero {
+    title "Cronus"
+    subtitle "Compose de produto em .cronus"
+  }
+
+  section pricing {
+    title "Planos"
+    item "Free"
+    item "Pro"
+  }
+
+  section faq {
+    title "FAQ"
+  }
+}

@@ -1,5 +1,8 @@
 ## Block Sheet
 ## source: registry/sheet.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: @radix-ui/react-dialog@^1.1.14, class-variance-authority@^0.7.1, lucide-react@^0.577.0
 
 component SheetBlock layout:stack style:sheet {
   label "Sheet"

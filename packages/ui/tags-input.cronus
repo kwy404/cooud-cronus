@@ -1,6 +1,9 @@
 ## TagsInput
 ## source: packages/ui/src/components/tags-input.tsx
+## wave 1 - forms
+## exports: TagsInput
+## slots: tags-input, tags-input-field, tags-input-remove
 
-component TagsInput layout:inline style:tags-input {
+component TagsInput(label: text) layout:inline style:tags-input {
   label "TagsInput"
 }

@@ -1,5 +1,7 @@
 ## Block ModeToggle
 ## source: registry/mode-toggle.json
+## type: registry:ui
+## registryDependencies: cn
 
 component ModeToggleBlock layout:stack style:mode-toggle {
   label "ModeToggle"

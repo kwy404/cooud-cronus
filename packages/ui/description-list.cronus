@@ -1,6 +1,28 @@
 ## DescriptionList
 ## source: packages/ui/src/components/description-list.tsx
+## wave 1 - forms
+## exports: DescriptionList, DescriptionTerm, DescriptionDetails, DescriptionItem
+## slots: description-details, description-item, description-list, description-term
+## variants.layout: stacked, horizontal, grid
+## variants.size: sm, md
+## variants.striped: true
+## variants.bordered: true, false
+## variants.detailsAlign: start, end
+## defaults: layout=stacked size=md striped=false bordered=false detailsAlign=start
 
-component DescriptionList layout:inline style:description-list {
+component DescriptionList(label: text, size: text) layout:inline style:description-list {
   label "DescriptionList"
+  size "md"
+}
+
+component DescriptionTerm(label: text) layout:inline style:description-term {
+  label "DescriptionTerm"
+}
+
+component DescriptionDetails(label: text) layout:inline style:description-details {
+  label "DescriptionDetails"
+}
+
+component DescriptionItem(label: text) layout:inline style:description-item {
+  label "DescriptionItem"
 }

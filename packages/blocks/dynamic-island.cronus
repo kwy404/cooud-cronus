@@ -1,5 +1,8 @@
 ## Block DynamicIsland
 ## source: registry/dynamic-island.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: motion@^12.23.0
 
 component DynamicIslandBlock layout:stack style:dynamic-island {
   label "DynamicIsland"

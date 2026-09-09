@@ -1,5 +1,8 @@
 ## Block RadarChart
 ## source: registry/radar-chart.json
+## type: registry:ui
+## registryDependencies: chart, cn
+## npm: recharts@^3.9.2
 
 component RadarChartBlock layout:stack style:radar-chart {
   label "RadarChart"

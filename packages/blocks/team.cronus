@@ -1,5 +1,8 @@
 ## Block Team
 ## source: registry/team.json
+## type: registry:block
+## registryDependencies: demo-saas
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component TeamBlock layout:stack style:team {
   label "Team"

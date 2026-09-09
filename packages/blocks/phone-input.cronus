@@ -1,5 +1,8 @@
 ## Block PhoneInput
 ## source: registry/phone-input.json
+## type: registry:ui
+## registryDependencies: cn, command, popover
+## npm: lucide-react@^0.577.0
 
 component PhoneInputBlock layout:stack style:phone-input {
   label "PhoneInput"

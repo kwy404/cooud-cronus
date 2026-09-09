@@ -1,6 +1,9 @@
 ## Noise
 ## source: packages/ui/src/components/noise.tsx
+## wave 1 - forms
+## exports: Noise
+## slots: noise
 
-component Noise layout:inline style:noise {
+component Noise(label: text) layout:inline style:noise {
   label "Noise"
 }

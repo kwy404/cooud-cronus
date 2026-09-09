@@ -1,7 +1,33 @@
-## Pagination — data
+## Pagination
 ## source: packages/ui/src/components/pagination.tsx
+## wave 1 - forms
+## exports: Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationPrevious, PaginationNext, PaginationEllipsis
+## slots: pagination, pagination-content, pagination-ellipsis, pagination-item, pagination-link, pagination-next, pagination-previous
 
-component Pagination layout:inline style:pagination {
+component Pagination(label: text) layout:inline style:pagination {
   label "Pagination"
-  variant "prev"
+}
+
+component PaginationContent(label: text) layout:inline style:pagination-content {
+  label "PaginationContent"
+}
+
+component PaginationItem(label: text) layout:inline style:pagination-item {
+  label "PaginationItem"
+}
+
+component PaginationLink(label: text) layout:inline style:pagination-link {
+  label "PaginationLink"
+}
+
+component PaginationPrevious(label: text) layout:inline style:pagination-previous {
+  label "PaginationPrevious"
+}
+
+component PaginationNext(label: text) layout:inline style:pagination-next {
+  label "PaginationNext"
+}
+
+component PaginationEllipsis(label: text) layout:inline style:pagination-ellipsis {
+  label "PaginationEllipsis"
 }

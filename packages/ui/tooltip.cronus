@@ -1,7 +1,21 @@
-## Tooltip — overlays
+## Tooltip
 ## source: packages/ui/src/components/tooltip.tsx
+## wave 1 - forms
+## exports: TooltipProvider, Tooltip, TooltipTrigger, TooltipContent
+## slots: tooltip, tooltip-content, tooltip-provider
 
-component Tooltip layout:inline style:tooltip {
+component Tooltip(label: text) layout:overlay style:tooltip {
   label "Tooltip"
-  variant "delay"
+}
+
+component TooltipProvider(label: text) layout:inline style:tooltip-provider {
+  label "TooltipProvider"
+}
+
+component TooltipTrigger(label: text) layout:inline style:tooltip-trigger {
+  label "TooltipTrigger"
+}
+
+component TooltipContent(label: text) layout:inline style:tooltip-content {
+  label "TooltipContent"
 }

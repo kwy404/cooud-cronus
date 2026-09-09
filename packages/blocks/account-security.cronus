@@ -1,5 +1,7 @@
 ## Block AccountSecurity
 ## source: registry/account-security.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component AccountSecurityBlock layout:stack style:account-security {
   label "AccountSecurity"

@@ -1,5 +1,8 @@
 ## Block Chip
 ## source: registry/chip.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: class-variance-authority@^0.7.1, lucide-react@^0.577.0
 
 component ChipBlock layout:stack style:chip {
   label "Chip"

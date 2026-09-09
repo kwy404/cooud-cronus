@@ -1,6 +1,9 @@
 ## CodeBlock
 ## source: packages/ui/src/components/code-block.tsx
+## wave 1 - forms
+## exports: CodeBlock
+## slots: code-block, code-block-code, code-block-filename, code-block-header, code-block-language, code-block-line, code-block-line-number, code-block-pre, code-block-scroll
 
-component CodeBlock layout:inline style:code-block {
+component CodeBlock(label: text) layout:inline style:code-block {
   label "CodeBlock"
 }

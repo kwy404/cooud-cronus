@@ -1,5 +1,7 @@
 ## Block BorderBeam
 ## source: registry/border-beam.json
+## type: registry:ui
+## registryDependencies: cn
 
 component BorderBeamBlock layout:stack style:border-beam {
   label "BorderBeam"

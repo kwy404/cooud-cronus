@@ -1,5 +1,7 @@
 ## Block Terminal
 ## source: registry/terminal.json
+## type: registry:ui
+## registryDependencies: cn, copy-button
 
 component TerminalBlock layout:stack style:terminal {
   label "Terminal"

@@ -1,7 +1,12 @@
-## Badge — foundation
+## Badge
 ## source: packages/ui/src/components/badge.tsx
+## wave 0 - foundation
+## exports: Badge
+## slots: badge
+## variants.variant: default, primary, secondary, outline, success, warning, destructive, error, info
+## defaults: variant=default
 
-component Badge layout:inline style:badge {
+component Badge(label: text, variant: text) layout:inline style:badge {
   label "Badge"
   variant "default"
 }

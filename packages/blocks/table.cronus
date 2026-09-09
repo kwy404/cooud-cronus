@@ -1,5 +1,7 @@
 ## Block Table
 ## source: registry/table.json
+## type: registry:ui
+## registryDependencies: cn
 
 component TableBlock layout:stack style:table {
   label "Table"

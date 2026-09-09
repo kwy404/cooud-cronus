@@ -1,6 +1,17 @@
 ## CreditCardInput
 ## source: packages/ui/src/components/credit-card-input.tsx
+## wave 1 - forms
+## exports: CardBrand, CreditCardValue, CreditCardInput
+## slots: credit-card-input
 
-component CreditCardInput layout:inline style:credit-card-input {
+component CreditCardInput(label: text) layout:inline style:credit-card-input {
   label "CreditCardInput"
+}
+
+component CardBrand(label: text) layout:inline style:card-brand {
+  label "CardBrand"
+}
+
+component CreditCardValue(label: text) layout:inline style:credit-card-value {
+  label "CreditCardValue"
 }

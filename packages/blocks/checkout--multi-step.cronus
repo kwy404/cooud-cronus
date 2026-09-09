@@ -1,5 +1,7 @@
 ## Block CheckoutMultiStep
 ## source: registry/checkout--multi-step.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component CheckoutMultiStepBlock layout:stack style:checkout--multi-step {
   label "CheckoutMultiStep"

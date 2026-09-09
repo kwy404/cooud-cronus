@@ -1,6 +1,45 @@
 ## @cooud-cronus/stack
-## Stack builder intent — generated apps run on cronus-kernel, not npm.
+## Native stack builder. Runtime is cronus-kernel, not Next/npm.
 
 app "Stack" {
   port 5175
+  database sqlite "./stack.db"
+  theme dark
+}
+
+style {
+  theme dark
+  accent white
+  font "Inter"
+}
+
+page "/" {
+  section hero {
+    title "Cronus Stack"
+    subtitle "Scaffold nativo .cronus"
+  }
+
+  section web {
+    title "Web"
+    item "cronus-kernel" icon:layers
+    item "none" icon:circle-slash
+  }
+
+  section backend {
+    title "Backend"
+    item "cronus-kernel" icon:server
+    item "none" icon:circle-slash
+  }
+
+  section database {
+    title "Database"
+    item "sqlite" icon:database
+    item "postgres" icon:database
+  }
+
+  section auth {
+    title "Auth"
+    item "cronus-auth" icon:shield
+    item "none" icon:circle-slash
+  }
 }

@@ -1,4 +1,4 @@
-## @cooud-cronus/ui — full catalog (173 families)
+## @cooud-cronus/ui — 173 families from cronus-ui barrel
 
 import "accordion.cronus"
 import "alert.cronus"

@@ -1,6 +1,21 @@
 ## TextEffect
 ## source: packages/ui/src/components/text-effect.tsx
+## wave 1 - forms
+## exports: TextEffectPer, TextEffectPreset, TextEffectTrigger, TextEffect
+## slots: text-effect
 
-component TextEffect layout:inline style:text-effect {
+component TextEffect(label: text) layout:inline style:text-effect {
   label "TextEffect"
+}
+
+component TextEffectPer(label: text) layout:inline style:text-effect-per {
+  label "TextEffectPer"
+}
+
+component TextEffectPreset(label: text) layout:inline style:text-effect-preset {
+  label "TextEffectPreset"
+}
+
+component TextEffectTrigger(label: text) layout:inline style:text-effect-trigger {
+  label "TextEffectTrigger"
 }

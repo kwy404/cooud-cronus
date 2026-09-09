@@ -1,0 +1,11 @@
+## @cooud-cronus/ai-kit
+## Doutrina de agentes. Nao instala configs Claude/Cursor daqui.
+## Fonte: AGENTS.md, PROMPT-GROK-MASTER.md, packages/ai-kit/templates do cronus-ui.
+##
+## presets: base, saas, agency, fintech, oss
+## skills: ui-add, compose, theme, upgrade, ship-pr, code-review, evidence-check
+## Assistants leem AGENTS.md na raiz.
+
+app "AiKit" {
+  port 4751
+}

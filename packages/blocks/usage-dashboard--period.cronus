@@ -1,5 +1,8 @@
 ## Block UsageDashboardPeriod
 ## source: registry/usage-dashboard--period.json
+## type: registry:block
+## registryDependencies: demo-saas
+## npm: @cronus-ui/ui@0.7.3
 
 component UsageDashboardPeriodBlock layout:stack style:usage-dashboard--period {
   label "UsageDashboardPeriod"

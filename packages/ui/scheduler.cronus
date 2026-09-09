@@ -1,6 +1,17 @@
 ## Scheduler
 ## source: packages/ui/src/components/scheduler.tsx
+## wave 1 - forms
+## exports: SchedulerEventColor, SchedulerEvent, Scheduler
+## slots: scheduler, scheduler-event, scheduler-event-overflow, scheduler-grid, scheduler-title, scheduler-weekdays
 
-component Scheduler layout:inline style:scheduler {
+component Scheduler(label: text) layout:stack style:scheduler {
   label "Scheduler"
+}
+
+component SchedulerEventColor(label: text) layout:inline style:scheduler-event-color {
+  label "SchedulerEventColor"
+}
+
+component SchedulerEvent(label: text) layout:inline style:scheduler-event {
+  label "SchedulerEvent"
 }

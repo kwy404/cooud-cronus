@@ -1,6 +1,13 @@
 ## Banner
 ## source: packages/ui/src/components/banner.tsx
+## wave 0 - foundation
+## exports: Banner
+## slots: banner, banner-action, banner-content, banner-description, banner-dismiss, banner-title
+## variants.variant: default, brand, info, success, warning, error
+## variants.align: start, center
+## defaults: variant=default align=center
 
-component Banner layout:inline style:banner {
+component Banner(label: text, variant: text) layout:stack style:banner {
   label "Banner"
+  variant "default"
 }

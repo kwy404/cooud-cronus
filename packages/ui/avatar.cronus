@@ -1,7 +1,17 @@
-## Avatar — data
+## Avatar
 ## source: packages/ui/src/components/avatar.tsx
+## wave 3 - data & display
+## exports: Avatar, AvatarImage, AvatarFallback
+## slots: avatar, avatar-fallback, avatar-image
 
-component Avatar layout:inline style:avatar {
+component Avatar(label: text) layout:inline style:avatar {
   label "Avatar"
-  variant "image"
+}
+
+component AvatarImage(label: text) layout:inline style:avatar-image {
+  label "AvatarImage"
+}
+
+component AvatarFallback(label: text) layout:inline style:avatar-fallback {
+  label "AvatarFallback"
 }

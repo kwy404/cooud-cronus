@@ -1,6 +1,9 @@
 ## DotPattern
 ## source: packages/ui/src/components/dot-pattern.tsx
+## wave 1 - forms
+## exports: DotPattern
+## slots: dot-pattern
 
-component DotPattern layout:inline style:dot-pattern {
+component DotPattern(label: text) layout:inline style:dot-pattern {
   label "DotPattern"
 }

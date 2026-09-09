@@ -1,5 +1,8 @@
 ## Block PillNav
 ## source: registry/pill-nav.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: motion@^12.23.0
 
 component PillNavBlock layout:stack style:pill-nav {
   label "PillNav"

@@ -1,7 +1,13 @@
-## RadioGroup — forms
+## RadioGroup
 ## source: packages/ui/src/components/radio-group.tsx
+## wave 1 - forms
+## exports: RadioGroup, RadioGroupItem
+## slots: radio-group, radio-group-item
 
-component RadioGroup layout:inline style:radio-group {
+component RadioGroup(label: text) layout:inline style:radio-group {
   label "RadioGroup"
-  variant "items"
+}
+
+component RadioGroupItem(label: text) layout:inline style:radio-group-item {
+  label "RadioGroupItem"
 }

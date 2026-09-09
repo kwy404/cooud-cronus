@@ -1,5 +1,7 @@
 ## Block NpsSurvey
 ## source: registry/nps-survey.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3
 
 component NpsSurveyBlock layout:stack style:nps-survey {
   label "NpsSurvey"

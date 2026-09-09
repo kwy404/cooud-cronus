@@ -1,6 +1,13 @@
 ## TypingText
 ## source: packages/ui/src/components/typing-text.tsx
+## wave 1 - forms
+## exports: TypingTextMotionPreference, TypingText
+## slots: typing-text
 
-component TypingText layout:inline style:typing-text {
+component TypingText(label: text) layout:inline style:typing-text {
   label "TypingText"
+}
+
+component TypingTextMotionPreference(label: text) layout:inline style:typing-text-motion-preference {
+  label "TypingTextMotionPreference"
 }

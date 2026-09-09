@@ -1,6 +1,13 @@
 ## Sonner
 ## source: packages/ui/src/components/sonner.tsx
+## wave 1 - forms
+## exports: Sonner, Toaster
+## slots: toaster
 
-component Sonner layout:inline style:sonner {
+component Sonner(label: text) layout:inline style:sonner {
   label "Sonner"
+}
+
+component Toaster(label: text) layout:inline style:toaster {
+  label "Toaster"
 }

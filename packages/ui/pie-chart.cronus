@@ -1,6 +1,13 @@
 ## PieChart
 ## source: packages/ui/src/components/pie-chart.tsx
+## wave 1 - forms
+## exports: PieChartItem, PieChart
+## slots: pie-chart
 
-component PieChart layout:inline style:pie-chart {
+component PieChart(label: text) layout:stack style:pie-chart {
   label "PieChart"
+}
+
+component PieChartItem(label: text) layout:inline style:pie-chart-item {
+  label "PieChartItem"
 }
