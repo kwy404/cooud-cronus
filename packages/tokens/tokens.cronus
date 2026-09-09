@@ -1,21 +1,10 @@
 ## @cooud-cronus/tokens
 ## Semantic roles from cronus-ui packages/tokens.
-## presets: aurora, neutral, midnight, sunset, emerald × light/dark
+## presets: aurora, aurora-light, neutral, neutral-dark,
+## midnight, midnight-dark, sunset, sunset-dark, emerald, emerald-dark
 
 style {
   theme dark
-  preset aurora
   accent white
   font "Inter"
 }
-
-import "aurora.cronus"
-import "aurora-light.cronus"
-import "neutral.cronus"
-import "neutral-dark.cronus"
-import "midnight.cronus"
-import "midnight-dark.cronus"
-import "sunset.cronus"
-import "sunset-dark.cronus"
-import "emerald.cronus"
-import "emerald-dark.cronus"

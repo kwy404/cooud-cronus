@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-09T02:14:24Z",
+  "generated": "2026-09-09T02:22:32Z",
   "cronus_files": 564,
   "forbidden": [],
   "forbidden_files": [],
@@ -44,7 +44,15 @@
   "parse": {
     "status": "PASS",
     "code": 0,
-    "output": "Parsed 16 nodes:\n  Entities: 7\n  Pages:    6\n  API:      0 routes\n  App:      \"Cooud\" (port 4747)\n  Database: sqlite Some(\"./cooud.db\")\n"
+    "output": "Parsed 16 nodes:\n  Entities: 7\n  Pages:    6\n  API:      0 routes\n  App:      \"Cooud\" (port 4747)\n  Database: sqlite Some(\"./cooud.db\")\n",
+    "validate": "\n  \u001b[32m\u2713\u001b[0m C:\\Users\\Hadouken Game Center\\Desktop\\cooud\\cronus-ui-in-cronus-language\\apps\\dashboard\\app.cronus is valid\n    7 entities, 6 pages, 0 routes\n    \u001b[33m\u26a0\u001b[0m Unknown config key 'brand' in section 'sidebar'\n    \u001b[33m\u26a0\u001b[0m Unknown section type 'dark-mode'\n    \u001b[33m\u26a0\u001b[0m Unknown config key 'value' in section 'kpi'\n    \u001b[33m\u26a0\u001b[0m Unknown section type 'progress'\n    \u001b[33m\u26a0\u001b[0m Unknown section type 'filters'\n    \u001b[33m\u26a0\u001b[0m Unknown config key 'value' in section 'chart'\n    \u001b[33m\u26a0\u001b[0m Unknown config key 'brand' in section 'sidebar'\n    \u001b[33m\u26a0\u001b[0m Unknown config key 'brand' in section 'sidebar'\n    \u001b[33m\u26a0\u001b[0m Unknown config key 'brand' in section 'sidebar'\n    \u001b[33m\u26a0\u001b[0m Unknown config key 'brand' in section 'sidebar'\n    \u001b[33m\u26a0\u001b[0m Unknown config key 'brand' in section 'sidebar'\n    \u001b[33m\u26a0\u001b[0m Unknown key 'value' in section 'form'\n    \u001b[33m\u26a0\u001b[0m Unknown key 'value' in section 'form'\n\n",
+    "validate_code": 0
+  },
+  "parse_all": {
+    "status": "PASS",
+    "total": 564,
+    "ok": 564,
+    "fail": []
   },
   "overall": "PASS"
 }

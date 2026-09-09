@@ -14,8 +14,9 @@ python scripts\harness.py
 
 Ultimo run: `harness/report.md`
 
-- forbidden HTML/CSS/TSX em `.cronus`: **PASS** (0 hits)
-- `cronus parse apps/dashboard/app.cronus`: **PASS** — App `"Cooud"` · 7 entities · 6 pages · port 4747
+- markup no repo: **PASS** (0 hits, 0 arquivos proibidos)
+- `cronus parse` + `validate` dashboard: **PASS**
+- parse de todos os `.cronus`: **564/564 PASS**
 - catalogo UI 173 / blocks 307: presente, **contrato** (nao visual VERIFIED)
 
 ## Cooud (end to end nativo)

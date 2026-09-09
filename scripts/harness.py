@@ -175,12 +175,18 @@ def inventory() -> dict:
     }
 
 
-def try_parse() -> dict:
+def _cronus_exe() -> Path | None:
     exe = ROOT / "bin" / "cronus.exe"
-    if not exe.exists():
-        exe = ROOT / "bin" / "cronus"
+    if exe.exists():
+        return exe
+    exe = ROOT / "bin" / "cronus"
+    return exe if exe.exists() else None
+
+
+def try_parse() -> dict:
+    exe = _cronus_exe()
     app = ROOT / "apps" / "dashboard" / "app.cronus"
-    if not exe.exists():
+    if not exe:
         return {"status": "SKIPPED", "reason": "bin/cronus.exe missing — run scripts/CRIAR-COMPILER.bat"}
     try:
         proc = subprocess.run(
@@ -191,13 +197,57 @@ def try_parse() -> dict:
             cwd=str(ROOT),
         )
         out = (proc.stdout or "") + (proc.stderr or "")
+        val = subprocess.run(
+            [str(exe), "validate", str(app)],
+            capture_output=True,
+            text=True,
+            timeout=60,
+            cwd=str(ROOT),
+        )
+        val_out = (val.stdout or "") + (val.stderr or "")
+        ok = proc.returncode == 0 and val.returncode == 0
         return {
-            "status": "PASS" if proc.returncode == 0 else "FAIL",
+            "status": "PASS" if ok else "FAIL",
             "code": proc.returncode,
-            "output": out[-4000:],
+            "output": out[-2000:],
+            "validate": val_out[-2000:],
+            "validate_code": val.returncode,
         }
     except Exception as exc:
         return {"status": "FAIL", "reason": str(exc)}
+
+
+def parse_all_cronus() -> dict:
+    exe = _cronus_exe()
+    files = iter_cronus()
+    if not exe:
+        return {"status": "SKIPPED", "total": len(files), "ok": 0, "fail": []}
+    fail = []
+    ok = 0
+    for path in files:
+        proc = subprocess.run(
+            [str(exe), "parse", str(path)],
+            capture_output=True,
+            text=True,
+            timeout=30,
+            cwd=str(ROOT),
+        )
+        if proc.returncode == 0:
+            ok += 1
+        else:
+            msg = ((proc.stdout or "") + (proc.stderr or "")).strip().splitlines()
+            fail.append(
+                {
+                    "file": str(path.relative_to(ROOT)).replace("\\", "/"),
+                    "error": msg[0] if msg else "parse failed",
+                }
+            )
+    return {
+        "status": "PASS" if not fail else "FAIL",
+        "total": len(files),
+        "ok": ok,
+        "fail": fail,
+    }
 
 
 def write_report(data: dict) -> Path:
@@ -260,6 +310,25 @@ def write_report(data: dict) -> Path:
         lines.append(parse["output"].strip())
         lines.append("```")
         lines.append("")
+    if parse.get("validate"):
+        lines.append("validate:")
+        lines.append("```")
+        lines.append(parse["validate"].strip())
+        lines.append("```")
+        lines.append("")
+
+    pall = data.get("parse_all") or {}
+    lines += [
+        "## Gate: parse every `.cronus`",
+        "",
+        f"status: **{pall.get('status')}**",
+        f"ok: {pall.get('ok')} / {pall.get('total')}",
+        "",
+    ]
+    for item in (pall.get("fail") or [])[:40]:
+        lines.append(f"- `{item['file']}`: {item['error']}")
+    if pall.get("fail"):
+        lines.append("")
 
     lines += [
         "## Inventory vs cronus-ui",
@@ -291,7 +360,7 @@ def write_report(data: dict) -> Path:
         "2. `cronus parse apps/dashboard/app.cronus` succeeds after `scripts/CRIAR-COMPILER.bat`.",
         "3. No file in this repo contains page markup. Source is `.cronus` only.",
         "4. Catalog files in `packages/ui` are contracts (variants/slots), not React ports — visual parity of 173 widgets is NOT VERIFIED.",
-        "5. Pixel chrome is a LANGUAGE GAP. Do not re-embed CSS/HTML to fake it.",
+        "5. Pixel chrome is a LANGUAGE GAP. Do not re-embed page markup to fake it.",
         "6. Preview is image only (`docs/preview/*.png`).",
         "",
         f"overall: **{data['overall']}**",
@@ -311,9 +380,11 @@ def main() -> int:
     preview_hits = scan_preview_not_images()
     inv = inventory()
     parse = try_parse()
+    parse_all = parse_all_cronus()
     forbidden_status = "FAIL" if hits or file_hits or preview_hits else "PASS"
     parse_ok = parse.get("status") in {"PASS", "SKIPPED"}
-    overall = "PASS" if forbidden_status == "PASS" and parse_ok else "FAIL"
+    all_ok = parse_all.get("status") in {"PASS", "SKIPPED"}
+    overall = "PASS" if forbidden_status == "PASS" and parse_ok and all_ok else "FAIL"
     if parse.get("status") == "SKIPPED" and forbidden_status == "PASS":
         overall = "PASS_WITH_GAPS"
     data = {
@@ -325,13 +396,15 @@ def main() -> int:
         "forbidden_status": forbidden_status,
         "inventory": inv,
         "parse": parse,
+        "parse_all": parse_all,
         "overall": overall,
     }
     path = write_report(data)
     print(
         f"files={len(cronus_files)} forbidden_lines={len(hits)} "
         f"forbidden_files={len(file_hits)} preview_bad={len(preview_hits)} "
-        f"parse={parse.get('status')} overall={overall}"
+        f"parse={parse.get('status')} parse_all={parse_all.get('ok')}/{parse_all.get('total')} "
+        f"overall={overall}"
     )
     print(path)
     if forbidden_status == "FAIL":
