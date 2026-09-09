@@ -1,5 +1,7 @@
 ## Block Integrations
 ## source: registry/integrations.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component IntegrationsBlock layout:stack style:integrations {
   label "Integrations"

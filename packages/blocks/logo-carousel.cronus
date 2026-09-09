@@ -1,5 +1,8 @@
 ## Block LogoCarousel
 ## source: registry/logo-carousel.json
+## type: registry:ui
+## registryDependencies: cn, motion-presets
+## npm: motion@^12.23.0
 
 component LogoCarouselBlock layout:stack style:logo-carousel {
   label "LogoCarousel"

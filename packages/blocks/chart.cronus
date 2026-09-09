@@ -1,5 +1,8 @@
 ## Block Chart
 ## source: registry/chart.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: recharts@^3.9.2
 
 component ChartBlock layout:stack style:chart {
   label "Chart"

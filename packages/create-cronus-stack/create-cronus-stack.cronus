@@ -1,0 +1,9 @@
+## @cooud-cronus/create-cronus-stack
+## Scaffold de stack nativo. Nao e bun create.
+## npm: create-cronus-stack [name] --web --backend --db
+## nativo: cronus compose + packages/stack/stack.cronus
+
+app "CreateCronusStack" {
+  port 5175
+  theme dark
+}

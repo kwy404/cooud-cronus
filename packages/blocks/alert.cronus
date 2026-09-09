@@ -1,5 +1,8 @@
 ## Block Alert
 ## source: registry/alert.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: class-variance-authority@^0.7.1
 
 component AlertBlock layout:stack style:alert {
   label "Alert"

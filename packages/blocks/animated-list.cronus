@@ -1,5 +1,8 @@
 ## Block AnimatedList
 ## source: registry/animated-list.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: motion@^12.23.0
 
 component AnimatedListBlock layout:stack style:animated-list {
   label "AnimatedList"

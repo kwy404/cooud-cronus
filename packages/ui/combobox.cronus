@@ -1,7 +1,9 @@
-## Combobox — forms
+## Combobox
 ## source: packages/ui/src/components/combobox.tsx
+## wave 1 - forms
+## exports: Combobox
+## slots: combobox-content, combobox-trigger
 
-component Combobox layout:inline style:combobox {
+component Combobox(label: text) layout:overlay style:combobox {
   label "Combobox"
-  variant "searchable"
 }

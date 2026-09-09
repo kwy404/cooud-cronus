@@ -2,16 +2,19 @@
 
 Cronus UI em `.cronus` + dashboard Cooud.
 
-**Não é um app Node.** Não tem `node_modules`. Sem o compilador o `.cronus` é só fonte — não quebra o git, mas não executa.
+**Nao e um app Node.** Nao tem `node_modules`. Sem o compilador o `.cronus` e so fonte — nao quebra o git, mas nao executa.
 
-## Como não quebrar
+## Como nao quebrar
 
-| Peça | Onde | Como entra no clone |
+| Peca | Onde | Como entra no clone |
 |---|---|---|
-| Pacotes UI | `packages/ui` (58 `.cronus`) | já no git |
-| Tokens | `packages/tokens` | já no git |
-| App dashboard | `apps/dashboard/app.cronus` | já no git |
-| Compilador `cronus` | `compiler/cronus-kernel` → `bin/cronus.exe` | **não** vai no git; `scripts/setup.ps1` clona + `cargo build` |
+| Pacotes UI | `packages/ui` (173 `.cronus`) | ja no git |
+| Blocks | `packages/blocks` (307) | ja no git |
+| Tokens / theme | `packages/tokens` `packages/theme` | ja no git |
+| Stack / cli / mcp / ai-kit | `packages/` | ja no git |
+| create-cronus-app / create-cronus-stack | `packages/` | ja no git |
+| App dashboard | `apps/dashboard/app.cronus` | ja no git |
+| Compilador `cronus` | `compiler/cronus-kernel` → `bin/cronus.exe` | **nao** vai no git; `scripts/setup.ps1` clona + `cargo build` |
 
 ```powershell
 git clone https://github.com/kwy404/cooud-cronus.git
@@ -20,24 +23,28 @@ cd cooud-cronus
 .\bin\cronus.exe parse .\apps\dashboard\app.cronus
 ```
 
-Precisa de **Rust** (`https://rustup.rs`) e **Git**. Sem isso o parse não roda — os arquivos `.cronus` continuam no repo.
+Precisa de **Rust** (`https://rustup.rs`) e **Git**. Sem isso o parse nao roda — os arquivos `.cronus` continuam no repo.
 
 ## Packages (tudo no git)
 
 ```
 packages/
-  tokens/     @cronus-ui/tokens
-  theme/      aurora / neutral / midnight / sunset / emerald
-  ui/         173 famílias (barrel inteiro do cronus-ui)
-  blocks/     307 blocks do registry
-  stack/      scaffold nativo
-  cli/        → bin/cronus.exe (não npm)
-  mcp/        intenção, sem Node
-  ai-kit/     doutrina
+  tokens/              5 presets x light/dark (CSS vars do cronus-ui)
+  theme/               aurora / neutral / midnight / sunset / emerald
+  ui/                  173 familias (barrel inteiro, CVA variants, slots, exports)
+  blocks/              307 blocks do registry
+  stack/               scaffold nativo
+  cli/                 -> bin/cronus.exe (nao npm)
+  mcp/                 14 tools, sem Node
+  ai-kit/              doutrina
+  create-cronus-app/   templates default / dashboard / marketing
+  create-cronus-stack/ compose nativo
 apps/
-  dashboard/  dashboard.cooud.com
-compiler/     cronus-kernel (clone no setup)
+  dashboard/           dashboard.cooud.com
+compiler/              cronus-kernel (clone no setup)
 ```
+
+Regenerar o catalogo: `python scripts/gen-packages.py` (le `../cronus-ui`).
 
 ## Cooud Dashboard
 
@@ -45,7 +52,7 @@ compiler/     cronus-kernel (clone no setup)
 
 ![Cooud Dashboard](docs/preview/cooud-dashboard.png)
 
-## Catálogo
+## Catalogo
 
 ![Wave 0](docs/preview/showcase-w0.png)
 ![Wave 1](docs/preview/showcase-w1.png)

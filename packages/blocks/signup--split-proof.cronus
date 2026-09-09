@@ -1,5 +1,8 @@
 ## Block SignupSplitProof
 ## source: registry/signup--split-proof.json
+## type: registry:block
+## registryDependencies: auth-adapter, demo-saas
+## npm: @cronus-ui/ui@0.7.3
 
 component SignupSplitProofBlock layout:stack style:signup--split-proof {
   label "SignupSplitProof"

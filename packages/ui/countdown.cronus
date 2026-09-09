@@ -1,6 +1,13 @@
 ## Countdown
 ## source: packages/ui/src/components/countdown.tsx
+## wave 1 - forms
+## exports: CountdownLabels, Countdown
+## slots: countdown, countdown-label, countdown-unit, countdown-value
 
-component Countdown layout:inline style:countdown {
+component Countdown(label: text) layout:inline style:countdown {
   label "Countdown"
+}
+
+component CountdownLabels(label: text) layout:inline style:countdown-labels {
+  label "CountdownLabels"
 }

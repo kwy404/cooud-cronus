@@ -1,7 +1,9 @@
-## Progress — data
+## Progress
 ## source: packages/ui/src/components/progress.tsx
+## wave 1 - forms
+## exports: Progress
+## slots: progress
 
-component Progress layout:inline style:progress {
+component Progress(label: text) layout:inline style:progress {
   label "Progress"
-  variant "0-100"
 }

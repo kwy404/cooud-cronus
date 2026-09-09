@@ -1,5 +1,7 @@
 ## Block Kbd
 ## source: registry/kbd.json
+## type: registry:ui
+## registryDependencies: cn
 
 component KbdBlock layout:stack style:kbd {
   label "Kbd"

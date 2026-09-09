@@ -1,0 +1,41 @@
+## tokens sunset-dark
+## source: packages/tokens/styles/tokens.css
+## --cronus-primary-text: oklch(0.78 0.16 65)
+## --cronus-surface-base: oklch(0.145 0.005 285.8)
+## --cronus-surface-inset: oklch(0.165 0.005 285.8)
+## --cronus-surface-raised: oklch(0.195 0.005 285.8)
+## --cronus-surface-overlay: oklch(0.235 0.006 285.9)
+## --cronus-surface-elevated: oklch(0.27 0.006 286)
+## --cronus-surface-floating: oklch(0.2 0.006 286)
+## --cronus-fg: oklch(0.985 0.001 106.4)
+## --cronus-fg-secondary: oklch(0.705 0.015 286)
+## --cronus-fg-tertiary: oklch(0.62 0.014 286)
+## --cronus-fg-muted: oklch(0.442 0.013 286)
+## --cronus-fg-inverse: oklch(0.235 0.006 285.9)
+## --cronus-border: oklch(1 0 0 / 0.1)
+## --cronus-border-strong: oklch(1 0 0 / 0.14)
+## --cronus-border-soft: oklch(1 0 0 / 0.06)
+## --cronus-success: oklch(0.74 0.16 130)
+## --cronus-success-text: oklch(0.74 0.16 130)
+## --cronus-warning: oklch(0.769 0.166 70.08)
+## --cronus-warning-text: oklch(0.769 0.166 70.08)
+## --cronus-error: oklch(0.645 0.222 16.44)
+## --cronus-error-text: oklch(0.69 0.222 16.44)
+## --cronus-info: oklch(0.72 0.13 55)
+## --cronus-info-text: oklch(0.72 0.13 55)
+## --cronus-chart-1: oklch(0.78 0.16 65)
+## --cronus-chart-2: oklch(0.7 0.19 40)
+## --cronus-chart-4: oklch(0.82 0.16 85)
+## --cronus-chart-5: oklch(0.66 0.18 4)
+## --cronus-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2)
+## --cronus-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.22)
+## --cronus-shadow-md: 0 6px 12px rgba(0, 0, 0, 0.24), 0 2px 4px rgba(0, 0, 0, 0.16)
+## --cronus-shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.28), 0 4px 8px rgba(0, 0, 0, 0.18)
+## --cronus-shadow-glow: 0 12px 32px rgba(252, 159, 48, 0.34)
+
+style {
+  theme dark
+  preset sunset
+  accent white
+  font "Inter"
+}

@@ -1,5 +1,7 @@
 ## Block Skeleton
 ## source: registry/skeleton.json
+## type: registry:ui
+## registryDependencies: cn
 
 component SkeletonBlock layout:stack style:skeleton {
   label "Skeleton"

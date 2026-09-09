@@ -1,5 +1,8 @@
 ## Block CandlestickChart
 ## source: registry/candlestick-chart.json
+## type: registry:ui
+## registryDependencies: chart, cn
+## npm: recharts@^3.9.2
 
 component CandlestickChartBlock layout:stack style:candlestick-chart {
   label "CandlestickChart"

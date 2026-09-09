@@ -1,5 +1,7 @@
 ## Block UsageMeter
 ## source: registry/usage-meter.json
+## type: registry:ui
+## registryDependencies: cn
 
 component UsageMeterBlock layout:stack style:usage-meter {
   label "UsageMeter"

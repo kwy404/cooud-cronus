@@ -1,7 +1,21 @@
-## Metric — data
+## Metric
 ## source: packages/ui/src/components/metric.tsx
+## wave 1 - forms
+## exports: Metric, MetricLabel, MetricValue, MetricDelta
+## slots: metric, metric-delta, metric-label, metric-value
 
-component Metric layout:inline style:metric {
+component Metric(label: text) layout:inline style:metric {
   label "Metric"
-  variant "value"
+}
+
+component MetricLabel(label: text) layout:inline style:metric-label {
+  label "MetricLabel"
+}
+
+component MetricValue(label: text) layout:inline style:metric-value {
+  label "MetricValue"
+}
+
+component MetricDelta(label: text) layout:inline style:metric-delta {
+  label "MetricDelta"
 }

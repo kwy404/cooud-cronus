@@ -1,7 +1,37 @@
-## Table — data
+## Table
 ## source: packages/ui/src/components/table.tsx
+## wave 1 - forms
+## exports: Table, TableHeader, TableBody, TableFooter, TableRow, TableHead, TableCell, TableCaption
+## slots: table, table-body, table-caption, table-cell, table-container, table-footer, table-head, table-header, table-row
 
-component Table layout:inline style:table {
+component Table(label: text) layout:stack style:table {
   label "Table"
-  variant "header"
+}
+
+component TableHeader(label: text) layout:inline style:table-header {
+  label "TableHeader"
+}
+
+component TableBody(label: text) layout:inline style:table-body {
+  label "TableBody"
+}
+
+component TableFooter(label: text) layout:inline style:table-footer {
+  label "TableFooter"
+}
+
+component TableRow(label: text) layout:inline style:table-row {
+  label "TableRow"
+}
+
+component TableHead(label: text) layout:inline style:table-head {
+  label "TableHead"
+}
+
+component TableCell(label: text) layout:inline style:table-cell {
+  label "TableCell"
+}
+
+component TableCaption(label: text) layout:inline style:table-caption {
+  label "TableCaption"
 }

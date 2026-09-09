@@ -1,6 +1,9 @@
 ## SpinningText
 ## source: packages/ui/src/components/spinning-text.tsx
+## wave 1 - forms
+## exports: SpinningText
+## slots: spinning-text
 
-component SpinningText layout:inline style:spinning-text {
+component SpinningText(label: text) layout:inline style:spinning-text {
   label "SpinningText"
 }

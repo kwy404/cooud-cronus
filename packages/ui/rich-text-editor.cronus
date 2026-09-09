@@ -1,6 +1,9 @@
 ## RichTextEditor
 ## source: packages/ui/src/components/rich-text-editor.tsx
+## wave 1 - forms
+## exports: RichTextEditor
+## slots: rich-text-editor, rich-text-editor-content-wrapper, rich-text-editor-placeholder, rich-text-editor-toolbar
 
-component RichTextEditor layout:inline style:rich-text-editor {
+component RichTextEditor(label: text) layout:stack style:rich-text-editor {
   label "RichTextEditor"
 }

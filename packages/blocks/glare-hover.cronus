@@ -1,5 +1,7 @@
 ## Block GlareHover
 ## source: registry/glare-hover.json
+## type: registry:ui
+## registryDependencies: cn
 
 component GlareHoverBlock layout:stack style:glare-hover {
   label "GlareHover"

@@ -1,7 +1,13 @@
-## ToggleGroup — forms
+## ToggleGroup
 ## source: packages/ui/src/components/toggle-group.tsx
+## wave 1 - forms
+## exports: ToggleGroup, ToggleGroupItem
+## slots: toggle-group, toggle-group-item
 
-component ToggleGroup layout:inline style:toggle-group {
+component ToggleGroup(label: text) layout:inline style:toggle-group {
   label "ToggleGroup"
-  variant "single"
+}
+
+component ToggleGroupItem(label: text) layout:inline style:toggle-group-item {
+  label "ToggleGroupItem"
 }

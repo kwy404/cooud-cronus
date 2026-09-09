@@ -1,6 +1,17 @@
 ## Collapsible
 ## source: packages/ui/src/components/collapsible.tsx
+## wave 1 - forms
+## exports: Collapsible, CollapsibleTrigger, CollapsibleContent
+## slots: collapsible-content
 
-component Collapsible layout:inline style:collapsible {
+component Collapsible(label: text) layout:inline style:collapsible {
   label "Collapsible"
+}
+
+component CollapsibleTrigger(label: text) layout:inline style:collapsible-trigger {
+  label "CollapsibleTrigger"
+}
+
+component CollapsibleContent(label: text) layout:inline style:collapsible-content {
+  label "CollapsibleContent"
 }

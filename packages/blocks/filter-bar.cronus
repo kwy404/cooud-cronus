@@ -1,5 +1,7 @@
 ## Block FilterBar
 ## source: registry/filter-bar.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component FilterBarBlock layout:stack style:filter-bar {
   label "FilterBar"

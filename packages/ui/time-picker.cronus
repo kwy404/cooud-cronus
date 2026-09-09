@@ -1,6 +1,13 @@
 ## TimePicker
 ## source: packages/ui/src/components/time-picker.tsx
+## wave 1 - forms
+## exports: TimeValue, TimePicker
+## slots: time-picker, time-picker-column, time-picker-content, time-picker-done, time-picker-now, time-picker-option
 
-component TimePicker layout:inline style:time-picker {
+component TimePicker(label: text) layout:inline style:time-picker {
   label "TimePicker"
+}
+
+component TimeValue(label: text) layout:inline style:time-value {
+  label "TimeValue"
 }

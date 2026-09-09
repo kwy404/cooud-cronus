@@ -1,5 +1,7 @@
 ## Block StatsCompactSummary
 ## source: registry/stats--compact-summary.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3
 
 component StatsCompactSummaryBlock layout:stack style:stats--compact-summary {
   label "StatsCompactSummary"

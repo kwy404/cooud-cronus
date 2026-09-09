@@ -1,5 +1,8 @@
 ## Block Signup
 ## source: registry/signup.json
+## type: registry:block
+## registryDependencies: auth-adapter, demo-saas
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component SignupBlock layout:stack style:signup {
   label "Signup"

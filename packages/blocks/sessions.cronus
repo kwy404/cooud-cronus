@@ -1,5 +1,7 @@
 ## Block Sessions
 ## source: registry/sessions.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component SessionsBlock layout:stack style:sessions {
   label "Sessions"

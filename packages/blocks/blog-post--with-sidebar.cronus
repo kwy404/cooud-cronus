@@ -1,5 +1,7 @@
 ## Block BlogPostWithSidebar
 ## source: registry/blog-post--with-sidebar.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3
 
 component BlogPostWithSidebarBlock layout:stack style:blog-post--with-sidebar {
   label "BlogPostWithSidebar"

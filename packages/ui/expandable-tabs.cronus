@@ -1,6 +1,13 @@
 ## ExpandableTabs
 ## source: packages/ui/src/components/expandable-tabs.tsx
+## wave 1 - forms
+## exports: ExpandableTab, ExpandableTabs
+## slots: expandable-tabs, expandable-tabs-item
 
-component ExpandableTabs layout:inline style:expandable-tabs {
+component ExpandableTabs(label: text) layout:inline style:expandable-tabs {
   label "ExpandableTabs"
+}
+
+component ExpandableTab(label: text) layout:inline style:expandable-tab {
+  label "ExpandableTab"
 }

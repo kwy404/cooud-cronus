@@ -1,5 +1,8 @@
 ## Block HoverCard
 ## source: registry/hover-card.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: @radix-ui/react-hover-card@^1.1.14
 
 component HoverCardBlock layout:stack style:hover-card {
   label "HoverCard"

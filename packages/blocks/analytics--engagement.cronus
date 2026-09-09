@@ -1,5 +1,7 @@
 ## Block AnalyticsEngagement
 ## source: registry/analytics--engagement.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3
 
 component AnalyticsEngagementBlock layout:stack style:analytics--engagement {
   label "AnalyticsEngagement"

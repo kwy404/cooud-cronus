@@ -1,5 +1,8 @@
 ## Block AlertDialog
 ## source: registry/alert-dialog.json
+## type: registry:ui
+## registryDependencies: button, cn
+## npm: @radix-ui/react-alert-dialog@^1.1.14
 
 component AlertDialogBlock layout:stack style:alert-dialog {
   label "AlertDialog"

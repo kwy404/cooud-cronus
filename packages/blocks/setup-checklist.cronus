@@ -1,5 +1,7 @@
 ## Block SetupChecklist
 ## source: registry/setup-checklist.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component SetupChecklistBlock layout:stack style:setup-checklist {
   label "SetupChecklist"

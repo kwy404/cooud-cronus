@@ -1,6 +1,14 @@
 ## StatusDot
 ## source: packages/ui/src/components/status-dot.tsx
+## wave 1 - forms
+## exports: StatusDot
+## slots: status-dot, status-dot-indicator, status-dot-label, status-dot-ping, status-dot-sr-label
+## variants.status: online, offline, busy, away, success, warning, error, info, neutral
+## variants.size: xs, sm, md, lg
+## variants.ring: true, false
+## defaults: status=online size=md ring=false
 
-component StatusDot layout:inline style:status-dot {
+component StatusDot(label: text, size: text) layout:inline style:status-dot {
   label "StatusDot"
+  size "md"
 }

@@ -1,5 +1,8 @@
 ## Block Avatar
 ## source: registry/avatar.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: @radix-ui/react-avatar@^1.1.10
 
 component AvatarBlock layout:stack style:avatar {
   label "Avatar"

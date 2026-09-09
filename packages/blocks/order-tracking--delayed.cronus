@@ -1,5 +1,7 @@
 ## Block OrderTrackingDelayed
 ## source: registry/order-tracking--delayed.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component OrderTrackingDelayedBlock layout:stack style:order-tracking--delayed {
   label "OrderTrackingDelayed"

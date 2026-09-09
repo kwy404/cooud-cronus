@@ -1,5 +1,7 @@
 ## Block EmailVerify
 ## source: registry/email-verify.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3
 
 component EmailVerifyBlock layout:stack style:email-verify {
   label "EmailVerify"

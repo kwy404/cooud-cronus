@@ -1,5 +1,7 @@
 ## Block MagicLinkSent
 ## source: registry/magic-link--sent.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component MagicLinkSentBlock layout:stack style:magic-link--sent {
   label "MagicLinkSent"

@@ -1,6 +1,13 @@
 ## SignaturePad
 ## source: packages/ui/src/components/signature-pad.tsx
+## wave 1 - forms
+## exports: SignaturePadHandle, SignaturePad
+## slots: signature-pad, signature-pad-canvas, signature-pad-hint
 
-component SignaturePad layout:inline style:signature-pad {
+component SignaturePad(label: text) layout:inline style:signature-pad {
   label "SignaturePad"
+}
+
+component SignaturePadHandle(label: text) layout:inline style:signature-pad-handle {
+  label "SignaturePadHandle"
 }

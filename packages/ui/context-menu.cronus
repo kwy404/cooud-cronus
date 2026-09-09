@@ -1,6 +1,65 @@
 ## ContextMenu
 ## source: packages/ui/src/components/context-menu.tsx
+## wave 1 - forms
+## exports: ContextMenu, ContextMenuTrigger, ContextMenuGroup, ContextMenuPortal, ContextMenuSub, ContextMenuRadioGroup, ContextMenuSubTrigger, ContextMenuSubContent, ContextMenuContent, ContextMenuItem, ContextMenuCheckboxItem, ContextMenuRadioItem, ContextMenuLabel, ContextMenuSeparator, ContextMenuShortcut
+## slots: context-menu-checkbox-item, context-menu-content, context-menu-item, context-menu-label, context-menu-radio-item, context-menu-separator, context-menu-shortcut, context-menu-sub-content, context-menu-sub-trigger
 
-component ContextMenu layout:inline style:context-menu {
+component ContextMenu(label: text) layout:overlay style:context-menu {
   label "ContextMenu"
+}
+
+component ContextMenuTrigger(label: text) layout:inline style:context-menu-trigger {
+  label "ContextMenuTrigger"
+}
+
+component ContextMenuGroup(label: text) layout:inline style:context-menu-group {
+  label "ContextMenuGroup"
+}
+
+component ContextMenuPortal(label: text) layout:inline style:context-menu-portal {
+  label "ContextMenuPortal"
+}
+
+component ContextMenuSub(label: text) layout:inline style:context-menu-sub {
+  label "ContextMenuSub"
+}
+
+component ContextMenuRadioGroup(label: text) layout:inline style:context-menu-radio-group {
+  label "ContextMenuRadioGroup"
+}
+
+component ContextMenuSubTrigger(label: text) layout:inline style:context-menu-sub-trigger {
+  label "ContextMenuSubTrigger"
+}
+
+component ContextMenuSubContent(label: text) layout:inline style:context-menu-sub-content {
+  label "ContextMenuSubContent"
+}
+
+component ContextMenuContent(label: text) layout:inline style:context-menu-content {
+  label "ContextMenuContent"
+}
+
+component ContextMenuItem(label: text) layout:inline style:context-menu-item {
+  label "ContextMenuItem"
+}
+
+component ContextMenuCheckboxItem(label: text) layout:inline style:context-menu-checkbox-item {
+  label "ContextMenuCheckboxItem"
+}
+
+component ContextMenuRadioItem(label: text) layout:inline style:context-menu-radio-item {
+  label "ContextMenuRadioItem"
+}
+
+component ContextMenuLabel(label: text) layout:inline style:context-menu-label {
+  label "ContextMenuLabel"
+}
+
+component ContextMenuSeparator(label: text) layout:inline style:context-menu-separator {
+  label "ContextMenuSeparator"
+}
+
+component ContextMenuShortcut(label: text) layout:inline style:context-menu-shortcut {
+  label "ContextMenuShortcut"
 }

@@ -1,5 +1,8 @@
 ## Block GradientText
 ## source: registry/gradient-text.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: @radix-ui/react-slot@^1.2.3
 
 component GradientTextBlock layout:stack style:gradient-text {
   label "GradientText"

@@ -1,7 +1,14 @@
-## Toggle — forms
+## Toggle
 ## source: packages/ui/src/components/toggle.tsx
+## wave 1 - forms
+## exports: Toggle
+## slots: toggle
+## variants.variant: default, outline
+## variants.size: sm, md, lg
+## defaults: variant=default size=md
 
-component Toggle layout:inline style:toggle {
+component Toggle(label: text, variant: text, size: text) layout:inline style:toggle {
   label "Toggle"
   variant "default"
+  size "md"
 }

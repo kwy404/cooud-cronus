@@ -1,5 +1,7 @@
 ## Block EmailReceipt
 ## source: registry/email-receipt.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3
 
 component EmailReceiptBlock layout:stack style:email-receipt {
   label "EmailReceipt"

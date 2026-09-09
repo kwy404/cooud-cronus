@@ -1,7 +1,9 @@
-## SpotlightCard — premium
+## SpotlightCard
 ## source: packages/ui/src/components/spotlight-card.tsx
+## wave 1 - forms
+## exports: SpotlightCard
+## slots: spotlight-card
 
-component SpotlightCard layout:inline style:spotlight-card {
+component SpotlightCard(label: text) layout:stack style:spotlight-card {
   label "SpotlightCard"
-  variant "pointer"
 }

@@ -1,5 +1,8 @@
 ## Block Stats
 ## source: registry/stats.json
+## type: registry:block
+## registryDependencies: demo-saas
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component StatsBlock layout:stack style:stats {
   label "Stats"

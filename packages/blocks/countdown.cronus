@@ -1,5 +1,7 @@
 ## Block Countdown
 ## source: registry/countdown.json
+## type: registry:ui
+## registryDependencies: cn
 
 component CountdownBlock layout:stack style:countdown {
   label "Countdown"

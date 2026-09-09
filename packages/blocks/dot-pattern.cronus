@@ -1,5 +1,7 @@
 ## Block DotPattern
 ## source: registry/dot-pattern.json
+## type: registry:ui
+## registryDependencies: cn
 
 component DotPatternBlock layout:stack style:dot-pattern {
   label "DotPattern"

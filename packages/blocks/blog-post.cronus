@@ -1,5 +1,7 @@
 ## Block BlogPost
 ## source: registry/blog-post.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component BlogPostBlock layout:stack style:blog-post {
   label "BlogPost"

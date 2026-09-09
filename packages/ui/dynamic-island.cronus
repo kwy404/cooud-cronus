@@ -1,6 +1,13 @@
 ## DynamicIsland
 ## source: packages/ui/src/components/dynamic-island.tsx
+## wave 1 - forms
+## exports: DynamicIslandView, DynamicIsland
+## slots: dynamic-island, dynamic-island-shell, dynamic-island-trigger
 
-component DynamicIsland layout:inline style:dynamic-island {
+component DynamicIsland(label: text) layout:inline style:dynamic-island {
   label "DynamicIsland"
+}
+
+component DynamicIslandView(label: text) layout:inline style:dynamic-island-view {
+  label "DynamicIslandView"
 }

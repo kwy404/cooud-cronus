@@ -1,5 +1,7 @@
 ## Block FloatingLabelInput
 ## source: registry/floating-label-input.json
+## type: registry:ui
+## registryDependencies: cn, input
 
 component FloatingLabelInputBlock layout:stack style:floating-label-input {
   label "FloatingLabelInput"

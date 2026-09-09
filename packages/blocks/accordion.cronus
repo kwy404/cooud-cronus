@@ -1,5 +1,8 @@
 ## Block Accordion
 ## source: registry/accordion.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: @radix-ui/react-accordion@^1.2.11, lucide-react@^0.577.0
 
 component AccordionBlock layout:stack style:accordion {
   label "Accordion"

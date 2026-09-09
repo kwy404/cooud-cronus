@@ -1,5 +1,8 @@
 ## Block Form
 ## source: registry/form.json
+## type: registry:ui
+## registryDependencies: cn, label
+## npm: @radix-ui/react-slot@^1.2.3, react-hook-form@^7.54.0
 
 component FormBlock layout:stack style:form {
   label "Form"

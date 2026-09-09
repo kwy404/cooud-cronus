@@ -1,6 +1,9 @@
 ## ScrollProgress
 ## source: packages/ui/src/components/scroll-progress.tsx
+## wave 1 - forms
+## exports: ScrollProgress
+## slots: scroll-progress, scroll-progress-fill, scroll-progress-ring, scroll-progress-value
 
-component ScrollProgress layout:inline style:scroll-progress {
+component ScrollProgress(label: text) layout:inline style:scroll-progress {
   label "ScrollProgress"
 }

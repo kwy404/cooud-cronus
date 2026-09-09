@@ -1,6 +1,13 @@
 ## SankeyChart
 ## source: packages/ui/src/components/sankey-chart.tsx
+## wave 1 - forms
+## exports: SankeyChartData, SankeyChart
+## slots: sankey-chart
 
-component SankeyChart layout:inline style:sankey-chart {
+component SankeyChart(label: text) layout:stack style:sankey-chart {
   label "SankeyChart"
+}
+
+component SankeyChartData(label: text) layout:inline style:sankey-chart-data {
+  label "SankeyChartData"
 }

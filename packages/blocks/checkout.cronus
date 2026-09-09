@@ -1,5 +1,8 @@
 ## Block Checkout
 ## source: registry/checkout.json
+## type: registry:block
+## registryDependencies: demo-store
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component CheckoutBlock layout:stack style:checkout {
   label "Checkout"

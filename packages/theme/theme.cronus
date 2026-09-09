@@ -1,5 +1,5 @@
 ## @cooud-cronus/theme
-## Presets from @cronus-ui/theme + tokens.
+## Presets from @cronus-ui/theme + tokens. Runtime is cronus-kernel style {}, not React.
 
 style {
   theme dark

@@ -1,7 +1,21 @@
-## Field — forms
+## Field
 ## source: packages/ui/src/components/field.tsx
+## wave 1 - forms
+## exports: Field, FieldLabel, FieldDescription, FieldError
+## slots: field, field-description, field-error, field-label
 
-component Field layout:inline style:field {
+component Field(label: text) layout:stack style:field {
   label "Field"
-  variant "label"
+}
+
+component FieldLabel(label: text) layout:inline style:field-label {
+  label "FieldLabel"
+}
+
+component FieldDescription(label: text) layout:inline style:field-description {
+  label "FieldDescription"
+}
+
+component FieldError(label: text) layout:inline style:field-error {
+  label "FieldError"
 }

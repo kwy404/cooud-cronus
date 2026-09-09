@@ -1,5 +1,7 @@
 ## Block InputGroup
 ## source: registry/input-group.json
+## type: registry:ui
+## registryDependencies: cn
 
 component InputGroupBlock layout:stack style:input-group {
   label "InputGroup"

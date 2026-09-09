@@ -1,5 +1,8 @@
 ## Block Select
 ## source: registry/select.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: @radix-ui/react-select@^2.2.5, lucide-react@^0.577.0
 
 component SelectBlock layout:stack style:select {
   label "Select"

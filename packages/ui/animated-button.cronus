@@ -1,7 +1,9 @@
-## AnimatedButton — premium
+## AnimatedButton
 ## source: packages/ui/src/components/animated-button.tsx
+## wave 4 - premium & brand
+## exports: AnimatedButton
+## slots: animated-button
 
-component AnimatedButton layout:inline style:animated-button {
+component AnimatedButton(label: text) layout:inline style:animated-button {
   label "AnimatedButton"
-  variant "reduced-motion"
 }

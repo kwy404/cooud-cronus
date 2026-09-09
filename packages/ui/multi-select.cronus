@@ -1,6 +1,9 @@
 ## MultiSelect
 ## source: packages/ui/src/components/multi-select.tsx
+## wave 1 - forms
+## exports: MultiSelect
+## slots: multi-select-chip-remove, multi-select-clear, multi-select-indicator, multi-select-trigger
 
-component MultiSelect layout:inline style:multi-select {
+component MultiSelect(label: text) layout:inline style:multi-select {
   label "MultiSelect"
 }

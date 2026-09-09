@@ -1,6 +1,13 @@
 ## FunnelChart
 ## source: packages/ui/src/components/funnel-chart.tsx
+## wave 1 - forms
+## exports: FunnelChartItem, FunnelChart
+## slots: funnel-chart
 
-component FunnelChart layout:inline style:funnel-chart {
+component FunnelChart(label: text) layout:stack style:funnel-chart {
   label "FunnelChart"
+}
+
+component FunnelChartItem(label: text) layout:inline style:funnel-chart-item {
+  label "FunnelChartItem"
 }

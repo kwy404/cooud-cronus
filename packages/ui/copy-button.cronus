@@ -1,6 +1,9 @@
 ## CopyButton
 ## source: packages/ui/src/components/copy-button.tsx
+## wave 1 - forms
+## exports: CopyButton
+## slots: copy-button
 
-component CopyButton layout:inline style:copy-button {
+component CopyButton(label: text) layout:inline style:copy-button {
   label "CopyButton"
 }

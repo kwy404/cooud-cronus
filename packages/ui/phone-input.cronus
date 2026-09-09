@@ -1,6 +1,17 @@
 ## PhoneInput
 ## source: packages/ui/src/components/phone-input.tsx
+## wave 1 - forms
+## exports: PhoneCountry, DEFAULT_PHONE_COUNTRIES, PhoneInput
+## slots: phone-input, phone-input-content, phone-input-country, phone-input-field
 
-component PhoneInput layout:inline style:phone-input {
+component PhoneInput(label: text) layout:inline style:phone-input {
   label "PhoneInput"
+}
+
+component PhoneCountry(label: text) layout:inline style:phone-country {
+  label "PhoneCountry"
+}
+
+component DEFAULT_PHONE_COUNTRIES(label: text) layout:inline style:d-e-f-a-u-l-t_-p-h-o-n-e_-c-o-u-n-t-r-i-e-s {
+  label "DEFAULT_PHONE_COUNTRIES"
 }

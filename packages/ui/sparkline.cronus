@@ -1,6 +1,9 @@
 ## Sparkline
 ## source: packages/ui/src/components/sparkline.tsx
+## wave 1 - forms
+## exports: Sparkline
+## slots: sparkline-area, sparkline-bar, sparkline-line
 
-component Sparkline layout:inline style:sparkline {
+component Sparkline(label: text) layout:inline style:sparkline {
   label "Sparkline"
 }

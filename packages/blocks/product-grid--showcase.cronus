@@ -1,5 +1,8 @@
 ## Block ProductGridShowcase
 ## source: registry/product-grid--showcase.json
+## type: registry:block
+## registryDependencies: demo-store
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component ProductGridShowcaseBlock layout:stack style:product-grid--showcase {
   label "ProductGridShowcase"

@@ -1,5 +1,7 @@
 ## Block FeatureGrid
 ## source: registry/feature-grid.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component FeatureGridBlock layout:stack style:feature-grid {
   label "FeatureGrid"

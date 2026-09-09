@@ -1,5 +1,7 @@
 ## Block SetupWizard
 ## source: registry/setup-wizard.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3
 
 component SetupWizardBlock layout:stack style:setup-wizard {
   label "SetupWizard"

@@ -1,6 +1,9 @@
 ## RadarChart
 ## source: packages/ui/src/components/radar-chart.tsx
+## wave 1 - forms
+## exports: RadarChart
+## slots: radar-chart
 
-component RadarChart layout:inline style:radar-chart {
+component RadarChart(label: text) layout:stack style:radar-chart {
   label "RadarChart"
 }

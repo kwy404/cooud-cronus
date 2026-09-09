@@ -1,5 +1,8 @@
 ## Block InputOtp
 ## source: registry/input-otp.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: input-otp@^1.4.2, lucide-react@^0.577.0
 
 component InputOtpBlock layout:stack style:input-otp {
   label "InputOtp"

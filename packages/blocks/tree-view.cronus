@@ -1,5 +1,8 @@
 ## Block TreeView
 ## source: registry/tree-view.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: lucide-react@^0.577.0
 
 component TreeViewBlock layout:stack style:tree-view {
   label "TreeView"

@@ -1,5 +1,8 @@
 ## Block ProductGridWithFilters
 ## source: registry/product-grid--with-filters.json
+## type: registry:block
+## registryDependencies: demo-store
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component ProductGridWithFiltersBlock layout:stack style:product-grid--with-filters {
   label "ProductGridWithFilters"

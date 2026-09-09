@@ -1,7 +1,8 @@
-## Calendar — data
+## Calendar
 ## source: packages/ui/src/components/calendar.tsx
+## wave 0 - foundation
+## exports: Calendar
 
-component Calendar layout:inline style:calendar {
+component Calendar(label: text) layout:stack style:calendar {
   label "Calendar"
-  variant "month"
 }

@@ -1,5 +1,7 @@
 ## Block FaqSplit
 ## source: registry/faq--split.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3
 
 component FaqSplitBlock layout:stack style:faq--split {
   label "FaqSplit"

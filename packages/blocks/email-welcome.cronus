@@ -1,5 +1,7 @@
 ## Block EmailWelcome
 ## source: registry/email-welcome.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3
 
 component EmailWelcomeBlock layout:stack style:email-welcome {
   label "EmailWelcome"

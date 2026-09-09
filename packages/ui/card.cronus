@@ -1,7 +1,33 @@
-## Card — foundation
+## Card
 ## source: packages/ui/src/components/card.tsx
+## wave 0 - foundation
+## exports: Card, CardHeader, CardTitle, CardDescription, CardAction, CardContent, CardFooter
+## slots: card, card-action, card-content, card-description, card-footer, card-header, card-title
 
-component Card layout:inline style:card {
+component Card(label: text) layout:stack style:card {
   label "Card"
-  variant "header"
+}
+
+component CardHeader(label: text) layout:inline style:card-header {
+  label "CardHeader"
+}
+
+component CardTitle(label: text) layout:inline style:card-title {
+  label "CardTitle"
+}
+
+component CardDescription(label: text) layout:inline style:card-description {
+  label "CardDescription"
+}
+
+component CardAction(label: text) layout:inline style:card-action {
+  label "CardAction"
+}
+
+component CardContent(label: text) layout:inline style:card-content {
+  label "CardContent"
+}
+
+component CardFooter(label: text) layout:inline style:card-footer {
+  label "CardFooter"
 }

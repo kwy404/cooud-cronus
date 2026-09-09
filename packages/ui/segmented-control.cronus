@@ -1,6 +1,13 @@
 ## SegmentedControl
 ## source: packages/ui/src/components/segmented-control.tsx
+## wave 1 - forms
+## exports: SegmentedControl, SegmentedControlItem
+## slots: segmented-control, segmented-control-item, segmented-control-thumb
 
-component SegmentedControl layout:inline style:segmented-control {
+component SegmentedControl(label: text) layout:inline style:segmented-control {
   label "SegmentedControl"
+}
+
+component SegmentedControlItem(label: text) layout:inline style:segmented-control-item {
+  label "SegmentedControlItem"
 }

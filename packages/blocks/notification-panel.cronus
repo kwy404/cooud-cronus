@@ -1,5 +1,7 @@
 ## Block NotificationPanel
 ## source: registry/notification-panel.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3
 
 component NotificationPanelBlock layout:stack style:notification-panel {
   label "NotificationPanel"

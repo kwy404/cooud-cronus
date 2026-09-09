@@ -1,6 +1,13 @@
 ## Fab
 ## source: packages/ui/src/components/fab.tsx
+## wave 1 - forms
+## exports: FabAction, Fab
+## slots: fab, fab-actions
 
-component Fab layout:inline style:fab {
+component Fab(label: text) layout:inline style:fab {
   label "Fab"
+}
+
+component FabAction(label: text) layout:inline style:fab-action {
+  label "FabAction"
 }

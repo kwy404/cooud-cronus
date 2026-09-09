@@ -1,6 +1,37 @@
 ## NavigationMenu
 ## source: packages/ui/src/components/navigation-menu.tsx
+## wave 1 - forms
+## exports: NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent, NavigationMenuLink, NavigationMenuIndicator, NavigationMenuViewport
+## slots: navigation-menu, navigation-menu-content, navigation-menu-indicator, navigation-menu-item, navigation-menu-link, navigation-menu-list, navigation-menu-trigger, navigation-menu-viewport
 
-component NavigationMenu layout:inline style:navigation-menu {
+component NavigationMenu(label: text) layout:overlay style:navigation-menu {
   label "NavigationMenu"
+}
+
+component NavigationMenuList(label: text) layout:inline style:navigation-menu-list {
+  label "NavigationMenuList"
+}
+
+component NavigationMenuItem(label: text) layout:inline style:navigation-menu-item {
+  label "NavigationMenuItem"
+}
+
+component NavigationMenuTrigger(label: text) layout:inline style:navigation-menu-trigger {
+  label "NavigationMenuTrigger"
+}
+
+component NavigationMenuContent(label: text) layout:inline style:navigation-menu-content {
+  label "NavigationMenuContent"
+}
+
+component NavigationMenuLink(label: text) layout:inline style:navigation-menu-link {
+  label "NavigationMenuLink"
+}
+
+component NavigationMenuIndicator(label: text) layout:inline style:navigation-menu-indicator {
+  label "NavigationMenuIndicator"
+}
+
+component NavigationMenuViewport(label: text) layout:inline style:navigation-menu-viewport {
+  label "NavigationMenuViewport"
 }

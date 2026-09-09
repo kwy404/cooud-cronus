@@ -1,5 +1,7 @@
 ## Block FlipCard
 ## source: registry/flip-card.json
+## type: registry:ui
+## registryDependencies: cn
 
 component FlipCardBlock layout:stack style:flip-card {
   label "FlipCard"

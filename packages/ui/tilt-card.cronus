@@ -1,6 +1,9 @@
 ## TiltCard
 ## source: packages/ui/src/components/tilt-card.tsx
+## wave 1 - forms
+## exports: TiltCard
+## slots: tilt-card
 
-component TiltCard layout:inline style:tilt-card {
+component TiltCard(label: text) layout:stack style:tilt-card {
   label "TiltCard"
 }

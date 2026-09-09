@@ -1,5 +1,7 @@
 ## Block Sonner
 ## source: registry/sonner.json
+## type: registry:ui
+## npm: @cronus-ui/theme@workspace:*, sonner@^2.0.7
 
 component SonnerBlock layout:stack style:sonner {
   label "Sonner"

@@ -1,5 +1,7 @@
 ## Block Maintenance
 ## source: registry/maintenance.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
 component MaintenanceBlock layout:stack style:maintenance {
   label "Maintenance"

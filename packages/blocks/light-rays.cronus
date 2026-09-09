@@ -1,5 +1,7 @@
 ## Block LightRays
 ## source: registry/light-rays.json
+## type: registry:ui
+## registryDependencies: cn
 
 component LightRaysBlock layout:stack style:light-rays {
   label "LightRays"

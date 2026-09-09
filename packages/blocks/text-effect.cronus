@@ -1,5 +1,8 @@
 ## Block TextEffect
 ## source: registry/text-effect.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: motion@^12.23.0
 
 component TextEffectBlock layout:stack style:text-effect {
   label "TextEffect"

@@ -1,7 +1,9 @@
-## Skeleton — foundation
+## Skeleton
 ## source: packages/ui/src/components/skeleton.tsx
+## wave 1 - forms
+## exports: Skeleton
+## slots: skeleton
 
-component Skeleton layout:inline style:skeleton {
+component Skeleton(label: text) layout:inline style:skeleton {
   label "Skeleton"
-  variant "pulse"
 }

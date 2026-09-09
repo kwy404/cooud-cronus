@@ -1,7 +1,8 @@
-## Toast — overlays
-## source: packages/ui/src/components/toast.tsx
+## Toast
+## source: packages/ui/src/components/sonner.tsx (toast surface)
+## aliases: sonner
 
-component Toast layout:inline style:toast {
+component Toast(label: text, variant: text) layout:overlay style:toast {
   label "Toast"
   variant "lifecycle"
 }

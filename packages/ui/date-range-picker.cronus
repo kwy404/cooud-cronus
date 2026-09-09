@@ -1,6 +1,17 @@
 ## DateRangePicker
 ## source: packages/ui/src/components/date-range-picker.tsx
+## wave 1 - forms
+## exports: DateRange, DateRangePreset, DateRangePicker
+## slots: date-range-picker-calendar, date-range-picker-content, date-range-picker-preset, date-range-picker-presets, date-range-picker-trigger
 
-component DateRangePicker layout:inline style:date-range-picker {
+component DateRangePicker(label: text) layout:inline style:date-range-picker {
   label "DateRangePicker"
+}
+
+component DateRange(label: text) layout:inline style:date-range {
+  label "DateRange"
+}
+
+component DateRangePreset(label: text) layout:inline style:date-range-preset {
+  label "DateRangePreset"
 }

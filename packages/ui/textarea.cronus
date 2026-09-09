@@ -1,7 +1,9 @@
-## Textarea — forms
+## Textarea
 ## source: packages/ui/src/components/textarea.tsx
+## wave 1 - forms
+## exports: Textarea
+## slots: textarea
 
-component Textarea layout:inline style:textarea {
+component Textarea(label: text) layout:inline style:textarea {
   label "Textarea"
-  variant "default"
 }

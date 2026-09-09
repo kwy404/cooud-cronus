@@ -1,7 +1,41 @@
-## AlertDialog — overlays
+## AlertDialog
 ## source: packages/ui/src/components/alert-dialog.tsx
+## wave 2 - overlays & navigation
+## exports: AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogFooter, AlertDialogTitle, AlertDialogDescription, AlertDialogAction, AlertDialogCancel
+## slots: alert-dialog-action, alert-dialog-cancel, alert-dialog-content, alert-dialog-description, alert-dialog-footer, alert-dialog-header, alert-dialog-overlay, alert-dialog-title
 
-component AlertDialog layout:inline style:alert-dialog {
+component AlertDialog(label: text) layout:overlay style:alert-dialog {
   label "AlertDialog"
-  variant "confirm"
+}
+
+component AlertDialogTrigger(label: text) layout:inline style:alert-dialog-trigger {
+  label "AlertDialogTrigger"
+}
+
+component AlertDialogContent(label: text) layout:inline style:alert-dialog-content {
+  label "AlertDialogContent"
+}
+
+component AlertDialogHeader(label: text) layout:inline style:alert-dialog-header {
+  label "AlertDialogHeader"
+}
+
+component AlertDialogFooter(label: text) layout:inline style:alert-dialog-footer {
+  label "AlertDialogFooter"
+}
+
+component AlertDialogTitle(label: text) layout:inline style:alert-dialog-title {
+  label "AlertDialogTitle"
+}
+
+component AlertDialogDescription(label: text) layout:inline style:alert-dialog-description {
+  label "AlertDialogDescription"
+}
+
+component AlertDialogAction(label: text) layout:inline style:alert-dialog-action {
+  label "AlertDialogAction"
+}
+
+component AlertDialogCancel(label: text) layout:inline style:alert-dialog-cancel {
+  label "AlertDialogCancel"
 }

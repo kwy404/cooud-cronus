@@ -1,5 +1,8 @@
 ## Block Frame
 ## source: registry/frame.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: class-variance-authority@^0.7.1
 
 component FrameBlock layout:stack style:frame {
   label "Frame"

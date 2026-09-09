@@ -1,6 +1,9 @@
 ## FlickeringGrid
 ## source: packages/ui/src/components/flickering-grid.tsx
+## wave 1 - forms
+## exports: FlickeringGrid
+## slots: flickering-grid
 
-component FlickeringGrid layout:inline style:flickering-grid {
+component FlickeringGrid(label: text) layout:inline style:flickering-grid {
   label "FlickeringGrid"
 }
