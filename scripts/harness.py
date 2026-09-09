@@ -38,6 +38,8 @@ SKIP_DIRS = {
 }
 
 FORBIDDEN_EXTS = {".html", ".htm", ".css", ".tsx", ".jsx", ".vue", ".scss"}
+IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".webp", ".gif"}
+PREVIEW_DIRS = ("docs/preview", "output/preview")
 
 
 def iter_cronus() -> list[Path]:
@@ -72,6 +74,22 @@ def scan_forbidden_files() -> list[str]:
                     stack.append(p)
                 elif p.is_file() and p.suffix.lower() in FORBIDDEN_EXTS:
                     hits.append(str(p.relative_to(ROOT)).replace("\\", "/"))
+    return sorted(hits)
+
+
+def scan_preview_not_images() -> list[str]:
+    hits = []
+    for rel in PREVIEW_DIRS:
+        d = ROOT / rel
+        if not d.is_dir():
+            continue
+        for p in d.iterdir():
+            if not p.is_file():
+                continue
+            if p.name.lower() == "readme.md":
+                continue
+            if p.suffix.lower() not in IMAGE_EXTS:
+                hits.append(str(p.relative_to(ROOT)).replace("\\", "/"))
     return sorted(hits)
 
 
@@ -164,9 +182,17 @@ def write_report(data: dict) -> Path:
         f"status: **{data['forbidden_status']}**",
         f"hits in .cronus: {len(hits)}",
         f"html/css/tsx files in repo: {len(data.get('forbidden_files') or [])}",
+        f"preview not image: {len(data.get('preview_not_images') or [])}",
         "",
     ]
     file_hits = data.get("forbidden_files") or []
+    preview_hits = data.get("preview_not_images") or []
+    if preview_hits:
+        lines.append("Preview must be image only:")
+        lines.append("")
+        for f in preview_hits:
+            lines.append(f"- `{f}`")
+        lines.append("")
     if file_hits:
         lines.append("Forbidden files (HTML/CSS/TSX must not live here):")
         lines.append("")
@@ -232,7 +258,7 @@ def write_report(data: dict) -> Path:
         "3. No `.cronus` file contains `style_block`, `template \"<html>`, or TSX.",
         "4. Catalog files in `packages/ui` are contracts (variants/slots), not React ports — visual parity of 173 widgets is NOT VERIFIED.",
         "5. Pixel chrome is a LANGUAGE GAP. Do not re-embed CSS/HTML to fake it.",
-        "6. PNG previews in `docs/preview/` are visual targets, not the source of truth.",
+        "6. Preview is image only (`docs/preview/*.png`). No .html preview.",
         "",
         f"overall: **{data['overall']}**",
         "",
@@ -248,9 +274,10 @@ def main() -> int:
     cronus_files = iter_cronus()
     hits = scan_forbidden(cronus_files)
     file_hits = scan_forbidden_files()
+    preview_hits = scan_preview_not_images()
     inv = inventory()
     parse = try_parse()
-    forbidden_status = "FAIL" if hits or file_hits else "PASS"
+    forbidden_status = "FAIL" if hits or file_hits or preview_hits else "PASS"
     parse_ok = parse.get("status") in {"PASS", "SKIPPED"}
     overall = "PASS" if forbidden_status == "PASS" and parse_ok else "FAIL"
     if parse.get("status") == "SKIPPED" and forbidden_status == "PASS":
@@ -260,6 +287,7 @@ def main() -> int:
         "cronus_files": len(cronus_files),
         "forbidden": hits,
         "forbidden_files": file_hits,
+        "preview_not_images": preview_hits,
         "forbidden_status": forbidden_status,
         "inventory": inv,
         "parse": parse,
@@ -268,7 +296,8 @@ def main() -> int:
     path = write_report(data)
     print(
         f"files={len(cronus_files)} forbidden_lines={len(hits)} "
-        f"forbidden_files={len(file_hits)} parse={parse.get('status')} overall={overall}"
+        f"forbidden_files={len(file_hits)} preview_bad={len(preview_hits)} "
+        f"parse={parse.get('status')} overall={overall}"
     )
     print(path)
     if forbidden_status == "FAIL":

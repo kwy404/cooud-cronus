@@ -1,5 +1,7 @@
 workspace/
 migration-staging/
+*.html
+*.htm
 *.log
 .DS_Store
 Thumbs.db

@@ -29,7 +29,7 @@ Ultimo run: `harness/report.md`
 - tabs Transacoes | Resumo, filtros Este mes / Todos os projetos
 - chart + table vazios (bind Transaction / Payout)
 
-O PNG em `docs/preview/` e o **alvo visual**. O HTML antigo foi para `migration/evidence/forbidden-html/` — nao volta.
+Preview e **so imagem** (`docs/preview/*.png`). Sem `.html`.
 
 ## Packages
 

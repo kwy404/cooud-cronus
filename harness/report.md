@@ -1,12 +1,13 @@
 # Harness report
 
-generated: 2026-09-09T02:09:44Z
+generated: 2026-09-09T02:11:19Z
 
 ## Gate: no TSX / HTML / CSS in `.cronus`
 
 status: **PASS**
 hits in .cronus: 0
 html/css/tsx files in repo: 0
+preview not image: 0
 
 No forbidden HTML/CSS/TSX in authoring `.cronus`.
 
@@ -40,6 +41,6 @@ Regra Zedd (fechou): HTML nao entra. O HTML e o `.cronus`. Kernel emite a pagina
 3. No `.cronus` file contains `style_block`, `template "<html>`, or TSX.
 4. Catalog files in `packages/ui` are contracts (variants/slots), not React ports — visual parity of 173 widgets is NOT VERIFIED.
 5. Pixel chrome is a LANGUAGE GAP. Do not re-embed CSS/HTML to fake it.
-6. PNG previews in `docs/preview/` are visual targets, not the source of truth.
+6. Preview is image only (`docs/preview/*.png`). No .html preview.
 
 overall: **PASS**

@@ -1,3 +1,3 @@
-PNG = alvo visual. Fonte = `apps/dashboard/app.cronus`.
+Preview = so imagem (png/jpg). Sem HTML.
 
-Nao ha HTML neste repo. O kernel emite HTML por tras, no `cronus run`.
+Fonte: `apps/dashboard/app.cronus`.
