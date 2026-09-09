@@ -1,67 +1,51 @@
 # cronus-ui-in-cronus-language
 
-Cronus UI autorado em `.cronus`. Destino da conversão — não misturar com `cronus-ui` (React) nem `cronus-kernel` (runtime).
+Cronus UI autorado em `.cronus`. Destino da conversão.
 
-Repo: [kwy404/cooud-cronus](https://github.com/kwy404/cooud-cronus)
+Repo: [kwy404/cooud-cronus](https://github.com/kwy404/cooud-cronus) · **58** famílias em `output/components/` · showcase `output/preview/showcase.html`
 
-## Como ficou — Button (Wave 0)
+## Prints
 
-Tokens semânticos `--cronus-*` (aurora / neutral × light / dark). Sem paleta Tailwind.
+### Wave 0 — Foundation
+Button, Input, Label, Badge, Card, Spinner, Skeleton, Separator, Kbd
 
-![Button — página completa](output/preview/button-full.png)
+![Wave 0](output/preview/showcase-w0.png)
 
-**Aurora dark** — variantes, sizes, focus ring, disabled:
+### Wave 1 — Forms
+Textarea, Checkbox, Switch, Radio, Select, File dropzone
 
-![Aurora dark](output/preview/button-aurora-dark.png)
+![Wave 1](output/preview/showcase-w1.png)
 
-**Aurora light**
+### Wave 2 — Overlays
+Tabs, Accordion, Dialog, Alert
 
-![Aurora light](output/preview/button-aurora-light.png)
+![Wave 2](output/preview/showcase-w2.png)
 
-**Neutral dark**
+### Wave 3 — Data
+Table, Metric, Avatar, Progress, Chart, Breadcrumb, Pagination, Empty
 
-![Neutral dark](output/preview/button-neutral-dark.png)
+![Wave 3](output/preview/showcase-w3.png)
 
-**Neutral light**
+### Wave 4 — Premium
+GlassCard, GradientText, Shimmer
 
-![Neutral light](output/preview/button-neutral-light.png)
+![Wave 4](output/preview/showcase-w4.png)
 
-Fonte: `output/button.cronus` · preview: `output/preview/button.html`
-
-## O que esta PR contém
-
-- Pack SDD + harness + parity matrix (128 rows)
-- `output/button.cronus` (Save / Cancel / Delete / Docs)
-- Preview HTML + prints reais (Playwright)
-- `cronus-kernel` e `cronus-ui` **não** são commitados aqui
+Catálogo completo (todas as waves): `output/CATALOG.md`
 
 ## Testes
 
-Rodados no checkout local do kernel (`ddce3e0`), **antes** de reverter os patches de renderer (o kernel ficou limpo de novo).
-
 | Suite | Resultado |
 |---|---|
-| `cargo test` (kernel, após W-1) | **220 passed**, 1 failed |
-| 11 testes novos W-1 (theme + button + parse demo) | **passed** |
-| `dump::detect::tests::test_hero_extraction_developer_landing` | **failed (pré-existente)** — `NotFound` de path no Windows; não é desta conversão |
-| `bun run lint` (cronus-ui) | **failed (pré-existente)** — `biome` fora do PATH |
-| typecheck / e2e / `cargo build --release` | não rodados |
+| `cargo test` kernel (baseline + W-1 temporário) | **220 passed**, 1 failed |
+| 11 testes W-1 Button/tokens | **passed** (revertidos do kernel; evidência no pack) |
+| `dump::detect` hero landing | **pré-existente** Windows `NotFound` |
+| `bun run lint` | **pré-existente** biome fora do PATH |
 
-Testes W-1 que passaram:
-
-- `components::button_parity_tests::*` (6)
-- `theme::tests::cronus_ui_css_*` / `css_vars_includes_semantic_and_button_css` (3)
-- `parser::parser_tests::parse_button_parity_demo`
-- `ui::component::w1_button_tests::inline_primary_component_renders_data_slot`
-
-## Pastas em `Desktop/cooud`
+## Pastas
 
 | Pasta | Papel |
 |---|---|
 | `cronus-ui` | fonte React — leitura |
-| `cronus-kernel` | linguagem/runtime — leitura (edição só via PR neste repo) |
+| `cronus-kernel` | runtime — leitura nesta PR |
 | `cronus-ui-in-cronus-language` | conversão `.cronus` |
-
-## Próximo
-
-Input + Label em `output/`, mesmo contrato de tokens.

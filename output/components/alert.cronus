@@ -1,0 +1,7 @@
+## Alert — foundation
+## source: packages/ui/src/components/alert.tsx
+
+component Alert layout:inline style:alert {
+  label "Alert"
+  variant "default"
+}

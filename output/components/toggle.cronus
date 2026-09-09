@@ -1,0 +1,7 @@
+## Toggle — forms
+## source: packages/ui/src/components/toggle.tsx
+
+component Toggle layout:inline style:toggle {
+  label "Toggle"
+  variant "default"
+}

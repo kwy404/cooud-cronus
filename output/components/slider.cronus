@@ -1,0 +1,7 @@
+## Slider — forms
+## source: packages/ui/src/components/slider.tsx
+
+component Slider layout:inline style:slider {
+  label "Slider"
+  variant "value"
+}

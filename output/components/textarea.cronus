@@ -1,0 +1,7 @@
+## Textarea — forms
+## source: packages/ui/src/components/textarea.tsx
+
+component Textarea layout:inline style:textarea {
+  label "Textarea"
+  variant "default"
+}

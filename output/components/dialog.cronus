@@ -1,0 +1,7 @@
+## Dialog — overlays
+## source: packages/ui/src/components/dialog.tsx
+
+component Dialog layout:inline style:dialog {
+  label "Dialog"
+  variant "open"
+}

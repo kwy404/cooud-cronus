@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" data-cronus-theme="aurora" data-cronus-mode="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cronus UI in .cronus — catalog</title>
+  <style>
+    :root {
+      --cronus-primary: oklch(0.685 0.169 237.3);
+      --cronus-primary-foreground: oklch(0.145 0.005 285.8);
+      --cronus-primary-text: oklch(0.685 0.169 237.3);
+      --cronus-surface-base: oklch(0.145 0.005 285.8);
+      --cronus-surface-inset: oklch(0.165 0.005 285.8);
+      --cronus-surface-raised: oklch(0.195 0.005 285.8);
+      --cronus-surface-overlay: oklch(0.235 0.006 285.9);
+      --cronus-fg: oklch(0.985 0.001 106.4);
+      --cronus-fg-secondary: oklch(0.705 0.015 286);
+      --cronus-fg-tertiary: oklch(0.62 0.014 286);
+      --cronus-border: oklch(1 0 0 / 0.1);
+      --cronus-border-strong: oklch(1 0 0 / 0.14);
+      --cronus-ring: oklch(0.685 0.169 237.3);
+      --cronus-error: oklch(0.645 0.222 16.44);
+      --cronus-error-text: oklch(0.69 0.222 16.44);
+      --cronus-success: oklch(0.715 0.155 162.5);
+      --cronus-success-text: oklch(0.715 0.155 162.5);
+      --cronus-warning: oklch(0.769 0.166 70.08);
+      --cronus-warning-text: oklch(0.769 0.166 70.08);
+      --cronus-info: oklch(0.715 0.143 215.2);
+      --cronus-info-text: oklch(0.715 0.143 215.2);
+      --cronus-radius: 14px;
+      --ease-out-quart: cubic-bezier(.22,1,.36,1);
+      --cronus-shadow-sm: 0 2px 4px rgba(0,0,0,0.22);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--cronus-surface-base);
+      color: var(--cronus-fg);
+      font-family: "SF Pro Text", Geist, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      font-weight: 400;
+    }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 40px 28px 80px; }
+    h1 { font-size: 32px; font-weight: 400; letter-spacing: -0.03em; margin: 0 0 8px; }
+    .lede { color: var(--cronus-fg-secondary); margin: 0 0 32px; font-size: 15px; }
+    nav {
+      display: flex; gap: 8px; flex-wrap: wrap;
+      border-top: 1px solid var(--cronus-border);
+      padding: 16px 0 32px;
+    }
+    nav a {
+      color: var(--cronus-fg-secondary); text-decoration: none; font-size: 13px;
+      padding: 6px 10px; border-radius: 8px; border: 1px solid transparent;
+    }
+    nav a:hover { color: var(--cronus-fg); background: var(--cronus-surface-overlay); }
+    section.wave { margin-bottom: 48px; }
+    section.wave > h2 {
+      font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--cronus-fg-tertiary); margin: 0 0 16px;
+      border-top: 1px solid var(--cronus-border); padding-top: 20px;
+    }
+    .grid { display: grid; gap: 16px; }
+    .grid-2 { grid-template-columns: 1fr 1fr; }
+    .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+    .panel {
+      background: var(--cronus-surface-raised);
+      border: 1px solid var(--cronus-border);
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .panel h3 { font-size: 13px; font-weight: 500; color: var(--cronus-fg-secondary); margin: 0 0 14px; }
+    .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .stack { display: flex; flex-direction: column; gap: 8px; }
+    [data-slot="button"] {
+      display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+      border-radius: var(--cronus-radius); font-size: .875rem; font-weight: 500;
+      border: 1px solid transparent; cursor: pointer; font-family: inherit; text-decoration: none;
+      height: 2.5rem; padding: 0 1rem; outline: none;
+    }
+    [data-slot="button"][data-size="sm"] { height: 2rem; padding: 0 .75rem; font-size: .75rem; }
+    [data-slot="button"][data-variant="primary"] { background: var(--cronus-primary); color: var(--cronus-primary-foreground); }
+    [data-slot="button"][data-variant="secondary"] { background: var(--cronus-surface-overlay); color: var(--cronus-fg); border-color: var(--cronus-border); }
+    [data-slot="button"][data-variant="outline"] { background: transparent; color: var(--cronus-fg); border-color: var(--cronus-border); }
+    [data-slot="button"][data-variant="ghost"] { background: transparent; color: var(--cronus-fg-secondary); }
+    [data-slot="button"][data-variant="destructive"] { background: color-mix(in oklch, var(--cronus-error), black 30%); color: #fff; }
+    [data-slot="button"][data-variant="link"] { background: none; color: var(--cronus-primary-text); height: auto; padding: 0; }
+    [data-slot="button"]:disabled { opacity: .5; }
+    [data-slot="label"] { font-size: .875rem; font-weight: 500; color: var(--cronus-fg); }
+    [data-slot="input"], [data-slot="textarea"], [data-slot="select"] {
+      height: 2.5rem; width: 100%; border-radius: 8px; border: 1px solid var(--cronus-border);
+      background: var(--cronus-surface-inset); color: var(--cronus-fg); padding: 0 12px;
+      font: inherit; font-size: .875rem; outline: none;
+    }
+    [data-slot="textarea"] { height: auto; min-height: 80px; padding: 8px 12px; resize: vertical; }
+    [data-slot="input"]::placeholder, [data-slot="textarea"]::placeholder { color: var(--cronus-fg-tertiary); }
+    [data-slot="badge"] {
+      display: inline-flex; align-items: center; border-radius: 6px; border: 1px solid var(--cronus-border);
+      padding: 2px 8px; font-size: 12px; font-weight: 500;
+    }
+    [data-slot="badge"][data-variant="default"] { background: var(--cronus-surface-overlay); }
+    [data-slot="badge"][data-variant="primary"] { background: var(--cronus-primary); color: var(--cronus-primary-foreground); border-color: transparent; }
+    [data-slot="badge"][data-variant="success"] { background: color-mix(in oklch, var(--cronus-success) 15%, transparent); color: var(--cronus-success-text); border-color: transparent; }
+    [data-slot="badge"][data-variant="warning"] { background: color-mix(in oklch, var(--cronus-warning) 15%, transparent); color: var(--cronus-warning-text); border-color: transparent; }
+    [data-slot="badge"][data-variant="destructive"] { background: color-mix(in oklch, var(--cronus-error) 15%, transparent); color: var(--cronus-error-text); border-color: transparent; }
+    [data-slot="badge"][data-variant="info"] { background: color-mix(in oklch, var(--cronus-info) 15%, transparent); color: var(--cronus-info-text); border-color: transparent; }
+    [data-slot="separator"] { height: 1px; background: var(--cronus-border); border: 0; margin: 8px 0; }
+    [data-slot="skeleton"] { background: var(--cronus-surface-overlay); border-radius: 8px; animation: pulse 1.4s ease-in-out infinite; }
+    @keyframes pulse { 50% { opacity: .5; } }
+    [data-slot="spinner"] { animation: spin .8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    [data-slot="card"] {
+      border: 1px solid var(--cronus-border); background: var(--cronus-surface-raised);
+      border-radius: 12px; padding: 20px; box-shadow: var(--cronus-shadow-sm);
+    }
+    [data-slot="card-title"] { font-size: 16px; margin: 0 0 4px; }
+    [data-slot="card-description"] { font-size: 13px; color: var(--cronus-fg-secondary); margin: 0 0 16px; }
+    [data-slot="alert"] {
+      border: 1px solid var(--cronus-border); border-radius: 10px; padding: 12px 14px; font-size: 13px;
+    }
+    [data-slot="alert"][data-variant="success"] { background: color-mix(in oklch, var(--cronus-success) 10%, transparent); border-color: color-mix(in oklch, var(--cronus-success) 30%, transparent); }
+    [data-slot="alert"][data-variant="warning"] { background: color-mix(in oklch, var(--cronus-warning) 10%, transparent); border-color: color-mix(in oklch, var(--cronus-warning) 30%, transparent); }
+    [data-slot="alert"][data-variant="destructive"] { background: color-mix(in oklch, var(--cronus-error) 10%, transparent); border-color: color-mix(in oklch, var(--cronus-error) 30%, transparent); }
+    [data-slot="alert"][data-variant="info"] { background: color-mix(in oklch, var(--cronus-info) 10%, transparent); border-color: color-mix(in oklch, var(--cronus-info) 30%, transparent); }
+    [data-slot="checkbox"], [data-slot="radio"] {
+      appearance: none; width: 16px; height: 16px; border: 1px solid var(--cronus-border);
+      background: var(--cronus-surface-inset); margin: 0;
+    }
+    [data-slot="checkbox"] { border-radius: 4px; }
+    [data-slot="radio"] { border-radius: 99px; }
+    [data-slot="checkbox"]:checked, [data-slot="radio"]:checked { background: var(--cronus-primary); border-color: var(--cronus-primary); }
+    [data-slot="switch"] {
+      width: 36px; height: 20px; border-radius: 99px; background: var(--cronus-fg-tertiary); position: relative; border: 0; padding: 0;
+    }
+    [data-slot="switch"][data-state="checked"] { background: var(--cronus-primary); }
+    [data-slot="switch"]::after {
+      content: ""; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px;
+      border-radius: 99px; background: var(--cronus-primary-foreground);
+    }
+    [data-slot="switch"][data-state="checked"]::after { left: 18px; }
+    [data-slot="progress"] { height: 8px; background: var(--cronus-surface-overlay); border-radius: 99px; overflow: hidden; }
+    [data-slot="progress"] > span { display: block; height: 100%; background: var(--cronus-primary); }
+    [data-slot="avatar"] {
+      width: 40px; height: 40px; border-radius: 99px; background: var(--cronus-surface-overlay);
+      display: grid; place-items: center; font-size: 13px; font-weight: 500;
+    }
+    [data-slot="kbd"] {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 11px; border: 1px solid var(--cronus-border); border-radius: 6px;
+      padding: 2px 6px; background: var(--cronus-surface-overlay);
+    }
+    [data-slot="tabs"] { display: flex; gap: 4px; border-bottom: 1px solid var(--cronus-border); margin-bottom: 12px; }
+    [data-slot="tabs"] button {
+      background: none; border: 0; color: var(--cronus-fg-secondary); padding: 8px 12px;
+      font: inherit; font-size: 13px; border-bottom: 2px solid transparent; cursor: pointer;
+    }
+    [data-slot="tabs"] button[aria-selected="true"] { color: var(--cronus-fg); border-bottom-color: var(--cronus-primary); }
+    table[data-slot="table"] { width: 100%; border-collapse: collapse; font-size: 13px; }
+    table[data-slot="table"] th { text-align: left; color: var(--cronus-fg-secondary); font-weight: 500; padding: 8px 10px; border-bottom: 1px solid var(--cronus-border); }
+    table[data-slot="table"] td { padding: 10px; border-bottom: 1px solid var(--cronus-border); }
+    [data-slot="dialog"] {
+      border: 1px solid var(--cronus-border); background: var(--cronus-surface-raised);
+      border-radius: 16px; padding: 20px; max-width: 360px;
+    }
+    [data-slot="dialog"] h4 { margin: 0 0 6px; font-size: 16px; font-weight: 400; }
+    [data-slot="dialog"] p { margin: 0 0 16px; font-size: 13px; color: var(--cronus-fg-secondary); }
+    [data-slot="metric-value"] { font-size: 28px; letter-spacing: -0.03em; display: block; }
+    [data-slot="metric-delta"] { font-size: 12px; color: var(--cronus-success-text); }
+    [data-slot="glass-card"] {
+      border: 1px solid oklch(1 0 0 / 0.12); border-radius: 16px; padding: 20px;
+      background: oklch(1 0 0 / 0.04); backdrop-filter: blur(16px);
+    }
+    [data-slot="gradient-text"] {
+      background: linear-gradient(90deg, var(--cronus-primary), var(--cronus-info));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      font-size: 22px; letter-spacing: -0.03em;
+    }
+    [data-slot="shimmer"] {
+      height: 12px; border-radius: 8px;
+      background: linear-gradient(90deg, var(--cronus-surface-overlay), oklch(1 0 0 / 0.08), var(--cronus-surface-overlay));
+      background-size: 200% 100%; animation: shimmer 2s linear infinite;
+    }
+    @keyframes shimmer { to { background-position: -200% 0; } }
+    [data-slot="breadcrumb"] { display: flex; gap: 8px; font-size: 13px; color: var(--cronus-fg-secondary); }
+    [data-slot="breadcrumb"] span[aria-current] { color: var(--cronus-fg); }
+    [data-slot="empty"] { text-align: center; padding: 24px; color: var(--cronus-fg-secondary); }
+    [data-slot="pagination"] { display: flex; gap: 6px; }
+    [data-slot="pagination"] button {
+      min-width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--cronus-border);
+      background: var(--cronus-surface-overlay); color: var(--cronus-fg); font: inherit; cursor: pointer;
+    }
+    [data-slot="pagination"] button[aria-current] { background: var(--cronus-primary); color: var(--cronus-primary-foreground); border-color: transparent; }
+    details[data-slot="accordion"] { border: 1px solid var(--cronus-border); border-radius: 10px; padding: 10px 14px; }
+    details[data-slot="accordion"] + details { margin-top: 8px; }
+    summary { cursor: pointer; font-size: 14px; }
+    .chart {
+      display: flex; align-items: flex-end; gap: 8px; height: 88px;
+    }
+    .chart i { display: block; width: 28px; border-radius: 4px 4px 0 0; background: var(--cronus-primary); opacity: .85; }
+    @media (max-width: 800px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Cronus UI in .cronus</h1>
+    <p class="lede">Catálogo nativo — foundation, forms, overlays, data e premium. Tokens semânticos, sem React.</p>
+    <nav>
+      <a href="#w0">Wave 0 · Foundation</a>
+      <a href="#w1">Wave 1 · Forms</a>
+      <a href="#w2">Wave 2 · Overlays</a>
+      <a href="#w3">Wave 3 · Data</a>
+      <a href="#w4">Wave 4 · Premium</a>
+    </nav>
+
+    <section class="wave" id="w0">
+      <h2>Wave 0 — Foundation</h2>
+      <div class="grid grid-2">
+        <div class="panel">
+          <h3>Button</h3>
+          <div class="row">
+            <button data-slot="button" data-variant="primary">Save</button>
+            <button data-slot="button" data-variant="secondary">Cancel</button>
+            <button data-slot="button" data-variant="outline">Outline</button>
+            <button data-slot="button" data-variant="ghost">Ghost</button>
+            <button data-slot="button" data-variant="destructive">Delete</button>
+            <a data-slot="button" data-variant="link" href="#">Docs</a>
+            <button data-slot="button" data-variant="primary" disabled>Disabled</button>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Input + Label</h3>
+          <div class="stack">
+            <label data-slot="label" for="email">Email</label>
+            <input data-slot="input" id="email" placeholder="you@cooud.com" />
+            <label data-slot="label" for="bad">Invalid</label>
+            <input data-slot="input" id="bad" aria-invalid="true" value="nope" />
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Badge</h3>
+          <div class="row">
+            <span data-slot="badge" data-variant="default">Default</span>
+            <span data-slot="badge" data-variant="primary">Primary</span>
+            <span data-slot="badge" data-variant="success">Success</span>
+            <span data-slot="badge" data-variant="warning">Warning</span>
+            <span data-slot="badge" data-variant="destructive">Error</span>
+            <span data-slot="badge" data-variant="info">Info</span>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Spinner · Skeleton · Separator</h3>
+          <div class="row">
+            <svg data-slot="spinner" width="20" height="20" viewBox="0 0 24 24" fill="none" role="status" aria-label="Loading"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" opacity=".25"/><path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+            <div data-slot="skeleton" style="width:120px;height:12px"></div>
+            <div data-slot="skeleton" style="width:80px;height:12px"></div>
+          </div>
+          <hr data-slot="separator" />
+          <div class="row"><span data-slot="kbd">⌘</span><span data-slot="kbd">K</span></div>
+        </div>
+        <div class="panel" style="grid-column:1/-1">
+          <div data-slot="card">
+            <div data-slot="card-title">Card</div>
+            <div data-slot="card-description">Família Card — header, title, description, content.</div>
+            <div class="row">
+              <button data-slot="button" data-variant="primary" data-size="sm">Continue</button>
+              <button data-slot="button" data-variant="ghost" data-size="sm">Skip</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wave" id="w1">
+      <h2>Wave 1 — Forms</h2>
+      <div class="grid grid-2">
+        <div class="panel">
+          <h3>Textarea · Field</h3>
+          <div class="stack">
+            <label data-slot="label" for="bio">Notes</label>
+            <textarea data-slot="textarea" id="bio" placeholder="Write a note…"></textarea>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Checkbox · Switch · Radio</h3>
+          <div class="stack">
+            <label class="row"><input data-slot="checkbox" type="checkbox" checked /> Remember me</label>
+            <label class="row"><button data-slot="switch" data-state="checked" type="button" aria-pressed="true"></button> Alerts on</label>
+            <label class="row"><input data-slot="radio" type="radio" name="plan" checked /> Monthly</label>
+            <label class="row"><input data-slot="radio" type="radio" name="plan" /> Yearly</label>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Select</h3>
+          <select data-slot="select">
+            <option>Aurora</option>
+            <option>Neutral</option>
+            <option>Midnight</option>
+          </select>
+        </div>
+        <div class="panel">
+          <h3>File dropzone</h3>
+          <div style="border:1px dashed var(--cronus-border);border-radius:12px;padding:28px;text-align:center;color:var(--cronus-fg-secondary);font-size:13px">
+            Drop files or click to upload
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wave" id="w2">
+      <h2>Wave 2 — Overlays &amp; navigation</h2>
+      <div class="grid grid-2">
+        <div class="panel">
+          <h3>Tabs</h3>
+          <div data-slot="tabs" role="tablist">
+            <button type="button" role="tab" aria-selected="true">Overview</button>
+            <button type="button" role="tab">Billing</button>
+            <button type="button" role="tab">Members</button>
+          </div>
+          <p style="font-size:13px;color:var(--cronus-fg-secondary);margin:0">Plan usage this period.</p>
+        </div>
+        <div class="panel">
+          <h3>Accordion</h3>
+          <details data-slot="accordion" open><summary>What is Cronus?</summary><p style="font-size:13px;color:var(--cronus-fg-secondary)">A .cronus file compiles to a full-stack binary.</p></details>
+          <details data-slot="accordion"><summary>Does it need React?</summary><p style="font-size:13px;color:var(--cronus-fg-secondary)">No. Native authoring.</p></details>
+        </div>
+        <div class="panel">
+          <h3>Dialog</h3>
+          <div data-slot="dialog">
+            <h4>Delete workspace?</h4>
+            <p>This cannot be undone. Type the name to confirm.</p>
+            <div class="row">
+              <button data-slot="button" data-variant="destructive" data-size="sm">Delete</button>
+              <button data-slot="button" data-variant="ghost" data-size="sm">Cancel</button>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Alert</h3>
+          <div class="stack">
+            <div data-slot="alert" data-variant="info" role="status">Deploy started. Watching logs.</div>
+            <div data-slot="alert" data-variant="success" role="status">Payment received.</div>
+            <div data-slot="alert" data-variant="warning" role="status">Quota at 80%.</div>
+            <div data-slot="alert" data-variant="destructive" role="alert">Webhook failed 3 times.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wave" id="w3">
+      <h2>Wave 3 — Data &amp; display</h2>
+      <div class="grid grid-2">
+        <div class="panel">
+          <h3>Table</h3>
+          <table data-slot="table">
+            <thead><tr><th>Invoice</th><th>Status</th><th>Amount</th></tr></thead>
+            <tbody>
+              <tr><td>INV-204</td><td><span data-slot="badge" data-variant="success">Paid</span></td><td>$1,240</td></tr>
+              <tr><td>INV-205</td><td><span data-slot="badge" data-variant="warning">Open</span></td><td>$890</td></tr>
+              <tr><td>INV-206</td><td><span data-slot="badge" data-variant="destructive">Failed</span></td><td>$120</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel">
+          <h3>Metric · Avatar · Progress</h3>
+          <div class="row" style="margin-bottom:16px">
+            <span data-slot="avatar">PB</span>
+            <div>
+              <span data-slot="metric-value">$54.2k</span>
+              <span data-slot="metric-delta">+12.4% vs last month</span>
+            </div>
+          </div>
+          <div data-slot="progress" role="progressbar" aria-label="Storage" aria-valuenow="64"><span style="width:64%"></span></div>
+        </div>
+        <div class="panel">
+          <h3>Chart (data-driven bars)</h3>
+          <div class="chart" aria-label="Weekly revenue">
+            <i style="height:40%"></i><i style="height:65%"></i><i style="height:50%"></i>
+            <i style="height:90%"></i><i style="height:70%"></i><i style="height:85%"></i><i style="height:55%"></i>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Breadcrumb · Pagination · Empty</h3>
+          <div data-slot="breadcrumb"><span>App</span><span>/</span><span>Billing</span><span>/</span><span aria-current="page">Invoices</span></div>
+          <div data-slot="pagination" style="margin:14px 0">
+            <button type="button">1</button>
+            <button type="button" aria-current="page">2</button>
+            <button type="button">3</button>
+          </div>
+          <div data-slot="empty">No webhooks yet.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wave" id="w4">
+      <h2>Wave 4 — Premium</h2>
+      <div class="grid grid-2">
+        <div data-slot="glass-card">
+          <div data-slot="gradient-text">Aurora product</div>
+          <p style="color:var(--cronus-fg-secondary);font-size:13px;margin:8px 0 0">GlassCard + GradientText. Motion respects prefers-reduced-motion.</p>
+        </div>
+        <div class="panel">
+          <h3>Shimmer</h3>
+          <div class="stack">
+            <div data-slot="shimmer"></div>
+            <div data-slot="shimmer" style="width:70%"></div>
+            <div data-slot="shimmer" style="width:40%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

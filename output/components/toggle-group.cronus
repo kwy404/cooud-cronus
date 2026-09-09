@@ -1,0 +1,7 @@
+## ToggleGroup — forms
+## source: packages/ui/src/components/toggle-group.tsx
+
+component ToggleGroup layout:inline style:toggle-group {
+  label "ToggleGroup"
+  variant "single"
+}

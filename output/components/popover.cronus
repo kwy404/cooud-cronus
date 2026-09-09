@@ -1,0 +1,7 @@
+## Popover — overlays
+## source: packages/ui/src/components/popover.tsx
+
+component Popover layout:inline style:popover {
+  label "Popover"
+  variant "anchor"
+}

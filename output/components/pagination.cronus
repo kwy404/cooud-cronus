@@ -1,0 +1,7 @@
+## Pagination — data
+## source: packages/ui/src/components/pagination.tsx
+
+component Pagination layout:inline style:pagination {
+  label "Pagination"
+  variant "prev"
+}

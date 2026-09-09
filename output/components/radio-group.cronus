@@ -1,0 +1,7 @@
+## RadioGroup — forms
+## source: packages/ui/src/components/radio-group.tsx
+
+component RadioGroup layout:inline style:radio-group {
+  label "RadioGroup"
+  variant "items"
+}

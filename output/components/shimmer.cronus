@@ -1,0 +1,7 @@
+## Shimmer — premium
+## source: packages/ui/src/components/shimmer.tsx
+
+component Shimmer layout:inline style:shimmer {
+  label "Shimmer"
+  variant "reduced-motion"
+}

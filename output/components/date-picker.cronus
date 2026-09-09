@@ -1,0 +1,7 @@
+## DatePicker — data
+## source: packages/ui/src/components/date-picker.tsx
+
+component DatePicker layout:inline style:date-picker {
+  label "DatePicker"
+  variant "popover+calendar"
+}

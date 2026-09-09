@@ -1,0 +1,7 @@
+## GlassCard — premium
+## source: packages/ui/src/components/glass-card.tsx
+
+component GlassCard layout:inline style:glass-card {
+  label "GlassCard"
+  variant "blur"
+}

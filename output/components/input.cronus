@@ -1,0 +1,7 @@
+## Input — foundation
+## source: packages/ui/src/components/input.tsx
+
+component Input layout:inline style:input {
+  label "Input"
+  variant "default"
+}
