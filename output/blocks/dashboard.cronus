@@ -1,0 +1,61 @@
+## Dashboard block — parity with cronus-ui apps/www/lib/blocks/dashboard.tsx
+## Dataset: @cronus-ui/ui/demo-saas (Northwind / Mara Castillo)
+
+app "Cronus Analytics" {
+  port 5301
+}
+
+style {
+  theme dark
+  preset aurora
+}
+
+layout Main {
+  sidebar {
+    item Overview
+    item Analytics
+    item Reports
+    item Settings
+  }
+}
+
+page "/" type:custom {
+  section page-header {
+    title "Analytics"
+    subtitle "Performance across your workspace, last 7 months."
+  }
+
+  section kpi {
+    item "Total revenue" value "$84,210" delta "+14.2%" trend up
+    item "Active users" value "12,840" delta "+6.8%" trend up
+    item "Conversion" value "4.21%" delta "+0.9%" trend up
+    item "Churn" value "1.64%" delta "-0.4%" trend down
+  }
+
+  section chart {
+    title "Revenue trend"
+    subtitle "Monthly recurring revenue"
+    type bar
+    bind Revenue
+  }
+
+  section table {
+    title "Recent activity"
+    subtitle "Latest invoices and payments"
+    columns customer, amount, status
+    bind Activity
+  }
+}
+
+entity Revenue {
+  month string!
+  revenue money!
+}
+
+entity Activity {
+  id string!
+  customer string!
+  email email!
+  amount money!
+  status enum [Paid, Pending, Refunded]
+}
