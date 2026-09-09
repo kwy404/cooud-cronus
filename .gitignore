@@ -1,0 +1,6 @@
+workspace/cronus-ui/
+workspace/cronus-kernel/
+migration-staging/
+*.log
+.DS_Store
+Thumbs.db
