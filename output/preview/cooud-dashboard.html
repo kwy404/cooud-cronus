@@ -48,7 +48,10 @@
       text-decoration: none;
     }
     .rail a:hover { background: #16161e; color: #fff; }
-    .rail a.active { background: #1a1a24; color: #fff; }
+    .rail a.active { background: #181822; color: #fff; }
+    .rail .gear {
+      width: 40px; height: 40px; border-radius: 99px; background: #14141c; border: 1px solid var(--line);
+    }
     .rail .spacer { flex: 1; }
     .rail svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 
@@ -68,15 +71,25 @@
       padding: 10px 16px 0;
     }
     .orb {
-      width: 32px; height: 32px; border-radius: 99px;
-      background: conic-gradient(from 200deg, #ff7ad9, #7af0ff, #ffe27a, #ff7ad9);
+      width: 34px; height: 34px; border-radius: 99px;
+      background: radial-gradient(circle at 30% 30%, #ffb4f0, #7ae7ff 45%, #ffd36a 80%);
     }
+    .theme {
+      display: flex; align-items: center; gap: 2px; height: 34px; padding: 3px;
+      border-radius: 99px; border: 1px solid var(--line); background: #12121a;
+    }
+    .theme button {
+      width: 28px; height: 28px; border: 0; border-radius: 99px; background: transparent;
+      color: #8b8b96; display: grid; place-items: center; cursor: pointer;
+    }
+    .theme button.on { background: #1c1c26; color: #eee; }
+    .theme svg { width: 14px; height: 14px; }
     .chip {
-      width: 32px; height: 32px; border-radius: 99px; border: 1px solid var(--line);
+      width: 34px; height: 34px; border-radius: 99px; border: 1px solid var(--line);
       background: #14141c; display: grid; place-items: center; color: #cfcfd6;
     }
     .chip svg { width: 15px; height: 15px; }
-    .ava { width: 32px; height: 32px; border-radius: 99px; object-fit: cover; }
+    .ava { width: 34px; height: 34px; border-radius: 99px; object-fit: cover; }
 
     .body {
       display: grid;
@@ -107,7 +120,7 @@
       background: #0c0c12; color: var(--fg); font: inherit; font-size: 12px;
       display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; cursor: pointer;
     }
-    .btn.primary { background: #0a0a0e; }
+    .btn.primary { background: #0a0a10; box-shadow: inset 0 0 0 1px rgba(255,255,255,.04); }
     .btn svg { width: 14px; height: 14px; opacity: .8; }
     .stat { display: flex; align-items: center; gap: 10px; padding: 8px 2px; font-size: 13px; }
     .stat .ico {
@@ -140,7 +153,7 @@
       border: 0; background: transparent; color: var(--muted); font: inherit; font-size: 11px;
       letter-spacing: .06em; text-transform: uppercase; padding: 6px 12px; border-radius: 99px; cursor: pointer;
     }
-    .seg button.on { background: #1c1c26; color: var(--fg); }
+    .seg button.on { background: #f4f4f5; color: #111; }
     .filters { margin-left: auto; display: flex; gap: 8px; }
     .dd {
       height: 34px; padding: 0 12px; border-radius: 10px; border: 1px solid var(--line);
@@ -158,9 +171,13 @@
       display: flex; justify-content: space-between; color: var(--dim); font-size: 11px;
     }
     .blob {
-      position: absolute; right: 28px; bottom: 40px; width: 90px; height: 70px;
-      background: radial-gradient(circle at 40% 40%, #f0a0ff 0%, #7a6cff 40%, transparent 70%);
-      filter: blur(8px); opacity: .85; pointer-events: none;
+      position: absolute; right: 18px; bottom: 28px; width: 110px; height: 80px;
+      background:
+        radial-gradient(circle at 35% 40%, #ffb8e8 0%, transparent 55%),
+        radial-gradient(circle at 70% 60%, #c9a0ff 0%, transparent 50%),
+        radial-gradient(circle at 50% 70%, #7ad7ff 0%, transparent 45%);
+      filter: blur(10px); opacity: .9; pointer-events: none;
+      border-radius: 40% 60% 50% 50%;
     }
   </style>
 </head>
@@ -186,7 +203,7 @@
         <svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
       </a>
       <div class="spacer"></div>
-      <a href="#" aria-label="Ajustes">
+      <a class="gear" href="#" aria-label="Ajustes">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>
       </a>
     </nav>
@@ -194,8 +211,10 @@
     <section class="stage">
       <div class="top">
         <div class="orb" aria-hidden="true"></div>
-        <button class="chip" type="button" aria-label="Tema"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M5 12H3M21 12h-2"/></svg></button>
-        <button class="chip" type="button" aria-label="Tema escuro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg></button>
+        <div class="theme" role="group" aria-label="Tema">
+          <button type="button" aria-label="Claro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M5 12H3M21 12h-2"/></svg></button>
+          <button class="on" type="button" aria-label="Escuro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg></button>
+        </div>
         <button class="chip" type="button" aria-label="Notificações"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 16v-5a6 6 0 1 1 12 0v5l1.5 2H4.5z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></button>
         <img class="ava" alt="" src="https://i.pravatar.cc/64?img=12" />
       </div>
