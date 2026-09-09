@@ -1,5 +1,4 @@
-workspace/cronus-ui/
-workspace/cronus-kernel/
+workspace/
 migration-staging/
 *.log
 .DS_Store
