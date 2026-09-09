@@ -33,11 +33,13 @@ UI extra (not in source tsx): motion-presets, toast
 
 ## VERIFY (agent)
 
+Regra Zedd (fechou): HTML nao entra. O HTML e o `.cronus`. Kernel emite a pagina.
+
 1. `apps/dashboard/app.cronus` is native sections only (sidebar, kpi, progress, tabs, chart, table, empty).
 2. `cronus parse apps/dashboard/app.cronus` succeeds after `scripts/CRIAR-COMPILER.bat`.
 3. No `.cronus` file contains `style_block`, `template "<html>`, or TSX.
 4. Catalog files in `packages/ui` are contracts (variants/slots), not React ports — visual parity of 173 widgets is NOT VERIFIED.
-5. Pixel-identical Cooud chrome is a LANGUAGE GAP: kernel renderer owns HTML. Do not re-embed CSS.
+5. Pixel chrome is a LANGUAGE GAP. Do not re-embed CSS/HTML to fake it.
 6. PNG previews in `docs/preview/` are visual targets, not the source of truth.
 
 overall: **PASS**

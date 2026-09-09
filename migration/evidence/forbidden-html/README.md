@@ -1,7 +1,7 @@
 # forbidden-html
 
-These HTML files were a rejected escape hatch (pixel mock via CSS/HTML inside `.cronus` `style_block` / `template`).
+Rejected escape hatch.
 
-Zedd 2026-09-08: no TSX, no HTML, no CSS. Authoring is `.cronus` only. Kernel renders.
+Zedd 2026-09-08: HTML nao entra. O HTML e o `.cronus`. Fechou.
 
 Do not copy these back into `apps/` or `packages/`.

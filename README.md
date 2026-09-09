@@ -2,7 +2,7 @@
 
 Cronus UI e dashboard Cooud em **`.cronus` nativo**.
 
-Sem TSX. Sem HTML. Sem CSS. Sem `style_block` / `template`. O kernel renderiza.
+**HTML nao entra.** O HTML e o `.cronus`. Voce escreve `app` / `page` / `section` / `entity`. O kernel vira isso em pagina. Sem TSX, sem CSS, sem `style_block`, sem `template "<div"`. Fechou.
 
 ## Harness
 
