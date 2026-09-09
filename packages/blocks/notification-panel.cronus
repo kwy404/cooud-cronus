@@ -1,13 +1,41 @@
 ## Block NotificationPanel
 ## source: registry/notification-panel.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Card, CardHeader, CardTitle, Badge, Button, CardContent, Reveal, Avatar, CardFooter
+## icons: AvatarFallback
 
 component NotificationPanelBlock(label: text) layout:stack style:notification-panel {
-  title "Notification Panel"
-  subtitle "Notification Panel"
-  action "Notification Panel"
-  test "use block" {
-    click "Notification Panel"
+  meta "stack"
+  label "NotificationPanel"
+  title "Notifications"
+  subtitle "Mark all read"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "Badge"
+  slot "Button"
+  slot "CardContent"
+  slot "Reveal"
+  slot "Avatar"
+  slot "CardFooter"
+  item "Mark all read"
+  item "Devon Lane"
+  item "commented on the Atlas brief."
+  item "2m ago"
+  item "Mara Castillo"
+  item "assigned you to Q3 roadmap."
+  text "3 new"
+  text "Riley Kim"
+  text "requested your review on PR #482."
+  text "1h ago"
+  text "Jordan Pierce"
+  text "shared a file with your team."
+  text "3h ago"
+  text "Sasha Tran"
+  text "closed the issue you reported."
+  text "Yesterday"
+  test "use" {
+    expect visible "Notifications"
   }
 }

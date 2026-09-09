@@ -1,14 +1,23 @@
 ## Block CardStack
 ## source: registry/card-stack.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLAttributes, HTMLElement, HTMLDivElement
 ## registryDependencies: cn
 
 component CardStackBlock(label: text) layout:stack style:card-stack {
-  title "Card Stack"
-  subtitle "Card Stack"
-  action "Card Stack"
-  test "use block" {
-    click "Card Stack"
+  meta "stack"
+  label "CardStack"
+  title "motion/react"
+  subtitle "children"
+  action "click"
+  text "Card stack"
+  text "Show next card"
+  text "Enter"
+  text "top center"
+  text "spring"
+  test "uses CardStack" {
+    click "CardStack"
   }
 }

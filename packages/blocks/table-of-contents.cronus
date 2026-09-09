@@ -1,14 +1,22 @@
 ## Block TableOfContents
 ## source: registry/table-of-contents.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLAttributes, HTMLElement, HTMLSpanElement, TableOfContentsItem, HTMLAnchorElement
 ## registryDependencies: cn
 
 component TableOfContentsBlock(label: text) layout:stack style:table-of-contents {
-  title "Table Of Contents"
-  subtitle "Table Of Contents"
-  action "Table Of Contents"
-  test "use block" {
-    click "Table Of Contents"
+  meta "stack"
+  label "TableOfContents"
+  title "children"
+  subtitle "On this page"
+  action "click"
+  text "auto"
+  text "scroll"
+  text "location"
+  text "smooth"
+  test "uses TableOfContents" {
+    click "TableOfContents"
   }
 }

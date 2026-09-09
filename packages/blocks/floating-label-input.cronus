@@ -1,14 +1,20 @@
 ## Block FloatingLabelInput
 ## source: registry/floating-label-input.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Input
+## icons: InputHTMLAttributes, HTMLInputElement
 ## registryDependencies: cn, input
 
 component FloatingLabelInputBlock(label: text) layout:stack style:floating-label-input {
-  title "Floating Label Input"
-  subtitle "Floating Label Input"
-  action "Floating Label Input"
-  test "use block" {
-    click "Floating Label Input"
+  meta "stack"
+  label "FloatingLabelInput"
+  title "placeholder"
+  subtitle "FloatingLabelInput"
+  slot "Input"
+  action "click"
+  text "alert"
+  test "uses FloatingLabelInput" {
+    click "FloatingLabelInput"
   }
 }

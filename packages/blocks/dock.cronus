@@ -1,14 +1,18 @@
 ## Block Dock
 ## source: registry/dock.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement, DockButton, HTMLElement
 ## registryDependencies: cn
 
 component DockBlock(label: text) layout:stack style:dock {
-  title "Dock"
-  subtitle "Dock"
-  action "Dock"
-  test "use block" {
+  meta "stack"
+  label "Dock"
+  title "motion/react"
+  subtitle "dock"
+  action "click"
+  test "uses Dock" {
     click "Dock"
   }
 }

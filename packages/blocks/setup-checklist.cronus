@@ -1,13 +1,37 @@
 ## Block SetupChecklist
 ## source: registry/setup-checklist.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Card, CardHeader, CardTitle, Badge, CardContent, Progress, Checkbox, Button
+## icons: Check
 
 component SetupChecklistBlock(label: text) layout:stack style:setup-checklist {
-  title "Setup Checklist"
-  subtitle "Setup Checklist"
-  action "Setup Checklist"
-  test "use block" {
-    click "Setup Checklist"
+  meta "stack"
+  label "SetupChecklist"
+  title "Finish setting up"
+  subtitle "Complete these steps to get the most out of Cronus."
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "Badge"
+  slot "CardContent"
+  slot "Progress"
+  slot "Checkbox"
+  slot "Button"
+  item "40% complete"
+  item "2 of 5 complete"
+  item "Verify your email"
+  item "Your email address is confirmed."
+  item "Create your first project"
+  item "Invite a teammate"
+  text "Collaborate with your team in real time."
+  text "Start"
+  text "Add a payment method"
+  text "Keep your workspace active after the trial."
+  text "Install the CLI"
+  text "Ship from your terminal in seconds."
+  text "Setup progress: 2 of 5 complete"
+  test "use" {
+    expect visible "Finish setting up"
   }
 }

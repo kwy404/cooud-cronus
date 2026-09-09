@@ -1,16 +1,20 @@
 ## Block FunnelChart
 ## source: registry/funnel-chart.json
 ## type: registry:ui
-## behavior: data
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement, ChartContainer, RechartsFunnelChart, ChartTooltip, ChartTooltipContent, Funnel, LabelList
 ## registryDependencies: chart, cn
 
 component FunnelChartBlock(label: text) layout:stack style:funnel-chart {
-  title "Funnel Chart"
-  subtitle "Funnel Chart"
-  columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads FunnelChart" {
-    expect visible "Funnel Chart"
+  meta "stack"
+  label "FunnelChart"
+  title "recharts"
+  subtitle "value"
+  action "click"
+  text "stage"
+  text "right"
+  test "uses FunnelChart" {
+    click "FunnelChart"
   }
 }

@@ -1,14 +1,28 @@
 ## Block CreditCardInput
 ## source: registry/credit-card-input.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: CreditCard, HTMLAttributes, HTMLDivElement, HTMLInputElement, CreditCardValue, HTMLFieldSetElement, BrandGlyph, Check
 ## registryDependencies: cn
 
 component CreditCardInputBlock(label: text) layout:stack style:credit-card-input {
-  title "Credit Card Input"
-  subtitle "Credit Card Input"
-  action "Credit Card Input"
-  test "use block" {
-    click "Credit Card Input"
+  meta "stack"
+  label "CreditCardInput"
+  title "American Express"
+  subtitle "Mastercard"
+  action "click"
+  text "VISA"
+  text "AMEX"
+  text "elo"
+  text "DISC"
+  text "Elo"
+  text "Visa"
+  text "Discover"
+  text "visa"
+  text "mastercard"
+  text "amex"
+  test "uses CreditCardInput" {
+    click "CreditCardInput"
   }
 }

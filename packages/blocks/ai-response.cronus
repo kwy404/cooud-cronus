@@ -1,13 +1,33 @@
 ## Block AiResponse
 ## source: registry/ai-response.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Card, CardHeader, Badge, CardContent, Separator, Button
+## icons: Sparkles, ThumbsUp, ThumbsDown, Copy, RefreshCw
 
 component AiResponseBlock(label: text) layout:stack style:ai-response {
-  title "Ai Response"
-  subtitle "Ai Response"
-  action "Ai Response"
-  test "use block" {
-    click "Ai Response"
+  meta "stack"
+  label "AiResponse"
+  title "Cronus Assistant"
+  subtitle "Swap a theme by overriding those tokens at any DOM scope."
+  slot "Card"
+  slot "CardHeader"
+  slot "Badge"
+  slot "CardContent"
+  slot "Separator"
+  slot "Button"
+  item "Sources"
+  item "Theming guide"
+  item "cronus-ui.dev"
+  item "Design tokens reference"
+  text "Answer"
+  text "The CLI copies source into your repo so you stay in control."
+  text "CLI: add a component"
+  text "Copy"
+  text "Regenerate"
+  text "Good response"
+  text "Bad response"
+  test "use" {
+    expect visible "Cronus Assistant"
   }
 }

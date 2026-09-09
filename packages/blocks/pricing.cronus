@@ -1,15 +1,40 @@
 ## Block Pricing
 ## source: registry/pricing.json
 ## type: registry:block
-## behavior: marketing
+## layout: pricing-grid
+## compose: Badge, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Button
+## icons: Sparkles, Check
 
 component PricingBlock(label: text) layout:stack style:pricing {
-  title "Pricing"
-  subtitle "Pricing"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "pricing-grid"
+  label "Pricing"
+  title "Simple, transparent pricing"
+  subtitle "Most popular"
+  slot "Badge"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardDescription"
+  slot "CardContent"
+  slot "CardFooter"
+  slot "Button"
+  plan "Starter"
+  plan "Pro"
+  plan "Enterprise"
+  button "Starter"
+  button "Get started"
+  button "Start free trial"
+  text "Everything you need to launch your first project."
+  text "For growing teams that need more power and polish."
+  text "Custom"
+  text "Dedicated infrastructure and support at scale."
+  text "Contact sales"
+  text "Community support"
+  text "1 GB storage"
+  text "Basic analytics"
+  text "Unlimited projects"
+  text "Priority support"
   test "cta" {
-    click "Get started"
+    click "Starter"
   }
 }

@@ -1,14 +1,29 @@
 ## Block TreeView
 ## source: registry/tree-view.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: TreeView
+## icons: HTMLAttributes, HTMLDivElement, TreeViewContextValue, TreeViewItem, Set, Map, TreeViewContext, ChevronRight
 ## registryDependencies: cn
 
 component TreeViewBlock(label: text) layout:stack style:tree-view {
-  title "Tree View"
-  subtitle "Tree View"
-  action "Tree View"
-  test "use block" {
-    click "Tree View"
+  meta "stack"
+  label "TreeView"
+  title "must be used within"
+  subtitle "onChange"
+  slot "TreeView"
+  action "click"
+  text "tree"
+  text "treeitem"
+  text "ArrowDown"
+  text "ArrowUp"
+  text "ArrowRight"
+  text "ArrowLeft"
+  text "Home"
+  text "End"
+  text "Enter"
+  text "open"
+  test "uses TreeView" {
+    click "TreeView"
   }
 }

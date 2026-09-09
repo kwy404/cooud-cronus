@@ -1,18 +1,30 @@
 ## Block MagicLinkSent
 ## source: registry/magic-link--sent.json
 ## type: registry:block
-## behavior: auth
+## layout: form-card
+## compose: Card, CardHeader, CardTitle, CardContent, Button, CardFooter
+## icons: MailCheck, ArrowLeft
 
 component MagicLinkSentBlock(label: text) layout:stack style:magic-link--sent {
-  title "Magic Link Sent"
-  subtitle "Sent"
+  meta "form-card"
+  label "MagicLinkSent"
+  title "Check your email"
+  subtitle "We emailed a magic link to mara@cronus.io. Click it to sign in."
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardContent"
+  slot "Button"
+  slot "CardFooter"
   state pending: boolean = false
   field "Email"
   field "Password"
-  action "Sign in"
-  link "Forgot password?" -> "/forgot-password"
-  test "submit auth" {
+  action "Submit"
+  text "The link expires in 10 minutes."
+  text "Resend link"
+  text "Back to sign in"
+  test "submit" {
     fill email "you@company.com"
-    click "Sign in"
+    click "Submit"
   }
 }

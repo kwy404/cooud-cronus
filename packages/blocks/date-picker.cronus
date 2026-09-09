@@ -1,14 +1,28 @@
 ## Block DatePicker
 ## source: registry/date-picker.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Popover, Button
+## icons: HTMLButtonElement, Date, PopoverTrigger, CalendarIcon, PopoverContent, Calendar
 ## registryDependencies: button, calendar, cn, popover
 
 component DatePickerBlock(label: text) layout:stack style:date-picker {
-  title "Date Picker"
-  subtitle "Date Picker"
-  action "Date Picker"
-  test "use block" {
-    click "Date Picker"
+  meta "stack"
+  label "DatePicker"
+  title "defaultValue"
+  subtitle "onChange"
+  slot "Popover"
+  slot "Button"
+  action "click"
+  text "value"
+  text "disabled"
+  text "name"
+  text "align"
+  text "Pick a date"
+  text "PPP"
+  text "start"
+  text "yyyy-MM-dd"
+  test "uses DatePicker" {
+    click "DatePicker"
   }
 }

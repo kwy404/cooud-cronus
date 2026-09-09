@@ -1,14 +1,28 @@
 ## Block TextEffect
 ## source: registry/text-effect.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: TextEffectPreset, TextEffectPer, React, HTMLElement, Component
 ## registryDependencies: cn
 
 component TextEffectBlock(label: text) layout:stack style:text-effect {
-  title "Text Effect"
-  subtitle "Text Effect"
-  action "Text Effect"
-  test "use block" {
-    click "Text Effect"
+  meta "stack"
+  label "TextEffect"
+  title "motion/react"
+  subtitle "Segmenter"
+  action "click"
+  text "char"
+  text "grapheme"
+  text "word"
+  text "fade"
+  text "blur"
+  text "slide"
+  text "mount"
+  text "inView"
+  text "children"
+  text "user"
+  test "uses TextEffect" {
+    click "TextEffect"
   }
 }

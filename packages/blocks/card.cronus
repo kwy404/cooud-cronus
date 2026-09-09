@@ -1,14 +1,23 @@
 ## Block Card
 ## source: registry/card.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component CardBlock(label: text) layout:stack style:card {
-  title "Card"
-  subtitle "Card"
-  action "Card"
-  test "use block" {
+  meta "stack"
+  label "Card"
+  title "CardHeader"
+  subtitle "CardTitle"
+  action "click"
+  text "card"
+  text "CardDescription"
+  text "CardAction"
+  text "CardContent"
+  text "CardFooter"
+  test "uses Card" {
     click "Card"
   }
 }

@@ -1,14 +1,25 @@
 ## Block AlertDialog
 ## source: registry/alert-dialog.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: AlertDialogPrimitive, AlertDialogOverlay
+## icons: HTMLDivElement
 ## registryDependencies: button, cn
 
 component AlertDialogBlock(label: text) layout:stack style:alert-dialog {
-  title "Alert Dialog"
-  subtitle "Alert Dialog"
-  action "Alert Dialog"
-  test "use block" {
-    click "Alert Dialog"
+  meta "stack"
+  label "AlertDialog"
+  title "AlertDialogContent"
+  subtitle "AlertDialogHeader"
+  slot "AlertDialogPrimitive"
+  slot "AlertDialogOverlay"
+  action "click"
+  text "AlertDialogFooter"
+  text "AlertDialogTitle"
+  text "AlertDialogDescription"
+  text "AlertDialogAction"
+  text "AlertDialogCancel"
+  test "uses AlertDialog" {
+    click "AlertDialog"
   }
 }

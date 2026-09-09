@@ -1,15 +1,30 @@
 ## Block Waitlist
 ## source: registry/waitlist.json
 ## type: registry:block
-## behavior: marketing
+## layout: stack
+## compose: Badge, Button, Label, Input, Avatar
+## icons: Sparkles, Check, ArrowRight, AvatarFallback
 
 component WaitlistBlock(label: text) layout:stack style:waitlist {
-  title "Waitlist"
-  subtitle "Waitlist"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "stack"
+  label "Waitlist"
+  title "Be first in line for a"
+  subtitle "Early access"
+  slot "Badge"
+  slot "Button"
+  slot "Label"
+  slot "Input"
+  slot "Avatar"
+  button "Join the waitlist"
+  text "Invites roll out weekly"
+  text "faster"
+  text "Undo"
+  text "Email address"
+  text "waiting for access"
+  text "polite"
+  text "status"
+  text "you@company.com"
   test "cta" {
-    click "Get started"
+    click "Join the waitlist"
   }
 }

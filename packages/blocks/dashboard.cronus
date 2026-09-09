@@ -1,16 +1,44 @@
 ## Block Dashboard
 ## source: registry/dashboard.json
 ## type: registry:block
-## behavior: data
+## layout: dashboard-grid
+## compose: Sidebar, Avatar, NavigationMenu, Button, AppShell, Badge, Card, CardContent, Metric, CardHeader, CardTitle, BarChart, Table
+## icons: ActivityStatus, SidebarHeader, ChartColumnIncreasing, SidebarSeparator, SidebarContent, SidebarGroup, SidebarGroupLabel, SidebarGroupContent
 ## registryDependencies: demo-saas
 
 component DashboardBlock(label: text) layout:stack style:dashboard {
-  title "Dashboard"
-  subtitle "Dashboard"
+  meta "dashboard-grid"
+  label "Dashboard"
+  title "Cronus Analytics"
+  subtitle "Acme Inc."
+  slot "Sidebar"
+  slot "Avatar"
+  slot "NavigationMenu"
+  slot "Button"
+  slot "AppShell"
+  slot "Badge"
+  slot "Card"
+  slot "CardContent"
+  slot "Metric"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "BarChart"
   columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads Dashboard" {
-    expect visible "Dashboard"
+  item "Cronus Analytics"
+  item "Acme Inc."
+  item "Workspace"
+  item "Search"
+  text "Performance across your workspace, last 7 months."
+  text "Live"
+  text "Revenue trend"
+  text "Monthly recurring revenue"
+  text "Recent activity"
+  text "Latest invoices and payments"
+  text "Customer"
+  text "Amount"
+  text "Status"
+  text "Overview"
+  test "reads" {
+    expect visible "Cronus Analytics"
   }
 }

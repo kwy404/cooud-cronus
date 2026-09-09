@@ -1,15 +1,33 @@
 ## Block HeroSplit
 ## source: registry/hero--split.json
 ## type: registry:block
-## behavior: marketing
+## layout: hero-center
+## compose: Badge, Button, Card, CardHeader, CardTitle, CardDescription, CardContent
+## icons: Sparkles, ArrowRight
 
 component HeroSplitBlock(label: text) layout:stack style:hero--split {
-  title "Hero Split"
-  subtitle "Split"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "hero-center"
+  label "HeroSplit"
+  title "Design systems in minutes"
+  subtitle "Build the product surface before the backlog catches up."
+  slot "Badge"
+  slot "Button"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardDescription"
+  slot "CardContent"
+  button "Start building"
+  text "View templates"
+  text "Release quality"
+  text "Everything tokenized before handoff."
+  text "Components"
+  text "52 ready"
+  text "Themes"
+  text "Aurora + Neutral"
+  text "Coverage"
+  text "A11y pass"
   test "cta" {
-    click "Get started"
+    click "Start building"
   }
 }

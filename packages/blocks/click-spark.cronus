@@ -1,14 +1,19 @@
 ## Block ClickSpark
 ## source: registry/click-spark.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement, Spark
 ## registryDependencies: cn
 
 component ClickSparkBlock(label: text) layout:stack style:click-spark {
-  title "Click Spark"
-  subtitle "Click Spark"
-  action "Click Spark"
-  test "use block" {
-    click "Click Spark"
+  meta "stack"
+  label "ClickSpark"
+  title "ClickSpark"
+  subtitle "--dy"
+  action "click"
+  text "--dx"
+  test "uses ClickSpark" {
+    click "ClickSpark"
   }
 }

@@ -1,14 +1,19 @@
 ## Block HoverCard
 ## source: registry/hover-card.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HoverCardPrimitive
 ## registryDependencies: cn
 
 component HoverCardBlock(label: text) layout:stack style:hover-card {
-  title "Hover Card"
-  subtitle "Hover Card"
-  action "Hover Card"
-  test "use block" {
-    click "Hover Card"
+  meta "stack"
+  label "HoverCard"
+  title "HoverCardContent"
+  subtitle "HoverCardContent"
+  action "click"
+  text "center"
+  test "uses HoverCard" {
+    click "HoverCard"
   }
 }

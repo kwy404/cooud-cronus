@@ -1,15 +1,37 @@
 ## Block BlogPostWithSidebar
 ## source: registry/blog-post--with-sidebar.json
 ## type: registry:block
-## behavior: marketing
+## layout: form-card
+## compose: Badge, Card, CardHeader, CardTitle, CardContent, CardDescription, Avatar, Label, Input, Button
+## icons: AvatarFallback
 
 component BlogPostWithSidebarBlock(label: text) layout:stack style:blog-post--with-sidebar {
-  title "Blog Post With Sidebar"
-  subtitle "WithSidebar"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "form-card"
+  label "BlogPostWithSidebar"
+  title "A single"
+  subtitle "Engineering"
+  slot "Badge"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardContent"
+  slot "CardDescription"
+  slot "Avatar"
+  slot "Label"
+  slot "Input"
+  slot "Button"
+  button "Subscribe"
+  text "12 min read"
+  text "Hierarchy beats whitespace"
+  text "Density tokens"
+  text "What changed for customers"
+  text "On this page"
+  text "Get the next essay"
+  text "One long-form piece a month, straight to your inbox."
+  text "Amara Okafor"
+  text "Email address"
+  text "One email a month. Unsubscribe anytime."
   test "cta" {
-    click "Get started"
+    click "Subscribe"
   }
 }

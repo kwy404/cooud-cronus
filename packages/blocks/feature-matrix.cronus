@@ -1,15 +1,34 @@
 ## Block FeatureMatrix
 ## source: registry/feature-matrix.json
 ## type: registry:block
-## behavior: marketing
+## layout: stack
+## compose: Badge, Button, Card
+## icons: Check, Minus, Sparkles, MatrixValue
 
 component FeatureMatrixBlock(label: text) layout:stack style:feature-matrix {
-  title "Feature Matrix"
-  subtitle "Feature Matrix"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "stack"
+  label "FeatureMatrix"
+  title "Included in"
+  subtitle "Not included in"
+  slot "Badge"
+  slot "Button"
+  slot "Card"
+  plan "Starter"
+  plan "Pro"
+  button "Starter"
+  button "Get started"
+  button "Start free trial"
+  text "Compare Starter, Pro, and Scale plans feature by feature"
+  text "Compare plans"
+  text "Every plan, feature by feature."
+  text "Popular"
+  text "Scale"
+  text "Contact sales"
+  text "Usage"
+  text "Projects"
+  text "Team members"
+  text "Storage"
   test "cta" {
-    click "Get started"
+    click "Starter"
   }
 }

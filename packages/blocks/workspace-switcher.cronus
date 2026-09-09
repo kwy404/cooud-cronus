@@ -1,14 +1,20 @@
 ## Block WorkspaceSwitcher
 ## source: registry/workspace-switcher.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: DropdownMenu, Avatar
+## icons: WorkspaceSwitcherLabels, HTMLButtonElement, DropdownMenuTrigger, WorkspaceAvatar, ChevronsUpDown, DropdownMenuContent, DropdownMenuRadioGroup, DropdownMenuRadioItem
 ## registryDependencies: avatar, cn, dropdown-menu
 
 component WorkspaceSwitcherBlock(label: text) layout:stack style:workspace-switcher {
-  title "Workspace Switcher"
-  subtitle "Workspace Switcher"
-  action "Workspace Switcher"
-  test "use block" {
-    click "Workspace Switcher"
+  meta "stack"
+  label "WorkspaceSwitcher"
+  title "Switch workspace"
+  subtitle "start"
+  slot "DropdownMenu"
+  slot "Avatar"
+  action "click"
+  test "uses WorkspaceSwitcher" {
+    click "WorkspaceSwitcher"
   }
 }

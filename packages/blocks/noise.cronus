@@ -1,14 +1,20 @@
 ## Block Noise
 ## source: registry/noise.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component NoiseBlock(label: text) layout:stack style:noise {
-  title "Noise"
-  subtitle "Noise"
-  action "Noise"
-  test "use block" {
+  meta "stack"
+  label "Noise"
+  title "fractalNoise"
+  subtitle "fractalNoise"
+  action "click"
+  text "noise"
+  text "stitch"
+  test "uses Noise" {
     click "Noise"
   }
 }

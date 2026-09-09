@@ -1,14 +1,26 @@
 ## Block AnimatedNumber
 ## source: registry/animated-number.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: React, HTMLSpanElement
 ## registryDependencies: cn
 
 component AnimatedNumberBlock(label: text) layout:stack style:animated-number {
-  title "Animated Number"
-  subtitle "Animated Number"
-  action "Animated Number"
-  test "use block" {
-    click "Animated Number"
+  meta "stack"
+  label "AnimatedNumber"
+  title "motion/react"
+  subtitle "children"
+  action "click"
+  text "spring"
+  text "user"
+  text "never"
+  text "always"
+  text "polite"
+  text "NaN"
+  text "change"
+  text "status"
+  test "uses AnimatedNumber" {
+    click "AnimatedNumber"
   }
 }

@@ -1,14 +1,18 @@
 ## Block Checkbox
 ## source: registry/checkbox.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: CheckboxPrimitive, Check
 ## registryDependencies: cn
 
 component CheckboxBlock(label: text) layout:stack style:checkbox {
-  title "Checkbox"
-  subtitle "Checkbox"
-  action "Checkbox"
-  test "use block" {
+  meta "stack"
+  label "Checkbox"
+  title "checkbox"
+  subtitle "checkbox"
+  action "click"
+  test "uses Checkbox" {
     click "Checkbox"
   }
 }

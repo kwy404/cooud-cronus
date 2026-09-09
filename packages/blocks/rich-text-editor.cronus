@@ -1,14 +1,31 @@
 ## Block RichTextEditor
 ## source: registry/rich-text-editor.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Toggle, Separator, Toolbar
+## icons: ToolbarButton, Bold, Italic, Strikethrough, Code, Heading1, Heading2, Heading3
 ## registryDependencies: cn, separator, toggle
 
 component RichTextEditorBlock(label: text) layout:stack style:rich-text-editor {
-  title "Rich Text Editor"
-  subtitle "Rich Text Editor"
-  action "Rich Text Editor"
-  test "use block" {
-    click "Rich Text Editor"
+  meta "stack"
+  label "RichTextEditor"
+  title "transaction"
+  subtitle "Text formatting"
+  slot "Toggle"
+  slot "Separator"
+  slot "Toolbar"
+  action "click"
+  text "toolbar"
+  text "Bold"
+  text "bold"
+  text "Italic"
+  text "italic"
+  text "Strikethrough"
+  text "strike"
+  text "Inline code"
+  text "code"
+  text "vertical"
+  test "uses RichTextEditor" {
+    click "RichTextEditor"
   }
 }

@@ -1,13 +1,31 @@
 ## Block CommentThread
 ## source: registry/comment-thread.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Card, CardContent, Avatar, Textarea, Button, Separator
+## icons: AvatarImage, AvatarFallback, Heart
 
 component CommentThreadBlock(label: text) layout:stack style:comment-thread {
-  title "Comment Thread"
-  subtitle "Comment Thread"
-  action "Comment Thread"
-  test "use block" {
-    click "Comment Thread"
+  meta "stack"
+  label "CommentThread"
+  title "Diego Lima"
+  subtitle "This is exactly what we needed. The token layer makes theming painless."
+  slot "Card"
+  slot "CardContent"
+  slot "Avatar"
+  slot "Textarea"
+  slot "Button"
+  slot "Separator"
+  item "Reply"
+  item "Mara Castillo"
+  item "Priya Raman"
+  text "Post"
+  text "Agreed — and it ships accessible by default, so we review less."
+  text "Bookmarking this for our next migration. Great work to the whole team."
+  text "You"
+  text "Add a comment…"
+  text "Add a comment"
+  test "use" {
+    expect visible "Post"
   }
 }

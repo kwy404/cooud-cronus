@@ -1,14 +1,26 @@
 ## Block Marquee
 ## source: registry/marquee.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component MarqueeBlock(label: text) layout:stack style:marquee {
-  title "Marquee"
-  subtitle "Marquee"
-  action "Marquee"
-  test "use block" {
+  meta "stack"
+  label "Marquee"
+  title "motion/react"
+  subtitle "respect"
+  action "click"
+  text "always"
+  text "never"
+  text "left"
+  text "right"
+  text "1rem"
+  text "forward"
+  text "down"
+  text "marquee"
+  test "uses Marquee" {
     click "Marquee"
   }
 }

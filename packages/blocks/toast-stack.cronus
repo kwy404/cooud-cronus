@@ -1,13 +1,25 @@
 ## Block ToastStack
 ## source: registry/toast-stack.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Reveal, Button
+## icons: CheckCircle2, XCircle, TriangleAlert, Info
 
 component ToastStackBlock(label: text) layout:stack style:toast-stack {
-  title "Toast Stack"
-  subtitle "Toast Stack"
-  action "Toast Stack"
-  test "use block" {
-    click "Toast Stack"
+  meta "stack"
+  label "ToastStack"
+  title "Payment received"
+  subtitle "Your invoice was settled successfully."
+  slot "Reveal"
+  slot "Button"
+  item "Upload failed"
+  item "Storage almost full"
+  item "New version available"
+  text "The file exceeds the 25 MB limit."
+  text "You are using 92% of your quota."
+  text "Refresh to update to the latest build."
+  text "Dismiss"
+  test "use" {
+    expect visible "Payment received"
   }
 }

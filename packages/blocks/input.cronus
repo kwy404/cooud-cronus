@@ -1,14 +1,18 @@
 ## Block Input
 ## source: registry/input.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLInputElement
 ## registryDependencies: cn
 
 component InputBlock(label: text) layout:stack style:input {
-  title "Input"
-  subtitle "Input"
-  action "Input"
-  test "use block" {
+  meta "stack"
+  label "Input"
+  title "input"
+  subtitle "input"
+  action "click"
+  test "uses Input" {
     click "Input"
   }
 }

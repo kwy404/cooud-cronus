@@ -1,13 +1,21 @@
 ## Block EmailVerify
 ## source: registry/email-verify.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Card, Button
 
 component EmailVerifyBlock(label: text) layout:stack style:email-verify {
-  title "Email Verify"
-  subtitle "Email Verify"
-  action "Email Verify"
-  test "use block" {
-    click "Email Verify"
+  meta "stack"
+  label "EmailVerify"
+  title "Confirm your email address"
+  subtitle "Tap the button below to verify your email and activate your Cronus account."
+  slot "Card"
+  slot "Button"
+  item "Verify email"
+  item "Or paste this code:"
+  item "This code expires in 30 minutes."
+  text "Cronus, Inc. · 2261 Market St, San Francisco"
+  test "use" {
+    expect visible "Cronus"
   }
 }

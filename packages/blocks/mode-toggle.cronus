@@ -1,14 +1,19 @@
 ## Block ModeToggle
 ## source: registry/mode-toggle.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: ModeToggleSize, ButtonHTMLAttributes, HTMLButtonElement
 ## registryDependencies: cn
 
 component ModeToggleBlock(label: text) layout:stack style:mode-toggle {
-  title "Mode Toggle"
-  subtitle "Mode Toggle"
-  action "Mode Toggle"
-  test "use block" {
-    click "Mode Toggle"
+  meta "stack"
+  label "ModeToggle"
+  title "light"
+  subtitle "dark"
+  action "click"
+  text "none"
+  test "uses ModeToggle" {
+    click "ModeToggle"
   }
 }

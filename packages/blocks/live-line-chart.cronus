@@ -1,16 +1,22 @@
 ## Block LiveLineChart
 ## source: registry/live-line-chart.json
 ## type: registry:ui
-## behavior: data
+## layout: stack
+## compose: LineChart
+## icons: HTMLDivElement, ChartContainer, CartesianGrid, XAxis, ChartTooltip, ChartCursor, ChartTooltipContent, Line
 ## registryDependencies: chart, cn
 
 component LiveLineChartBlock(label: text) layout:stack style:live-line-chart {
-  title "Live Line Chart"
-  subtitle "Live Line Chart"
-  columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads LiveLineChart" {
-    expect visible "Live Line Chart"
+  meta "stack"
+  label "LiveLineChart"
+  title "recharts"
+  subtitle "monotone"
+  slot "LineChart"
+  action "click"
+  text "Value"
+  text "tick"
+  text "value"
+  test "uses LiveLineChart" {
+    click "LiveLineChart"
   }
 }

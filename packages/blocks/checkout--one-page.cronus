@@ -1,15 +1,43 @@
 ## Block CheckoutOnePage
 ## source: registry/checkout--one-page.json
 ## type: registry:block
-## behavior: commerce
+## layout: checkout-split
+## compose: Card, CardHeader, CardTitle, CardContent, Input, Button, Separator, CardFooter, Badge, Label, Checkbox, Select, SelectTrigger, SelectValue, SelectContent, SelectItem
+## icons: Lock, CreditCard, ShieldCheck
 
 component CheckoutOnePageBlock(label: text) layout:stack style:checkout--one-page {
-  title "Checkout One Page"
-  subtitle "OnePage"
-  field "Card"
-  value "$0"
+  meta "checkout-split"
+  label "CheckoutOnePage"
+  title "Order summary"
+  subtitle "3 items · ships from Portland, OR"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardContent"
+  slot "Input"
+  slot "Button"
+  slot "Separator"
+  slot "CardFooter"
+  slot "Badge"
+  slot "Label"
+  slot "Checkbox"
+  slot "Select"
+  field "3 items · ships from Portland, OR"
+  field "Card number"
+  field "you@email.com"
+  field "MM / YY"
   action "Pay"
-  test "checkout" {
+  text "Apply"
+  text "Subtotal"
+  text "Shipping"
+  text "Free"
+  text "Tax"
+  text "Total"
+  text "Includes duties · billed in USD"
+  text "Northwind Supply Co. · order NW-20461"
+  text "Secure"
+  text "Contact"
+  test "pay" {
     click "Pay"
   }
 }

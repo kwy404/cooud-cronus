@@ -1,14 +1,18 @@
 ## Block Slider
 ## source: registry/slider.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: SliderPrimitive
 ## registryDependencies: cn
 
 component SliderBlock(label: text) layout:stack style:slider {
-  title "Slider"
-  subtitle "Slider"
-  action "Slider"
-  test "use block" {
+  meta "stack"
+  label "Slider"
+  title "slider"
+  subtitle "Volume"
+  action "click"
+  test "uses Slider" {
     click "Slider"
   }
 }

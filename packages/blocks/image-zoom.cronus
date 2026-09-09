@@ -1,14 +1,21 @@
 ## Block ImageZoom
 ## source: registry/image-zoom.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLButtonElement, ImageZoomLabels, ZoomIn
 ## registryDependencies: cn
 
 component ImageZoomBlock(label: text) layout:stack style:image-zoom {
-  title "Image Zoom"
-  subtitle "Image Zoom"
-  action "Image Zoom"
-  test "use block" {
-    click "Image Zoom"
+  meta "stack"
+  label "ImageZoom"
+  title "Zoom image"
+  subtitle "mouse"
+  action "click"
+  text "Escape"
+  text "zoomed"
+  text "idle"
+  test "uses ImageZoom" {
+    click "ImageZoom"
   }
 }

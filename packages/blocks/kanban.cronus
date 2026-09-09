@@ -1,14 +1,19 @@
 ## Block Kanban
 ## source: registry/kanban.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Badge
+## icons: HTMLAttributes, HTMLDivElement, GripVertical, SortableContext, KanbanCard, UniqueIdentifier, CollisionDetection, DndContext
 ## registryDependencies: badge, cn
 
 component KanbanBlock(label: text) layout:stack style:kanban {
-  title "Kanban"
-  subtitle "Kanban"
-  action "Kanban"
-  test "use block" {
+  meta "stack"
+  label "Kanban"
+  title "onChange"
+  subtitle "kanban"
+  slot "Badge"
+  action "click"
+  test "uses Kanban" {
     click "Kanban"
   }
 }

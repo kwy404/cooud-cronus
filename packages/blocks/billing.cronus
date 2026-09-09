@@ -1,16 +1,38 @@
 ## Block Billing
 ## source: registry/billing.json
 ## type: registry:block
-## behavior: commerce
+## layout: checkout-split
+## compose: Card, CardHeader, CardTitle, Badge, CardContent, Separator, CardFooter, Button, Progress, Table
+## icons: CreditCard, TableHeader, TableRow, TableHead, TableBody, TableCell, Download
 ## registryDependencies: demo-saas
 
 component BillingBlock(label: text) layout:stack style:billing {
-  title "Billing"
-  subtitle "Billing"
-  field "Card"
-  value "$0"
+  meta "checkout-split"
+  label "Billing"
+  title "Current plan"
+  subtitle "Your workspace is on the Team plan, billed monthly."
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "Badge"
+  slot "CardContent"
+  slot "Separator"
+  slot "CardFooter"
+  slot "Button"
+  slot "Progress"
+  slot "Table"
   action "Pay"
-  test "checkout" {
+  text "Active"
+  text "Renews Jul 1, 2026"
+  text "Change plan"
+  text "Cancel subscription"
+  text "Usage"
+  text "Current billing period · resets Jul 1, 2026."
+  text "Payment method"
+  text "Visa ending in 4242"
+  text "Update"
+  text "Invoices"
+  test "pay" {
     click "Pay"
   }
 }

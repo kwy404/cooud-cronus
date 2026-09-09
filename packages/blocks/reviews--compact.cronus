@@ -1,13 +1,29 @@
 ## Block ReviewsCompact
 ## source: registry/reviews--compact.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Badge, Button, Card, CardContent, Avatar
+## icons: Star, StarHalf, ReviewStars, AvatarFallback
 
 component ReviewsCompactBlock(label: text) layout:stack style:reviews--compact {
-  title "Reviews Compact"
-  subtitle "Compact"
-  action "Reviews Compact"
-  test "use block" {
-    click "Reviews Compact"
+  meta "stack"
+  label "ReviewsCompact"
+  title "Loved by listeners"
+  subtitle "Write a review"
+  slot "Badge"
+  slot "Button"
+  slot "Card"
+  slot "CardContent"
+  slot "Avatar"
+  item "Sofia Almeida"
+  item "Marcus Chen"
+  item "Priya Nair"
+  item "Jonas Weber"
+  item "Amara Diallo"
+  item "Leo Tanaka"
+  text "img"
+  text "sofia"
+  test "use" {
+    expect visible "Loved by listeners"
   }
 }

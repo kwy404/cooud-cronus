@@ -1,14 +1,24 @@
 ## Block SignaturePad
 ## source: registry/signature-pad.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Button
+## icons: HTMLAttributes, HTMLDivElement, SignaturePadHandle, HTMLCanvasElement, CanvasRenderingContext2D, Point, Undo2, Eraser
 ## registryDependencies: button, cn
 
 component SignaturePadBlock(label: text) layout:stack style:signature-pad {
-  title "Signature Pad"
-  subtitle "Signature Pad"
-  action "Signature Pad"
-  test "use block" {
-    click "Signature Pad"
+  meta "stack"
+  label "SignaturePad"
+  title "Sign here"
+  subtitle "onChange"
+  slot "Button"
+  action "click"
+  text "Signature pad"
+  text "currentColor"
+  text "round"
+  text "mouse"
+  text "img"
+  test "uses SignaturePad" {
+    click "SignaturePad"
   }
 }

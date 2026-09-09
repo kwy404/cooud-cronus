@@ -1,14 +1,38 @@
 ## Block Sessions
 ## source: registry/sessions.json
 ## type: registry:block
-## behavior: settings
+## layout: stack
+## compose: Card, CardHeader, CardTitle, CardDescription, CardAction, Badge, CardContent, Button, Separator, CardFooter
+## icons: Icon, LogOut
 
 component SessionsBlock(label: text) layout:stack style:sessions {
-  title "Sessions"
-  subtitle "Sessions"
+  meta "stack"
+  label "Sessions"
+  title "Active sessions"
+  subtitle "Devices currently signed in to your account."
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardDescription"
+  slot "CardAction"
+  slot "Badge"
+  slot "CardContent"
+  slot "Button"
+  slot "Separator"
+  slot "CardFooter"
   field "Name"
   action "Save"
-  test "save settings" {
+  text "4 devices"
+  text "This device"
+  text "Revoke"
+  text "Revoking a session signs that device out immediately."
+  text "Sign out all other sessions"
+  text "MacBook Pro 16″"
+  text "Chrome 126 · macOS Sonoma"
+  text "San Francisco, US"
+  text "Active now"
+  text "iPhone 15 Pro"
+  test "save" {
     click "Save"
   }
 }

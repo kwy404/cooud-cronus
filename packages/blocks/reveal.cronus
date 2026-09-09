@@ -1,14 +1,19 @@
 ## Block Reveal
 ## source: registry/reveal.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: motion-presets
 
 component RevealBlock(label: text) layout:stack style:reveal {
-  title "Reveal"
-  subtitle "Reveal"
-  action "Reveal"
-  test "use block" {
+  meta "stack"
+  label "Reveal"
+  title "motion/react"
+  subtitle "reveal"
+  action "click"
+  text "visible"
+  test "uses Reveal" {
     click "Reveal"
   }
 }

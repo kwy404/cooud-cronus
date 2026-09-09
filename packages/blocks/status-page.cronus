@@ -1,13 +1,33 @@
 ## Block StatusPage
 ## source: registry/status-page.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Card, Button
+## icons: SegmentTone, ArrowRight
 
 component StatusPageBlock(label: text) layout:stack style:status-page {
-  title "Status Page"
-  subtitle "Status Page"
-  action "Status Page"
-  test "use block" {
-    click "Status Page"
+  meta "stack"
+  label "StatusPage"
+  title "All systems operational"
+  subtitle "Updated 2 min ago"
+  slot "Card"
+  slot "Button"
+  item "Operational"
+  item "Degraded"
+  item "Outage"
+  item "View incident history"
+  item "API"
+  item "Dashboard"
+  text "Webhooks"
+  text "CDN"
+  text "degraded"
+  text "outage"
+  text "Degraded performance"
+  text "Today"
+  text "Yesterday"
+  text "status"
+  text "img"
+  test "use" {
+    expect visible "All systems operational"
   }
 }

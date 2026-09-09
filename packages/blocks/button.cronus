@@ -1,14 +1,18 @@
 ## Block Button
 ## source: registry/button.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLButtonElement, Comp
 ## registryDependencies: cn
 
 component ButtonBlock(label: text) layout:stack style:button {
+  meta "stack"
+  label "Button"
   title "Button"
   subtitle "Button"
-  action "Button"
-  test "use block" {
+  action "click"
+  test "uses Button" {
     click "Button"
   }
 }

@@ -1,14 +1,18 @@
 ## Block GlassCard
 ## source: registry/glass-card.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component GlassCardBlock(label: text) layout:stack style:glass-card {
-  title "Glass Card"
-  subtitle "Glass Card"
-  action "Glass Card"
-  test "use block" {
-    click "Glass Card"
+  meta "stack"
+  label "GlassCard"
+  title "GlassCard"
+  subtitle "GlassCard"
+  action "click"
+  test "uses GlassCard" {
+    click "GlassCard"
   }
 }

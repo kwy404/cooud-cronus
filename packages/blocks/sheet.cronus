@@ -1,14 +1,28 @@
 ## Block Sheet
 ## source: registry/sheet.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: SheetPrimitive, SheetOverlay
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component SheetBlock(label: text) layout:stack style:sheet {
-  title "Sheet"
-  subtitle "Sheet"
-  action "Sheet"
-  test "use block" {
+  meta "stack"
+  label "Sheet"
+  title "SheetContent"
+  subtitle "SheetHeader"
+  slot "SheetPrimitive"
+  slot "SheetOverlay"
+  action "click"
+  text "Close"
+  text "top"
+  text "right"
+  text "bottom"
+  text "left"
+  text "SheetFooter"
+  text "SheetTitle"
+  text "SheetDescription"
+  test "uses Sheet" {
     click "Sheet"
   }
 }

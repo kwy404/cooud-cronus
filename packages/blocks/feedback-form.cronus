@@ -1,13 +1,32 @@
 ## Block FeedbackForm
 ## source: registry/feedback-form.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Card, CardHeader, CardTitle, CardContent, Rating, Label, Badge, Textarea, Button
 
 component FeedbackFormBlock(label: text) layout:stack style:feedback-form {
-  title "Feedback Form"
-  subtitle "Feedback Form"
-  action "Feedback Form"
-  test "use block" {
-    click "Feedback Form"
+  meta "stack"
+  label "FeedbackForm"
+  title "Tell us more…"
+  subtitle "Optional"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardContent"
+  slot "Rating"
+  slot "Label"
+  slot "Badge"
+  slot "Textarea"
+  slot "Button"
+  item "Optional"
+  item "Send feedback"
+  item "Bug"
+  item "Idea"
+  item "Praise"
+  item "Other"
+  text "How was your experience?"
+  text "Share the details so we can improve…"
+  test "use" {
+    expect visible "How was your experience?"
   }
 }

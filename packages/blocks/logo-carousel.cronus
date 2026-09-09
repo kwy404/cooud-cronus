@@ -1,14 +1,28 @@
 ## Block LogoCarousel
 ## source: registry/logo-carousel.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: SVGProps, SVGSVGElement, HTMLUListElement, LogoCarouselVariant, LogoCarouselSize, Icon, AnimatePresence, LogoMark
 ## registryDependencies: cn, motion-presets
 
 component LogoCarouselBlock(label: text) layout:stack style:logo-carousel {
-  title "Logo Carousel"
-  subtitle "Logo Carousel"
-  action "Logo Carousel"
-  test "use block" {
-    click "Logo Carousel"
+  meta "stack"
+  label "LogoCarousel"
+  title "motion/react"
+  subtitle "Logo carousel"
+  action "click"
+  text "surface"
+  text "first"
+  text "second"
+  text "third"
+  text "fourth"
+  text "fifth"
+  text "sixth"
+  text "seventh"
+  text "eighth"
+  text "always"
+  test "uses LogoCarousel" {
+    click "LogoCarousel"
   }
 }

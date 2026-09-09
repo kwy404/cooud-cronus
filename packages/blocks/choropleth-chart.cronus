@@ -1,16 +1,23 @@
 ## Block ChoroplethChart
 ## source: registry/choropleth-chart.json
 ## type: registry:ui
-## behavior: data
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component ChoroplethChartBlock(label: text) layout:stack style:choropleth-chart {
-  title "Choropleth Chart"
-  subtitle "Choropleth Chart"
-  columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads ChoroplethChart" {
-    expect visible "Choropleth Chart"
+  meta "stack"
+  label "ChoroplethChart"
+  title "Northwest"
+  subtitle "Northeast"
+  action "click"
+  text "West"
+  text "Central"
+  text "East"
+  text "Southwest"
+  text "Southeast"
+  test "uses ChoroplethChart" {
+    click "ChoroplethChart"
   }
 }

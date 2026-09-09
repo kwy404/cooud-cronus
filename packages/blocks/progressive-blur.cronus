@@ -1,14 +1,21 @@
 ## Block ProgressiveBlur
 ## source: registry/progressive-blur.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component ProgressiveBlurBlock(label: text) layout:stack style:progressive-blur {
-  title "Progressive Blur"
-  subtitle "Progressive Blur"
-  action "Progressive Blur"
-  test "use block" {
-    click "Progressive Blur"
+  meta "stack"
+  label "ProgressiveBlur"
+  title "scrolls under the chrome"
+  subtitle "ProgressiveBlur"
+  action "click"
+  text "bottom"
+  text "6rem"
+  text "top"
+  test "uses ProgressiveBlur" {
+    click "ProgressiveBlur"
   }
 }

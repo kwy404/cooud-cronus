@@ -1,14 +1,19 @@
 ## Block Resizable
 ## source: registry/resizable.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: ResizablePrimitivePanelGroup, ResizablePrimitiveHandle, GripVertical
 ## registryDependencies: cn
 
 component ResizableBlock(label: text) layout:stack style:resizable {
-  title "Resizable"
-  subtitle "Resizable"
-  action "Resizable"
-  test "use block" {
+  meta "stack"
+  label "Resizable"
+  title "horizontal"
+  subtitle "vertical"
+  action "click"
+  text "ResizablePanelGroup"
+  test "uses Resizable" {
     click "Resizable"
   }
 }

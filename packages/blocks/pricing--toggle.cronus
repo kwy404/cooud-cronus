@@ -1,15 +1,35 @@
 ## Block PricingToggle
 ## source: registry/pricing--toggle.json
 ## type: registry:block
-## behavior: marketing
+## layout: pricing-grid
+## compose: Badge, Button, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter
+## icons: Check
 
 component PricingToggleBlock(label: text) layout:stack style:pricing--toggle {
-  title "Pricing Toggle"
-  subtitle "Toggle"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "pricing-grid"
+  label "PricingToggle"
+  title "Pick the pace that matches your team."
+  subtitle "Annual - save 20%"
+  slot "Badge"
+  slot "Button"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardDescription"
+  slot "CardContent"
+  slot "CardFooter"
+  cta "Choose"
+  text "Plans"
+  text "Monthly"
+  text "Launch"
+  text "For focused teams shipping one product."
+  text "Scale"
+  text "For teams running multiple surfaces."
+  text "Unlimited blocks"
+  text "Theme presets"
+  text "Email support"
+  text "Everything in Launch"
   test "cta" {
-    click "Get started"
+    click "Choose"
   }
 }

@@ -1,14 +1,19 @@
 ## Block FileDropzone
 ## source: registry/file-dropzone.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLLabelElement, UploadCloud
 ## registryDependencies: cn
 
 component FileDropzoneBlock(label: text) layout:stack style:file-dropzone {
-  title "File Dropzone"
-  subtitle "File Dropzone"
-  action "File Dropzone"
-  test "use block" {
-    click "File Dropzone"
+  meta "stack"
+  label "FileDropzone"
+  title "Upload files"
+  subtitle "Upload files"
+  action "click"
+  text "browse"
+  test "uses FileDropzone" {
+    click "FileDropzone"
   }
 }

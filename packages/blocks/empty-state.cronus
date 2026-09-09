@@ -1,12 +1,22 @@
 ## Block EmptyState
 ## source: registry/empty-state.json
 ## type: registry:block
-## behavior: empty
+## layout: empty-center
+## compose: Empty, EmptyTitle, EmptyDescription, EmptyContent, Button
+## icons: EmptyIcon, Inbox, Plus
 
 component EmptyStateBlock(label: text) layout:stack style:empty-state {
-  title "Empty State"
-  subtitle "Empty State"
+  meta "empty-center"
+  label "EmptyState"
+  title "No projects yet"
+  subtitle "Import existing"
+  slot "Empty"
+  slot "EmptyTitle"
+  slot "EmptyDescription"
+  slot "EmptyContent"
+  slot "Button"
   action "Go home" -> "/"
+  text "New project"
   test "empty" {
     click "Go home"
   }

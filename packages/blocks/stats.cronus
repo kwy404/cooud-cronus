@@ -1,16 +1,22 @@
 ## Block Stats
 ## source: registry/stats.json
 ## type: registry:block
-## behavior: data
+## layout: dashboard-grid
+## compose: Card, CardContent, Metric
+## icons: Icon, MetricDelta, MetricLabel, MetricValue
 ## registryDependencies: demo-saas
 
 component StatsBlock(label: text) layout:stack style:stats {
-  title "Stats"
-  subtitle "Stats"
+  meta "dashboard-grid"
+  label "Stats"
+  title "vs. last month"
+  subtitle "vs. last month"
+  slot "Card"
+  slot "CardContent"
+  slot "Metric"
   columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads Stats" {
-    expect visible "Stats"
+  item "vs. last month"
+  test "reads" {
+    expect visible "vs. last month"
   }
 }

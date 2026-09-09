@@ -1,12 +1,19 @@
 ## Block SuccessState
 ## source: registry/success-state.json
 ## type: registry:block
-## behavior: empty
+## layout: empty-center
+## compose: Reveal, Button
+## icons: Check
 
 component SuccessStateBlock(label: text) layout:stack style:success-state {
-  title "Success State"
-  subtitle "Success State"
+  meta "empty-center"
+  label "SuccessState"
+  title "Your account is ready. Everything has been configured and is good to go."
+  subtitle "Go to dashboard"
+  slot "Reveal"
+  slot "Button"
   action "Go home" -> "/"
+  text "View details"
   test "empty" {
     click "Go home"
   }

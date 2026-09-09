@@ -1,16 +1,43 @@
 ## Block Analytics
 ## source: registry/analytics.json
 ## type: registry:block
-## behavior: data
+## layout: dashboard-grid
+## compose: Badge, Card, CardContent, Metric, Sparkline, CardHeader, CardTitle, CardDescription, CardAction, Select, SelectTrigger, SelectValue, SelectContent, SelectItem, Progress
+## icons: MetricLabel, MetricValue, MetricDelta
 ## registryDependencies: demo-saas
 
 component AnalyticsBlock(label: text) layout:stack style:analytics {
+  meta "dashboard-grid"
+  label "Analytics"
   title "Analytics"
-  subtitle "Analytics"
+  subtitle "Product and marketing traffic across meridianhq.com."
+  slot "Badge"
+  slot "Card"
+  slot "CardContent"
+  slot "Metric"
+  slot "Sparkline"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardDescription"
+  slot "CardAction"
+  slot "Select"
+  slot "SelectTrigger"
+  slot "SelectValue"
   columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads Analytics" {
+  item "Analytics"
+  item "Live"
+  item "Traffic overview"
+  text "Daily sessions · Jun 14 – Jul 13"
+  text "Last 7 days"
+  text "Last 30 days"
+  text "Last 90 days"
+  text "Jul 5"
+  text "google.com"
+  text "github.com"
+  text "x.com"
+  text "Newsletter"
+  text "producthunt.com"
+  test "reads" {
     expect visible "Analytics"
   }
 }

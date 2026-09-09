@@ -1,13 +1,38 @@
 ## Block NotificationPreferencesSimple
 ## source: registry/notification-preferences--simple.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Card, CardHeader, CardTitle, CardDescription, CardContent, Label, Switch, Separator, CardFooter
 
 component NotificationPreferencesSimpleBlock(label: text) layout:stack style:notification-preferences--simple {
-  title "Notification Preferences Simple"
-  subtitle "Simple"
-  action "Notification Preferences Simple"
-  test "use block" {
-    click "Notification Preferences Simple"
+  meta "stack"
+  label "NotificationPreferencesSimple"
+  title "Email notifications"
+  subtitle "Decide what lands in your inbox."
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardDescription"
+  slot "CardContent"
+  slot "Label"
+  slot "Switch"
+  slot "Separator"
+  slot "CardFooter"
+  item "Activity"
+  item "Sales & payouts"
+  item "Order confirmations, payout receipts, and refunds."
+  item "Product reviews"
+  text "Every email includes a one-click unsubscribe link."
+  text "When a customer leaves a rating or review."
+  text "Comments & mentions"
+  text "Replies to your posts and @mentions."
+  text "Digest & marketing"
+  text "Weekly summary"
+  text "Your store performance, every Monday morning."
+  text "Product updates"
+  text "New Cronus features and improvements."
+  text "Tips & offers"
+  test "use" {
+    expect visible "Email notifications"
   }
 }

@@ -1,13 +1,31 @@
 ## Block DemoStore
 ## source: registry/demo-store.json
 ## type: registry:lib
-## behavior: card
+## layout: stack
+## compose: native-sections
 
 component DemoStoreBlock(label: text) layout:stack style:demo-store {
-  title "Demo Store"
-  subtitle "Demo Store"
-  action "Demo Store"
-  test "use block" {
-    click "Demo Store"
+  meta "stack"
+  label "DemoStore"
+  title "Aurora Wireless Headphones"
+  subtitle "Bestseller"
+  item "Hard-Shell Travel Case"
+  item "Memory-Foam Ear Cushions"
+  item "Aurora Wireless Earbuds"
+  item "New"
+  item "Aluminum Headphone Stand"
+  item "Braided USB-C Cable"
+  text "The Creator Playbook"
+  text "Cinematic LUT Presets"
+  text "Launch Notion System"
+  text "Newsletter to Income"
+  text "Monetization Workshop"
+  text "Ambient Sound Kit"
+  text "5 stars: 82% of reviews"
+  text "4 stars: 11% of reviews"
+  text "3 stars: 4% of reviews"
+  text "2 stars: 2% of reviews"
+  test "use" {
+    expect visible "Aurora Wireless Headphones"
   }
 }

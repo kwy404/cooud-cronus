@@ -1,14 +1,31 @@
 ## Block ProductDetailGallery
 ## source: registry/product-detail--gallery.json
 ## type: registry:block
-## behavior: card
+## layout: checkout-split
+## compose: Badge, ToggleGroup, Button
+## icons: Headphones, Star, StarHalf, ToggleGroupItem, ShoppingCart, Heart, Truck
 ## registryDependencies: demo-store
 
 component ProductDetailGalleryBlock(label: text) layout:stack style:product-detail--gallery {
-  title "Product Detail Gallery"
-  subtitle "Gallery"
-  action "Product Detail Gallery"
-  test "use block" {
-    click "Product Detail Gallery"
+  meta "checkout-split"
+  label "ProductDetailGallery"
+  title "Add to cart —"
+  subtitle "Aurora Audio · Over-ear"
+  slot "Badge"
+  slot "ToggleGroup"
+  slot "Button"
+  action "Pay"
+  text "Battery"
+  text "Noise cancel"
+  text "Weight"
+  text "Color"
+  text "Midnight"
+  text "Fog Gray"
+  text "Sandstone"
+  text "Add to wishlist"
+  text "Free 2-day shipping · Order within 6 hours for Thursday delivery"
+  text "Front view"
+  test "pay" {
+    click "Pay"
   }
 }

@@ -1,14 +1,29 @@
 ## Block SegmentedControl
 ## source: registry/segmented-control.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: SegmentedControl
+## icons: SegmentedControlContextValue, HTMLAttributes, HTMLDivElement, SegmentedControlItemProps, ItemRecord, SegmentedControlContext, MotionConfig, ButtonHTMLAttributes
 ## registryDependencies: cn
 
 component SegmentedControlBlock(label: text) layout:stack style:segmented-control {
-  title "Segmented Control"
-  subtitle "Segmented Control"
-  action "Segmented Control"
-  test "use block" {
-    click "Segmented Control"
+  meta "stack"
+  label "SegmentedControl"
+  title "must be used within"
+  subtitle "can't carry the layout-animated label."
+  slot "SegmentedControl"
+  action "click"
+  text "motion/react"
+  text "spring"
+  text "next"
+  text "prev"
+  text "first"
+  text "last"
+  text "onChange"
+  text "defaultValue"
+  text "user"
+  text "never"
+  test "uses SegmentedControl" {
+    click "SegmentedControl"
   }
 }

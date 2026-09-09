@@ -1,15 +1,31 @@
 ## Block FooterMega
 ## source: registry/footer--mega.json
 ## type: registry:block
-## behavior: marketing
+## layout: site-chrome
+## compose: Label, Input, Button, Separator
+## icons: Hexagon, Send, Github, Twitter, Linkedin
 
 component FooterMegaBlock(label: text) layout:stack style:footer--mega {
-  title "Footer Mega"
-  subtitle "Mega"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "site-chrome"
+  label "FooterMega"
+  title "Product updates, new blocks, and launch guides — a few times a month."
+  subtitle "Email address"
+  slot "Label"
+  slot "Input"
+  slot "Button"
+  slot "Separator"
+  button "Subscribe"
+  text "Cronus"
+  text "© 2026 Cronus Labs, Inc. All rights reserved."
+  text "All systems operational"
+  text "Features"
+  text "Pricing"
+  text "Blocks"
+  text "Themes"
+  text "Changelog"
+  text "Developers"
+  text "Documentation"
   test "cta" {
-    click "Get started"
+    click "Subscribe"
   }
 }

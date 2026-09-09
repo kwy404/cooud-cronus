@@ -1,13 +1,39 @@
 ## Block ApiKeys
 ## source: registry/api-keys.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Card, CardHeader, CardTitle, CardDescription, CardAction, Button, CardContent, Badge, CopyButton, Separator, CardFooter
+## icons: Plus, Eye
 
 component ApiKeysBlock(label: text) layout:stack style:api-keys {
-  title "Api Keys"
-  subtitle "Api Keys"
-  action "Api Keys"
-  test "use block" {
-    click "Api Keys"
+  meta "stack"
+  label "ApiKeys"
+  title "API keys"
+  subtitle "Programmatic access to your Cronus workspace."
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardDescription"
+  slot "CardAction"
+  slot "Button"
+  slot "CardContent"
+  slot "Badge"
+  slot "CopyButton"
+  slot "Separator"
+  slot "CardFooter"
+  field "Name"
+  action "Save"
+  text "Reveal"
+  text "Created"
+  text "Create key"
+  text "Revoke"
+  text "3 active keys"
+  text "Rotate keys at least every 90 days."
+  text "Production storefront"
+  text "Zapier integration"
+  text "Staging sandbox"
+  text "orders:read"
+  test "save" {
+    click "Save"
   }
 }

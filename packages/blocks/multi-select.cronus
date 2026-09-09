@@ -1,14 +1,32 @@
 ## Block MultiSelect
 ## source: registry/multi-select.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Popover, Chip, Badge, Command
+## icons: HTMLDivElement, HTMLInputElement, PopoverTrigger, ChevronDown, PopoverContent, CommandInput, CommandList, CommandEmpty
 ## registryDependencies: badge, cn, command, popover
 
 component MultiSelectBlock(label: text) layout:stack style:multi-select {
-  title "Multi Select"
-  subtitle "Multi Select"
-  action "Multi Select"
-  test "use block" {
-    click "Multi Select"
+  meta "stack"
+  label "MultiSelect"
+  title "No results found."
+  subtitle "Backspace"
+  slot "Popover"
+  slot "Chip"
+  slot "Badge"
+  slot "Command"
+  action "click"
+  text "item"
+  text "Select…"
+  text "Search…"
+  text "ArrowDown"
+  text "Enter"
+  text "combobox"
+  text "listbox"
+  text "Clear all"
+  text "start"
+  text "checked"
+  test "uses MultiSelect" {
+    click "MultiSelect"
   }
 }

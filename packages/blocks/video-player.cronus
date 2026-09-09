@@ -1,14 +1,28 @@
 ## Block VideoPlayer
 ## source: registry/video-player.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement, VideoPlayerLabels, HTMLVideoElement, HTMLButtonElement, HTMLInputElement, Play, Pause, VolumeX
 ## registryDependencies: cn
 
 component VideoPlayerBlock(label: text) layout:stack style:video-player {
-  title "Video Player"
-  subtitle "Video Player"
-  action "Video Player"
-  test "use block" {
-    click "Video Player"
+  meta "stack"
+  label "VideoPlayer"
+  title "Playback speed"
+  subtitle "Fullscreen"
+  action "click"
+  text "video"
+  text "Pause"
+  text "Mute"
+  text "Unmute"
+  text "Seek"
+  text "Volume"
+  text "Exit fullscreen"
+  text "square"
+  text "wide"
+  text "fullscreenchange"
+  test "uses VideoPlayer" {
+    click "VideoPlayer"
   }
 }

@@ -1,15 +1,26 @@
 ## Block LogoCloud
 ## source: registry/logo-cloud.json
 ## type: registry:block
-## behavior: marketing
+## layout: stack
+## compose: native-sections
 
 component LogoCloudBlock(label: text) layout:stack style:logo-cloud {
-  title "Logo Cloud"
-  subtitle "Logo Cloud"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "stack"
+  label "LogoCloud"
+  title "Trusted by 4,000+ product teams"
+  subtitle "From seed-stage startups to public companies in 60 countries."
+  cta "Trusted by 4,000+ product teams"
+  text "Northwind"
+  text "Vertex"
+  text "Lumina"
+  text "Fathom"
+  text "Polaris"
+  text "Halcyon"
+  text "Driftline"
+  text "Basalt"
+  text "Cascade"
+  text "Emberly"
   test "cta" {
-    click "Get started"
+    click "Trusted by 4,000+ product teams"
   }
 }

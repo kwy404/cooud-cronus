@@ -1,14 +1,18 @@
 ## Block ShinyText
 ## source: registry/shiny-text.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLSpanElement, Comp
 ## registryDependencies: cn
 
 component ShinyTextBlock(label: text) layout:stack style:shiny-text {
-  title "Shiny Text"
-  subtitle "Shiny Text"
-  action "Shiny Text"
-  test "use block" {
-    click "Shiny Text"
+  meta "stack"
+  label "ShinyText"
+  title "ShinyText"
+  subtitle "ShinyText"
+  action "click"
+  test "uses ShinyText" {
+    click "ShinyText"
   }
 }

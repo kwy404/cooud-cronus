@@ -1,14 +1,19 @@
 ## Block Avatar
 ## source: registry/avatar.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: AvatarPrimitive
 ## registryDependencies: cn
 
 component AvatarBlock(label: text) layout:stack style:avatar {
-  title "Avatar"
-  subtitle "Avatar"
-  action "Avatar"
-  test "use block" {
+  meta "stack"
+  label "Avatar"
+  title "AvatarImage"
+  subtitle "AvatarFallback"
+  action "click"
+  text "avatar"
+  test "uses Avatar" {
     click "Avatar"
   }
 }

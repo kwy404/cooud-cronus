@@ -1,13 +1,33 @@
 ## Block Integrations
 ## source: registry/integrations.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Badge, Button
+## icons: Check
 
 component IntegrationsBlock(label: text) layout:stack style:integrations {
+  meta "stack"
+  label "Integrations"
   title "Integrations"
-  subtitle "Integrations"
-  action "Integrations"
-  test "use block" {
-    click "Integrations"
+  subtitle "Plays well with your stack"
+  slot "Badge"
+  slot "Button"
+  item "Connected"
+  item "Connect"
+  item "Slack"
+  item "GitHub"
+  item "Sync issues, PRs, and deploy statuses."
+  text "Route alerts and approvals into any channel."
+  text "Figma"
+  text "Embed live design files next to specs."
+  text "Linear"
+  text "Create issues from feedback in one click."
+  text "Notion"
+  text "Publish docs and changelogs automatically."
+  text "Stripe"
+  text "Reconcile invoices and payout events."
+  text "Vercel"
+  test "use" {
+    expect visible "Integrations"
   }
 }

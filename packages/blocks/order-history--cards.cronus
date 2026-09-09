@@ -1,15 +1,35 @@
 ## Block OrderHistoryCards
 ## source: registry/order-history--cards.json
 ## type: registry:block
-## behavior: commerce
+## layout: checkout-split
+## compose: Badge, Card, CardHeader, CardTitle, CardContent, CardFooter, Button
+## icons: Package, RotateCcw
 
 component OrderHistoryCardsBlock(label: text) layout:stack style:order-history--cards {
-  title "Order History Cards"
-  subtitle "Cards"
-  field "Card"
-  value "$0"
+  meta "checkout-split"
+  label "OrderHistoryCards"
+  title "Order history"
+  subtitle "Your purchases from the last 90 days."
+  slot "Badge"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardContent"
+  slot "CardFooter"
+  slot "Button"
+  field "3 orders"
   action "Pay"
-  test "checkout" {
+  text "View details"
+  text "Reorder"
+  text "Delivered"
+  text "In transit"
+  text "Processing"
+  text "Refunded"
+  text "Aurora Wireless Headphones + 2 more"
+  text "aurora"
+  text "case"
+  text "cushions"
+  test "pay" {
     click "Pay"
   }
 }

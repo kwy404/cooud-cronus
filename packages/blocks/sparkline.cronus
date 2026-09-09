@@ -1,14 +1,28 @@
 ## Block Sparkline
 ## source: registry/sparkline.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: SparklineTone, SVGAttributes, SVGSVGElement
 ## registryDependencies: cn
 
 component SparklineBlock(label: text) layout:stack style:sparkline {
-  title "Sparkline"
-  subtitle "Sparkline"
-  action "Sparkline"
-  test "use block" {
+  meta "stack"
+  label "Sparkline"
+  title "currentColor"
+  subtitle "sparkline"
+  action "click"
+  text "success"
+  text "warning"
+  text "error"
+  text "info"
+  text "type"
+  text "point"
+  text "points"
+  text "img"
+  text "none"
+  text "bar"
+  test "uses Sparkline" {
     click "Sparkline"
   }
 }

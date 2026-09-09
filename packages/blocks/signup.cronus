@@ -1,19 +1,42 @@
 ## Block Signup
 ## source: registry/signup.json
 ## type: registry:block
-## behavior: auth
+## layout: form-card
+## compose: Card, CardHeader, CardTitle, CardContent, Label, Input, Checkbox, Button, Separator, CardFooter
+## icons: ChartColumnIncreasing, Github, Chrome
 ## registryDependencies: auth-adapter, demo-saas
 
 component SignupBlock(label: text) layout:stack style:signup {
-  title "Signup"
-  subtitle "Signup"
+  meta "form-card"
+  label "Signup"
+  title "Join the workspace"
+  subtitle "Must be at least 8 characters."
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardContent"
+  slot "Label"
+  slot "Input"
+  slot "Checkbox"
+  slot "Button"
+  slot "Separator"
+  slot "CardFooter"
   state pending: boolean = false
   field "Email"
   field "Password"
-  action "Sign in"
-  link "Forgot password?" -> "/forgot-password"
-  test "submit auth" {
+  action "Create account"
+  text "Already have an account?"
+  text "Full name"
+  text "I agree to the Terms and Privacy Policy."
+  text "or sign up with"
+  text "GitHub"
+  text "Google"
+  text "Sign in"
+  text "name"
+  text "Something went wrong."
+  text "Create your account"
+  test "submit" {
     fill email "you@company.com"
-    click "Sign in"
+    click "Submit"
   }
 }

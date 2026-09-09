@@ -1,14 +1,19 @@
 ## Block Popover
 ## source: registry/popover.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: PopoverPrimitive
 ## registryDependencies: cn
 
 component PopoverBlock(label: text) layout:stack style:popover {
-  title "Popover"
-  subtitle "Popover"
-  action "Popover"
-  test "use block" {
+  meta "stack"
+  label "Popover"
+  title "PopoverContent"
+  subtitle "PopoverContent"
+  action "click"
+  text "center"
+  test "uses Popover" {
     click "Popover"
   }
 }

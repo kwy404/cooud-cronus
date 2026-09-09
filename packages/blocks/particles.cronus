@@ -1,14 +1,19 @@
 ## Block Particles
 ## source: registry/particles.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement, HTMLCanvasElement, Speck
 ## registryDependencies: cn
 
 component ParticlesBlock(label: text) layout:stack style:particles {
-  title "Particles"
+  meta "stack"
+  label "Particles"
+  title "particles"
   subtitle "Particles"
-  action "Particles"
-  test "use block" {
+  action "click"
+  text "resize"
+  test "uses Particles" {
     click "Particles"
   }
 }

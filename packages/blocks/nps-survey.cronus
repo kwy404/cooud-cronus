@@ -1,13 +1,27 @@
 ## Block NpsSurvey
 ## source: registry/nps-survey.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Card, CardHeader, CardTitle, CardContent, Label, Textarea, Button
 
 component NpsSurveyBlock(label: text) layout:stack style:nps-survey {
-  title "Nps Survey"
-  subtitle "Nps Survey"
-  action "Nps Survey"
-  test "use block" {
-    click "Nps Survey"
+  meta "stack"
+  label "NpsSurvey"
+  title "Not likely"
+  subtitle "Very likely"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardContent"
+  slot "Label"
+  slot "Textarea"
+  slot "Button"
+  item "Very likely"
+  item "Submit feedback"
+  item "Tell us what shaped your rating…"
+  text "How likely are you to recommend Cronus to a friend or colleague?"
+  text "What's the main reason for your score?"
+  test "use" {
+    expect visible "How likely are you to recommend Cronus to a friend or colleague?"
   }
 }

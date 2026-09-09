@@ -1,14 +1,22 @@
 ## Block ScrollArea
 ## source: registry/scroll-area.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: ScrollAreaPrimitive, ScrollBar
 ## registryDependencies: cn
 
 component ScrollAreaBlock(label: text) layout:stack style:scroll-area {
-  title "Scroll Area"
-  subtitle "Scroll Area"
-  action "Scroll Area"
-  test "use block" {
-    click "Scroll Area"
+  meta "stack"
+  label "ScrollArea"
+  title "Release notes"
+  subtitle "ScrollArea"
+  action "click"
+  text "region"
+  text "vertical"
+  text "horizontal"
+  text "ScrollBar"
+  test "uses ScrollArea" {
+    click "ScrollArea"
   }
 }

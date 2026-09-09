@@ -1,15 +1,28 @@
 ## Block CtaSplitVisual
 ## source: registry/cta--split-visual.json
 ## type: registry:block
-## behavior: marketing
+## layout: stack
+## compose: Badge, Button
+## icons: Check, ArrowRight
 
 component CtaSplitVisualBlock(label: text) layout:stack style:cta--split-visual {
-  title "Cta Split Visual"
-  subtitle "SplitVisual"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "stack"
+  label "CtaSplitVisual"
+  title "Get started"
+  subtitle "Your product surface, themed and shipped this week."
+  slot "Badge"
+  slot "Button"
+  button "Get started"
+  button "Start building"
+  text "Explore blocks"
+  text "app.cronus.com/overview"
+  text "Monthly recurring revenue"
+  text "Active customers"
+  text "Net revenue churn"
+  text "50+ production-ready blocks"
+  text "Dark and light themes included"
+  text "Accessible and RTL-safe by default"
   test "cta" {
-    click "Get started"
+    click "Start building"
   }
 }

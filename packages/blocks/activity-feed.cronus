@@ -1,13 +1,35 @@
 ## Block ActivityFeed
 ## source: registry/activity-feed.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Card, CardHeader, CardTitle, CardContent, Timeline
+## icons: TimelineItem, TimelineDot, FolderPlus, TimelineContent, TimelineTitle, TimelineTime, TimelineDescription, UserPlus
 
 component ActivityFeedBlock(label: text) layout:stack style:activity-feed {
-  title "Activity Feed"
-  subtitle "Activity Feed"
-  action "Activity Feed"
-  test "use block" {
-    click "Activity Feed"
+  meta "stack"
+  label "ActivityFeed"
+  title "Recent activity"
+  subtitle "Mara created the project Atlas"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardContent"
+  slot "Timeline"
+  item "2 minutes ago"
+  item "Devon invited 3 teammates"
+  item "26 minutes ago"
+  item "Invoice INV-2026-006 was paid"
+  text "A new workspace was set up for the design team."
+  text "Invitations were sent to riley, jordan and sasha."
+  text "1 hour ago"
+  text "R$ 2.480,00 settled to your balance."
+  text "Riley left feedback on the Q3 plan"
+  text "4 hours ago"
+  text "Three comments were added to the roadmap doc."
+  text "Storage is reaching its limit"
+  text "Yesterday"
+  text "The team is using 92% of the available quota."
+  test "use" {
+    expect visible "Recent activity"
   }
 }

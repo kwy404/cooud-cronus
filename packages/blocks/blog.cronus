@@ -1,15 +1,31 @@
 ## Block Blog
 ## source: registry/blog.json
 ## type: registry:block
-## behavior: marketing
+## layout: stack
+## compose: Button, Card, Badge, Avatar
+## icons: ArrowRight, AvatarFallback
 
 component BlogBlock(label: text) layout:stack style:blog {
-  title "Blog"
-  subtitle "Blog"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "stack"
+  label "Blog"
+  title "Aurora Journal"
+  subtitle "Latest from the journal"
+  slot "Button"
+  slot "Card"
+  slot "Badge"
+  slot "Avatar"
+  cta "Aurora Journal"
+  text "Essays on design systems, engineering, and the craft of calm software."
+  text "View all posts"
+  text "Featured"
+  text "A practical guide to design tokens at scale"
+  text "Shipping dark mode without shipping regressions"
+  text "How Northwind cut onboarding time by 40%"
+  text "The anatomy of an accessible data table"
+  text "Aurora 2.4: workflows, webhooks, and a faster editor"
+  text "Pricing experiments we ran so you don't have to"
+  text "density"
   test "cta" {
-    click "Get started"
+    click "Aurora Journal"
   }
 }

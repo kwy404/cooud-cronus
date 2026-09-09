@@ -1,15 +1,33 @@
 ## Block PaymentMethod
 ## source: registry/payment-method.json
 ## type: registry:block
-## behavior: commerce
+## layout: checkout-split
+## compose: Card, CardHeader, CardTitle, CardContent, RadioGroup, Label, Badge, Button, Separator, CardFooter
+## icons: CreditCard, RadioGroupItem
 
 component PaymentMethodBlock(label: text) layout:stack style:payment-method {
-  title "Payment Method"
-  subtitle "Payment Method"
-  field "Card"
-  value "$0"
+  meta "checkout-split"
+  label "PaymentMethod"
+  title "Payment method"
+  subtitle "Choose how you'd like to be billed."
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardContent"
+  slot "RadioGroup"
+  slot "Label"
+  slot "Badge"
+  slot "Button"
+  slot "Separator"
+  slot "CardFooter"
   action "Pay"
-  test "checkout" {
+  text "Expires"
+  text "Cancel"
+  text "Save"
+  text "Visa"
+  text "Mastercard"
+  text "Saved payment methods"
+  test "pay" {
     click "Pay"
   }
 }

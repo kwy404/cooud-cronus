@@ -1,16 +1,19 @@
 ## Block LineChart
 ## source: registry/line-chart.json
 ## type: registry:ui
-## behavior: data
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement, ChartContainer, RechartsLineChart, CartesianGrid, XAxis, ChartTooltip, ChartCursor, ChartTooltipContent
 ## registryDependencies: chart, cn
 
 component LineChartBlock(label: text) layout:stack style:line-chart {
-  title "Line Chart"
-  subtitle "Line Chart"
-  columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads LineChart" {
-    expect visible "Line Chart"
+  meta "stack"
+  label "LineChart"
+  title "recharts"
+  subtitle "monotone"
+  action "click"
+  text "date"
+  test "uses LineChart" {
+    click "LineChart"
   }
 }

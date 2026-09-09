@@ -1,14 +1,28 @@
 ## Block PillNav
 ## source: registry/pill-nav.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLAttributes, HTMLElement
 ## registryDependencies: cn
 
 component PillNavBlock(label: text) layout:stack style:pill-nav {
-  title "Pill Nav"
-  subtitle "Pill Nav"
-  action "Pill Nav"
-  test "use block" {
-    click "Pill Nav"
+  meta "stack"
+  label "PillNav"
+  title "motion/react"
+  subtitle "onChange"
+  action "click"
+  text "next"
+  text "prev"
+  text "first"
+  text "last"
+  text "ArrowRight"
+  text "ArrowDown"
+  text "ArrowLeft"
+  text "ArrowUp"
+  text "Home"
+  text "End"
+  test "uses PillNav" {
+    click "PillNav"
   }
 }

@@ -1,14 +1,26 @@
 ## Block ProductDetailMinimal
 ## source: registry/product-detail--minimal.json
 ## type: registry:block
-## behavior: card
+## layout: checkout-split
+## compose: Badge, Button
+## icons: Headphones, Star, StarHalf, Minus, Plus, ShoppingCart, ShieldCheck
 ## registryDependencies: demo-store
 
 component ProductDetailMinimalBlock(label: text) layout:stack style:product-detail--minimal {
-  title "Product Detail Minimal"
-  subtitle "Minimal"
-  action "Product Detail Minimal"
-  test "use block" {
-    click "Product Detail Minimal"
+  meta "checkout-split"
+  label "ProductDetailMinimal"
+  title "Limited run"
+  subtitle "Aurora Audio"
+  slot "Badge"
+  slot "Button"
+  action "Pay"
+  text "Decrease quantity"
+  text "Increase quantity"
+  text "Add to cart"
+  text "Secure checkout · Free shipping · 60-day returns"
+  text "aurora"
+  text "Product detail"
+  test "pay" {
+    click "Pay"
   }
 }

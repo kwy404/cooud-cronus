@@ -1,16 +1,24 @@
 ## Block CandlestickChart
 ## source: registry/candlestick-chart.json
 ## type: registry:ui
-## behavior: data
+## layout: stack
+## compose: ComposedChart
+## icons: HTMLDivElement, ChartTooltipContent, ChartContainer, CartesianGrid, XAxis, YAxis, ChartTooltip, ChartCursor
 ## registryDependencies: chart, cn
 
 component CandlestickChartBlock(label: text) layout:stack style:candlestick-chart {
-  title "Candlestick Chart"
-  subtitle "Candlestick Chart"
-  columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads CandlestickChart" {
-    expect visible "Candlestick Chart"
+  meta "stack"
+  label "CandlestickChart"
+  title "recharts"
+  subtitle "transparent"
+  slot "ComposedChart"
+  action "click"
+  text "Close"
+  text "close"
+  text "middle"
+  text "date"
+  text "none"
+  test "uses CandlestickChart" {
+    click "CandlestickChart"
   }
 }

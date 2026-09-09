@@ -1,13 +1,43 @@
 ## Block AuditLogTable
 ## source: registry/audit-log--table.json
 ## type: registry:block
-## behavior: card
+## layout: form-card
+## compose: Card, CardHeader, CardTitle, CardDescription, CardAction, Button, CardContent, Input, Select, SelectTrigger, SelectValue, SelectContent, SelectItem, Table, Badge, Avatar, Separator, CardFooter
+## icons: Download, Search, TableHeader, TableRow, TableHead, TableBody, TableCell, AvatarFallback
 
 component AuditLogTableBlock(label: text) layout:stack style:audit-log--table {
-  title "Audit Log Table"
-  subtitle "Table"
-  action "Audit Log Table"
-  test "use block" {
-    click "Audit Log Table"
+  meta "form-card"
+  label "AuditLogTable"
+  title "View details for"
+  subtitle "Audit events"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardDescription"
+  slot "CardAction"
+  slot "Button"
+  slot "CardContent"
+  slot "Input"
+  slot "Select"
+  slot "SelectTrigger"
+  slot "SelectValue"
+  slot "SelectContent"
+  item "Export CSV"
+  item "All event types"
+  item "Authentication"
+  item "Members"
+  item "API keys"
+  text "Every privileged action in the workspace, retained for 365 days."
+  text "Data exports"
+  text "Last 24 hours"
+  text "Last 7 days"
+  text "Last 30 days"
+  text "Event"
+  text "Actor"
+  text "IP address"
+  text "Timestamp"
+  text "Details"
+  test "use" {
+    expect visible "View details for"
   }
 }

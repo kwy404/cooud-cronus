@@ -1,14 +1,18 @@
 ## Block ButtonGroup
 ## source: registry/button-group.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component ButtonGroupBlock(label: text) layout:stack style:button-group {
-  title "Button Group"
-  subtitle "Button Group"
-  action "Button Group"
-  test "use block" {
-    click "Button Group"
+  meta "stack"
+  label "ButtonGroup"
+  title "horizontal"
+  subtitle "vertical"
+  action "click"
+  test "uses ButtonGroup" {
+    click "ButtonGroup"
   }
 }

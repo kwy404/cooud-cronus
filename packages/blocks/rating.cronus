@@ -1,14 +1,25 @@
 ## Block Rating
 ## source: registry/rating.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: Star, HTMLDivElement, HTMLSpanElement, StarIcon
 ## registryDependencies: cn
 
 component RatingBlock(label: text) layout:stack style:rating {
-  title "Rating"
-  subtitle "Rating"
-  action "Rating"
-  test "use block" {
+  meta "stack"
+  label "Rating"
+  title "show the committed value"
+  subtitle "ArrowRight"
+  action "click"
+  text "ArrowUp"
+  text "ArrowLeft"
+  text "ArrowDown"
+  text "Home"
+  text "End"
+  text "rating"
+  text "slider"
+  test "uses Rating" {
     click "Rating"
   }
 }

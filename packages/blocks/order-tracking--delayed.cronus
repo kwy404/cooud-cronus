@@ -1,15 +1,39 @@
 ## Block OrderTrackingDelayed
 ## source: registry/order-tracking--delayed.json
 ## type: registry:block
-## behavior: commerce
+## layout: checkout-split
+## compose: Card, CardHeader, CardTitle, Badge, CardContent, Alert, AlertTitle, AlertDescription, Timeline, Separator, CardFooter, Avatar, Button
+## icons: TriangleAlert, TimelineItem, TimelineDot, Check, TimelineContent, TimelineTitle, TimelineTime, TimelineDescription
 
 component OrderTrackingDelayedBlock(label: text) layout:stack style:order-tracking--delayed {
-  title "Order Tracking Delayed"
-  subtitle "Delayed"
-  field "Card"
-  value "$0"
+  meta "checkout-split"
+  label "OrderTrackingDelayed"
+  title "Your delivery is running late"
+  subtitle "Order confirmed"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "Badge"
+  slot "CardContent"
+  slot "Alert"
+  slot "AlertTitle"
+  slot "AlertDescription"
+  slot "Timeline"
+  slot "Separator"
+  slot "CardFooter"
+  slot "Avatar"
   action "Pay"
-  test "checkout" {
+  text "Payment received and order accepted."
+  text "Packed and shipped"
+  text "Handed to DHL Express at the Aurora warehouse."
+  text "Held at sorting hub"
+  text "Severe weather in Memphis is delaying outbound trucks."
+  text "Delivered"
+  text "New estimate Jul 19"
+  text "DHL Express"
+  text "Request a refund"
+  text "Contact support"
+  test "pay" {
     click "Pay"
   }
 }

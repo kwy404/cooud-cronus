@@ -1,14 +1,20 @@
 ## Block CodeBlock
 ## source: registry/code-block.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Badge, CopyButton
+## icons: HTMLAttributes, HTMLDivElement
 ## registryDependencies: badge, cn, copy-button
 
 component CodeBlockBlock(label: text) layout:stack style:code-block {
-  title "Code"
-  subtitle "Code"
-  action "Code"
-  test "use block" {
-    click "Code"
+  meta "stack"
+  label "CodeBlock"
+  title "children"
+  subtitle "CodeBlock"
+  slot "Badge"
+  slot "CopyButton"
+  action "click"
+  test "uses CodeBlock" {
+    click "CodeBlock"
   }
 }

@@ -1,14 +1,19 @@
 ## Block Fab
 ## source: registry/fab.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLButtonElement, AnimatePresence
 ## registryDependencies: cn, motion-presets
 
 component FabBlock(label: text) layout:stack style:fab {
-  title "Fab"
-  subtitle "Fab"
-  action "Fab"
-  test "use block" {
+  meta "stack"
+  label "Fab"
+  title "motion/react"
+  subtitle "fab"
+  action "click"
+  text "visible"
+  test "uses Fab" {
     click "Fab"
   }
 }

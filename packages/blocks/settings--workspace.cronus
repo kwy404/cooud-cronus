@@ -1,15 +1,41 @@
 ## Block SettingsWorkspace
 ## source: registry/settings--workspace.json
 ## type: registry:block
-## behavior: settings
+## layout: form-card
+## compose: Card, CardHeader, CardTitle, CardDescription, CardContent, Label, Input, CardFooter, Button, Select, SelectTrigger, SelectValue, SelectContent, SelectItem, Separator
+## icons: Trash2
 ## registryDependencies: demo-saas
 
 component SettingsWorkspaceBlock(label: text) layout:stack style:settings--workspace {
-  title "Settings Workspace"
-  subtitle "Workspace"
+  meta "form-card"
+  label "SettingsWorkspace"
+  title "Workspace"
+  subtitle "Name, URL, and mark for this workspace."
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardDescription"
+  slot "CardContent"
+  slot "Label"
+  slot "Input"
+  slot "CardFooter"
+  slot "Button"
+  slot "Select"
+  slot "SelectTrigger"
+  slot "SelectValue"
   field "Name"
   action "Save"
-  test "save settings" {
+  text "Workspace name"
+  text "app.cronus.dev/"
+  text "Used in invite links and the workspace switcher."
+  text "Cancel"
+  text "Save changes"
+  text "Defaults"
+  text "Applied to everyone in this workspace."
+  text "Language"
+  text "English"
+  text "Português"
+  test "save" {
     click "Save"
   }
 }

@@ -1,14 +1,18 @@
 ## Block Switch
 ## source: registry/switch.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: SwitchPrimitive
 ## registryDependencies: cn
 
 component SwitchBlock(label: text) layout:stack style:switch {
-  title "Switch"
-  subtitle "Switch"
-  action "Switch"
-  test "use block" {
+  meta "stack"
+  label "Switch"
+  title "switch"
+  subtitle "switch"
+  action "click"
+  test "uses Switch" {
     click "Switch"
   }
 }

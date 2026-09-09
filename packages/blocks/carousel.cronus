@@ -1,14 +1,30 @@
 ## Block Carousel
 ## source: registry/carousel.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Carousel, Button
+## icons: HTMLDivElement, CarouselOptions, CarouselContextValue, HTMLAttributes, ReturnType, Required, CarouselContext, CarouselInternalsContext
 ## registryDependencies: button, cn
 
 component CarouselBlock(label: text) layout:stack style:carousel {
-  title "Carousel"
-  subtitle "Carousel"
-  action "Carousel"
-  test "use block" {
+  meta "stack"
+  label "Carousel"
+  title "must be used within"
+  subtitle "would be semantically wrong."
+  slot "Carousel"
+  slot "Button"
+  action "click"
+  text "start"
+  text "center"
+  text "onScroll"
+  text "region"
+  text "carousel"
+  text "rtl"
+  text "smooth"
+  text "ArrowLeft"
+  text "ArrowRight"
+  text "CarouselContent"
+  test "uses Carousel" {
     click "Carousel"
   }
 }

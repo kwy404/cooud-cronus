@@ -1,15 +1,30 @@
 ## Block Team
 ## source: registry/team.json
 ## type: registry:block
-## behavior: settings
+## layout: stack
+## compose: Card, CardHeader, CardTitle, Button, Separator, Avatar, Badge, DropdownMenu
+## icons: Role, Users, AvatarImage, AvatarFallback, DropdownMenuTrigger, MoreHorizontal, DropdownMenuContent, DropdownMenuLabel
 ## registryDependencies: demo-saas
 
 component TeamBlock(label: text) layout:stack style:team {
-  title "Team"
-  subtitle "Team"
-  field "Name"
-  action "Save"
-  test "save settings" {
-    click "Save"
+  meta "stack"
+  label "Team"
+  title "Team members"
+  subtitle "Invite and manage your workspace teammates."
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "Button"
+  slot "Separator"
+  slot "Avatar"
+  slot "Badge"
+  slot "DropdownMenu"
+  cta "Team members"
+  text "Change role"
+  text "Remove"
+  text "info"
+  text "end"
+  test "cta" {
+    click "Team members"
   }
 }

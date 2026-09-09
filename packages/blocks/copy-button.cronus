@@ -1,14 +1,25 @@
 ## Block CopyButton
 ## source: registry/copy-button.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Button
+## icons: ButtonProps, HTMLButtonElement, ReturnType, Check, Copy
 ## registryDependencies: button, cn
 
 component CopyButtonBlock(label: text) layout:stack style:copy-button {
-  title "Copy Button"
-  subtitle "Copy Button"
-  action "Copy Button"
-  test "use block" {
-    click "Copy Button"
+  meta "stack"
+  label "CopyButton"
+  title "textarea"
+  subtitle "readonly"
+  slot "Button"
+  action "click"
+  text "copy"
+  text "value"
+  text "children"
+  text "copied"
+  text "Copied"
+  text "polite"
+  test "uses CopyButton" {
+    click "CopyButton"
   }
 }

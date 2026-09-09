@@ -1,16 +1,38 @@
 ## Block OrderTracking
 ## source: registry/order-tracking.json
 ## type: registry:block
-## behavior: commerce
+## layout: checkout-split
+## compose: Card, CardHeader, CardTitle, Badge, CardContent, Timeline, Separator, CardFooter, Avatar, Button
+## icons: Truck, TimelineItem, TimelineDot, Check, TimelineContent, TimelineTitle, TimelineTime, TimelineDescription
 ## registryDependencies: demo-store
 
 component OrderTrackingBlock(label: text) layout:stack style:order-tracking {
-  title "Order Tracking"
-  subtitle "Order Tracking"
-  field "Card"
-  value "$0"
+  meta "checkout-split"
+  label "OrderTracking"
+  title "Arriving Thursday, Jul 16"
+  subtitle "Out for delivery by 8:00 PM · Portland, OR"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "Badge"
+  slot "CardContent"
+  slot "Timeline"
+  slot "Separator"
+  slot "CardFooter"
+  slot "Avatar"
+  slot "Button"
   action "Pay"
-  test "checkout" {
+  text "Placed"
+  text "Order confirmed"
+  text "Payment received and order accepted."
+  text "Packed and shipped"
+  text "Handed to DHL Express at the Aurora warehouse."
+  text "In transit"
+  text "Departed the Salt Lake City sorting facility."
+  text "Delivered"
+  text "Expected Jul 16"
+  text "Signature may be required on delivery."
+  test "pay" {
     click "Pay"
   }
 }

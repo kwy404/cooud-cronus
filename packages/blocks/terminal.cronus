@@ -1,14 +1,29 @@
 ## Block Terminal
 ## source: registry/terminal.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: CopyButton
+## icons: HTMLAttributes, HTMLDivElement, TerminalProgress, TerminalRow
 ## registryDependencies: cn, copy-button
 
 component TerminalBlock(label: text) layout:stack style:terminal {
-  title "Terminal"
-  subtitle "Terminal"
-  action "Terminal"
-  test "use block" {
+  meta "stack"
+  label "Terminal"
+  title "Segmenter"
+  subtitle "grapheme"
+  slot "CopyButton"
+  action "click"
+  text "input"
+  text "output"
+  text "execution time"
+  text "respect"
+  text "always"
+  text "never"
+  text "children"
+  text "zsh"
+  text "change"
+  text "Copy commands"
+  test "uses Terminal" {
     click "Terminal"
   }
 }

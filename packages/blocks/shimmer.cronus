@@ -1,14 +1,18 @@
 ## Block Shimmer
 ## source: registry/shimmer.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component ShimmerBlock(label: text) layout:stack style:shimmer {
-  title "Shimmer"
+  meta "stack"
+  label "Shimmer"
+  title "shimmer"
   subtitle "Shimmer"
-  action "Shimmer"
-  test "use block" {
+  action "click"
+  test "uses Shimmer" {
     click "Shimmer"
   }
 }

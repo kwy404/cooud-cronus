@@ -1,15 +1,28 @@
 ## Block HeroAtmosphere
 ## source: registry/hero--atmosphere.json
 ## type: registry:block
-## behavior: marketing
+## layout: hero-center
+## compose: RetroGrid, Meteors, Badge, Highlighter, TypingText, Button
+## icons: Sparkles, ArrowRight
 
 component HeroAtmosphereBlock(label: text) layout:stack style:hero--atmosphere {
-  title "Hero Atmosphere"
-  subtitle "Atmosphere"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "hero-center"
+  label "HeroAtmosphere"
+  title "A product UI system: compose the app, theme it live, and keep the copy-in you can"
+  subtitle "Ship products your team is"
+  slot "RetroGrid"
+  slot "Meteors"
+  slot "Badge"
+  slot "Highlighter"
+  slot "TypingText"
+  slot "Button"
+  button "Start free trial"
+  button "Book a demo"
+  text "Now in public beta"
+  text "proud of"
+  text "restyle."
+  text "ship."
   test "cta" {
-    click "Get started"
+    click "Start free trial"
   }
 }

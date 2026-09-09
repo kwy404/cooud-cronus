@@ -1,14 +1,21 @@
 ## Block Tooltip
 ## source: registry/tooltip.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Tooltip
+## icons: TooltipProvider, HasTooltipProviderContext, TooltipPrimitive
 ## registryDependencies: cn
 
 component TooltipBlock(label: text) layout:stack style:tooltip {
-  title "Tooltip"
-  subtitle "Tooltip"
-  action "Tooltip"
-  test "use block" {
+  meta "stack"
+  label "Tooltip"
+  title "is mounted above, so"
+  subtitle "TooltipProvider"
+  slot "Tooltip"
+  action "click"
+  text "tooltip"
+  text "TooltipContent"
+  test "uses Tooltip" {
     click "Tooltip"
   }
 }

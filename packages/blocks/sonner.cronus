@@ -1,13 +1,20 @@
 ## Block Sonner
 ## source: registry/sonner.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Sonner
 
 component SonnerBlock(label: text) layout:stack style:sonner {
-  title "Sonner"
-  subtitle "Sonner"
-  action "Sonner"
-  test "use block" {
+  meta "stack"
+  label "Sonner"
+  title "sonner"
+  subtitle "light"
+  slot "Sonner"
+  action "click"
+  text "dark"
+  text "toaster"
+  text "Toaster"
+  test "uses Sonner" {
     click "Sonner"
   }
 }

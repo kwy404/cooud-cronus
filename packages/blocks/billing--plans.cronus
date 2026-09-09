@@ -1,16 +1,32 @@
 ## Block BillingPlans
 ## source: registry/billing--plans.json
 ## type: registry:block
-## behavior: commerce
+## layout: checkout-split
+## compose: Switch, Badge, Card, CardHeader, CardTitle, CardContent, Separator, CardFooter, Button
+## icons: Check
 ## registryDependencies: demo-saas
 
 component BillingPlansBlock(label: text) layout:stack style:billing--plans {
-  title "Billing Plans"
-  subtitle "Plans"
-  field "Card"
-  value "$0"
+  meta "checkout-split"
+  label "BillingPlans"
+  title "Pick the plan that fits"
+  subtitle "Switch plans or cancel anytime. Annual billing saves you up to 17%."
+  slot "Switch"
+  slot "Badge"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardContent"
+  slot "Separator"
+  slot "CardFooter"
+  slot "Button"
   action "Pay"
-  test "checkout" {
+  text "Monthly"
+  text "Popular"
+  text "Choose a plan"
+  text "Bill annually"
+  text "forever"
+  test "pay" {
     click "Pay"
   }
 }

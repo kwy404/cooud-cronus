@@ -1,13 +1,16 @@
 ## Block MotionPresets
 ## source: registry/motion-presets.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
 
 component MotionPresetsBlock(label: text) layout:stack style:motion-presets {
-  title "Motion Presets"
-  subtitle "Motion Presets"
-  action "Motion Presets"
-  test "use block" {
-    click "Motion Presets"
+  meta "stack"
+  label "MotionPresets"
+  title "motion/react"
+  subtitle "spring"
+  action "click"
+  test "uses MotionPresets" {
+    click "MotionPresets"
   }
 }

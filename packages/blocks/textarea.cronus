@@ -1,14 +1,18 @@
 ## Block Textarea
 ## source: registry/textarea.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLTextAreaElement
 ## registryDependencies: cn
 
 component TextareaBlock(label: text) layout:stack style:textarea {
-  title "Textarea"
-  subtitle "Textarea"
-  action "Textarea"
-  test "use block" {
+  meta "stack"
+  label "Textarea"
+  title "textarea"
+  subtitle "textarea"
+  action "click"
+  test "uses Textarea" {
     click "Textarea"
   }
 }

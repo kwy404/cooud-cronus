@@ -1,16 +1,40 @@
 ## Block OrderTrackingDelivered
 ## source: registry/order-tracking--delivered.json
 ## type: registry:block
-## behavior: commerce
+## layout: checkout-split
+## compose: Card, CardHeader, CardTitle, Badge, CardContent, Alert, AlertTitle, AlertDescription, Timeline, Separator, CardFooter, Button
+## icons: PackageCheck, TimelineItem, TimelineDot, Check, TimelineContent, TimelineTitle, TimelineTime, TimelineDescription
 ## registryDependencies: demo-store
 
 component OrderTrackingDeliveredBlock(label: text) layout:stack style:order-tracking--delivered {
-  title "Order Tracking Delivered"
-  subtitle "Delivered"
-  field "Card"
-  value "$0"
+  meta "checkout-split"
+  label "OrderTrackingDelivered"
+  title "Delivered on Wednesday, Jun 24"
+  subtitle "Signed by A. Rivera at 2:48 PM · Left with the front desk."
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "Badge"
+  slot "CardContent"
+  slot "Alert"
+  slot "AlertTitle"
+  slot "AlertDescription"
+  slot "Timeline"
+  slot "Separator"
+  slot "CardFooter"
+  slot "Button"
   action "Pay"
-  test "checkout" {
+  text "Placed"
+  text "Order confirmed"
+  text "Payment received and order accepted."
+  text "Packed and shipped"
+  text "Handed to DHL Express at the Aurora warehouse."
+  text "Out for delivery"
+  text "Loaded on the delivery vehicle in Portland."
+  text "Signed by A. Rivera · front desk."
+  text "How was your order?"
+  text "Leave a review"
+  test "pay" {
     click "Pay"
   }
 }

@@ -1,14 +1,30 @@
 ## Block TimePicker
 ## source: registry/time-picker.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Popover, Button
+## icons: HTMLDivElement, ReturnType, HTMLButtonElement, TimeValue, PopoverTrigger, Clock, PopoverContent, TimeColumn
 ## registryDependencies: button, cn, popover
 
 component TimePickerBlock(label: text) layout:stack style:time-picker {
-  title "Time Picker"
-  subtitle "Time Picker"
-  action "Time Picker"
-  test "use block" {
-    click "Time Picker"
+  meta "stack"
+  label "TimePicker"
+  title "HH:mm:ss"
+  subtitle "Select time"
+  slot "Popover"
+  slot "Button"
+  action "click"
+  text "Now"
+  text "Done"
+  text "start"
+  text "center"
+  text "end"
+  text "period"
+  text "auto"
+  text "smooth"
+  text "ArrowDown"
+  text "ArrowUp"
+  test "uses TimePicker" {
+    click "TimePicker"
   }
 }

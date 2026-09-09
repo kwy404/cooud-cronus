@@ -1,14 +1,22 @@
 ## Block Form
 ## source: registry/form.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Form, Label
+## icons: TFieldValues, FormFieldContextValue, FormFieldContext, Controller, FormItemContextValue, FormField, FormItem, HTMLDivElement
 ## registryDependencies: cn, label
 
 component FormBlock(label: text) layout:stack style:form {
-  title "Form"
-  subtitle "Form"
-  action "Form"
-  test "use block" {
+  meta "stack"
+  label "Form"
+  title "FormItem"
+  subtitle "FormLabel"
+  slot "Form"
+  slot "Label"
+  action "click"
+  text "FormControl"
+  text "FormDescription"
+  test "uses Form" {
     click "Form"
   }
 }

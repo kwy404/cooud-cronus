@@ -1,16 +1,28 @@
 ## Block Chart
 ## source: registry/chart.json
 ## type: registry:ui
-## behavior: data
+## layout: stack
+## compose: native-sections
+## icons: ChartContextProps, ChartContainer, ChartContext, ChartStyle, RechartsPrimitive, HTMLDivElement, ChartCursor
 ## registryDependencies: cn
 
 component ChartBlock(label: text) layout:stack style:chart {
-  title "Chart"
-  subtitle "Chart"
-  columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads Chart" {
-    expect visible "Chart"
+  meta "stack"
+  label "Chart"
+  title "recharts"
+  subtitle "children"
+  action "click"
+  text "en-US"
+  text "ChartContainer"
+  text "line"
+  text "dot"
+  text "dashed"
+  text "ChartTooltipContent"
+  text "date"
+  text "Aug 6"
+  text "Aug 7"
+  text "day"
+  test "uses Chart" {
+    click "Chart"
   }
 }

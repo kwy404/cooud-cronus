@@ -1,14 +1,18 @@
 ## Block Meteors
 ## source: registry/meteors.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component MeteorsBlock(label: text) layout:stack style:meteors {
-  title "Meteors"
-  subtitle "Meteors"
-  action "Meteors"
-  test "use block" {
+  meta "stack"
+  label "Meteors"
+  title "meteors"
+  subtitle "meteors"
+  action "click"
+  test "uses Meteors" {
     click "Meteors"
   }
 }

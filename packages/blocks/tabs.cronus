@@ -1,14 +1,19 @@
 ## Block Tabs
 ## source: registry/tabs.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: TabsPrimitive
 ## registryDependencies: cn
 
 component TabsBlock(label: text) layout:stack style:tabs {
-  title "Tabs"
-  subtitle "Tabs"
-  action "Tabs"
-  test "use block" {
+  meta "stack"
+  label "Tabs"
+  title "TabsList"
+  subtitle "TabsContent"
+  slot "TabsPrimitive"
+  action "click"
+  text "tabs"
+  test "uses Tabs" {
     click "Tabs"
   }
 }

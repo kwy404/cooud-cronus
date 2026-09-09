@@ -1,13 +1,21 @@
 ## Block PostCard
 ## source: registry/post-card.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Card, CardHeader, Avatar, Button, CardContent
+## icons: AvatarImage, AvatarFallback, MoreHorizontal, Heart, MessageCircle, Repeat2, Bookmark, Share
 
 component PostCardBlock(label: text) layout:stack style:post-card {
-  title "Post Card"
-  subtitle "Post Card"
-  action "Post Card"
-  test "use block" {
-    click "Post Card"
+  meta "stack"
+  label "PostCard"
+  title "Mara Castillo"
+  subtitle "Post actions"
+  slot "Card"
+  slot "CardHeader"
+  slot "Avatar"
+  slot "Button"
+  slot "CardContent"
+  test "use" {
+    expect visible "Mara Castillo"
   }
 }

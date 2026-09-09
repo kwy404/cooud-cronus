@@ -1,14 +1,39 @@
 ## Block AccountSecurity
 ## source: registry/account-security.json
 ## type: registry:block
-## behavior: settings
+## layout: stack
+## compose: Card, CardContent, Badge, Switch, CardHeader, CardTitle, CardDescription, CopyButton, Separator, Button, CardFooter
+## icons: ShieldCheck, Download, RefreshCw
 
 component AccountSecurityBlock(label: text) layout:stack style:account-security {
-  title "Account Security"
-  subtitle "Account Security"
+  meta "stack"
+  label "AccountSecurity"
+  title "Two-factor authentication"
+  subtitle "Require a verification code in addition to your password at sign-in."
+  slot "Card"
+  slot "CardContent"
+  slot "Badge"
+  slot "Switch"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardDescription"
+  slot "CopyButton"
+  slot "Separator"
+  slot "Button"
+  slot "CardFooter"
   field "Name"
   action "Save"
-  test "save settings" {
+  text "Enabled"
+  text "Authenticator app"
+  text "Pair an app that generates rotating 6-digit codes for this account."
+  text "JBSW Y3DP EHPK 3PXP QK7M 30XA"
+  text "Backup codes"
+  text "Each code signs you in once if you lose your authenticator."
+  text "Download backup codes"
+  text "8 of 8 codes left · Generated Jun 02, 2026"
+  text "Regenerate"
+  text "Install an authenticator app"
+  test "save" {
     click "Save"
   }
 }

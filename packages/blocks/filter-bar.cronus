@@ -1,13 +1,41 @@
 ## Block FilterBar
 ## source: registry/filter-bar.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Input, Select, SelectTrigger, SelectValue, SelectContent, SelectItem, Combobox, ToggleGroup, Badge
+## icons: Search, ToggleGroupItem, List, LayoutGrid, SlidersHorizontal
 
 component FilterBarBlock(label: text) layout:stack style:filter-bar {
-  title "Filter Bar"
-  subtitle "Filter Bar"
-  action "Filter Bar"
-  test "use block" {
-    click "Filter Bar"
+  meta "stack"
+  label "FilterBar"
+  title "Search projects"
+  subtitle "Status: Active"
+  slot "Input"
+  slot "Select"
+  slot "SelectTrigger"
+  slot "SelectValue"
+  slot "SelectContent"
+  slot "SelectItem"
+  slot "Combobox"
+  slot "ToggleGroup"
+  slot "Badge"
+  item "Status: Active"
+  item "Owner: Mara Castillo"
+  item "12 projects"
+  item "All statuses"
+  item "Active"
+  item "Paused"
+  text "Filters"
+  text "Archived"
+  text "Devon Lane"
+  text "Priya Sharma"
+  text "Aiko Tanaka"
+  text "all"
+  text "active"
+  text "paused"
+  text "archived"
+  text "mara"
+  test "use" {
+    expect visible "Search projects"
   }
 }

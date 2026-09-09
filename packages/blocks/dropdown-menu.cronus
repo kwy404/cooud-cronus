@@ -1,14 +1,22 @@
 ## Block DropdownMenu
 ## source: registry/dropdown-menu.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: DropdownMenuPrimitive, ChevronRight, Check, Circle, HTMLSpanElement
 ## registryDependencies: cn
 
 component DropdownMenuBlock(label: text) layout:stack style:dropdown-menu {
-  title "Dropdown Menu"
-  subtitle "Dropdown Menu"
-  action "Dropdown Menu"
-  test "use block" {
-    click "Dropdown Menu"
+  meta "stack"
+  label "DropdownMenu"
+  title "DropdownMenuContent"
+  subtitle "DropdownMenuCheckboxItem"
+  action "click"
+  text "DropdownMenuRadioItem"
+  text "DropdownMenuLabel"
+  text "DropdownMenuSeparator"
+  text "DropdownMenuShortcut"
+  test "uses DropdownMenu" {
+    click "DropdownMenu"
   }
 }

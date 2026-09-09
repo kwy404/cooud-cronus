@@ -1,14 +1,18 @@
 ## Block GradientText
 ## source: registry/gradient-text.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLSpanElement, Comp
 ## registryDependencies: cn
 
 component GradientTextBlock(label: text) layout:stack style:gradient-text {
-  title "Gradient Text"
-  subtitle "Gradient Text"
-  action "Gradient Text"
-  test "use block" {
-    click "Gradient Text"
+  meta "stack"
+  label "GradientText"
+  title "GradientText"
+  subtitle "GradientText"
+  action "click"
+  test "uses GradientText" {
+    click "GradientText"
   }
 }

@@ -1,13 +1,30 @@
 ## Block EmailReceipt
 ## source: registry/email-receipt.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Card, Separator, Button
 
 component EmailReceiptBlock(label: text) layout:stack style:email-receipt {
-  title "Email Receipt"
-  subtitle "Email Receipt"
-  action "Email Receipt"
-  test "use block" {
-    click "Email Receipt"
+  meta "stack"
+  label "EmailReceipt"
+  title "Questions about this charge? Contact"
+  subtitle "Receipt from Cronus"
+  slot "Card"
+  slot "Separator"
+  slot "Button"
+  item "Receipt from Cronus"
+  item "Description"
+  item "Qty"
+  item "Amount"
+  item "Pro plan — monthly"
+  item "Additional seats"
+  text "Priority support"
+  text "Subtotal"
+  text "Total"
+  text "View invoice"
+  text "support@cronus.com"
+  text "Cronus, Inc. · 2261 Market St, San Francisco"
+  test "use" {
+    expect visible "Questions about this charge? Contact"
   }
 }

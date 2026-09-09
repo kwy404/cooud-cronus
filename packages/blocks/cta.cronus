@@ -1,15 +1,23 @@
 ## Block Cta
 ## source: registry/cta.json
 ## type: registry:block
-## behavior: marketing
+## layout: stack
+## compose: Label, Input, Button
+## icons: Send
 
 component CtaBlock(label: text) layout:stack style:cta {
-  title "Cta"
-  subtitle "Cta"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "stack"
+  label "Cta"
+  title "Email address"
+  subtitle "Subscribe"
+  slot "Label"
+  slot "Input"
+  slot "Button"
+  button "Subscribe"
+  text "Ready to build something great?"
+  text "No spam. Unsubscribe at any time."
+  text "you@company.com"
   test "cta" {
-    click "Get started"
+    click "Subscribe"
   }
 }

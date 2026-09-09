@@ -1,14 +1,28 @@
 ## Block Command
 ## source: registry/command.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, Command
+## icons: CommandPrimitive, Search
 ## registryDependencies: cn, dialog
 
 component CommandBlock(label: text) layout:stack style:command {
-  title "Command"
-  subtitle "Command"
-  action "Command"
-  test "use block" {
+  meta "stack"
+  label "Command"
+  title "Command Menu"
+  subtitle "Search for a command to run..."
+  slot "Dialog"
+  slot "DialogContent"
+  slot "DialogHeader"
+  slot "DialogTitle"
+  slot "DialogDescription"
+  slot "Command"
+  action "click"
+  text "cmdk"
+  text "CommandList"
+  text "CommandEmpty"
+  text "CommandSeparator"
+  test "uses Command" {
     click "Command"
   }
 }

@@ -1,15 +1,20 @@
 ## Block FooterMinimal
 ## source: registry/footer--minimal.json
 ## type: registry:block
-## behavior: marketing
+## layout: site-chrome
+## compose: native-sections
+## icons: Hexagon
 
 component FooterMinimalBlock(label: text) layout:stack style:footer--minimal {
-  title "Footer Minimal"
-  subtitle "Minimal"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "site-chrome"
+  label "FooterMinimal"
+  title "© 2026 Cronus. All rights reserved."
+  subtitle "© 2026 Cronus. All rights reserved."
+  cta "Cronus"
+  text "Docs"
+  text "Pricing"
+  text "Support"
   test "cta" {
-    click "Get started"
+    click "Cronus"
   }
 }

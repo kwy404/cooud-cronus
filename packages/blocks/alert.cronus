@@ -1,14 +1,20 @@
 ## Block Alert
 ## source: registry/alert.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement, HTMLParagraphElement
 ## registryDependencies: cn
 
 component AlertBlock(label: text) layout:stack style:alert {
-  title "Alert"
-  subtitle "Alert"
-  action "Alert"
-  test "use block" {
+  meta "stack"
+  label "Alert"
+  title "AlertTitle"
+  subtitle "AlertDescription"
+  action "click"
+  text "alert"
+  text "status"
+  test "uses Alert" {
     click "Alert"
   }
 }

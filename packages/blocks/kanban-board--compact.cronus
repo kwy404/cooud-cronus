@@ -1,13 +1,34 @@
 ## Block KanbanBoardCompact
 ## source: registry/kanban-board--compact.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Button, Badge, Avatar
+## icons: Plus, AvatarFallback
 
 component KanbanBoardCompactBlock(label: text) layout:stack style:kanban-board--compact {
-  title "Kanban Board Compact"
-  subtitle "Compact"
-  action "Kanban Board Compact"
-  test "use block" {
-    click "Kanban Board Compact"
+  meta "stack"
+  label "KanbanBoardCompact"
+  title "Add task to"
+  subtitle "Assigned to"
+  slot "Button"
+  slot "Badge"
+  slot "Avatar"
+  item "Platform team · Week 29"
+  item "Add task"
+  item "At WIP limit"
+  item "Todo"
+  item "Improve webhook retry backoff"
+  text "10 tasks in flight · WIP limits enforced"
+  text "CSV import for the contacts page"
+  text "Refresh empty-state illustrations"
+  text "Tighten password policy defaults"
+  text "In progress"
+  text "Usage-based billing alerts"
+  text "Fix timezone drift in scheduled reports"
+  text "Move search to a typo-tolerant index"
+  text "Keyboard navigation for the command menu"
+  text "In review"
+  test "use" {
+    expect visible "Add task to"
   }
 }

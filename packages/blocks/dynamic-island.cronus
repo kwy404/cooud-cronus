@@ -1,14 +1,22 @@
 ## Block DynamicIsland
 ## source: registry/dynamic-island.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLAttributes, HTMLDivElement
 ## registryDependencies: cn
 
 component DynamicIslandBlock(label: text) layout:stack style:dynamic-island {
-  title "Dynamic Island"
-  subtitle "Dynamic Island"
-  action "Dynamic Island"
-  test "use block" {
-    click "Dynamic Island"
+  meta "stack"
+  label "DynamicIsland"
+  title "motion/react"
+  subtitle "children"
+  action "click"
+  text "spring"
+  text "empty"
+  text "tablist"
+  text "tab"
+  test "uses DynamicIsland" {
+    click "DynamicIsland"
   }
 }

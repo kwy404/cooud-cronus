@@ -1,15 +1,31 @@
 ## Block TestimonialsGrid
 ## source: registry/testimonials--grid.json
 ## type: registry:block
-## behavior: marketing
+## layout: stack
+## compose: Badge, AvatarGroup, Card, CardContent, Avatar
+## icons: Sparkles, AvatarImage, AvatarFallback
 
 component TestimonialsGridBlock(label: text) layout:stack style:testimonials--grid {
-  title "Testimonials Grid"
-  subtitle "Grid"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "stack"
+  label "TestimonialsGrid"
+  title "Loved by teams"
+  subtitle "Loved by modern product teams"
+  slot "Badge"
+  slot "AvatarGroup"
+  slot "Card"
+  slot "CardContent"
+  slot "Avatar"
+  button "Join"
+  text "teams shipping with Cronus"
+  text "Amara Okafor"
+  text "Marco Rossi"
+  text "Priya Nair"
+  text "Jonas Berg"
+  text "Sofia Lindqvist"
+  text "David Chen"
+  text "VP Design, Northwind"
+  text "Teams using Cronus"
   test "cta" {
-    click "Get started"
+    click "Join"
   }
 }

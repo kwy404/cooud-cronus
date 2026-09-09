@@ -1,16 +1,18 @@
 ## Block ScatterChart
 ## source: registry/scatter-chart.json
 ## type: registry:ui
-## behavior: data
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement, ChartContainer, RechartsScatterChart, CartesianGrid, XAxis, YAxis, ZAxis, ChartTooltip
 ## registryDependencies: chart, cn
 
 component ScatterChartBlock(label: text) layout:stack style:scatter-chart {
-  title "Scatter Chart"
-  subtitle "Scatter Chart"
-  columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads ScatterChart" {
-    expect visible "Scatter Chart"
+  meta "stack"
+  label "ScatterChart"
+  title "recharts"
+  subtitle "recharts"
+  action "click"
+  test "uses ScatterChart" {
+    click "ScatterChart"
   }
 }

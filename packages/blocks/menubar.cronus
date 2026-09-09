@@ -1,14 +1,24 @@
 ## Block Menubar
 ## source: registry/menubar.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: MenubarPrimitive, ChevronRight, Check, Circle, HTMLSpanElement
 ## registryDependencies: cn
 
 component MenubarBlock(label: text) layout:stack style:menubar {
-  title "Menubar"
-  subtitle "Menubar"
-  action "Menubar"
-  test "use block" {
+  meta "stack"
+  label "Menubar"
+  title "MenubarContent"
+  subtitle "MenubarCheckboxItem"
+  action "click"
+  text "menubar"
+  text "start"
+  text "MenubarRadioItem"
+  text "MenubarLabel"
+  text "MenubarSeparator"
+  text "MenubarShortcut"
+  test "uses Menubar" {
     click "Menubar"
   }
 }

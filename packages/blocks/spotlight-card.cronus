@@ -1,14 +1,18 @@
 ## Block SpotlightCard
 ## source: registry/spotlight-card.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component SpotlightCardBlock(label: text) layout:stack style:spotlight-card {
-  title "Spotlight Card"
-  subtitle "Spotlight Card"
-  action "Spotlight Card"
-  test "use block" {
-    click "Spotlight Card"
+  meta "stack"
+  label "SpotlightCard"
+  title "SpotlightCard"
+  subtitle "SpotlightCard"
+  action "click"
+  test "uses SpotlightCard" {
+    click "SpotlightCard"
   }
 }

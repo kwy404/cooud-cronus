@@ -1,14 +1,18 @@
 ## Block Progress
 ## source: registry/progress.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: ProgressPrimitive
 ## registryDependencies: cn
 
 component ProgressBlock(label: text) layout:stack style:progress {
-  title "Progress"
-  subtitle "Progress"
-  action "Progress"
-  test "use block" {
+  meta "stack"
+  label "Progress"
+  title "progressbar"
+  subtitle "Upload progress"
+  action "click"
+  test "uses Progress" {
     click "Progress"
   }
 }

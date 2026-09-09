@@ -1,14 +1,22 @@
 ## Block Metric
 ## source: registry/metric.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement, HTMLSpanElement, NonNullable, MetricDeltaProps, Icon
 ## registryDependencies: cn
 
 component MetricBlock(label: text) layout:stack style:metric {
-  title "Metric"
-  subtitle "Metric"
-  action "Metric"
-  test "use block" {
+  meta "stack"
+  label "Metric"
+  title "MetricLabel"
+  subtitle "MetricValue"
+  action "click"
+  text "metric"
+  text "trend"
+  text "neutral"
+  text "MetricDelta"
+  test "uses Metric" {
     click "Metric"
   }
 }

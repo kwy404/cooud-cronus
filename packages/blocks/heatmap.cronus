@@ -1,14 +1,20 @@
 ## Block Heatmap
 ## source: registry/heatmap.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component HeatmapBlock(label: text) layout:stack style:heatmap {
-  title "Heatmap"
-  subtitle "Heatmap"
-  action "Heatmap"
-  test "use block" {
+  meta "stack"
+  label "Heatmap"
+  title "Activity heatmap"
+  subtitle "More"
+  action "click"
+  text "Less"
+  text "img"
+  test "uses Heatmap" {
     click "Heatmap"
   }
 }

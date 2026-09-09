@@ -1,15 +1,33 @@
 ## Block InvoiceReceipt
 ## source: registry/invoice--receipt.json
 ## type: registry:block
-## behavior: commerce
+## layout: checkout-split
+## compose: Card, CardHeader, CardTitle, CardContent, Badge, CardFooter
 
 component InvoiceReceiptBlock(label: text) layout:stack style:invoice--receipt {
-  title "Invoice Receipt"
-  subtitle "Receipt"
-  field "Card"
-  value "$0"
+  meta "checkout-split"
+  label "InvoiceReceipt"
+  title "Cronus Studio"
+  subtitle "548 Market St · San Francisco, CA"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardContent"
+  slot "Badge"
+  slot "CardFooter"
+  field "548 Market St · San Francisco, CA"
   action "Pay"
-  test "checkout" {
+  text "Subtotal"
+  text "Total"
+  text "Paid"
+  text "Thanks for supporting independent creators."
+  text "Creator Playbook — Lifetime"
+  text "Team seats"
+  text "Priority support — 1 yr"
+  text "playbook"
+  text "seats"
+  text "support"
+  test "pay" {
     click "Pay"
   }
 }

@@ -1,13 +1,33 @@
 ## Block KanbanBoard
 ## source: registry/kanban-board.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Button, Badge, Avatar
+## icons: Plus, CalendarDays, MessageSquare, AvatarFallback
 
 component KanbanBoardBlock(label: text) layout:stack style:kanban-board {
-  title "Kanban Board"
-  subtitle "Kanban Board"
-  action "Kanban Board"
-  test "use block" {
-    click "Kanban Board"
+  meta "stack"
+  label "KanbanBoard"
+  title "Add task to"
+  subtitle "Sprint 24 · Growth squad"
+  slot "Button"
+  slot "Badge"
+  slot "Avatar"
+  item "New task"
+  item "comments"
+  item "Backlog"
+  item "Devon Lane"
+  text "Jul 7 – Jul 18 · 10 tasks across 4 stages"
+  text "Migrate billing webhooks to the v2 event schema"
+  text "Design empty states for the reports page"
+  text "Hana Yoshida"
+  text "Spike: evaluate ClickHouse for event analytics"
+  text "Marcus Chen"
+  text "In progress"
+  text "Rework onboarding checklist with progress tracking"
+  text "Ingrid Solberg"
+  text "Rosa Delgado"
+  test "use" {
+    expect visible "Add task to"
   }
 }

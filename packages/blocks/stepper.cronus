@@ -1,14 +1,29 @@
 ## Block Stepper
 ## source: registry/stepper.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Stepper
+## icons: StepperContextValue, StepperItemContextValue, StepperItem, HTMLAttributes, HTMLDivElement, StepperLabels, StepperContext, HTMLOListElement
 ## registryDependencies: cn
 
 component StepperBlock(label: text) layout:stack style:stepper {
-  title "Stepper"
-  subtitle "Stepper"
-  action "Stepper"
-  test "use block" {
+  meta "stack"
+  label "Stepper"
+  title "must be used within"
+  subtitle "horizontal"
+  slot "Stepper"
+  action "click"
+  text "vertical"
+  text "completed"
+  text "current"
+  text "not started"
+  text "active"
+  text "upcoming"
+  text "onChange"
+  text "stepper"
+  text "StepperList"
+  text "step"
+  test "uses Stepper" {
     click "Stepper"
   }
 }

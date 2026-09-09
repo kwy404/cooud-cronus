@@ -1,14 +1,19 @@
 ## Block InputGroup
 ## source: registry/input-group.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component InputGroupBlock(label: text) layout:stack style:input-group {
-  title "Input Group"
-  subtitle "Input Group"
-  action "Input Group"
-  test "use block" {
-    click "Input Group"
+  meta "stack"
+  label "InputGroup"
+  title "InputGroupAddon"
+  subtitle "end"
+  action "click"
+  text "start"
+  test "uses InputGroup" {
+    click "InputGroup"
   }
 }

@@ -1,14 +1,28 @@
 ## Block ComparisonSlider
 ## source: registry/comparison-slider.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLAttributes, HTMLDivElement, ChevronsLeftRight
 ## registryDependencies: cn
 
 component ComparisonSliderBlock(label: text) layout:stack style:comparison-slider {
-  title "Comparison Slider"
-  subtitle "Comparison Slider"
-  action "Comparison Slider"
-  test "use block" {
-    click "Comparison Slider"
+  meta "stack"
+  label "ComparisonSlider"
+  title "onChange"
+  subtitle "Comparison"
+  action "click"
+  text "before"
+  text "after"
+  text "ArrowLeft"
+  text "ArrowDown"
+  text "ArrowRight"
+  text "ArrowUp"
+  text "Home"
+  text "End"
+  text "slider"
+  text "horizontal"
+  test "uses ComparisonSlider" {
+    click "ComparisonSlider"
   }
 }

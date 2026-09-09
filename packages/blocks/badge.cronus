@@ -1,14 +1,18 @@
 ## Block Badge
 ## source: registry/badge.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLSpanElement
 ## registryDependencies: cn
 
 component BadgeBlock(label: text) layout:stack style:badge {
-  title "Badge"
+  meta "stack"
+  label "Badge"
+  title "badge"
   subtitle "Badge"
-  action "Badge"
-  test "use block" {
+  action "click"
+  test "uses Badge" {
     click "Badge"
   }
 }

@@ -1,14 +1,19 @@
 ## Block Accordion
 ## source: registry/accordion.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: AccordionPrimitive
+## icons: ChevronDown
 ## registryDependencies: cn
 
 component AccordionBlock(label: text) layout:stack style:accordion {
-  title "Accordion"
-  subtitle "Accordion"
-  action "Accordion"
-  test "use block" {
+  meta "stack"
+  label "Accordion"
+  title "AccordionItem"
+  subtitle "AccordionItem"
+  slot "AccordionPrimitive"
+  action "click"
+  test "uses Accordion" {
     click "Accordion"
   }
 }

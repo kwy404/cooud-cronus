@@ -1,14 +1,18 @@
 ## Block Skeleton
 ## source: registry/skeleton.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component SkeletonBlock(label: text) layout:stack style:skeleton {
-  title "Skeleton"
+  meta "stack"
+  label "Skeleton"
+  title "skeleton"
   subtitle "Skeleton"
-  action "Skeleton"
-  test "use block" {
+  action "click"
+  test "uses Skeleton" {
     click "Skeleton"
   }
 }

@@ -1,15 +1,26 @@
 ## Block Faq
 ## source: registry/faq.json
 ## type: registry:block
-## behavior: marketing
+## layout: faq-accordion
+## compose: Badge, Accordion, AccordionItem, AccordionTrigger, AccordionContent
 
 component FaqBlock(label: text) layout:stack style:faq {
-  title "Faq"
-  subtitle "Faq"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "faq-accordion"
+  label "Faq"
+  title "Frequently asked questions"
+  subtitle "Frequently asked questions"
+  slot "Badge"
+  slot "Accordion"
+  slot "AccordionItem"
+  slot "AccordionTrigger"
+  slot "AccordionContent"
+  item "What exactly do I get with Cronus?"
+  item "Do the components work with my existing stack?"
+  item "How do themes work?"
+  item "Is everything accessible out of the box?"
+  item "Can I cancel anytime?"
+  cta "FAQ"
   test "cta" {
-    click "Get started"
+    click "FAQ"
   }
 }

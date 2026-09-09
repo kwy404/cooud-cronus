@@ -1,15 +1,30 @@
 ## Block AboutValues
 ## source: registry/about--values.json
 ## type: registry:block
-## behavior: marketing
+## layout: stack
+## compose: Badge, Card, CardContent
+## icons: Users, Sparkles
 
 component AboutValuesBlock(label: text) layout:stack style:about--values {
-  title "About Values"
-  subtitle "Values"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "stack"
+  label "AboutValues"
+  title "How we work"
+  subtitle "The values we hire, build, and ship by"
+  slot "Badge"
+  slot "Card"
+  slot "CardContent"
+  cta "How we work"
+  text "Life at Aurora — team offsite, Lisbon · June 2026"
+  text "Craft over shortcuts"
+  text "Details are the product. We sweat empty states, error copy, and 60fps."
+  text "Default to transparency"
+  text "Roadmap, pricing, postmortems — public. Trust compounds faster than features."
+  text "Ship, then sharpen"
+  text "Real usage beats internal debate. Release small, watch closely, iterate weekly."
+  text "Customers in the room"
+  text "Every project starts and ends with a customer call. Opinions lose to evidence."
+  text "Strong opinions, loosely held"
   test "cta" {
-    click "Get started"
+    click "How we work"
   }
 }

@@ -1,13 +1,42 @@
 ## Block UserManagementCards
 ## source: registry/user-management--cards.json
 ## type: registry:block
-## behavior: card
+## layout: form-card
+## compose: Input, Button, Card, CardHeader, Avatar, CardAction, DropdownMenu, CardContent, Badge, Separator, CardFooter
+## icons: Search, UserPlus, AvatarFallback, DropdownMenuTrigger, MoreHorizontal, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator
 
 component UserManagementCardsBlock(label: text) layout:stack style:user-management--cards {
-  title "User Management Cards"
-  subtitle "Cards"
-  action "User Management Cards"
-  test "use block" {
-    click "User Management Cards"
+  meta "form-card"
+  label "UserManagementCards"
+  title "Actions for"
+  subtitle "Team members"
+  slot "Input"
+  slot "Button"
+  slot "Card"
+  slot "CardHeader"
+  slot "Avatar"
+  slot "CardAction"
+  slot "DropdownMenu"
+  slot "CardContent"
+  slot "Badge"
+  slot "Separator"
+  slot "CardFooter"
+  item "Invite member"
+  item "View profile"
+  item "Change role"
+  item "Remove from team"
+  item "Last active"
+  text "4 of 10 seats used on the Starter plan."
+  text "Priya Raman"
+  text "Diego Fuentes"
+  text "Hana Yoshida"
+  text "Sam Whitfield"
+  text "info"
+  text "Active"
+  text "Invited"
+  text "Suspended"
+  text "success"
+  test "use" {
+    expect visible "Actions for"
   }
 }

@@ -1,16 +1,43 @@
 ## Block DashboardAdminOverview
 ## source: registry/dashboard--admin-overview.json
 ## type: registry:block
-## behavior: data
+## layout: dashboard-grid
+## compose: Sidebar, Avatar, Button, AppShell, Card, CardContent, Badge, Metric, CardHeader, CardTitle, AreaChart, Table
+## icons: SidebarHeader, ChartColumnIncreasing, SidebarSeparator, SidebarContent, SidebarGroup, SidebarGroupLabel, SidebarGroupContent, SidebarMenu
 ## registryDependencies: demo-saas
 
 component DashboardAdminOverviewBlock(label: text) layout:stack style:dashboard--admin-overview {
-  title "Dashboard Admin Overview"
-  subtitle "AdminOverview"
+  meta "dashboard-grid"
+  label "DashboardAdminOverview"
+  title "Cronus Admin"
+  subtitle "Admin overview"
+  slot "Sidebar"
+  slot "Avatar"
+  slot "Button"
+  slot "AppShell"
+  slot "Card"
+  slot "CardContent"
+  slot "Badge"
+  slot "Metric"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "AreaChart"
+  slot "Table"
   columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads DashboardAdminOverview" {
-    expect visible "Dashboard Admin Overview"
+  item "Cronus Admin"
+  item "Manage"
+  item "Admin overview"
+  text "Toggle the sidebar to collapse to icons"
+  text "Export"
+  text "New user"
+  text "New signups"
+  text "Last 7 days"
+  text "All workspace accounts"
+  text "User"
+  text "Role"
+  text "Orders"
+  text "Spend"
+  test "reads" {
+    expect visible "Cronus Admin"
   }
 }

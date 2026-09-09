@@ -1,14 +1,30 @@
 ## Block PhoneInput
 ## source: registry/phone-input.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Popover, Command
+## icons: HTMLInputElement, PopoverTrigger, ChevronDown, PopoverContent, CommandInput, CommandList, CommandEmpty, CommandItem
 ## registryDependencies: cn, command, popover
 
 component PhoneInputBlock(label: text) layout:stack style:phone-input {
-  title "Phone Input"
-  subtitle "Phone Input"
-  action "Phone Input"
-  test "use block" {
-    click "Phone Input"
+  meta "stack"
+  label "PhoneInput"
+  title "United States"
+  subtitle "Portugal"
+  slot "Popover"
+  slot "Command"
+  action "click"
+  text "Brazil"
+  text "United Kingdom"
+  text "Spain"
+  text "France"
+  text "Germany"
+  text "Italy"
+  text "Netherlands"
+  text "Mexico"
+  text "Argentina"
+  text "Chile"
+  test "uses PhoneInput" {
+    click "PhoneInput"
   }
 }

@@ -1,14 +1,18 @@
 ## Block Kbd
 ## source: registry/kbd.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLElement
 ## registryDependencies: cn
 
 component KbdBlock(label: text) layout:stack style:kbd {
-  title "Kbd"
-  subtitle "Kbd"
-  action "Kbd"
-  test "use block" {
+  meta "stack"
+  label "Kbd"
+  title "kbd"
+  subtitle "kbd"
+  action "click"
+  test "uses Kbd" {
     click "Kbd"
   }
 }

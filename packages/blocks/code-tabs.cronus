@@ -1,14 +1,31 @@
 ## Block CodeTabs
 ## source: registry/code-tabs.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Tabs, TabsList, TabsTrigger, CopyButton, TabsContent
+## icons: HTMLAttributes, HTMLDivElement, CodeTabsSyncDetail, HTMLElement
 ## registryDependencies: cn, copy-button, tabs
 
 component CodeTabsBlock(label: text) layout:stack style:code-tabs {
-  title "Code Tabs"
-  subtitle "Code Tabs"
-  action "Code Tabs"
-  test "use block" {
-    click "Code Tabs"
+  meta "stack"
+  label "CodeTabs"
+  title "cronus-ui:code-tabs"
+  subtitle "children"
+  slot "Tabs"
+  slot "TabsList"
+  slot "TabsTrigger"
+  slot "CopyButton"
+  slot "TabsContent"
+  action "click"
+  text "bun"
+  text "bash"
+  text "defaultValue"
+  text "dir"
+  text "onChange"
+  text "storage"
+  text "active"
+  text "copied"
+  test "uses CodeTabs" {
+    click "CodeTabs"
   }
 }

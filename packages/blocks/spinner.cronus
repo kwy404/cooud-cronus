@@ -1,14 +1,20 @@
 ## Block Spinner
 ## source: registry/spinner.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: SVGSVGElement
 ## registryDependencies: cn
 
 component SpinnerBlock(label: text) layout:stack style:spinner {
-  title "Spinner"
-  subtitle "Spinner"
-  action "Spinner"
-  test "use block" {
+  meta "stack"
+  label "Spinner"
+  title "Loading"
+  subtitle "spinner"
+  action "click"
+  text "status"
+  text "none"
+  test "uses Spinner" {
     click "Spinner"
   }
 }

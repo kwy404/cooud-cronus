@@ -1,16 +1,18 @@
 ## Block RadarChart
 ## source: registry/radar-chart.json
 ## type: registry:ui
-## behavior: data
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement, ChartContainer, RechartsRadarChart, PolarGrid, PolarAngleAxis, ChartTooltip, ChartTooltipContent, Radar
 ## registryDependencies: chart, cn
 
 component RadarChartBlock(label: text) layout:stack style:radar-chart {
-  title "Radar Chart"
-  subtitle "Radar Chart"
-  columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads RadarChart" {
-    expect visible "Radar Chart"
+  meta "stack"
+  label "RadarChart"
+  title "recharts"
+  subtitle "metric"
+  action "click"
+  test "uses RadarChart" {
+    click "RadarChart"
   }
 }

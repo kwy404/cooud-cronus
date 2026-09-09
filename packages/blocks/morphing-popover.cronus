@@ -1,14 +1,29 @@
 ## Block MorphingPopover
 ## source: registry/morphing-popover.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: MorphingPopover
+## icons: HTMLButtonElement, MorphingPopoverContextValue, HTMLDivElement, MorphingPopoverContext, MotionConfig, React, HTMLElement, AnimatePresence
 ## registryDependencies: cn
 
 component MorphingPopoverBlock(label: text) layout:stack style:morphing-popover {
-  title "Morphing Popover"
-  subtitle "Morphing Popover"
-  action "Morphing Popover"
-  test "use block" {
-    click "Morphing Popover"
+  meta "stack"
+  label "MorphingPopover"
+  title "must be used within"
+  subtitle "motion/react"
+  slot "MorphingPopover"
+  action "click"
+  text "spring"
+  text "expand, then reveal"
+  text "easeOut"
+  text "user"
+  text "never"
+  text "always"
+  text "open"
+  text "closed"
+  text "ref"
+  text "children"
+  test "uses MorphingPopover" {
+    click "MorphingPopover"
   }
 }

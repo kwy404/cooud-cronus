@@ -1,14 +1,25 @@
 ## Block NumberInput
 ## source: registry/number-input.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Button, Input
+## icons: HTMLInputElement, Minus, Plus
 ## registryDependencies: button, cn, input
 
 component NumberInputBlock(label: text) layout:stack style:number-input {
-  title "Number Input"
-  subtitle "Number Input"
-  action "Number Input"
-  test "use block" {
-    click "Number Input"
+  meta "stack"
+  label "NumberInput"
+  title "ArrowDown"
+  subtitle "PageDown"
+  slot "Button"
+  slot "Input"
+  action "click"
+  text "ArrowUp"
+  text "PageUp"
+  text "Home"
+  text "End"
+  text "Increment"
+  test "uses NumberInput" {
+    click "NumberInput"
   }
 }

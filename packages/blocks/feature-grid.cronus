@@ -1,15 +1,31 @@
 ## Block FeatureGrid
 ## source: registry/feature-grid.json
 ## type: registry:block
-## behavior: marketing
+## layout: stack
+## compose: Badge, Card, CardHeader, CardTitle, CardDescription
 
 component FeatureGridBlock(label: text) layout:stack style:feature-grid {
-  title "Feature Grid"
-  subtitle "Feature Grid"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "stack"
+  label "FeatureGrid"
+  title "Features"
+  subtitle "A thoughtfully crafted set of tools that scales from your first prototype to production."
+  slot "Badge"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardDescription"
+  cta "Features"
+  text "Lightning fast"
+  text "Optimized rendering and zero-runtime styling keep every interaction instant."
+  text "Themeable by design"
+  text "Secure by default"
+  text "Composable primitives"
+  text "Build complex layouts from small, predictable, accessible building blocks."
+  text "Insightful analytics"
+  text "Understand how people use your product with real-time usage dashboards."
+  text "Automate anything"
+  text "Connect your favorite tools and wire up workflows without writing glue code."
   test "cta" {
-    click "Get started"
+    click "Features"
   }
 }

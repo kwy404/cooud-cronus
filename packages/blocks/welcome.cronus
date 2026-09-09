@@ -1,13 +1,29 @@
 ## Block Welcome
 ## source: registry/welcome.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Card, CardHeader, CardTitle, CardContent, CardFooter, Button
+## icons: Rocket, FolderPlus, ArrowRight, Users, Database
 
 component WelcomeBlock(label: text) layout:stack style:welcome {
-  title "Welcome"
-  subtitle "Welcome"
-  action "Welcome"
-  test "use block" {
-    click "Welcome"
+  meta "stack"
+  label "Welcome"
+  title "Welcome to Cronus, Mara"
+  subtitle "Create your first project"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardContent"
+  slot "CardFooter"
+  slot "Button"
+  item "Invite your team"
+  item "Connect your data"
+  item "Skip for now"
+  text "Spin up a workspace project to organize your work."
+  text "Bring teammates in to collaborate in real time."
+  text "Sync a source so your dashboards come to life."
+  text "Go to dashboard"
+  test "use" {
+    expect visible "Welcome to Cronus, Mara"
   }
 }

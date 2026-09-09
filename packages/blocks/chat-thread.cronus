@@ -1,13 +1,28 @@
 ## Block ChatThread
 ## source: registry/chat-thread.json
 ## type: registry:block
-## behavior: card
+## layout: form-card
+## compose: Card, CardHeader, Button, CardContent, Avatar, CardFooter, Input
+## icons: Sparkles, AvatarFallback, ArrowUp
 
 component ChatThreadBlock(label: text) layout:stack style:chat-thread {
-  title "Chat Thread"
-  subtitle "Chat Thread"
-  action "Chat Thread"
-  test "use block" {
-    click "Chat Thread"
+  meta "form-card"
+  label "ChatThread"
+  title "Cronus Assistant"
+  subtitle "Wrap your app in CronusUIProvider and override the design tokens you want to change."
+  slot "Card"
+  slot "CardHeader"
+  slot "Button"
+  slot "CardContent"
+  slot "Avatar"
+  slot "CardFooter"
+  slot "Input"
+  item "Can I do it per-route?"
+  item "Message Cronus Assistant…"
+  item "Send message"
+  text "Clear"
+  text "How do I theme a Cronus component?"
+  test "use" {
+    expect visible "Cronus Assistant"
   }
 }

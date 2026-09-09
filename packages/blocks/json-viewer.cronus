@@ -1,14 +1,29 @@
 ## Block JsonViewer
 ## source: registry/json-viewer.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: CopyButton
+## icons: BranchKind, Punct, JsonCircularLeaf, JsonBranch, JsonLeaf, JsonRow, ControlSpacer, KeyLabel
 ## registryDependencies: cn, copy-button
 
 component JsonViewerBlock(label: text) layout:stack style:json-viewer {
-  title "Json Viewer"
-  subtitle "Json Viewer"
-  action "Json Viewer"
-  test "use block" {
-    click "Json Viewer"
+  meta "stack"
+  label "JsonViewer"
+  title "| ReadonlySet"
+  subtitle "Name: message"
+  slot "CopyButton"
+  action "click"
+  text "object"
+  text "array"
+  text "map"
+  text "set"
+  text "item"
+  text "items"
+  text "entry"
+  text "entries"
+  text "key"
+  text "keys"
+  test "uses JsonViewer" {
+    click "JsonViewer"
   }
 }

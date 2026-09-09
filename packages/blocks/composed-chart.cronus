@@ -1,16 +1,22 @@
 ## Block ComposedChart
 ## source: registry/composed-chart.json
 ## type: registry:ui
-## behavior: data
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement, ChartContainer, RechartsComposedChart, CartesianGrid, XAxis, ChartTooltip, ChartCursor, ChartTooltipContent
 ## registryDependencies: chart, cn
 
 component ComposedChartBlock(label: text) layout:stack style:composed-chart {
-  title "Composed Chart"
-  subtitle "Composed Chart"
-  columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads ComposedChart" {
-    expect visible "Composed Chart"
+  meta "stack"
+  label "ComposedChart"
+  title "recharts"
+  subtitle "monotone"
+  action "click"
+  text "area"
+  text "bar"
+  text "line"
+  text "date"
+  test "uses ComposedChart" {
+    click "ComposedChart"
   }
 }

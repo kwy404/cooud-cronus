@@ -1,19 +1,44 @@
 ## Block SignupWithPlan
 ## source: registry/signup--with-plan.json
 ## type: registry:block
-## behavior: auth
+## layout: form-card
+## compose: Card, CardHeader, CardTitle, CardDescription, CardContent, Label, Input, Checkbox, Button, CardFooter, CardAction, Badge, Separator
+## icons: Check
 ## registryDependencies: auth-adapter, demo-saas
 
 component SignupWithPlanBlock(label: text) layout:stack style:signup--with-plan {
-  title "Signup With Plan"
-  subtitle "WithPlan"
+  meta "form-card"
+  label "SignupWithPlan"
+  title "Create your account"
+  subtitle "Full name"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardDescription"
+  slot "CardContent"
+  slot "Label"
+  slot "Input"
+  slot "Checkbox"
+  slot "Button"
+  slot "CardFooter"
+  slot "CardAction"
+  slot "Badge"
   state pending: boolean = false
   field "Email"
   field "Password"
   action "Sign in"
-  link "Forgot password?" -> "/forgot-password"
-  test "submit auth" {
+  text "Already have an account?"
+  text "Work email"
+  text "Must be at least 8 characters."
+  text "I agree to the Terms of Service."
+  text "Your plan"
+  text "Switch or cancel anytime."
+  text "14-day free trial"
+  text "Growth"
+  text "For creators scaling past $10k/mo"
+  text "Due today"
+  test "submit" {
     fill email "you@company.com"
-    click "Sign in"
+    click "Submit"
   }
 }

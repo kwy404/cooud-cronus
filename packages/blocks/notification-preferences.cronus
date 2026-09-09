@@ -1,13 +1,40 @@
 ## Block NotificationPreferences
 ## source: registry/notification-preferences.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Card, CardHeader, CardTitle, CardDescription, CardContent, Switch, Separator, CardFooter, Button
 
 component NotificationPreferencesBlock(label: text) layout:stack style:notification-preferences {
-  title "Notification Preferences"
-  subtitle "Notification Preferences"
-  action "Notification Preferences"
-  test "use block" {
-    click "Notification Preferences"
+  meta "stack"
+  label "NotificationPreferences"
+  title "Notification preferences"
+  subtitle "Choose how you hear about activity, per channel."
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardDescription"
+  slot "CardContent"
+  slot "Switch"
+  slot "Separator"
+  slot "CardFooter"
+  slot "Button"
+  item "Push"
+  item "SMS"
+  item "SMS is reserved for critical alerts."
+  item "Save preferences"
+  item "Sales"
+  item "New order"
+  text "Every successful checkout."
+  text "Payout sent"
+  text "When a payout leaves your balance."
+  text "Refund requested"
+  text "A customer asks for their money back."
+  text "Team"
+  text "Member joined"
+  text "Someone accepts a workspace invite."
+  text "Mentions & comments"
+  text "Replies and @mentions on your work."
+  test "use" {
+    expect visible "Notification preferences"
   }
 }

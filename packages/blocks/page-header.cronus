@@ -1,13 +1,27 @@
 ## Block PageHeader
 ## source: registry/page-header.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Breadcrumb, Badge, Button
+## icons: BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage, Download, Plus
 
 component PageHeaderBlock(label: text) layout:stack style:page-header {
-  title "Page Header"
-  subtitle "Page Header"
-  action "Page Header"
-  test "use block" {
-    click "Page Header"
+  meta "stack"
+  label "PageHeader"
+  title "Projects"
+  subtitle "Settings"
+  slot "Breadcrumb"
+  slot "Badge"
+  slot "Button"
+  item "Settings"
+  item "Project settings"
+  item "Active"
+  item "Export"
+  item "New deploy"
+  text "Aurora"
+  text "Manage the configuration, members, and billing for the Aurora workspace."
+  text "success"
+  test "use" {
+    expect visible "Projects"
   }
 }

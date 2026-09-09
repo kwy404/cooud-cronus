@@ -1,14 +1,25 @@
 ## Block Dialog
 ## source: registry/dialog.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: DialogPrimitive, DialogPortal, DialogOverlay
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component DialogBlock(label: text) layout:stack style:dialog {
-  title "Dialog"
-  subtitle "Dialog"
-  action "Dialog"
-  test "use block" {
+  meta "stack"
+  label "Dialog"
+  title "DialogContent"
+  subtitle "DialogHeader"
+  slot "DialogPrimitive"
+  slot "DialogPortal"
+  slot "DialogOverlay"
+  action "click"
+  text "Close"
+  text "DialogFooter"
+  text "DialogTitle"
+  text "DialogDescription"
+  test "uses Dialog" {
     click "Dialog"
   }
 }

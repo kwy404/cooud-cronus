@@ -1,13 +1,41 @@
 ## Block AuditLog
 ## source: registry/audit-log.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Card, CardHeader, CardTitle, CardDescription, CardAction, Button, CardContent, Separator, Avatar, Badge, CardFooter
+## icons: Download, AvatarFallback
 
 component AuditLogBlock(label: text) layout:stack style:audit-log {
-  title "Audit Log"
-  subtitle "Audit Log"
-  action "Audit Log"
-  test "use block" {
-    click "Audit Log"
+  meta "stack"
+  label "AuditLog"
+  title "Audit log"
+  subtitle "Security-relevant activity across the Meridian workspace."
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardDescription"
+  slot "CardAction"
+  slot "Button"
+  slot "CardContent"
+  slot "Separator"
+  slot "Avatar"
+  slot "Badge"
+  slot "CardFooter"
+  item "Export"
+  item "View full log"
+  item "Previous key revoked immediately"
+  item "IP 203.0.113.42 · London, United Kingdom"
+  text "Showing the last 3 days · 8 events"
+  text "Viewer → Admin · Settings → Members"
+  text "Yesterday · July 12, 2026"
+  text "Grace period ends July 19"
+  text "Endpoint had been failing for 14 days"
+  text "Invited by Ingrid Solberg"
+  text "Critical"
+  text "Warning"
+  text "Info"
+  text "warning"
+  test "use" {
+    expect visible "Audit log"
   }
 }

@@ -1,14 +1,35 @@
 ## Block AppShellChrome
 ## source: registry/app-shell-chrome.json
 ## type: registry:block
-## behavior: card
+## layout: app-shell
+## compose: Sidebar, WorkspaceSwitcher, Avatar, InviteDialog, Button, AppShell
+## icons: SidebarHeader, Hexagon, SidebarSeparator, SidebarContent, SidebarGroup, SidebarGroupLabel, SidebarGroupContent, SidebarMenu
 ## registryDependencies: demo-saas
 
 component AppShellChromeBlock(label: text) layout:stack style:app-shell-chrome {
-  title "App Shell Chrome"
-  subtitle "App Shell Chrome"
-  action "App Shell Chrome"
-  test "use block" {
-    click "App Shell Chrome"
+  meta "app-shell"
+  label "AppShellChrome"
+  title "Dashboard"
+  subtitle "Analytics"
+  slot "Sidebar"
+  slot "WorkspaceSwitcher"
+  slot "Avatar"
+  slot "InviteDialog"
+  slot "Button"
+  slot "AppShell"
+  item "Invite"
+  item "Dashboard"
+  item "Analytics"
+  item "Team"
+  item "Billing"
+  item "Settings"
+  text "Cronus"
+  text "Menu"
+  text "Northwind"
+  text "Acme"
+  text "cronus"
+  text "none"
+  test "use" {
+    expect visible "Cronus"
   }
 }

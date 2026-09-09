@@ -1,14 +1,26 @@
 ## Block Drawer
 ## source: registry/drawer.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: DrawerPrimitive, DrawerPortal, DrawerOverlay
 ## registryDependencies: cn
 
 component DrawerBlock(label: text) layout:stack style:drawer {
-  title "Drawer"
-  subtitle "Drawer"
-  action "Drawer"
-  test "use block" {
+  meta "stack"
+  label "Drawer"
+  title "DrawerOverlay"
+  subtitle "DrawerContent"
+  slot "DrawerPrimitive"
+  slot "DrawerPortal"
+  slot "DrawerOverlay"
+  action "click"
+  text "vaul"
+  text "drawer"
+  text "DrawerHeader"
+  text "DrawerFooter"
+  text "DrawerTitle"
+  text "DrawerDescription"
+  test "uses Drawer" {
     click "Drawer"
   }
 }

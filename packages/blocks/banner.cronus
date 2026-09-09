@@ -1,14 +1,26 @@
 ## Block Banner
 ## source: registry/banner.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Button
+## icons: HTMLAttributes, HTMLElement, AnimatePresence
 ## registryDependencies: button, cn
 
 component BannerBlock(label: text) layout:stack style:banner {
-  title "Banner"
-  subtitle "Banner"
-  action "Banner"
-  test "use block" {
+  meta "stack"
+  label "Banner"
+  title "motion/react"
+  subtitle "Top Banner"
+  slot "Button"
+  action "click"
+  text "centre"
+  text "center"
+  text "Announcement"
+  text "auto"
+  text "brand"
+  text "banner"
+  text "Dismiss"
+  test "uses Banner" {
     click "Banner"
   }
 }

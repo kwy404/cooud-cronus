@@ -1,16 +1,20 @@
 ## Block SankeyChart
 ## source: registry/sankey-chart.json
 ## type: registry:ui
-## behavior: data
+## layout: stack
+## compose: Tooltip
+## icons: HTMLDivElement, ChartContainer, Sankey
 ## registryDependencies: chart, cn
 
 component SankeyChartBlock(label: text) layout:stack style:sankey-chart {
-  title "Sankey Chart"
-  subtitle "Sankey Chart"
-  columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads SankeyChart" {
-    expect visible "Sankey Chart"
+  meta "stack"
+  label "SankeyChart"
+  title "recharts"
+  subtitle "recharts"
+  slot "Tooltip"
+  action "click"
+  text "Flow"
+  test "uses SankeyChart" {
+    click "SankeyChart"
   }
 }

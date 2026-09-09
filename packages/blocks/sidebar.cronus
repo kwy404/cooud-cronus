@@ -1,14 +1,36 @@
 ## Block Sidebar
 ## source: registry/sidebar.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Sheet, SheetContent, SheetTitle, SheetDescription, Button, ScrollArea, Separator, Tooltip
+## icons: SidebarContextValue, SidebarProvider, HTMLDivElement, SidebarContext, HTMLButtonElement, SidebarTriggerIcon, Comp, HTMLUListElement
 ## registryDependencies: button, cn, scroll-area, separator, sheet, tooltip
 
 component SidebarBlock(label: text) layout:stack style:sidebar {
-  title "Sidebar"
-  subtitle "Sidebar"
-  action "Sidebar"
-  test "use block" {
+  meta "stack"
+  label "Sidebar"
+  title "Mobile navigation menu."
+  subtitle "Toggle sidebar"
+  slot "Sheet"
+  slot "SheetContent"
+  slot "SheetTitle"
+  slot "SheetDescription"
+  slot "Button"
+  slot "ScrollArea"
+  slot "Separator"
+  slot "Tooltip"
+  action "click"
+  text "change"
+  text "INPUT"
+  text "TEXTAREA"
+  text "SELECT"
+  text "keydown"
+  text "expanded"
+  text "collapsed"
+  text "SidebarProvider"
+  text "left"
+  text "right"
+  test "uses Sidebar" {
     click "Sidebar"
   }
 }

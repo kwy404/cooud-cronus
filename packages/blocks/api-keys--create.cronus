@@ -1,13 +1,40 @@
 ## Block ApiKeysCreate
 ## source: registry/api-keys--create.json
 ## type: registry:block
-## behavior: card
+## layout: form-card
+## compose: Card, CardHeader, CardTitle, CardDescription, CardContent, Label, Input, Checkbox, Select, SelectTrigger, SelectValue, SelectContent, SelectItem, CardFooter, Button, CopyButton, Alert, AlertTitle, AlertDescription
+## icons: KeyRound, Check, TriangleAlert
 
 component ApiKeysCreateBlock(label: text) layout:stack style:api-keys--create {
-  title "Api Keys Create"
-  subtitle "Create"
-  action "Api Keys Create"
-  test "use block" {
-    click "Api Keys Create"
+  meta "form-card"
+  label "ApiKeysCreate"
+  title "Create API key"
+  subtitle "Scope the key to the smallest set of permissions."
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardDescription"
+  slot "CardContent"
+  slot "Label"
+  slot "Input"
+  slot "Checkbox"
+  slot "Select"
+  slot "SelectTrigger"
+  slot "SelectValue"
+  slot "SelectContent"
+  field "Name"
+  action "Save"
+  text "Key name"
+  text "Scopes"
+  text "Expires"
+  text "In 30 days"
+  text "In 90 days"
+  text "In 1 year"
+  text "Never expires"
+  text "Cancel"
+  text "Generate key"
+  text "Key generated"
+  test "save" {
+    click "Save"
   }
 }

@@ -1,19 +1,38 @@
 ## Block SignupSplitProof
 ## source: registry/signup--split-proof.json
 ## type: registry:block
-## behavior: auth
+## layout: form-card
+## compose: Label, Input, Checkbox, Button, Rating, Avatar
+## icons: AvatarFallback
 ## registryDependencies: auth-adapter, demo-saas
 
 component SignupSplitProofBlock(label: text) layout:stack style:signup--split-proof {
-  title "Signup Split Proof"
-  subtitle "SplitProof"
+  meta "form-card"
+  label "SignupSplitProof"
+  title "Create your account"
+  subtitle "Free for 14 days. No credit card needed."
+  slot "Label"
+  slot "Input"
+  slot "Checkbox"
+  slot "Button"
+  slot "Rating"
+  slot "Avatar"
   state pending: boolean = false
   field "Email"
   field "Password"
   action "Sign in"
-  link "Forgot password?" -> "/forgot-password"
-  test "submit auth" {
+  text "Already have an account?"
+  text "Full name"
+  text "I agree to the Terms of Service."
+  text "Join 12,000+ creators selling with Cronus"
+  text "Courses, communities, and digital products — one storefront."
+  text "across 2,300+ reviews"
+  text "Northwind"
+  text "Framelane"
+  text "Luma Labs"
+  text "Postbox"
+  test "submit" {
     fill email "you@company.com"
-    click "Sign in"
+    click "Submit"
   }
 }

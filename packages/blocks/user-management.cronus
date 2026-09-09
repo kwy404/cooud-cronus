@@ -1,13 +1,43 @@
 ## Block UserManagement
 ## source: registry/user-management.json
 ## type: registry:block
-## behavior: card
+## layout: form-card
+## compose: Card, CardHeader, CardTitle, CardDescription, CardAction, Button, CardContent, Input, Select, SelectTrigger, SelectValue, SelectContent, SelectItem, Table, Avatar, Badge, DropdownMenu, Separator, CardFooter, Pagination
+## icons: UserPlus, Search, TableHeader, TableRow, TableHead, TableBody, TableCell, AvatarFallback
 
 component UserManagementBlock(label: text) layout:stack style:user-management {
-  title "User Management"
-  subtitle "User Management"
-  action "User Management"
-  test "use block" {
-    click "User Management"
+  meta "form-card"
+  label "UserManagement"
+  title "Actions for"
+  subtitle "Team members"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardDescription"
+  slot "CardAction"
+  slot "Button"
+  slot "CardContent"
+  slot "Input"
+  slot "Select"
+  slot "SelectTrigger"
+  slot "SelectValue"
+  slot "SelectContent"
+  item "Invite member"
+  item "All roles"
+  item "Owner"
+  item "Admin"
+  item "Editor"
+  text "Manage roles and access for the Meridian workspace."
+  text "Viewer"
+  text "Member"
+  text "Role"
+  text "Status"
+  text "Last active"
+  text "View profile"
+  text "Change role"
+  text "Reset password"
+  text "Suspend account"
+  test "use" {
+    expect visible "Actions for"
   }
 }

@@ -1,14 +1,24 @@
 ## Block SplitButton
 ## source: registry/split-button.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Button, Spinner, DropdownMenu
+## icons: VariantProps, HTMLAttributes, HTMLDivElement, HTMLButtonElement, DropdownMenuTrigger, ChevronDown, DropdownMenuContent, DropdownMenuItem
 ## registryDependencies: button, cn, dropdown-menu, spinner
 
 component SplitButtonBlock(label: text) layout:stack style:split-button {
-  title "Split Button"
-  subtitle "Split Button"
-  action "Split Button"
-  test "use block" {
-    click "Split Button"
+  meta "stack"
+  label "SplitButton"
+  title "SplitButton"
+  subtitle "start"
+  slot "Button"
+  slot "Spinner"
+  slot "DropdownMenu"
+  action "click"
+  text "variant"
+  text "center"
+  text "end"
+  test "uses SplitButton" {
+    click "SplitButton"
   }
 }

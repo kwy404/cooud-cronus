@@ -1,14 +1,18 @@
 ## Block Separator
 ## source: registry/separator.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: SeparatorPrimitive
 ## registryDependencies: cn
 
 component SeparatorBlock(label: text) layout:stack style:separator {
-  title "Separator"
-  subtitle "Separator"
-  action "Separator"
-  test "use block" {
+  meta "stack"
+  label "Separator"
+  title "horizontal"
+  subtitle "separator"
+  action "click"
+  test "uses Separator" {
     click "Separator"
   }
 }

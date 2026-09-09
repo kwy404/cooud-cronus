@@ -1,14 +1,18 @@
 ## Block FlickeringGrid
 ## source: registry/flickering-grid.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component FlickeringGridBlock(label: text) layout:stack style:flickering-grid {
-  title "Flickering Grid"
-  subtitle "Flickering Grid"
-  action "Flickering Grid"
-  test "use block" {
-    click "Flickering Grid"
+  meta "stack"
+  label "FlickeringGrid"
+  title "FlickeringGrid"
+  subtitle "FlickeringGrid"
+  action "click"
+  test "uses FlickeringGrid" {
+    click "FlickeringGrid"
   }
 }

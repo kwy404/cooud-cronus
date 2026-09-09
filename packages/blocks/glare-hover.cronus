@@ -1,14 +1,18 @@
 ## Block GlareHover
 ## source: registry/glare-hover.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component GlareHoverBlock(label: text) layout:stack style:glare-hover {
-  title "Glare Hover"
-  subtitle "Glare Hover"
-  action "Glare Hover"
-  test "use block" {
-    click "Glare Hover"
+  meta "stack"
+  label "GlareHover"
+  title "GlareHover"
+  subtitle "GlareHover"
+  action "click"
+  test "uses GlareHover" {
+    click "GlareHover"
   }
 }

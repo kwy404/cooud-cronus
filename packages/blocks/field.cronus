@@ -1,14 +1,21 @@
 ## Block Field
 ## source: registry/field.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement, HTMLLabelElement, HTMLParagraphElement
 ## registryDependencies: cn
 
 component FieldBlock(label: text) layout:stack style:field {
-  title "Field"
-  subtitle "Field"
-  action "Field"
-  test "use block" {
+  meta "stack"
+  label "Field"
+  title "FieldLabel"
+  subtitle "FieldDescription"
+  action "click"
+  text "field"
+  text "alert"
+  text "FieldError"
+  test "uses Field" {
     click "Field"
   }
 }

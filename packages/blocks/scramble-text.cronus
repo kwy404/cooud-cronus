@@ -1,14 +1,24 @@
 ## Block ScrambleText
 ## source: registry/scramble-text.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLAttributes, HTMLSpanElement
 ## registryDependencies: cn
 
 component ScrambleTextBlock(label: text) layout:stack style:scramble-text {
-  title "Scramble Text"
-  subtitle "Scramble Text"
-  action "Scramble Text"
-  test "use block" {
-    click "Scramble Text"
+  meta "stack"
+  label "ScrambleText"
+  title "children"
+  subtitle "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+  action "click"
+  text "respect"
+  text "always"
+  text "never"
+  text "Segmenter"
+  text "grapheme"
+  text "decryption"
+  test "uses ScrambleText" {
+    click "ScrambleText"
   }
 }

@@ -1,14 +1,28 @@
 ## Block Pagination
 ## source: registry/pagination.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLElement, HTMLUListElement, HTMLLIElement, Parameters, HTMLAnchorElement, PaginationLink, ChevronLeft, ChevronRight
 ## registryDependencies: button, cn
 
 component PaginationBlock(label: text) layout:stack style:pagination {
-  title "Pagination"
-  subtitle "Pagination"
-  action "Pagination"
-  test "use block" {
+  meta "stack"
+  label "Pagination"
+  title "Previous"
+  subtitle "More pages"
+  action "click"
+  text "Next"
+  text "pagination"
+  text "PaginationContent"
+  text "PaginationItem"
+  text "size"
+  text "PaginationLink"
+  text "Go to previous page"
+  text "PaginationPrevious"
+  text "Go to next page"
+  text "PaginationNext"
+  test "uses Pagination" {
     click "Pagination"
   }
 }

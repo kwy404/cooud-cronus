@@ -1,14 +1,24 @@
 ## Block Lightbox
 ## source: registry/lightbox.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Dialog, DialogContent, DialogClose
+## icons: HTMLDivElement, ChevronLeft, ChevronRight
 ## registryDependencies: cn, dialog
 
 component LightboxBlock(label: text) layout:stack style:lightbox {
-  title "Lightbox"
-  subtitle "Lightbox"
-  action "Lightbox"
-  test "use block" {
+  meta "stack"
+  label "Lightbox"
+  title "ArrowLeft"
+  subtitle "ArrowRight"
+  slot "Dialog"
+  slot "DialogContent"
+  slot "DialogClose"
+  action "click"
+  text "keydown"
+  text "Image gallery"
+  text "lightbox"
+  test "uses Lightbox" {
     click "Lightbox"
   }
 }

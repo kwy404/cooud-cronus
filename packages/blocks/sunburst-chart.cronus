@@ -1,16 +1,19 @@
 ## Block SunburstChart
 ## source: registry/sunburst-chart.json
 ## type: registry:ui
-## behavior: data
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component SunburstChartBlock(label: text) layout:stack style:sunburst-chart {
-  title "Sunburst Chart"
-  subtitle "Sunburst Chart"
-  columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads SunburstChart" {
-    expect visible "Sunburst Chart"
+  meta "stack"
+  label "SunburstChart"
+  title "Sunburst chart"
+  subtitle "Sunburst chart"
+  action "click"
+  text "img"
+  test "uses SunburstChart" {
+    click "SunburstChart"
   }
 }

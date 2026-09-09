@@ -1,14 +1,29 @@
 ## Block Scheduler
 ## source: registry/scheduler.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Button
+## icons: SchedulerEventColor, HTMLAttributes, HTMLDivElement, Date, ChevronLeft, ChevronRight
 ## registryDependencies: button, cn
 
 component SchedulerBlock(label: text) layout:stack style:scheduler {
-  title "Scheduler"
-  subtitle "Scheduler"
-  action "Scheduler"
-  test "use block" {
+  meta "stack"
+  label "Scheduler"
+  title "onChange"
+  subtitle "defaultValue"
+  slot "Button"
+  action "click"
+  text "Today"
+  text "success"
+  text "warning"
+  text "error"
+  text "info"
+  text "today"
+  text "Event calendar"
+  text "yyyy-MM-dd"
+  text "EEE"
+  text "scheduler"
+  test "uses Scheduler" {
     click "Scheduler"
   }
 }

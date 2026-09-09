@@ -1,14 +1,26 @@
 ## Block Breadcrumb
 ## source: registry/breadcrumb.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLElement, HTMLOListElement, HTMLLIElement, HTMLAnchorElement, Comp, HTMLSpanElement, ChevronRight, MoreHorizontal
 ## registryDependencies: cn
 
 component BreadcrumbBlock(label: text) layout:stack style:breadcrumb {
-  title "Breadcrumb"
+  meta "stack"
+  label "Breadcrumb"
+  title "breadcrumb"
   subtitle "Breadcrumb"
-  action "Breadcrumb"
-  test "use block" {
+  action "click"
+  text "More"
+  text "BreadcrumbList"
+  text "BreadcrumbItem"
+  text "page"
+  text "BreadcrumbPage"
+  text "presentation"
+  text "BreadcrumbSeparator"
+  text "BreadcrumbEllipsis"
+  test "uses Breadcrumb" {
     click "Breadcrumb"
   }
 }

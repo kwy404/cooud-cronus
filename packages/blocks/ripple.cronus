@@ -1,14 +1,18 @@
 ## Block Ripple
 ## source: registry/ripple.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component RippleBlock(label: text) layout:stack style:ripple {
-  title "Ripple"
-  subtitle "Ripple"
-  action "Ripple"
-  test "use block" {
+  meta "stack"
+  label "Ripple"
+  title "ripple"
+  subtitle "ripple"
+  action "click"
+  test "uses Ripple" {
     click "Ripple"
   }
 }

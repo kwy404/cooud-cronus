@@ -1,15 +1,41 @@
 ## Block CheckoutMultiStep
 ## source: registry/checkout--multi-step.json
 ## type: registry:block
-## behavior: commerce
+## layout: checkout-split
+## compose: Card, CardHeader, CardTitle, Badge, CardContent, Stepper, Separator, Label, Input, Checkbox, CardFooter, Button
+## icons: Lock, StepperList, StepperItem, StepperIndicator, StepperTitle, StepperDescription, StepperSeparator, CreditCard
 
 component CheckoutMultiStepBlock(label: text) layout:stack style:checkout--multi-step {
-  title "Checkout Multi Step"
-  subtitle "MultiStep"
-  field "Card"
-  value "$0"
+  meta "checkout-split"
+  label "CheckoutMultiStep"
+  title "Secure checkout"
+  subtitle "Step 2 of 3"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "Badge"
+  slot "CardContent"
+  slot "Stepper"
+  slot "Separator"
+  slot "Label"
+  slot "Input"
+  slot "Checkbox"
+  slot "CardFooter"
+  slot "Button"
+  field "Card number"
+  field "MM / YY"
   action "Pay"
-  test "checkout" {
+  text "Shipping"
+  text "Confirmed"
+  text "Payment"
+  text "In progress"
+  text "Review"
+  text "Up next"
+  text "Ships to"
+  text "Alex Morgan · 2482 Fulton St, San Francisco"
+  text "Edit"
+  text "Expiry"
+  test "pay" {
     click "Pay"
   }
 }

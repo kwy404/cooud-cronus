@@ -1,19 +1,20 @@
 ## Block InputOtp
 ## source: registry/input-otp.json
 ## type: registry:ui
-## behavior: auth
+## layout: stack
+## compose: native-sections
+## icons: OTPInput, HTMLDivElement, Minus
 ## registryDependencies: cn
 
 component InputOtpBlock(label: text) layout:stack style:input-otp {
-  title "Input Otp"
-  subtitle "Input Otp"
-  state pending: boolean = false
-  field "Email"
-  field "Password"
-  action "Sign in"
-  link "Forgot password?" -> "/forgot-password"
-  test "submit auth" {
-    fill email "you@company.com"
-    click "Sign in"
+  meta "stack"
+  label "InputOtp"
+  title "One-time passcode"
+  subtitle "InputOTP"
+  action "click"
+  text "InputOTPGroup"
+  text "InputOTPSeparator"
+  test "uses InputOtp" {
+    click "InputOtp"
   }
 }

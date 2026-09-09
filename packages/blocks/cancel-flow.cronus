@@ -1,13 +1,41 @@
 ## Block CancelFlow
 ## source: registry/cancel-flow.json
 ## type: registry:block
-## behavior: card
+## layout: stack
+## compose: Card, CardHeader, CardTitle, CardContent, RadioGroup, Label, Banner, Button, Separator, CardFooter
+## icons: RadioGroupItem, Sparkles
 
 component CancelFlowBlock(label: text) layout:stack style:cancel-flow {
-  title "Cancel Flow"
-  subtitle "Cancel Flow"
-  action "Cancel Flow"
-  test "use block" {
-    click "Cancel Flow"
+  meta "stack"
+  label "CancelFlow"
+  title "We're sorry to see you go"
+  subtitle "Apply offer"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardContent"
+  slot "RadioGroup"
+  slot "Label"
+  slot "Banner"
+  slot "Button"
+  slot "Separator"
+  slot "CardFooter"
+  item "Apply offer"
+  item "Cancel anyway"
+  item "Keep my subscription"
+  item "Too expensive"
+  item "Missing features I need"
+  item "Switching to another tool"
+  text "Help us improve — why are you cancelling?"
+  text "Not using it enough"
+  text "Other"
+  text "Cancel subscription"
+  text "Reason for cancelling"
+  text "success"
+  text "start"
+  text "Stay and get 30% off for the next 3 months"
+  text "Apply the discount and keep everything you have today."
+  test "use" {
+    expect visible "We're sorry to see you go"
   }
 }

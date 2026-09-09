@@ -1,14 +1,30 @@
 ## Block NotificationCenter
 ## source: registry/notification-center.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Avatar, Popover, Button, Badge, ScrollArea
+## icons: HTMLAttributes, HTMLButtonElement, AvatarImage, AvatarFallback, HTMLDivElement, BellOff, NotificationRow, ComponentPropsWithoutRef
 ## registryDependencies: avatar, badge, button, cn, popover, scroll-area
 
 component NotificationCenterBlock(label: text) layout:stack style:notification-center {
-  title "Notification Center"
-  subtitle "Notification Center"
-  action "Notification Center"
-  test "use block" {
-    click "Notification Center"
+  meta "stack"
+  label "NotificationCenter"
+  title "You're all caught up"
+  subtitle "Mark all read"
+  slot "Avatar"
+  slot "Popover"
+  slot "Button"
+  slot "Badge"
+  slot "ScrollArea"
+  action "click"
+  text "Notifications"
+  text "2m ago"
+  text "NotificationRow"
+  text "onSelect"
+  text "NotificationList"
+  text "View all"
+  text "end"
+  test "uses NotificationCenter" {
+    click "NotificationCenter"
   }
 }

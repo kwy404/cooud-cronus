@@ -1,14 +1,19 @@
 ## Block Frame
 ## source: registry/frame.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component FrameBlock(label: text) layout:stack style:frame {
-  title "Frame"
-  subtitle "Frame"
-  action "Frame"
-  test "use block" {
+  meta "stack"
+  label "Frame"
+  title "browser"
+  subtitle "window"
+  action "click"
+  text "frame"
+  test "uses Frame" {
     click "Frame"
   }
 }

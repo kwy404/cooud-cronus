@@ -1,14 +1,26 @@
 ## Block Select
 ## source: registry/select.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: SelectPrimitive, SelectScrollUpButton, SelectScrollDownButton
+## icons: ChevronDown, ChevronUp, Check
 ## registryDependencies: cn
 
 component SelectBlock(label: text) layout:stack style:select {
-  title "Select"
-  subtitle "Select"
-  action "Select"
-  test "use block" {
+  meta "stack"
+  label "Select"
+  title "SelectTrigger"
+  subtitle "SelectScrollUpButton"
+  slot "SelectPrimitive"
+  slot "SelectScrollUpButton"
+  slot "SelectScrollDownButton"
+  action "click"
+  text "popper"
+  text "SelectContent"
+  text "SelectLabel"
+  text "SelectItem"
+  text "SelectSeparator"
+  test "uses Select" {
     click "Select"
   }
 }

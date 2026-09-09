@@ -1,14 +1,19 @@
 ## Block Confetti
 ## source: registry/confetti.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement, HTMLCanvasElement, Particle
 ## registryDependencies: cn
 
 component ConfettiBlock(label: text) layout:stack style:confetti {
-  title "Confetti"
+  meta "stack"
+  label "Confetti"
+  title "confetti"
   subtitle "Confetti"
-  action "Confetti"
-  test "use block" {
+  action "click"
+  text "resize"
+  test "uses Confetti" {
     click "Confetti"
   }
 }

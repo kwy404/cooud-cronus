@@ -1,14 +1,18 @@
 ## Block Magnetic
 ## source: registry/magnetic.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement, MagneticState
 ## registryDependencies: cn
 
 component MagneticBlock(label: text) layout:stack style:magnetic {
-  title "Magnetic"
+  meta "stack"
+  label "Magnetic"
+  title "magnetic"
   subtitle "Magnetic"
-  action "Magnetic"
-  test "use block" {
+  action "click"
+  test "uses Magnetic" {
     click "Magnetic"
   }
 }

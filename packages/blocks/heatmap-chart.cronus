@@ -1,16 +1,18 @@
 ## Block HeatmapChart
 ## source: registry/heatmap-chart.json
 ## type: registry:ui
-## behavior: data
+## layout: stack
+## compose: Heatmap
 ## registryDependencies: cn, heatmap
 
 component HeatmapChartBlock(label: text) layout:stack style:heatmap-chart {
-  title "Heatmap Chart"
-  subtitle "Heatmap Chart"
-  columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads HeatmapChart" {
-    expect visible "Heatmap Chart"
+  meta "stack"
+  label "HeatmapChart"
+  title "HeatmapChart"
+  subtitle "HeatmapChart"
+  slot "Heatmap"
+  action "click"
+  test "uses HeatmapChart" {
+    click "HeatmapChart"
   }
 }

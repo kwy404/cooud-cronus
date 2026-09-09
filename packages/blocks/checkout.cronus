@@ -1,16 +1,41 @@
 ## Block Checkout
 ## source: registry/checkout.json
 ## type: registry:block
-## behavior: commerce
+## layout: checkout-split
+## compose: Card, CardHeader, CardTitle, CardContent, Separator, Badge, CardFooter, Label, Input, Button
+## icons: Lock, CreditCard, ShieldCheck
 ## registryDependencies: demo-store
 
 component CheckoutBlock(label: text) layout:stack style:checkout {
-  title "Checkout"
-  subtitle "Checkout"
-  field "Card"
-  value "$0"
+  meta "checkout-split"
+  label "Checkout"
+  title "Order summary"
+  subtitle "Cronus Studio · digital products"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardContent"
+  slot "Separator"
+  slot "Badge"
+  slot "CardFooter"
+  slot "Label"
+  slot "Input"
+  slot "Button"
+  field "Card number"
+  field "you@email.com"
+  field "MM / YY"
   action "Pay"
-  test "checkout" {
+  text "Subtotal"
+  text "Discount"
+  text "LAUNCH20"
+  text "Total due"
+  text "One-time payment · billed in USD"
+  text "Payment details"
+  text "Secure"
+  text "Expiry"
+  text "CVC"
+  text "Name on card"
+  test "pay" {
     click "Pay"
   }
 }

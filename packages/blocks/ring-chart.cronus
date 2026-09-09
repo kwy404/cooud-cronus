@@ -1,16 +1,24 @@
 ## Block RingChart
 ## source: registry/ring-chart.json
 ## type: registry:ui
-## behavior: data
+## layout: stack
+## compose: PieChart, Label
+## icons: HTMLDivElement, ChartContainer, ChartTooltip, ChartTooltipContent, Pie, Cell
 ## registryDependencies: chart, cn
 
 component RingChartBlock(label: text) layout:stack style:ring-chart {
-  title "Ring Chart"
-  subtitle "Ring Chart"
-  columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads RingChart" {
-    expect visible "Ring Chart"
+  meta "stack"
+  label "RingChart"
+  title "recharts"
+  subtitle "en-US"
+  slot "PieChart"
+  slot "Label"
+  action "click"
+  text "compact"
+  text "Total"
+  text "value"
+  text "key"
+  test "uses RingChart" {
+    click "RingChart"
   }
 }

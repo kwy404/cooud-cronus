@@ -1,14 +1,31 @@
 ## Block Autocomplete
 ## source: registry/autocomplete.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Popover, Spinner, Skeleton
+## icons: HTMLInputElement, AutocompleteOption, HTMLDivElement, HTMLElement, PopoverAnchor, PopoverContent, CommandPrimitive, CommandList
 ## registryDependencies: cn, command, popover, skeleton, spinner
 
 component AutocompleteBlock(label: text) layout:stack style:autocomplete {
-  title "Autocomplete"
-  subtitle "Autocomplete"
-  action "Autocomplete"
-  test "use block" {
+  meta "stack"
+  label "Autocomplete"
+  title "defaultValue"
+  subtitle "onChange"
+  slot "Popover"
+  slot "Spinner"
+  slot "Skeleton"
+  action "click"
+  text "Promise"
+  text "cmdk"
+  text "value"
+  text "onSelect"
+  text "role"
+  text "Type to search…"
+  text "No results found."
+  text "keydown"
+  text "ArrowDown"
+  text "ArrowUp"
+  test "uses Autocomplete" {
     click "Autocomplete"
   }
 }

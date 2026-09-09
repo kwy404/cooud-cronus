@@ -1,15 +1,31 @@
 ## Block Footer
 ## source: registry/footer.json
 ## type: registry:block
-## behavior: marketing
+## layout: site-chrome
+## compose: Button, Label, Input, Separator
+## icons: Hexagon, Github, Twitter, Linkedin, Send
 
 component FooterBlock(label: text) layout:stack style:footer {
-  title "Footer"
-  subtitle "Footer"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "site-chrome"
+  label "Footer"
+  title "Stay in the loop"
+  subtitle "Product updates and new blocks, a few times a month."
+  slot "Button"
+  slot "Label"
+  slot "Input"
+  slot "Separator"
+  button "Subscribe"
+  text "Cronus"
+  text "Email address"
+  text "© 2026 Cronus. All rights reserved."
+  text "Privacy"
+  text "Terms"
+  text "Status"
+  text "Features"
+  text "Pricing"
+  text "Blocks"
+  text "Changelog"
   test "cta" {
-    click "Get started"
+    click "Subscribe"
   }
 }

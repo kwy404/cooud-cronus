@@ -1,14 +1,20 @@
 ## Block NavigationMenu
 ## source: registry/navigation-menu.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: NavigationMenuPrimitive, NavigationMenuViewport, ChevronDown
 ## registryDependencies: cn
 
 component NavigationMenuBlock(label: text) layout:stack style:navigation-menu {
-  title "Navigation Menu"
-  subtitle "Navigation Menu"
-  action "Navigation Menu"
-  test "use block" {
-    click "Navigation Menu"
+  meta "stack"
+  label "NavigationMenu"
+  title "NavigationMenu"
+  subtitle "NavigationMenuList"
+  action "click"
+  text "NavigationMenuItem"
+  text "NavigationMenuContent"
+  test "uses NavigationMenu" {
+    click "NavigationMenu"
   }
 }

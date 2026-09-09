@@ -1,14 +1,29 @@
 ## Block ConfirmationDialog
 ## source: registry/confirmation-dialog.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogCancel, Spinner
+## icons: ComponentPropsWithoutRef, TriangleAlert, CircleAlert
 ## registryDependencies: alert-dialog, button, cn, spinner
 
 component ConfirmationDialogBlock(label: text) layout:stack style:confirmation-dialog {
-  title "Confirmation Dialog"
-  subtitle "Confirmation Dialog"
-  action "Confirmation Dialog"
-  test "use block" {
-    click "Confirmation Dialog"
+  meta "stack"
+  label "ConfirmationDialog"
+  title "void | Promise"
+  subtitle "Something went wrong. Please try again."
+  slot "AlertDialog"
+  slot "AlertDialogTrigger"
+  slot "AlertDialogContent"
+  slot "AlertDialogHeader"
+  slot "AlertDialogTitle"
+  slot "AlertDialogDescription"
+  slot "AlertDialogFooter"
+  slot "AlertDialogCancel"
+  slot "Spinner"
+  action "click"
+  text "children"
+  text "alert"
+  test "uses ConfirmationDialog" {
+    click "ConfirmationDialog"
   }
 }

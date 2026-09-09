@@ -1,14 +1,18 @@
 ## Block Highlighter
 ## source: registry/highlighter.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLSpanElement
 ## registryDependencies: cn
 
 component HighlighterBlock(label: text) layout:stack style:highlighter {
-  title "Highlighter"
-  subtitle "Highlighter"
-  action "Highlighter"
-  test "use block" {
+  meta "stack"
+  label "Highlighter"
+  title "we highlight the * important bit"
+  subtitle "highlighter"
+  action "click"
+  test "uses Highlighter" {
     click "Highlighter"
   }
 }

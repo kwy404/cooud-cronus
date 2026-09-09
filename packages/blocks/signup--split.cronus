@@ -1,19 +1,37 @@
 ## Block SignupSplit
 ## source: registry/signup--split.json
 ## type: registry:block
-## behavior: auth
+## layout: form-card
+## compose: Label, Input, Checkbox, Button, Avatar
+## icons: ChartColumnIncreasing, Quote, AvatarFallback
 ## registryDependencies: auth-adapter
 
 component SignupSplitBlock(label: text) layout:stack style:signup--split {
-  title "Signup Split"
-  subtitle "Split"
+  meta "form-card"
+  label "SignupSplit"
+  title "Join the workspace"
+  subtitle "Must be at least 8 characters."
+  slot "Label"
+  slot "Input"
+  slot "Checkbox"
+  slot "Button"
+  slot "Avatar"
   state pending: boolean = false
   field "Email"
   field "Password"
-  action "Sign in"
-  link "Forgot password?" -> "/forgot-password"
-  test "submit auth" {
+  action "Create account"
+  text "Already have an account?"
+  text "Full name"
+  text "Sign in"
+  text "Cronus"
+  text "“Cronus replaced four tools on day one — and our checkout conversion is up 23%.”"
+  text "Dana Reyes"
+  text "Head of Growth, Northwind Labs"
+  text "name"
+  text "Something went wrong."
+  text "Create your account"
+  test "submit" {
     fill email "you@company.com"
-    click "Sign in"
+    click "Submit"
   }
 }

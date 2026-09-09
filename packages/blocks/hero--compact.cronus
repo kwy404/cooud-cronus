@@ -1,15 +1,23 @@
 ## Block HeroCompact
 ## source: registry/hero--compact.json
 ## type: registry:block
-## behavior: marketing
+## layout: hero-center
+## compose: Badge, Button
+## icons: ArrowRight, Check
 
 component HeroCompactBlock(label: text) layout:stack style:hero--compact {
-  title "Hero Compact"
-  subtitle "Compact"
-  action "Get started"
-  action "Learn more"
-  cta "Get started"
+  meta "hero-center"
+  label "HeroCompact"
+  title "Copy polished product sections into any React app."
+  subtitle "Blocks inherit your theme, radius, color scale, and typography automatically."
+  slot "Badge"
+  slot "Button"
+  cta "New registry"
+  text "Browse blocks"
+  text "Read docs"
+  text "Themeable"
+  text "Composable"
   test "cta" {
-    click "Get started"
+    click "New registry"
   }
 }

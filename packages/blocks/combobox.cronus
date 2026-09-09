@@ -1,14 +1,26 @@
 ## Block Combobox
 ## source: registry/combobox.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Popover, Button, Command
+## icons: HTMLButtonElement, PopoverTrigger, ChevronsUpDown, PopoverContent, CommandInput, CommandList, CommandEmpty, CommandItem
 ## registryDependencies: button, cn, command, popover
 
 component ComboboxBlock(label: text) layout:stack style:combobox {
-  title "Combobox"
-  subtitle "Combobox"
-  action "Combobox"
-  test "use block" {
+  meta "stack"
+  label "Combobox"
+  title "Select an option…"
+  subtitle "No results found."
+  slot "Popover"
+  slot "Button"
+  slot "Command"
+  action "click"
+  text "Search…"
+  text "combobox"
+  text "listbox"
+  text "start"
+  text "highlighted"
+  test "uses Combobox" {
     click "Combobox"
   }
 }

@@ -1,13 +1,40 @@
 ## Block SetupWizard
 ## source: registry/setup-wizard.json
 ## type: registry:block
-## behavior: card
+## layout: form-card
+## compose: Card, CardHeader, Stepper, CardContent, CardTitle, Label, Input, CardFooter, Button
+## icons: StepperList, StepperItem, StepperIndicator, StepperTitle, StepperSeparator
 
 component SetupWizardBlock(label: text) layout:stack style:setup-wizard {
-  title "Setup Wizard"
-  subtitle "Setup Wizard"
-  action "Setup Wizard"
-  test "use block" {
-    click "Setup Wizard"
+  meta "form-card"
+  label "SetupWizard"
+  title "Workspace"
+  subtitle "Set up your workspace"
+  slot "Card"
+  slot "CardHeader"
+  slot "Stepper"
+  slot "CardContent"
+  slot "CardTitle"
+  slot "Label"
+  slot "Input"
+  slot "CardFooter"
+  slot "Button"
+  item "Team"
+  item "Done"
+  item "Set up your workspace"
+  item "Workspace name"
+  item "Workspace URL"
+  text "Account"
+  text "Name your workspace and choose its address — you can change these later."
+  text "cronus.app/"
+  text "Back"
+  text "Step 2 of 4"
+  text "Continue"
+  text "horizontal"
+  text "Acme Inc"
+  text "organization"
+  text "acme"
+  test "use" {
+    expect visible "Account"
   }
 }

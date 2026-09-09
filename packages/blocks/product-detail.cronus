@@ -1,14 +1,39 @@
 ## Block ProductDetail
 ## source: registry/product-detail.json
 ## type: registry:block
-## behavior: card
+## layout: checkout-split
+## compose: Badge, ToggleGroup, Button, Accordion, AccordionItem, AccordionTrigger, AccordionContent
+## icons: Headphones, Star, StarHalf, ToggleGroupItem, Minus, Plus, ShoppingCart, Heart
 ## registryDependencies: demo-store
 
 component ProductDetailBlock(label: text) layout:stack style:product-detail {
-  title "Product Detail"
-  subtitle "Product Detail"
-  action "Product Detail"
-  test "use block" {
-    click "Product Detail"
+  meta "checkout-split"
+  label "ProductDetail"
+  title "New arrival"
+  subtitle "Photo 1 of 4"
+  slot "Badge"
+  slot "ToggleGroup"
+  slot "Button"
+  slot "Accordion"
+  slot "AccordionItem"
+  slot "AccordionTrigger"
+  slot "AccordionContent"
+  field "60-day returns"
+  field "2-year warranty"
+  field "40-hour battery — a 5-minute charge adds 4 hours"
+  field "254 g machined-aluminum frame, foldable"
+  action "Pay"
+  text "Aurora Audio · Over-ear"
+  text "Color"
+  text "Midnight"
+  text "Fog Gray"
+  text "Sandstone"
+  text "Quantity"
+  text "Decrease quantity"
+  text "Increase quantity"
+  text "Add to cart"
+  text "Add to wishlist"
+  test "pay" {
+    click "Pay"
   }
 }

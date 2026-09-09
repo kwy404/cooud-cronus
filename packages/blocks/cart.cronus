@@ -1,16 +1,39 @@
 ## Block Cart
 ## source: registry/cart.json
 ## type: registry:block
-## behavior: commerce
+## layout: checkout-split
+## compose: Card, CardHeader, CardTitle, CardContent, Separator, Button, Badge, Label, Input, CardFooter
+## icons: Package, Minus, Plus, Trash2, ShieldCheck
 ## registryDependencies: demo-store
 
 component CartBlock(label: text) layout:stack style:cart {
-  title "Cart"
-  subtitle "Cart"
-  field "Card"
-  value "$0"
+  meta "checkout-split"
+  label "Cart"
+  title "Your cart"
+  subtitle "4 items · ships from Aurora Audio"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardContent"
+  slot "Separator"
+  slot "Button"
+  slot "Badge"
+  slot "Label"
+  slot "Input"
+  slot "CardFooter"
+  field "4 items · ships from Aurora Audio"
   action "Pay"
-  test "checkout" {
+  text "Remove"
+  text "Decrease quantity"
+  text "Increase quantity"
+  text "Order summary"
+  text "Subtotal"
+  text "Shipping"
+  text "Free"
+  text "Discount"
+  text "SPRING15"
+  text "Discount code"
+  test "pay" {
     click "Pay"
   }
 }

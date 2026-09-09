@@ -1,16 +1,35 @@
 ## Block UsageDashboard
 ## source: registry/usage-dashboard.json
 ## type: registry:block
-## behavior: data
+## layout: dashboard-grid
+## compose: Card, CardContent, Badge, Sparkline, CardHeader, CardTitle, Table
+## icons: UsageMeterLinear, UsageMeterCircular, TableHeader, TableRow, TableHead, TableBody, TableCell
 ## registryDependencies: demo-saas
 
 component UsageDashboardBlock(label: text) layout:stack style:usage-dashboard {
-  title "Usage Dashboard"
-  subtitle "Usage Dashboard"
+  meta "dashboard-grid"
+  label "UsageDashboard"
+  title "Plan usage"
+  subtitle "Top resources"
+  slot "Card"
+  slot "CardContent"
+  slot "Badge"
+  slot "Sparkline"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "Table"
   columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads UsageDashboard" {
-    expect visible "Usage Dashboard"
+  item "Plan usage"
+  item "Top resources"
+  item "Resource"
+  text "By share of total usage."
+  text "Share"
+  text "Edge functions"
+  text "Database reads"
+  text "Media delivery"
+  text "success"
+  text "info"
+  test "reads" {
+    expect visible "Plan usage"
   }
 }

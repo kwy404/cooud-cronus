@@ -1,14 +1,22 @@
 ## Block TypingText
 ## source: registry/typing-text.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLAttributes, HTMLSpanElement
 ## registryDependencies: cn
 
 component TypingTextBlock(label: text) layout:stack style:typing-text {
-  title "Typing Text"
-  subtitle "Typing Text"
-  action "Typing Text"
-  test "use block" {
-    click "Typing Text"
+  meta "stack"
+  label "TypingText"
+  title "children"
+  subtitle "Segmenter"
+  action "click"
+  text "respect"
+  text "always"
+  text "never"
+  text "grapheme"
+  test "uses TypingText" {
+    click "TypingText"
   }
 }

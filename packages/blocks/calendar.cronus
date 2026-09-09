@@ -1,14 +1,20 @@
 ## Block Calendar
 ## source: registry/calendar.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: Icon, DayButton, DayPicker
 ## registryDependencies: button, cn
 
 component CalendarBlock(label: text) layout:stack style:calendar {
-  title "Calendar"
+  meta "stack"
+  label "Calendar"
+  title "calendar"
   subtitle "Calendar"
-  action "Calendar"
-  test "use block" {
+  action "click"
+  text "left"
+  text "rtl"
+  test "uses Calendar" {
     click "Calendar"
   }
 }

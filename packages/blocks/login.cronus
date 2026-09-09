@@ -1,19 +1,43 @@
 ## Block Login
 ## source: registry/login.json
 ## type: registry:block
-## behavior: auth
+## layout: form-card
+## compose: Card, CardHeader, CardTitle, CardContent, Label, Input, Checkbox, Button, Separator, CardFooter
+## icons: ChartColumnIncreasing, Github, Chrome
 ## registryDependencies: auth-adapter
 
 component LoginBlock(label: text) layout:stack style:login {
-  title "Login"
-  subtitle "Login"
+  meta "form-card"
+  label "Login"
+  title "Welcome back"
+  subtitle "or continue with"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardContent"
+  slot "Label"
+  slot "Input"
+  slot "Checkbox"
+  slot "Button"
+  slot "Separator"
+  slot "CardFooter"
   state pending: boolean = false
   field "Email"
   field "Password"
   action "Sign in"
   link "Forgot password?" -> "/forgot-password"
-  test "submit auth" {
+  text "Remember me"
+  text "GitHub"
+  text "Google"
+  text "Sign up"
+  text "Something went wrong."
+  text "Join the workspace"
+  text "Sign in to accept the invitation."
+  text "Sign in to your Cronus workspace"
+  text "you@company.com"
+  text "alert"
+  test "submit" {
     fill email "you@company.com"
-    click "Sign in"
+    click "Submit"
   }
 }

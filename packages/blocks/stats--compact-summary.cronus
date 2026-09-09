@@ -1,15 +1,29 @@
 ## Block StatsCompactSummary
 ## source: registry/stats--compact-summary.json
 ## type: registry:block
-## behavior: data
+## layout: dashboard-grid
+## compose: Card, CardHeader, CardTitle, Badge, CardContent, Metric
+## icons: MetricLabel, MetricValue, MetricDelta
 
 component StatsCompactSummaryBlock(label: text) layout:stack style:stats--compact-summary {
-  title "Stats Compact Summary"
-  subtitle "CompactSummary"
+  meta "dashboard-grid"
+  label "StatsCompactSummary"
+  title "Growth snapshot"
+  subtitle "Last 30 days"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "Badge"
+  slot "CardContent"
+  slot "Metric"
   columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads StatsCompactSummary" {
-    expect visible "Stats Compact Summary"
+  item "Growth snapshot"
+  item "Last 30 days"
+  item "On track"
+  item "Net revenue"
+  text "New accounts"
+  text "Expansion"
+  test "reads" {
+    expect visible "Growth snapshot"
   }
 }

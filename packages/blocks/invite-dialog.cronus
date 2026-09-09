@@ -1,14 +1,40 @@
 ## Block InviteDialog
 ## source: registry/invite-dialog.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription, Field, Input, CopyButton, DialogFooter, Button, Select, SelectTrigger, SelectValue, SelectContent, SelectItem, Spinner
+## icons: InviteDialogLabels, ComponentPropsWithoutRef, HTMLDivElement, FieldLabel, CircleAlert
 ## registryDependencies: button, cn, copy-button, dialog, field, input, select, spinner
 
 component InviteDialogBlock(label: text) layout:stack style:invite-dialog {
-  title "Invite Dialog"
-  subtitle "Invite Dialog"
-  action "Invite Dialog"
-  test "use block" {
-    click "Invite Dialog"
+  meta "stack"
+  label "InviteDialog"
+  title "Invite member"
+  subtitle "Send an invitation to join this workspace."
+  slot "Dialog"
+  slot "DialogTrigger"
+  slot "DialogContent"
+  slot "DialogHeader"
+  slot "DialogTitle"
+  slot "DialogDescription"
+  slot "Field"
+  slot "Input"
+  slot "CopyButton"
+  slot "DialogFooter"
+  slot "Button"
+  slot "Select"
+  action "click"
+  text "Member"
+  text "Admin"
+  text "name@example.com"
+  text "Role"
+  text "Send invite"
+  text "Cancel"
+  text "Sending"
+  text "Something went wrong. Please try again."
+  text "Invite sent"
+  text "Copy the link and send it to your teammate."
+  test "uses InviteDialog" {
+    click "InviteDialog"
   }
 }

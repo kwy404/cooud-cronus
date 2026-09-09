@@ -1,16 +1,21 @@
 ## Block ProfitLossChart
 ## source: registry/profit-loss-chart.json
 ## type: registry:ui
-## behavior: data
+## layout: stack
+## compose: LineChart
+## icons: HTMLDivElement, ChartContainer, CartesianGrid, ReferenceLine, XAxis, ChartTooltip, ChartCursor, ChartTooltipContent
 ## registryDependencies: chart, cn
 
 component ProfitLossChartBlock(label: text) layout:stack style:profit-loss-chart {
-  title "Profit Loss Chart"
-  subtitle "Profit Loss Chart"
-  columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads ProfitLossChart" {
-    expect visible "Profit Loss Chart"
+  meta "stack"
+  label "ProfitLossChart"
+  title "recharts"
+  subtitle "monotone"
+  slot "LineChart"
+  action "click"
+  text "month"
+  text "pnl"
+  test "uses ProfitLossChart" {
+    click "ProfitLossChart"
   }
 }

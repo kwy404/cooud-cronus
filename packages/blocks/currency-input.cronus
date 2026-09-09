@@ -1,14 +1,29 @@
 ## Block CurrencyInput
 ## source: registry/currency-input.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: DropdownMenu
+## icons: HTMLInputElement, DropdownMenuTrigger, ChevronDown, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuRadioGroup, DropdownMenuRadioItem
 ## registryDependencies: cn, dropdown-menu
 
 component CurrencyInputBlock(label: text) layout:stack style:currency-input {
-  title "Currency Input"
-  subtitle "Currency Input"
-  action "Currency Input"
-  test "use block" {
-    click "Currency Input"
+  meta "stack"
+  label "CurrencyInput"
+  title "Currency"
+  subtitle "Brazilian Real"
+  slot "DropdownMenu"
+  action "click"
+  text "US Dollar"
+  text "Euro"
+  text "British Pound"
+  text "Japanese Yen"
+  text "Chinese Yuan"
+  text "Indian Rupee"
+  text "Australian Dollar"
+  text "Canadian Dollar"
+  text "Swiss Franc"
+  text "Mexican Peso"
+  test "uses CurrencyInput" {
+    click "CurrencyInput"
   }
 }

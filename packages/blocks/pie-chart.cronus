@@ -1,16 +1,19 @@
 ## Block PieChart
 ## source: registry/pie-chart.json
 ## type: registry:ui
-## behavior: data
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement, ChartContainer, RechartsPieChart, ChartTooltip, ChartTooltipContent, Pie, Cell
 ## registryDependencies: chart, cn
 
 component PieChartBlock(label: text) layout:stack style:pie-chart {
-  title "Pie Chart"
-  subtitle "Pie Chart"
-  columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads PieChart" {
-    expect visible "Pie Chart"
+  meta "stack"
+  label "PieChart"
+  title "recharts"
+  subtitle "value"
+  action "click"
+  text "key"
+  test "uses PieChart" {
+    click "PieChart"
   }
 }

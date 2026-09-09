@@ -1,14 +1,29 @@
 ## Block ProductGridShowcase
 ## source: registry/product-grid--showcase.json
 ## type: registry:block
-## behavior: card
+## layout: checkout-split
+## compose: Badge, Button
+## icons: ArrowUpRight
 ## registryDependencies: demo-store
 
 component ProductGridShowcaseBlock(label: text) layout:stack style:product-grid--showcase {
-  title "Product Grid Showcase"
-  subtitle "Showcase"
-  action "Product Grid Showcase"
-  test "use block" {
-    click "Product Grid Showcase"
+  meta "checkout-split"
+  label "ProductGridShowcase"
+  title "This week at the studio"
+  subtitle "View all products"
+  slot "Badge"
+  slot "Button"
+  field "42 lessons on building a paid audience — 2026 edition."
+  action "Pay"
+  text "Shop the drop"
+  text "Shop"
+  text "playbook"
+  text "presets"
+  text "templates"
+  text "soundkit"
+  text "workshop"
+  text "Product showcase"
+  test "pay" {
+    click "Pay"
   }
 }

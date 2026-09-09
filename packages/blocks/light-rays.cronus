@@ -1,14 +1,18 @@
 ## Block LightRays
 ## source: registry/light-rays.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component LightRaysBlock(label: text) layout:stack style:light-rays {
-  title "Light Rays"
-  subtitle "Light Rays"
-  action "Light Rays"
-  test "use block" {
-    click "Light Rays"
+  meta "stack"
+  label "LightRays"
+  title "LightRays"
+  subtitle "LightRays"
+  action "click"
+  test "uses LightRays" {
+    click "LightRays"
   }
 }

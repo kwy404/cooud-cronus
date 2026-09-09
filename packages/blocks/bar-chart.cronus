@@ -1,16 +1,18 @@
 ## Block BarChart
 ## source: registry/bar-chart.json
 ## type: registry:ui
-## behavior: data
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement, ChartContainer, RechartsBarChart, CartesianGrid, XAxis, ChartTooltip, ChartCursor, ChartTooltipContent
 ## registryDependencies: chart, cn
 
 component BarChartBlock(label: text) layout:stack style:bar-chart {
-  title "Bar Chart"
-  subtitle "Bar Chart"
-  columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads BarChart" {
-    expect visible "Bar Chart"
+  meta "stack"
+  label "BarChart"
+  title "recharts"
+  subtitle "month"
+  action "click"
+  test "uses BarChart" {
+    click "BarChart"
   }
 }

@@ -1,18 +1,31 @@
 ## Block Otp
 ## source: registry/otp.json
 ## type: registry:block
-## behavior: auth
+## layout: form-card
+## compose: Card, CardHeader, CardTitle, CardContent, Button, CardFooter
+## icons: ShieldCheck, InputOTP, InputOTPGroup, InputOTPSlot, ArrowLeft
 
 component OtpBlock(label: text) layout:stack style:otp {
-  title "Otp"
-  subtitle "Otp"
+  meta "form-card"
+  label "Otp"
+  title "Verify"
+  subtitle "Enter the 6-digit code from your authenticator app."
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardContent"
+  slot "Button"
+  slot "CardFooter"
   state pending: boolean = false
   field "Email"
   field "Password"
-  action "Sign in"
-  link "Forgot password?" -> "/forgot-password"
-  test "submit auth" {
+  action "Verify"
+  text "Two-factor authentication"
+  text "Resend"
+  text "Back to sign in"
+  text "6-digit authentication code"
+  test "submit" {
     fill email "you@company.com"
-    click "Sign in"
+    click "Submit"
   }
 }

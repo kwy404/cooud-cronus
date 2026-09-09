@@ -1,14 +1,20 @@
 ## Block AvatarGroup
 ## source: registry/avatar-group.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Avatar
+## icons: HTMLDivElement, ComponentProps, AvatarImage, AvatarFallback
 ## registryDependencies: avatar, cn
 
 component AvatarGroupBlock(label: text) layout:stack style:avatar-group {
-  title "Avatar Group"
-  subtitle "Avatar Group"
-  action "Avatar Group"
-  test "use block" {
-    click "Avatar Group"
+  meta "stack"
+  label "AvatarGroup"
+  title "AvatarGroup"
+  subtitle "AvatarGroup"
+  slot "Avatar"
+  action "click"
+  text "img"
+  test "uses AvatarGroup" {
+    click "AvatarGroup"
   }
 }

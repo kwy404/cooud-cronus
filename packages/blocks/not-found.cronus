@@ -1,12 +1,21 @@
 ## Block NotFound
 ## source: registry/not-found.json
 ## type: registry:block
-## behavior: empty
+## layout: empty-center
+## compose: Reveal, Input, Button
+## icons: Search
 
 component NotFoundBlock(label: text) layout:stack style:not-found {
-  title "Not Found"
-  subtitle "Not Found"
+  meta "empty-center"
+  label "NotFound"
+  title "Page not found"
+  subtitle "Back to home"
+  slot "Reveal"
+  slot "Input"
+  slot "Button"
   action "Go home" -> "/"
+  text "Contact support"
+  text "Search the docs…"
   test "empty" {
     click "Go home"
   }

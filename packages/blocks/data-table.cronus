@@ -1,14 +1,40 @@
 ## Block DataTable
 ## source: registry/data-table.json
 ## type: registry:ui
-## behavior: card
+## layout: table-stack
+## compose: Checkbox, Button, DropdownMenu, Badge, Input, Select, SelectTrigger, SelectValue, SelectContent, SelectItem, Table, Skeleton, AlertCircle
+## icons: TData, VisibilityState, SortingState, ColumnFiltersState, PaginationState, RowSelectionState, DataTableLabels, DataTableDensity
 ## registryDependencies: badge, button, checkbox, cn, dropdown-menu, input, select, skeleton, table
 
 component DataTableBlock(label: text) layout:stack style:data-table {
-  title "Data Table"
-  subtitle "Data Table"
-  action "Data Table"
-  test "use block" {
-    click "Data Table"
+  meta "table-stack"
+  label "DataTable"
+  title "comfortable"
+  subtitle "No results."
+  slot "Checkbox"
+  slot "Button"
+  slot "DropdownMenu"
+  slot "Badge"
+  slot "Input"
+  slot "Select"
+  slot "SelectTrigger"
+  slot "SelectValue"
+  slot "SelectContent"
+  slot "SelectItem"
+  slot "Table"
+  slot "Skeleton"
+  action "click"
+  text "compact"
+  text "Search…"
+  text "View"
+  text "export"
+  text "Table controls"
+  text "3 selected"
+  text "Page 2 of 5"
+  text "Rows per page"
+  text "Pagination"
+  text "Go to first page"
+  test "uses DataTable" {
+    click "DataTable"
   }
 }

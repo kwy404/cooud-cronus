@@ -1,14 +1,26 @@
 ## Block FlipCard
 ## source: registry/flip-card.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: FlipCard
+## icons: FlipCardContextValue, HTMLAttributes, HTMLDivElement, FlipCardContext
 ## registryDependencies: cn
 
 component FlipCardBlock(label: text) layout:stack style:flip-card {
-  title "Flip Card"
-  subtitle "Flip Card"
-  action "Flip Card"
-  test "use block" {
-    click "Flip Card"
+  meta "stack"
+  label "FlipCard"
+  title "must be used within"
+  subtitle "controlled"
+  slot "FlipCard"
+  action "click"
+  text "hover"
+  text "horizontal"
+  text "vertical"
+  text "onChange"
+  text "Enter"
+  text "FlipCardFront"
+  text "FlipCardBack"
+  test "uses FlipCard" {
+    click "FlipCard"
   }
 }

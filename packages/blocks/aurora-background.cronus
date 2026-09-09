@@ -1,14 +1,18 @@
 ## Block AuroraBackground
 ## source: registry/aurora-background.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: native-sections
+## icons: HTMLDivElement
 ## registryDependencies: cn
 
 component AuroraBackgroundBlock(label: text) layout:stack style:aurora-background {
-  title "Aurora Background"
-  subtitle "Aurora Background"
-  action "Aurora Background"
-  test "use block" {
-    click "Aurora Background"
+  meta "stack"
+  label "AuroraBackground"
+  title "AuroraBackground"
+  subtitle "AuroraBackground"
+  action "click"
+  test "uses AuroraBackground" {
+    click "AuroraBackground"
   }
 }

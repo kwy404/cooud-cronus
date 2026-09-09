@@ -1,15 +1,27 @@
 ## Block StatsPipelineFunnel
 ## source: registry/stats--pipeline-funnel.json
 ## type: registry:block
-## behavior: data
+## layout: dashboard-grid
+## compose: Card, CardHeader, CardTitle, CardContent, Metric
+## icons: Icon, MetricLabel, MetricValue, MetricDelta
 
 component StatsPipelineFunnelBlock(label: text) layout:stack style:stats--pipeline-funnel {
-  title "Stats Pipeline Funnel"
-  subtitle "PipelineFunnel"
+  meta "dashboard-grid"
+  label "StatsPipelineFunnel"
+  title "Activation funnel"
+  subtitle "Weekly product-led conversion"
+  slot "Card"
+  slot "CardHeader"
+  slot "CardTitle"
+  slot "CardContent"
+  slot "Metric"
   columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads StatsPipelineFunnel" {
-    expect visible "Stats Pipeline Funnel"
+  item "Activation funnel"
+  item "Weekly product-led conversion"
+  item "Trials started"
+  item "Qualified demos"
+  text "Paid upgrades"
+  test "reads" {
+    expect visible "Activation funnel"
   }
 }

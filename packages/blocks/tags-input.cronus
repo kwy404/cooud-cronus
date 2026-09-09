@@ -1,14 +1,20 @@
 ## Block TagsInput
 ## source: registry/tags-input.json
 ## type: registry:ui
-## behavior: card
+## layout: stack
+## compose: Badge
+## icons: HTMLInputElement, HTMLDivElement
 ## registryDependencies: badge, cn
 
 component TagsInputBlock(label: text) layout:stack style:tags-input {
-  title "Tags Input"
-  subtitle "Tags Input"
-  action "Tags Input"
-  test "use block" {
-    click "Tags Input"
+  meta "stack"
+  label "TagsInput"
+  title "TagsInput"
+  subtitle "off"
+  slot "Badge"
+  action "click"
+  text "Enter"
+  test "uses TagsInput" {
+    click "TagsInput"
   }
 }

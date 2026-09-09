@@ -1,16 +1,29 @@
 ## Block UsageMeter
 ## source: registry/usage-meter.json
 ## type: registry:ui
-## behavior: data
+## layout: stack
+## compose: UsageMeter
+## icons: Exclude, UsageMeterTone, HTMLAttributes, HTMLDivElement, UsageMeterCircularImpl, UsageMeterProps
 ## registryDependencies: cn
 
 component UsageMeterBlock(label: text) layout:stack style:usage-meter {
-  title "Usage Meter"
-  subtitle "Usage Meter"
-  columns "name, value, status"
-  item "Row"
-  value "0"
-  test "reads UsageMeter" {
-    expect visible "Usage Meter"
+  meta "stack"
+  label "UsageMeter"
+  title "circular"
+  subtitle "children"
+  slot "UsageMeter"
+  action "click"
+  text "auto"
+  text "success"
+  text "warning"
+  text "error"
+  text "linear"
+  text "en-US"
+  text "tokens"
+  text "meter"
+  text "none"
+  text "-rotate-90"
+  test "uses UsageMeter" {
+    click "UsageMeter"
   }
 }

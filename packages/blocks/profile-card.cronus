@@ -1,14 +1,29 @@
 ## Block ProfileCard
 ## source: registry/profile-card.json
 ## type: registry:block
-## behavior: settings
+## layout: stack
+## compose: Card, CardContent, Avatar, Button, AvatarGroup
+## icons: AvatarImage, AvatarFallback
 
 component ProfileCardBlock(label: text) layout:stack style:profile-card {
-  title "Profile Card"
-  subtitle "Profile Card"
+  meta "stack"
+  label "ProfileCard"
+  title "Mara Castillo"
+  subtitle "Design systems lead at Cronus. Building accessible, themeable interfaces."
+  slot "Card"
+  slot "CardContent"
+  slot "Avatar"
+  slot "Button"
+  slot "AvatarGroup"
   field "Name"
   action "Save"
-  test "save settings" {
+  text "Follow"
+  text "Posts"
+  text "Followers"
+  text "Following"
+  text "Followed by Diego, Priya, and 18 others"
+  text "Diego Lima"
+  test "save" {
     click "Save"
   }
 }
