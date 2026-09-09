@@ -8,7 +8,8 @@ Repo: [kwy404/cooud-cronus](https://github.com/kwy404/cooud-cronus) · **58** fa
 
 Mesma superfície: rail de ícones, saldo **-R$ 0,23**, Auto + D3, Transações / Repasses, meta Titanium R$ 100.000, gráfico vazio “Este mês”.
 
-Fonte: `output/blocks/cooud-dashboard.cronus`
+Fonte nativa: `output/blocks/cooud-dashboard.cronus`  
+`cronus parse` → **Parsed 3 nodes** · App `"Cooud"` · 1 page · port 4747
 
 ![Cooud Dashboard](output/preview/cooud-dashboard.png)
 
