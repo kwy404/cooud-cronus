@@ -21,9 +21,9 @@ component PricingBlock(label: text) layout:stack style:pricing {
   plan "Starter"
   plan "Pro"
   plan "Enterprise"
-  button "Starter"
-  button "Get started"
-  button "Start free trial"
+  button "Starter" tone:primary
+  button "Get started" tone:primary
+  button "Start free trial" tone:primary
   text "Everything you need to launch your first project."
   text "For growing teams that need more power and polish."
   text "Custom"

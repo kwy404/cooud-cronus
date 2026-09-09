@@ -5,7 +5,7 @@
 ## slots: spinner
 ## variants.size: sm, md, lg
 
-component Spinner(label: text, disabled: boolean, size: text) layout:inline style:spinner {
+component Spinner(label: text, disabled: boolean, size: text) layout:inline style:spinner+md {
   label "Spinner"
   size "md"
   action "click"

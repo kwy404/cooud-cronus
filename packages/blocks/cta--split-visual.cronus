@@ -12,8 +12,8 @@ component CtaSplitVisualBlock(label: text) layout:stack style:cta--split-visual 
   subtitle "Your product surface, themed and shipped this week."
   slot "Badge"
   slot "Button"
-  button "Get started"
-  button "Start building"
+  button "Get started" tone:primary
+  button "Start building" tone:primary
   text "Explore blocks"
   text "app.cronus.com/overview"
   text "Monthly recurring revenue"

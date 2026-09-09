@@ -5,7 +5,7 @@
 ## slots: alert, alert-description, alert-title
 ## variants.variant: default, info, success, warning, destructive
 
-component Alert(label: text, disabled: boolean, variant: text) layout:inline style:alert {
+component Alert(label: text, disabled: boolean, variant: text) layout:inline style:alert+default {
   label "Alert"
   variant "default"
   action "click"
@@ -17,6 +17,30 @@ component Alert(label: text, disabled: boolean, variant: text) layout:inline sty
   test "disabled Alert" {
     expect visible "Alert"
   }
+}
+
+component AlertInfo(label: text, disabled: boolean) layout:inline style:alert+info {
+  label "Alert"
+  variant "info"
+  action "click"
+}
+
+component AlertSuccess(label: text, disabled: boolean) layout:inline style:alert+success {
+  label "Alert"
+  variant "success"
+  action "click"
+}
+
+component AlertWarning(label: text, disabled: boolean) layout:inline style:alert+warning {
+  label "Alert"
+  variant "warning"
+  action "click"
+}
+
+component AlertDestructive(label: text, disabled: boolean) layout:inline style:alert+destructive+danger {
+  label "Alert"
+  variant "destructive"
+  action "click"
 }
 
 component AlertTitle(label: text, disabled: boolean) layout:inline style:alert-title {

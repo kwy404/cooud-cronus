@@ -14,7 +14,7 @@ component FooterMegaBlock(label: text) layout:stack style:footer--mega {
   slot "Input"
   slot "Button"
   slot "Separator"
-  button "Subscribe"
+  button "Subscribe" tone:primary
   text "Cronus"
   text "© 2026 Cronus Labs, Inc. All rights reserved."
   text "All systems operational"

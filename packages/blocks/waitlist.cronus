@@ -15,7 +15,7 @@ component WaitlistBlock(label: text) layout:stack style:waitlist {
   slot "Label"
   slot "Input"
   slot "Avatar"
-  button "Join the waitlist"
+  button "Join the waitlist" tone:primary
   text "Invites roll out weekly"
   text "faster"
   text "Undo"

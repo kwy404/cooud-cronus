@@ -11,7 +11,7 @@ component NavbarCenteredBlock(label: text) layout:stack style:navbar--centered {
   title "Get started"
   subtitle "Features"
   slot "Button"
-  button "Get started"
+  button "Get started" tone:primary
   text "Cronus"
   text "Pricing"
   text "Docs"

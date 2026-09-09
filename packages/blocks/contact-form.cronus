@@ -16,7 +16,7 @@ component ContactFormBlock(label: text) layout:stack style:contact-form {
   slot "Input"
   slot "Textarea"
   slot "Button"
-  button "Get in touch"
+  button "Get in touch" tone:primary
   text "contact@cronus.com"
   text "Live chat"
   text "Mon–Fri, 9am–6pm"

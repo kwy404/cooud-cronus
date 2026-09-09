@@ -6,7 +6,7 @@
 ## variants.variant: primary, secondary, outline, ghost, destructive, link
 ## variants.size: sm, md, lg, icon, icon-sm
 
-component Button(label: text, disabled: boolean, variant: text, size: text) layout:inline style:button {
+component Button(label: text, disabled: boolean, variant: text, size: text) layout:inline style:button+primary+md {
   label "Button"
   variant "primary"
   size "md"
@@ -19,4 +19,34 @@ component Button(label: text, disabled: boolean, variant: text, size: text) layo
   test "disabled Button" {
     expect visible "Button"
   }
+}
+
+component ButtonSecondary(label: text, disabled: boolean) layout:inline style:button+secondary+md {
+  label "Button"
+  variant "secondary"
+  action "click"
+}
+
+component ButtonOutline(label: text, disabled: boolean) layout:inline style:button+outline+md {
+  label "Button"
+  variant "outline"
+  action "click"
+}
+
+component ButtonGhost(label: text, disabled: boolean) layout:inline style:button+ghost+md {
+  label "Button"
+  variant "ghost"
+  action "click"
+}
+
+component ButtonDestructive(label: text, disabled: boolean) layout:inline style:button+destructive+danger+md {
+  label "Button"
+  variant "destructive"
+  action "click"
+}
+
+component ButtonLink(label: text, disabled: boolean) layout:inline style:button+link+md {
+  label "Button"
+  variant "link"
+  action "click"
 }

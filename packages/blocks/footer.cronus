@@ -14,7 +14,7 @@ component FooterBlock(label: text) layout:stack style:footer {
   slot "Label"
   slot "Input"
   slot "Separator"
-  button "Subscribe"
+  button "Subscribe" tone:primary
   text "Cronus"
   text "Email address"
   text "© 2026 Cronus. All rights reserved."

@@ -9,7 +9,7 @@
 ## variants.bordered: true, false
 ## variants.detailsAlign: start, end
 
-component DescriptionList(label: text, disabled: boolean, size: text) layout:inline style:description-list {
+component DescriptionList(label: text, disabled: boolean, size: text) layout:inline style:description-list+md {
   label "DescriptionList"
   size "md"
   action "click"

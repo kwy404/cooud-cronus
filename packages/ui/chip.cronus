@@ -9,7 +9,7 @@
 ## variants.interactive: true, false
 ## variants.selected: true, false
 
-component Chip(label: text, disabled: boolean, variant: text, size: text) layout:inline style:chip {
+component Chip(label: text, disabled: boolean, variant: text, size: text) layout:inline style:chip+soft+md {
   label "Chip"
   variant "soft"
   size "md"
@@ -22,6 +22,18 @@ component Chip(label: text, disabled: boolean, variant: text, size: text) layout
   test "disabled Chip" {
     expect visible "Chip"
   }
+}
+
+component ChipSolid(label: text, disabled: boolean) layout:inline style:chip+solid+md {
+  label "Chip"
+  variant "solid"
+  action "click"
+}
+
+component ChipOutline(label: text, disabled: boolean) layout:inline style:chip+outline+md {
+  label "Chip"
+  variant "outline"
+  action "click"
 }
 
 component ChipLabels(label: text, disabled: boolean) layout:inline style:chip-labels {

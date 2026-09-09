@@ -5,7 +5,7 @@
 ## slots: rating, rating-item, rating-star
 ## variants.size: sm, md, lg
 
-component Rating(label: text, disabled: boolean, size: text) layout:inline style:rating {
+component Rating(label: text, disabled: boolean, size: text) layout:inline style:rating+md {
   label "Rating"
   size "md"
   action "click"

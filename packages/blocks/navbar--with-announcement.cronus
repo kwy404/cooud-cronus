@@ -12,14 +12,14 @@ component NavbarWithAnnouncementBlock(label: text) layout:stack style:navbar--wi
   subtitle "Read more"
   slot "Badge"
   slot "Button"
-  button "Sign in"
-  button "Get started"
+  button "Sign in" tone:primary
+  button "Get started" tone:primary
   text "New"
   text "Features"
   text "Pricing"
   text "Docs"
   text "Changelog"
   test "cta" {
-    click "Get started"
+    click "Sign in"
   }
 }

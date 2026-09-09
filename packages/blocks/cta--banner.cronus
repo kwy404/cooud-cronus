@@ -11,7 +11,7 @@ component CtaBannerBlock(label: text) layout:stack style:cta--banner {
   title "Ship your next launch on Cronus."
   subtitle "Start free trial"
   slot "Button"
-  button "Start free trial"
+  button "Start free trial" tone:primary
   text "Talk to sales"
   test "cta" {
     click "Start free trial"

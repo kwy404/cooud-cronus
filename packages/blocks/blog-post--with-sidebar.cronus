@@ -20,7 +20,7 @@ component BlogPostWithSidebarBlock(label: text) layout:stack style:blog-post--wi
   slot "Label"
   slot "Input"
   slot "Button"
-  button "Subscribe"
+  button "Subscribe" tone:primary
   text "12 min read"
   text "Hierarchy beats whitespace"
   text "Density tokens"

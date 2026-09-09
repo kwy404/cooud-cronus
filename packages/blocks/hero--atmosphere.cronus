@@ -16,13 +16,13 @@ component HeroAtmosphereBlock(label: text) layout:stack style:hero--atmosphere {
   slot "Highlighter"
   slot "TypingText"
   slot "Button"
-  button "Start free trial"
-  button "Book a demo"
+  button "Start free trial" tone:primary
+  button "Book a demo" tone:primary
   text "Now in public beta"
   text "proud of"
   text "restyle."
   text "ship."
   test "cta" {
-    click "Start free trial"
+    click "Book a demo"
   }
 }

@@ -13,7 +13,7 @@ component CtaBlock(label: text) layout:stack style:cta {
   slot "Label"
   slot "Input"
   slot "Button"
-  button "Subscribe"
+  button "Subscribe" tone:primary
   text "Ready to build something great?"
   text "No spam. Unsubscribe at any time."
   text "you@company.com"

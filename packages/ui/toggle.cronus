@@ -6,7 +6,7 @@
 ## variants.variant: default, outline
 ## variants.size: sm, md, lg
 
-component Toggle(label: text, disabled: boolean, variant: text, size: text, checked: boolean) layout:inline style:toggle {
+component Toggle(label: text, disabled: boolean, variant: text, size: text, checked: boolean) layout:inline style:toggle+default+md {
   label "Toggle"
   variant "default"
   size "md"
@@ -20,4 +20,10 @@ component Toggle(label: text, disabled: boolean, variant: text, size: text, chec
   test "disabled Toggle" {
     expect visible "Toggle"
   }
+}
+
+component ToggleOutline(label: text, disabled: boolean) layout:inline style:toggle+outline+md {
+  label "Toggle"
+  variant "outline"
+  action "click"
 }

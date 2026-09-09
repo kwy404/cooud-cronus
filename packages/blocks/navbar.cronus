@@ -12,14 +12,14 @@ component NavbarBlock(label: text) layout:stack style:navbar {
   subtitle "Features"
   slot "Badge"
   slot "Button"
-  button "Sign in"
-  button "Get started"
+  button "Sign in" tone:primary
+  button "Get started" tone:primary
   text "Cronus"
   text "Beta"
   text "Pricing"
   text "Docs"
   text "Changelog"
   test "cta" {
-    click "Get started"
+    click "Sign in"
   }
 }

@@ -5,7 +5,7 @@
 ## slots: avatar-group, avatar-group-overflow
 ## variants.size: sm, md, lg
 
-component AvatarGroup(label: text, disabled: boolean, size: text) layout:inline style:avatar-group {
+component AvatarGroup(label: text, disabled: boolean, size: text) layout:inline style:avatar-group+md {
   label "AvatarGroup"
   size "md"
   action "click"

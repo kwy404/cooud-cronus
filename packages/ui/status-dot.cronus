@@ -7,7 +7,7 @@
 ## variants.size: xs, sm, md, lg
 ## variants.ring: true, false
 
-component StatusDot(label: text, disabled: boolean, size: text) layout:inline style:status-dot {
+component StatusDot(label: text, disabled: boolean, size: text) layout:inline style:status-dot+md {
   label "StatusDot"
   size "md"
   action "click"

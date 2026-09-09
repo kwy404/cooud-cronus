@@ -15,7 +15,7 @@ component TestimonialsGridBlock(label: text) layout:stack style:testimonials--gr
   slot "Card"
   slot "CardContent"
   slot "Avatar"
-  button "Join"
+  button "Join" tone:primary
   text "teams shipping with Cronus"
   text "Amara Okafor"
   text "Marco Rossi"

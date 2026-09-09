@@ -10,9 +10,17 @@ app "Cooud" {
 
 style {
   theme dark
-  accent white
+  preset aurora
+  accent "#0ea5e9"
   font "Inter"
-  radius lg
+  radius 14px
+  accent-hex "#0ea5e9"
+  background "#09090b"
+  surface "#111113"
+  text "#fafaf9"
+  text-muted "#a1a1aa"
+  border "rgba(255,255,255,0.10)"
+  primary "oklch(0.685 0.169 237.3)"
 }
 
 layout Main {

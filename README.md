@@ -17,7 +17,8 @@ Ultimo run: `harness/report.md`
 - markup no repo: **PASS** (0 hits, 0 arquivos proibidos)
 - `cronus parse` + `validate` dashboard: **PASS**
 - parse de todos os `.cronus`: **564/564 PASS**
-- catalogo UI 173 / blocks 307: **comportamento nativo** (params, state, field/action, tests). Parse 564/564.
+- tokens no `style {}` que o kernel le (`accent-hex`, background, text)
+- variants no `style:` do component (`button+primary+md`) — o renderer faz `contains("primary")`
 
 ## Cooud (end to end nativo)
 

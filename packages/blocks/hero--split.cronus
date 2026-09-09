@@ -17,7 +17,7 @@ component HeroSplitBlock(label: text) layout:stack style:hero--split {
   slot "CardTitle"
   slot "CardDescription"
   slot "CardContent"
-  button "Start building"
+  button "Start building" tone:primary
   text "View templates"
   text "Release quality"
   text "Everything tokenized before handoff."

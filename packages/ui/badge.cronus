@@ -5,7 +5,7 @@
 ## slots: badge
 ## variants.variant: default, primary, secondary, outline, success, warning, destructive, error, info
 
-component Badge(label: text, disabled: boolean, variant: text) layout:inline style:badge {
+component Badge(label: text, disabled: boolean, variant: text) layout:inline style:badge+default {
   label "Badge"
   variant "default"
   action "click"
@@ -17,4 +17,52 @@ component Badge(label: text, disabled: boolean, variant: text) layout:inline sty
   test "disabled Badge" {
     expect visible "Badge"
   }
+}
+
+component BadgePrimary(label: text, disabled: boolean) layout:inline style:badge+primary {
+  label "Badge"
+  variant "primary"
+  action "click"
+}
+
+component BadgeSecondary(label: text, disabled: boolean) layout:inline style:badge+secondary {
+  label "Badge"
+  variant "secondary"
+  action "click"
+}
+
+component BadgeOutline(label: text, disabled: boolean) layout:inline style:badge+outline {
+  label "Badge"
+  variant "outline"
+  action "click"
+}
+
+component BadgeSuccess(label: text, disabled: boolean) layout:inline style:badge+success {
+  label "Badge"
+  variant "success"
+  action "click"
+}
+
+component BadgeWarning(label: text, disabled: boolean) layout:inline style:badge+warning {
+  label "Badge"
+  variant "warning"
+  action "click"
+}
+
+component BadgeDestructive(label: text, disabled: boolean) layout:inline style:badge+destructive+danger {
+  label "Badge"
+  variant "destructive"
+  action "click"
+}
+
+component BadgeError(label: text, disabled: boolean) layout:inline style:badge+error {
+  label "Badge"
+  variant "error"
+  action "click"
+}
+
+component BadgeInfo(label: text, disabled: boolean) layout:inline style:badge+info {
+  label "Badge"
+  variant "info"
+  action "click"
 }

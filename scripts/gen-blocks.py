@@ -262,7 +262,7 @@ def emit_block(stem: str, data: dict) -> str:
             if b in seen_btn:
                 continue
             seen_btn.add(b)
-            body.append(f"  button {q(b)}")
+            body.append(f"  button {q(b)} tone:primary")
             if len(seen_btn) >= 3:
                 break
         if not seen_btn and copy:

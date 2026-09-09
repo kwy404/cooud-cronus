@@ -206,6 +206,16 @@ def gen_ui() -> int:
             exports = [feat] + exports
         slots = extract_slots(src)
         params, body = behavior_body(name, feat, variants, defaults)
+        style_parts = [name]
+        dv = defaults.get("variant") or (variants.get("variant") or [None])[0]
+        if dv:
+            style_parts.append(dv)
+            if dv == "destructive":
+                style_parts.append("danger")
+        ds = defaults.get("size") or (variants.get("size") or [None])[0]
+        if ds and ds not in {"icon", "icon-sm"}:
+            style_parts.append(ds)
+        style_s = "+".join(style_parts)
         comments = [
             f"## {feat}",
             f"## source: packages/ui/src/components/{name}.tsx",
@@ -220,10 +230,27 @@ def gen_ui() -> int:
         blocks = [
             "\n".join(comments),
             "",
-            f"component {feat}({params}) layout:{layout_for(name)} style:{name} {{",
+            f"component {feat}({params}) layout:{layout_for(name)} style:{style_s} {{",
             *body,
             "}",
         ]
+        for vv in variants.get("variant") or []:
+            if vv == (dv or ""):
+                continue
+            vstyle = [name, vv]
+            if vv == "destructive":
+                vstyle.append("danger")
+            if ds and ds not in {"icon", "icon-sm"}:
+                vstyle.append(ds)
+            vfeat = feat + ident(vv)
+            blocks += [
+                "",
+                f"component {vfeat}(label: text, disabled: boolean) layout:{layout_for(name)} style:{'+'.join(vstyle)} {{",
+                f"  label {q(feat)}",
+                f"  variant {q(vv)}",
+                "  action \"click\"",
+                "}",
+            ]
         for extra in exports:
             if extra == feat:
                 continue
@@ -395,10 +422,12 @@ def gen_blocks() -> int:
 
 
 def main() -> None:
-    ui = gen_ui()
-    blocks = gen_blocks()
-    print("ui", ui)
-    print("blocks", blocks)
+    import sys
+    args = set(sys.argv[1:])
+    if not args or "ui" in args:
+        print("ui", gen_ui())
+    if not args or "blocks" in args:
+        print("blocks", gen_blocks())
 
 
 if __name__ == "__main__":

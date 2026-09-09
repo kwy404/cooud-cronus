@@ -5,7 +5,7 @@
 ## slots: sidebar, sidebar-content, sidebar-footer, sidebar-group, sidebar-group-content, sidebar-group-label, sidebar-header, sidebar-inset, sidebar-menu, sidebar-menu-button, sidebar-menu-item, sidebar-menu-sub, sidebar-menu-sub-button, sidebar-menu-sub-item, sidebar-rail, sidebar-separator, sidebar-trigger, sidebar-wrapper
 ## variants.size: sm, md, lg
 
-component Sidebar(label: text, disabled: boolean, size: text) layout:stack style:sidebar {
+component Sidebar(label: text, disabled: boolean, size: text) layout:stack style:sidebar+md {
   label "Sidebar"
   size "md"
   item "Home" -> "/"

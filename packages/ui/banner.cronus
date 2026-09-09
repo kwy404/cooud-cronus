@@ -6,7 +6,7 @@
 ## variants.variant: default, brand, info, success, warning, error
 ## variants.align: start, center
 
-component Banner(label: text, disabled: boolean, variant: text) layout:stack style:banner {
+component Banner(label: text, disabled: boolean, variant: text) layout:stack style:banner+default {
   label "Banner"
   variant "default"
   action "click"
@@ -18,4 +18,34 @@ component Banner(label: text, disabled: boolean, variant: text) layout:stack sty
   test "disabled Banner" {
     expect visible "Banner"
   }
+}
+
+component BannerBrand(label: text, disabled: boolean) layout:stack style:banner+brand {
+  label "Banner"
+  variant "brand"
+  action "click"
+}
+
+component BannerInfo(label: text, disabled: boolean) layout:stack style:banner+info {
+  label "Banner"
+  variant "info"
+  action "click"
+}
+
+component BannerSuccess(label: text, disabled: boolean) layout:stack style:banner+success {
+  label "Banner"
+  variant "success"
+  action "click"
+}
+
+component BannerWarning(label: text, disabled: boolean) layout:stack style:banner+warning {
+  label "Banner"
+  variant "warning"
+  action "click"
+}
+
+component BannerError(label: text, disabled: boolean) layout:stack style:banner+error {
+  label "Banner"
+  variant "error"
+  action "click"
 }

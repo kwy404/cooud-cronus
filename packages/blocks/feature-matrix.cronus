@@ -15,9 +15,9 @@ component FeatureMatrixBlock(label: text) layout:stack style:feature-matrix {
   slot "Card"
   plan "Starter"
   plan "Pro"
-  button "Starter"
-  button "Get started"
-  button "Start free trial"
+  button "Starter" tone:primary
+  button "Get started" tone:primary
+  button "Start free trial" tone:primary
   text "Compare Starter, Pro, and Scale plans feature by feature"
   text "Compare plans"
   text "Every plan, feature by feature."

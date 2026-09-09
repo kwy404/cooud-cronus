@@ -1,48 +1,22 @@
-## tokens sunset
-## source: packages/tokens/styles/tokens.css
-## --cronus-primary: oklch(0.78 0.16 65)
-## --cronus-primary-foreground: oklch(0.24 0.05 55)
-## --cronus-primary-text: oklch(0.54 0.129 65)
-## --cronus-accent: oklch(0.585 0.22 18)
-## --cronus-accent-foreground: oklch(0.99 0.01 40)
-## --cronus-surface-base: oklch(1 0 0)
-## --cronus-surface-inset: oklch(0.985 0 0)
-## --cronus-surface-raised: oklch(1 0 0)
-## --cronus-surface-overlay: oklch(0.967 0.001 286)
-## --cronus-surface-elevated: oklch(1 0 0)
-## --cronus-surface-floating: oklch(1 0 0)
-## --cronus-fg: oklch(0.235 0.006 285.9)
-## --cronus-fg-secondary: oklch(0.442 0.013 286)
-## --cronus-fg-tertiary: oklch(0.54 0.014 286)
-## --cronus-fg-muted: oklch(0.705 0.015 286)
-## --cronus-fg-inverse: oklch(0.985 0.001 106.4)
-## --cronus-border: oklch(0 0 0 / 0.1)
-## --cronus-border-strong: oklch(0 0 0 / 0.14)
-## --cronus-border-soft: oklch(0 0 0 / 0.06)
-## --cronus-ring: oklch(0.78 0.16 65)
-## --cronus-success: oklch(0.55 0.15 130)
-## --cronus-success-text: oklch(0.5 0.15 130)
-## --cronus-warning: oklch(0.52 0.12 70)
-## --cronus-warning-text: oklch(0.518 0.12 70)
-## --cronus-error: oklch(0.55 0.2 25)
-## --cronus-error-text: oklch(0.531 0.2 25)
-## --cronus-info: oklch(0.55 0.13 55)
-## --cronus-info-text: oklch(0.52 0.13 55)
-## --cronus-radius: 14px
-## --cronus-chart-1: oklch(0.7 0.16 60)
-## --cronus-chart-2: oklch(0.62 0.19 40)
-## --cronus-chart-3: oklch(0.585 0.22 18)
-## --cronus-chart-4: oklch(0.76 0.16 85)
-## --cronus-chart-5: oklch(0.58 0.18 4)
-## --cronus-shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.06)
-## --cronus-shadow-sm: 0 2px 4px rgba(16, 24, 40, 0.08)
-## --cronus-shadow-md: 0 6px 12px rgba(16, 24, 40, 0.1), 0 2px 4px rgba(16, 24, 40, 0.06)
-## --cronus-shadow-lg: 0 12px 24px rgba(16, 24, 40, 0.12), 0 4px 8px rgba(16, 24, 40, 0.08)
-## --cronus-shadow-glow: 0 12px 32px rgba(252, 159, 48, 0.24)
+## tokens sunset dark
+## live style {} — kernel generate_css_vars reads these keys
 
 style {
   theme dark
   preset sunset
-  accent white
+  accent "#fc9f30"
   font "Inter"
+  radius 14px
+  accent-hex "#fc9f30"
+  background "#09090b"
+  surface "#111113"
+  text "#fafaf9"
+  text-muted "#a1a1aa"
+  border "rgba(255,255,255,0.10)"
+  primary "oklch(0.78 0.16 65)"
+  ring "oklch(0.78 0.16 65)"
+  success "oklch(0.55 0.15 130)"
+  warning "oklch(0.52 0.12 70)"
+  error "oklch(0.55 0.2 25)"
+  info "oklch(0.55 0.13 55)"
 }
