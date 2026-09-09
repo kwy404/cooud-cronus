@@ -4,13 +4,13 @@ Cronus UI autorado em `.cronus`. Destino da conversão.
 
 Repo: [kwy404/cooud-cronus](https://github.com/kwy404/cooud-cronus) · **58** famílias em `output/components/` · showcase `output/preview/showcase.html`
 
-## Dashboard (block Analytics)
+## Cooud Dashboard (`dashboard.cooud.com`)
 
-Igual ao block `dashboard` do Cronus UI: AppShell, sidebar, KPIs `demo-saas`, revenue bars Jan–Jul, activity table.
+Mesma superfície: rail de ícones, saldo **-R$ 0,23**, Auto + D3, Transações / Repasses, meta Titanium R$ 100.000, gráfico vazio “Este mês”.
 
-Fonte: `output/blocks/dashboard.cronus`
+Fonte: `output/blocks/cooud-dashboard.cronus`
 
-![Dashboard Analytics](output/preview/dashboard.png)
+![Cooud Dashboard](output/preview/cooud-dashboard.png)
 
 ## Prints — catálogo
 

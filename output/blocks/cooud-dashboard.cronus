@@ -1,0 +1,56 @@
+## Cooud Dashboard — parity with dashboard.cooud.com
+## Saldo, boost, meta Titanium, transações / resumo
+
+app "Cooud" {
+  port 4747
+}
+
+style {
+  theme dark
+  preset aurora
+}
+
+page "/" type:custom {
+  section sidebar {
+    item home
+    item analytics
+    item history
+    item share
+    item apps
+    item settings
+  }
+
+  section kpi {
+    title "Saldo"
+    value "-R$ 0,23"
+    badge "Auto + D3"
+    item "Faltam hoje" value "R$ 110,00"
+    item "Meta diária" value "R$ 110,00"
+  }
+
+  section stats {
+    item "Receita bruta" value "R$ 0,00"
+    item "Receita líquida" value "R$ 0,00"
+    item "Pedidos" value "0"
+    item "Ticket médio bruto" value "R$ 0,00"
+  }
+
+  section progress {
+    title "Meta de faturamento"
+    subtitle "Receita líquida — todos os projetos"
+    value 0
+    max 100000
+    product "COOUD Titanium"
+  }
+
+  section tabs {
+    item Transações
+    item Resumo
+  }
+
+  section chart {
+    title "Este mês"
+    value "R$ 0,00"
+    range "01 de set. … 07 de set."
+  }
+}
