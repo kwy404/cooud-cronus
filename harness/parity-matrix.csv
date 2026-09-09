@@ -124,6 +124,7 @@ CLI-ADD,packages/cli,cronus-ui add,cli,,,,,,,,,,,,INVENTORIED,
 CLI-COMPOSE,packages/cli,cronus-ui compose,cli,,,,,,,,,,,,INVENTORIED,kernel already has compose — name conflict
 CLI-THEME,packages/cli,cronus-ui theme set/add,cli,,,,,,,,,,,,INVENTORIED,
 CLI-UPGRADE,packages/cli,cronus-ui upgrade,cli,,,,,,,,,,,,INVENTORIED,
+COOUD-DASH,dashboard.cooud.com,Cooud product dashboard,product,"saldo, auto+D3, boost, transacoes, repasses, receita, meta 100000, tabs, chart empty","dark",empty-month,pt-BR,neutral/aurora,apps/dashboard/app.cronus,"app/entity/layout/page/section kpi progress tabs chart table empty",kernel renderer,harness/report.md,apps/dashboard/app.cronus,docs/preview/cooud-dashboard.png,PORTED,"native .cronus; HTML/CSS escape hatch REJECTED; visual pixel-parity is LANGUAGE GAP"
 REACT,packages/ui,React/Next/Bun runtime,release-tooling,,,,,,,,,,,,INTENTIONAL_DIFFERENCE,must not exist on target runtime
 RHF,packages/ui,React Hook Form,component-forms,,,,,,,,,,,,INTENTIONAL_DIFFERENCE,replace with native validation
 REF,CONTRACT.md,React ref forwarding,component-foundation,,,,,,,,,,,,INTENTIONAL_DIFFERENCE,no CRONUS equivalent

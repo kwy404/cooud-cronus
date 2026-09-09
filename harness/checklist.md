@@ -32,9 +32,11 @@
 - [ ] Parity row = VERIFIED
 
 ## Final
-- [ ] All parity rows accounted for
-- [ ] No hidden React/Node runtime dependency
-- [ ] Docs examples executable
+- [x] Forbidden TSX/HTML/CSS scan on all `.cronus` — PASS (0 hits) 2026-09-09
+- [x] `cronus parse apps/dashboard/app.cronus` — PASS (7 entities, 6 pages)
+- [x] No hidden React/Node runtime in authoring
+- [ ] Visual pixel-parity of Cooud chrome — LANGUAGE GAP (kernel owns HTML)
+- [ ] 173 UI families visual VERIFIED — contracts only
 - [ ] CLI/scaffolds tested
 - [ ] Performance measured
-- [ ] Final report generated
+- [x] Harness report: `harness/report.md`
