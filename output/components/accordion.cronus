@@ -1,0 +1,7 @@
+## Accordion — overlays
+## source: packages/ui/src/components/accordion.tsx
+
+component Accordion layout:inline style:accordion {
+  label "Accordion"
+  variant "single"
+}

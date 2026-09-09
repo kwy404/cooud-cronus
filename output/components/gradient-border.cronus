@@ -1,0 +1,7 @@
+## GradientBorder — premium
+## source: packages/ui/src/components/gradient-border.tsx
+
+component GradientBorder layout:inline style:gradient-border {
+  label "GradientBorder"
+  variant "aurora"
+}

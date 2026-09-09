@@ -1,0 +1,7 @@
+## Button — foundation
+## source: packages/ui/src/components/button.tsx
+
+component Button layout:inline style:button {
+  label "Button"
+  variant "primary"
+}

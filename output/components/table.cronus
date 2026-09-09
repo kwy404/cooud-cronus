@@ -1,0 +1,7 @@
+## Table — data
+## source: packages/ui/src/components/table.tsx
+
+component Table layout:inline style:table {
+  label "Table"
+  variant "header"
+}

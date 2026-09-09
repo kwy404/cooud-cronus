@@ -5,3 +5,4 @@ migration-staging/
 .DS_Store
 Thumbs.db
 scripts/screenshot-preview.mjs
+scripts/shot-showcase.mjs

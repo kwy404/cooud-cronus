@@ -1,0 +1,7 @@
+## LogoCarousel — premium
+## source: packages/ui/src/components/logo-carousel.tsx
+
+component LogoCarousel layout:inline style:logo-carousel {
+  label "LogoCarousel"
+  variant "marquee"
+}

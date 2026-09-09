@@ -1,0 +1,7 @@
+## Checkbox — forms
+## source: packages/ui/src/components/checkbox.tsx
+
+component Checkbox layout:inline style:checkbox {
+  label "Checkbox"
+  variant "checked"
+}
