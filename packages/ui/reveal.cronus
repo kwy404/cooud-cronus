@@ -1,0 +1,7 @@
+## Reveal — premium
+## source: packages/ui/src/components/reveal.tsx
+
+component Reveal layout:inline style:reveal {
+  label "Reveal"
+  variant "reduced-motion"
+}

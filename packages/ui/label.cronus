@@ -1,0 +1,7 @@
+## Label — foundation
+## source: packages/ui/src/components/label.tsx
+
+component Label layout:inline style:label {
+  label "Label"
+  variant "default"
+}

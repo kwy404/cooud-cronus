@@ -1,0 +1,7 @@
+## Tooltip — overlays
+## source: packages/ui/src/components/tooltip.tsx
+
+component Tooltip layout:inline style:tooltip {
+  label "Tooltip"
+  variant "delay"
+}

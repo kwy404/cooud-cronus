@@ -1,0 +1,7 @@
+## Spinner — foundation
+## source: packages/ui/src/components/spinner.tsx
+
+component Spinner layout:inline style:spinner {
+  label "Spinner"
+  variant "sm"
+}

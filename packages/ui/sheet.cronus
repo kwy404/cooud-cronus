@@ -1,0 +1,7 @@
+## Sheet — overlays
+## source: packages/ui/src/components/sheet.tsx
+
+component Sheet layout:inline style:sheet {
+  label "Sheet"
+  variant "side left"
+}

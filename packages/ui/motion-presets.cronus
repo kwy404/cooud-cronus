@@ -1,0 +1,7 @@
+## Motion presets — premium
+## source: packages/ui/src/components/motion-presets.tsx
+
+component MotionPresets layout:inline style:motion-presets {
+  label "Motion presets"
+  variant "ease-out-quart"
+}

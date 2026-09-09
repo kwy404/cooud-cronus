@@ -1,0 +1,7 @@
+## DropdownMenu — overlays
+## source: packages/ui/src/components/dropdown-menu.tsx
+
+component DropdownMenu layout:inline style:dropdown-menu {
+  label "DropdownMenu"
+  variant "keyboard"
+}

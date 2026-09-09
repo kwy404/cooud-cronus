@@ -1,0 +1,7 @@
+## Toast — overlays
+## source: packages/ui/src/components/toast.tsx
+
+component Toast layout:inline style:toast {
+  label "Toast"
+  variant "lifecycle"
+}

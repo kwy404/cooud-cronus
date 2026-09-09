@@ -1,0 +1,7 @@
+## SpotlightCard — premium
+## source: packages/ui/src/components/spotlight-card.tsx
+
+component SpotlightCard layout:inline style:spotlight-card {
+  label "SpotlightCard"
+  variant "pointer"
+}

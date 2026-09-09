@@ -1,0 +1,7 @@
+## HoverCard — overlays
+## source: packages/ui/src/components/hover-card.tsx
+
+component HoverCard layout:inline style:hover-card {
+  label "HoverCard"
+  variant "hover"
+}

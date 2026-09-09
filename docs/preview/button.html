@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cronus UI in .cronus — Button</title>
+  <style>
+    :root {
+      --ease-out-quart: cubic-bezier(.22, 1, .36, 1);
+      font-family: "SF Pro Text", Geist, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    }
+
+    /* aurora dark */
+    .theme-aurora.mode-dark {
+      --cronus-primary: oklch(0.685 0.169 237.3);
+      --cronus-primary-foreground: oklch(0.145 0.005 285.8);
+      --cronus-primary-text: oklch(0.685 0.169 237.3);
+      --cronus-surface-base: oklch(0.145 0.005 285.8);
+      --cronus-surface-overlay: oklch(0.235 0.006 285.9);
+      --cronus-fg: oklch(0.985 0.001 106.4);
+      --cronus-fg-secondary: oklch(0.705 0.015 286);
+      --cronus-border: oklch(1 0 0 / 0.1);
+      --cronus-border-strong: oklch(1 0 0 / 0.14);
+      --cronus-ring: oklch(0.685 0.169 237.3);
+      --cronus-error: oklch(0.645 0.222 16.44);
+      --cronus-radius: 14px;
+    }
+    /* aurora light */
+    .theme-aurora.mode-light {
+      --cronus-primary: oklch(0.685 0.169 237.3);
+      --cronus-primary-foreground: oklch(0.145 0.005 285.8);
+      --cronus-primary-text: oklch(0.515 0.12 237.3);
+      --cronus-surface-base: oklch(1 0 0);
+      --cronus-surface-overlay: oklch(0.967 0.001 286);
+      --cronus-fg: oklch(0.235 0.006 285.9);
+      --cronus-fg-secondary: oklch(0.442 0.013 286);
+      --cronus-border: oklch(0 0 0 / 0.1);
+      --cronus-border-strong: oklch(0 0 0 / 0.14);
+      --cronus-ring: oklch(0.685 0.169 237.3);
+      --cronus-error: oklch(0.55 0.2 25);
+      --cronus-radius: 14px;
+    }
+    /* neutral dark */
+    .theme-neutral.mode-dark {
+      --cronus-primary: oklch(0.93 0 0);
+      --cronus-primary-foreground: oklch(0.11 0 0);
+      --cronus-primary-text: oklch(0.93 0 0);
+      --cronus-surface-base: oklch(0.11 0 0);
+      --cronus-surface-overlay: oklch(0.2 0 0);
+      --cronus-fg: oklch(0.93 0 0);
+      --cronus-fg-secondary: oklch(0.7 0 0);
+      --cronus-border: oklch(1 0 0 / 0.1);
+      --cronus-border-strong: oklch(1 0 0 / 0.16);
+      --cronus-ring: oklch(0.55 0 0);
+      --cronus-error: oklch(0.704 0.191 22.216);
+      --cronus-radius: 14px;
+    }
+    /* neutral light */
+    .theme-neutral.mode-light {
+      --cronus-primary: oklch(0.205 0 0);
+      --cronus-primary-foreground: oklch(0.985 0 0);
+      --cronus-primary-text: oklch(0.205 0 0);
+      --cronus-surface-base: oklch(0.985 0 0);
+      --cronus-surface-overlay: oklch(0.96 0 0);
+      --cronus-fg: oklch(0.145 0 0);
+      --cronus-fg-secondary: oklch(0.43 0 0);
+      --cronus-border: oklch(0.915 0 0);
+      --cronus-border-strong: oklch(0.86 0 0);
+      --cronus-ring: oklch(0.705 0 0);
+      --cronus-error: oklch(0.55 0.2 25);
+      --cronus-radius: 14px;
+    }
+
+    [data-slot="button"] {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      white-space: nowrap;
+      border-radius: var(--cronus-radius, 14px);
+      font-size: 0.875rem;
+      font-weight: 500;
+      line-height: 1;
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid transparent;
+      outline: none;
+      font-family: inherit;
+      transition: background 150ms var(--ease-out-quart),
+        border-color 150ms var(--ease-out-quart),
+        box-shadow 150ms var(--ease-out-quart),
+        transform 150ms var(--ease-out-quart),
+        opacity 150ms var(--ease-out-quart);
+    }
+    [data-slot="button"]:focus-visible {
+      box-shadow: 0 0 0 2px var(--cronus-surface-base), 0 0 0 4px var(--cronus-ring);
+    }
+    [data-slot="button"]:disabled,
+    [data-slot="button"][aria-disabled="true"] {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    [data-slot="button"][data-size="sm"] { height: 2rem; padding: 0 0.75rem; font-size: 0.75rem; }
+    [data-slot="button"][data-size="md"] { height: 2.5rem; padding: 0 1rem; }
+    [data-slot="button"][data-size="lg"] { height: 2.75rem; padding: 0 1.5rem; font-size: 1rem; }
+    [data-slot="button"][data-size="icon"] { width: 2.25rem; height: 2.25rem; padding: 0; }
+    [data-slot="button"][data-size="icon-sm"] { width: 2rem; height: 2rem; padding: 0; }
+    [data-slot="button"][data-variant="primary"] {
+      background: var(--cronus-primary);
+      color: var(--cronus-primary-foreground);
+    }
+    [data-slot="button"][data-variant="secondary"] {
+      background: var(--cronus-surface-overlay);
+      color: var(--cronus-fg);
+      border-color: var(--cronus-border);
+    }
+    [data-slot="button"][data-variant="outline"] {
+      background: transparent;
+      color: var(--cronus-fg);
+      border-color: var(--cronus-border);
+    }
+    [data-slot="button"][data-variant="ghost"] {
+      background: transparent;
+      color: var(--cronus-fg-secondary);
+    }
+    [data-slot="button"][data-variant="destructive"] {
+      background: color-mix(in oklch, var(--cronus-error), black 30%);
+      color: #fff;
+    }
+    [data-slot="button"][data-variant="link"] {
+      background: transparent;
+      color: var(--cronus-primary-text);
+      text-underline-offset: 4px;
+      height: auto;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      background: #0b0b0c;
+      color: #fafafa;
+    }
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 48px 32px 64px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      margin: 0 0 8px;
+    }
+    .lede {
+      color: #a1a1aa;
+      font-size: 14px;
+      margin: 0 0 40px;
+    }
+    .panel {
+      background: var(--cronus-surface-base);
+      color: var(--cronus-fg);
+      border: 1px solid var(--cronus-border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 20px;
+    }
+    .panel h2 {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--cronus-fg-secondary);
+      margin: 0 0 20px;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .row:last-child { margin-bottom: 0; }
+    .label {
+      width: 88px;
+      font-size: 12px;
+      color: var(--cronus-fg-secondary);
+    }
+    code {
+      font-family: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+      font-size: 12px;
+      color: var(--cronus-fg-secondary);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Button — Cronus UI in .cronus</h1>
+    <p class="lede">Wave 0 slice. Semantic tokens only. <code>output/button.cronus</code></p>
+
+    <section class="panel theme-aurora mode-dark" id="aurora-dark">
+      <h2>Aurora · dark</h2>
+      <div class="row">
+        <span class="label">variants</span>
+        <button type="button" data-slot="button" data-variant="primary" data-size="md">Save</button>
+        <button type="button" data-slot="button" data-variant="secondary" data-size="md">Cancel</button>
+        <button type="button" data-slot="button" data-variant="outline" data-size="md">Outline</button>
+        <button type="button" data-slot="button" data-variant="ghost" data-size="md">Ghost</button>
+        <button type="button" data-slot="button" data-variant="destructive" data-size="md">Delete</button>
+        <a href="#docs" data-slot="button" data-variant="link" data-size="md">Docs</a>
+      </div>
+      <div class="row">
+        <span class="label">sizes</span>
+        <button type="button" data-slot="button" data-variant="primary" data-size="sm">Small</button>
+        <button type="button" data-slot="button" data-variant="primary" data-size="md">Medium</button>
+        <button type="button" data-slot="button" data-variant="primary" data-size="lg">Large</button>
+        <button type="button" data-slot="button" data-variant="primary" data-size="icon" aria-label="Icon">+</button>
+        <button type="button" data-slot="button" data-variant="outline" data-size="icon-sm" aria-label="Icon sm">+</button>
+      </div>
+      <div class="row">
+        <span class="label">states</span>
+        <button type="button" data-slot="button" data-variant="primary" data-size="md" class="force-focus" id="focus-demo">Focus</button>
+        <button type="button" data-slot="button" data-variant="primary" data-size="md" disabled>Disabled</button>
+      </div>
+    </section>
+
+    <section class="panel theme-aurora mode-light" id="aurora-light">
+      <h2>Aurora · light</h2>
+      <div class="row">
+        <span class="label">variants</span>
+        <button type="button" data-slot="button" data-variant="primary" data-size="md">Save</button>
+        <button type="button" data-slot="button" data-variant="secondary" data-size="md">Cancel</button>
+        <button type="button" data-slot="button" data-variant="outline" data-size="md">Outline</button>
+        <button type="button" data-slot="button" data-variant="ghost" data-size="md">Ghost</button>
+        <button type="button" data-slot="button" data-variant="destructive" data-size="md">Delete</button>
+        <a href="#docs" data-slot="button" data-variant="link" data-size="md">Docs</a>
+      </div>
+    </section>
+
+    <section class="panel theme-neutral mode-dark" id="neutral-dark">
+      <h2>Neutral · dark</h2>
+      <div class="row">
+        <span class="label">variants</span>
+        <button type="button" data-slot="button" data-variant="primary" data-size="md">Save</button>
+        <button type="button" data-slot="button" data-variant="secondary" data-size="md">Cancel</button>
+        <button type="button" data-slot="button" data-variant="outline" data-size="md">Outline</button>
+        <button type="button" data-slot="button" data-variant="ghost" data-size="md">Ghost</button>
+        <button type="button" data-slot="button" data-variant="destructive" data-size="md">Delete</button>
+        <a href="#docs" data-slot="button" data-variant="link" data-size="md">Docs</a>
+      </div>
+    </section>
+
+    <section class="panel theme-neutral mode-light" id="neutral-light">
+      <h2>Neutral · light</h2>
+      <div class="row">
+        <span class="label">variants</span>
+        <button type="button" data-slot="button" data-variant="primary" data-size="md">Save</button>
+        <button type="button" data-slot="button" data-variant="secondary" data-size="md">Cancel</button>
+        <button type="button" data-slot="button" data-variant="outline" data-size="md">Outline</button>
+        <button type="button" data-slot="button" data-variant="ghost" data-size="md">Ghost</button>
+        <button type="button" data-slot="button" data-variant="destructive" data-size="md">Delete</button>
+        <a href="#docs" data-slot="button" data-variant="link" data-size="md">Docs</a>
+      </div>
+    </section>
+  </div>
+  <style>
+    .force-focus { box-shadow: 0 0 0 2px var(--cronus-surface-base), 0 0 0 4px var(--cronus-ring); }
+  </style>
+</body>
+</html>

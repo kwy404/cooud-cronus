@@ -1,0 +1,7 @@
+## Card — foundation
+## source: packages/ui/src/components/card.tsx
+
+component Card layout:inline style:card {
+  label "Card"
+  variant "header"
+}
