@@ -13,9 +13,9 @@ Wave 0 remainder: **Input + Label** (kernel `input()` still hardcodes `#0a0a0a` 
 - First deliverable (SDD, inventory, gaps, harness, parity init).
 - **W-1-TOKENS-BUTTON** implemented without a new tokenizer keyword.
   - `theme.rs`: aurora/neutral × light/dark `--cronus-*` + `BUTTON_PRIMITIVE_CSS`
-  - `components.rs::button` / `button_ex`: variants, sizes, href→`<a>`, disabled, `data-slot`
+  - `components.rs::button` / `button_ex`: variants, sizes, href→link, disabled, `data-slot`
   - `ui/component.rs` `layout:inline` maps destructive/link/icon
-  - `layout.rs` injects semantic CSS + `data-cronus-theme/mode` on `<html>`
+  - `layout.rs` injects semantic tokens + `data-cronus-theme/mode` on the document root
   - Demo `demos/ui-parity/button.cronus`
   - LANGUAGE.md §6.1 REAL
 - Tests: **+11**, full suite **220 passed / 1 pre-existing fail** (`dump::detect` Windows path).

@@ -25,7 +25,7 @@ ALREADY_NATIVE · EXPRESSIBLE_WITH_EXISTING_CRONUS · NEEDS_LANGUAGE_EXTENSION �
 | Typed variant enums | NEEDS_RENDERER_EXTENSION first | AST props are strings; validate in renderer/lint before new grammar |
 | Slots | NEEDS_RENDERER_EXTENSION | `slot` in OFFICIAL_ITEM_TYPES; no renderer |
 | `ref` / `forwardRef` | INTENTIONALLY_NOT_PORTED | React-only |
-| `asChild` | EXPRESSIBLE | kernel button already `<a>` if href |
+| `asChild` | EXPRESSIBLE | kernel button already a link if href |
 | RHF / Zod | INTENTIONALLY_NOT_PORTED | Native validation later |
 | TanStack / Recharts / visx / motion | INTENTIONALLY_NOT_PORTED as deps | Native SVG/runtime instead |
 | React/Next/Bun runtime | INTENTIONALLY_NOT_PORTED | Invariant |

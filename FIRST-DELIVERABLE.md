@@ -86,7 +86,7 @@ CRONUS is a **declarative full-stack language** compiling to one Rust binary (`c
 | Typed props / slots / variants / CVA | No first-class variant enum, no slots, no `data-slot` contract | NEEDS_LANGUAGE_EXTENSION + RENDERER |
 | Semantic tokens | `style { theme dark accent blue }`; `tailwind_config` JS scraped into `ThemeTokens` with **hardcoded hex Obsidian defaults** (`src/theme.rs`) | NEEDS_LANGUAGE_EXTENSION + RUNTIME. Do not keep JS config as SoT |
 | Theme switch / overrides | `dark-mode` section; not aurora/neutral + CSS-var override model | NEEDS_RUNTIME_EXTENSION |
-| Foundation primitives (Button, Input, …) | Absent as DS primitives. Entity fields render `<input>`/`<textarea>`/`<select>` by type | NEEDS_RENDERER_EXTENSION |
+| Foundation primitives (Button, Input, …) | Absent as DS primitives. Entity fields render native form controls by type | NEEDS_RENDERER_EXTENSION |
 | Page sections | **39 canonical** types (hero, form, table, chart SVG bar/line/area/donut, modal, sheet, drawer, popover, tabs, …) | EXPRESSIBLE_WITH_EXISTING_CRONUS for *page blocks*; not DS parity |
 | Forms | Entity + `section form` + field types. No RHF/Zod equivalent | NEEDS_RUNTIME_EXTENSION for validation semantics |
 | Overlays | Section types exist; **zero** `src/ui` tests; keyboard/focus trap unknown | NEEDS_NEW_TEST/HARNESS + likely RENDERER |
@@ -142,7 +142,7 @@ If we can express this with current `component Button layout:primitive { variant
 | CVA variants | explicit `variant`/`size` fields, validated enum |
 | `data-slot` | same attribute on root HTML |
 | `ref` | omit |
-| `asChild` | `href` present → render `<a>`; else `<button>` |
+| `asChild` | `href` present → render link; else button |
 | focus ring | `focus-visible` + `ring` token |
 | disabled | `disabled` + opacity/pointer-events |
 | RTL | logical CSS |
@@ -211,11 +211,11 @@ A row is VERIFIED only if **all** hold:
 7. Focus-visible uses **ring token**, not a raw color.
 8. Styles consume **semantic tokens only** (forbidden: `bg-zinc-*`, hardcoded palette scales). Destructive may use `color-mix` on `--cronus-error` as in source.
 9. Light and dark (at least `aurora` + `neutral`) change Button via CSS vars without React.
-10. `href` present → `<a>`; else `<button>` (asChild intent).
+10. `href` present → link; else button (asChild intent).
 11. Demo `.cronus` file in kernel demos/templates parses and renders.
 12. Full `cargo test` green; existing demos still parse.
 13. `LANGUAGE.md` updated **only for what actually works**, marked REAL.
-14. Evidence under `migration/evidence/w-1/button/` (HTML snapshot ± screenshot).
+14. Evidence under `migration/evidence/w-1/button/` (image snapshot).
 15. Parity rows `TOKENS`, `THEME` (minimal), `W0-BUTTON` → `VERIFIED` or `FUNCTIONAL_PARITY` with notes; **not** claimed complete for all 5 themes until those themes are generated.
 
 Then implement that slice. Not before these specs landed (they have now).

@@ -15,7 +15,7 @@ SPEC → IMPLEMENT → HARNESS → SELF-CORRECT → EVIDENCE → PARITY UPDATE.
 Never claim completion from file existence alone.
 A migrated capability is complete only when it is VERIFIED by tests/evidence.
 
-**Nao se escreve HTML.** So `.cronus` no repo. HTML e por tras: o kernel emite na saida do `cronus run`. Arquivo `.html` / `.css` / `.tsx` neste repo e erro. `style_block` e `template "<div"` sao proibidos.
+**Nao entra markup de pagina neste repo.** So `.cronus` (mais imagem de preview). A pagina e emitida por tras, no `cronus run`. `style_block` e `template` com markup sao proibidos.
 
 Do not use React/Next/Node as a hidden target runtime.
 Do not patch dead kernel paths.

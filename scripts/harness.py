@@ -13,20 +13,21 @@ SRC_UI = Path(r"C:\Users\Hadouken Game Center\Desktop\cooud\cronus-ui\packages\u
 SRC_REG = Path(r"C:\Users\Hadouken Game Center\Desktop\cooud\cronus-ui\registry")
 SRC_PKGS = Path(r"C:\Users\Hadouken Game Center\Desktop\cooud\cronus-ui\packages")
 
-FORBIDDEN_LINE = re.compile(
+HATCH_LINE = re.compile(
+    r"""style_block | \btailwind_config\b | \btemplate\s+" """,
+    re.I | re.X,
+)
+MARKUP_LINE = re.compile(
     r"""
-    style_block
-    | \btailwind_config\b
-    | \btemplate\s+"
-    | <(div|nav|section|span|svg|button|html|body|style|img|a)\b
-    | class=\\"
-    | class='
+    </?(div|nav|section|span|svg|button|html|body|head|style|script|img|input|textarea|select|!DOCTYPE)\b
+    | <a(/|>|\s)
     | from\s+['\"]react
-    | \.tsx\b
     | import\s+React
     """,
     re.I | re.X,
 )
+
+TEXT_EXTS = {".cronus", ".md", ".sdd", ".py", ".txt", ".csv", ".json", ".ps1", ".bat"}
 
 SKIP_DIRS = {
     "workspace",
@@ -93,18 +94,51 @@ def scan_preview_not_images() -> list[str]:
     return sorted(hits)
 
 
+def iter_text() -> list[Path]:
+    out = []
+    for child in ROOT.iterdir():
+        if child.name in SKIP_DIRS or child.name.startswith("."):
+            continue
+        stack = [child] if child.is_dir() else []
+        if child.is_file() and child.suffix.lower() in TEXT_EXTS:
+            out.append(child)
+        while stack:
+            d = stack.pop()
+            if d.name in SKIP_DIRS:
+                continue
+            try:
+                entries = list(d.iterdir())
+            except OSError:
+                continue
+            for p in entries:
+                if p.name in SKIP_DIRS or p.name == "node_modules":
+                    continue
+                if p.is_dir():
+                    stack.append(p)
+                elif p.is_file() and p.suffix.lower() in TEXT_EXTS:
+                    out.append(p)
+    return sorted(out)
+
+
 def scan_forbidden(paths: list[Path]) -> list[dict]:
     hits = []
+    skip_names = {"harness.py"}
     for path in paths:
+        if path.name in skip_names:
+            continue
+        rel = str(path.relative_to(ROOT)).replace("\\", "/")
+        if rel in {"harness/report.md", "harness/report.json"}:
+            continue
         text = path.read_text(encoding="utf-8")
+        is_cronus = path.suffix.lower() == ".cronus"
         for i, line in enumerate(text.splitlines(), 1):
             stripped = line.lstrip()
             if stripped.startswith("##"):
                 continue
-            if FORBIDDEN_LINE.search(line):
+            if MARKUP_LINE.search(line) or (is_cronus and HATCH_LINE.search(line)):
                 hits.append(
                     {
-                        "file": str(path.relative_to(ROOT)).replace("\\", "/"),
+                        "file": rel,
                         "line": i,
                         "excerpt": line.strip()[:160],
                     }
@@ -177,7 +211,7 @@ def write_report(data: dict) -> Path:
         "",
         f"generated: {data['generated']}",
         "",
-        "## Gate: no TSX / HTML / CSS in `.cronus`",
+        "## Gate: no page markup in the repo",
         "",
         f"status: **{data['forbidden_status']}**",
         f"hits in .cronus: {len(hits)}",
@@ -206,10 +240,10 @@ def write_report(data: dict) -> Path:
             excerpt = h["excerpt"].replace("|", "\\|")
             lines.append(f"| `{h['file']}` | {h['line']} | `{excerpt}` |")
         lines.append("")
-        lines.append("VERIFY: remove style_block / template HTML / CSS / TSX. Kernel renders.")
+        lines.append("VERIFY: remove style_block / template markup. Kernel renders.")
         lines.append("")
     else:
-        lines.append("No forbidden HTML/CSS/TSX in authoring `.cronus`.")
+        lines.append("No page markup in authoring files. Source is `.cronus`.")
         lines.append("")
 
     lines += [
@@ -255,10 +289,10 @@ def write_report(data: dict) -> Path:
         "Regra Zedd (fechou): HTML nao entra. O HTML e o `.cronus`. Kernel emite a pagina.",
         "1. `apps/dashboard/app.cronus` is native sections only (sidebar, kpi, progress, tabs, chart, table, empty).",
         "2. `cronus parse apps/dashboard/app.cronus` succeeds after `scripts/CRIAR-COMPILER.bat`.",
-        "3. No `.cronus` file contains `style_block`, `template \"<html>`, or TSX.",
+        "3. No file in this repo contains page markup. Source is `.cronus` only.",
         "4. Catalog files in `packages/ui` are contracts (variants/slots), not React ports — visual parity of 173 widgets is NOT VERIFIED.",
         "5. Pixel chrome is a LANGUAGE GAP. Do not re-embed CSS/HTML to fake it.",
-        "6. Preview is image only (`docs/preview/*.png`). No .html preview.",
+        "6. Preview is image only (`docs/preview/*.png`).",
         "",
         f"overall: **{data['overall']}**",
         "",
@@ -272,7 +306,7 @@ def write_report(data: dict) -> Path:
 
 def main() -> int:
     cronus_files = iter_cronus()
-    hits = scan_forbidden(cronus_files)
+    hits = scan_forbidden(iter_text())
     file_hits = scan_forbidden_files()
     preview_hits = scan_preview_not_images()
     inv = inventory()

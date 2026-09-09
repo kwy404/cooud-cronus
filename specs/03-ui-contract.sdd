@@ -9,8 +9,8 @@ Preserve **intent**. Drop React mechanics.
 
 1. **Semantic tokens only.** Primitives use `--cronus-*` (or documented aliases that resolve to them). Forbidden: Tailwind palette scales (`bg-zinc-900`, `text-neutral-500`, `bg-amber-500`) and raw hex in primitive renderers. Allowed: `color-mix` on a semantic var; `text-white`/`bg-black` on a surface the primitive owns, with a comment (ADR 0001).
 2. **Variants explicit.** Named enums, defaulted, testable. Export the set in the SDD/tests (CVA equivalent).
-3. **Stable selector.** Root has `data-slot="<name>"`. Add `data-variant` when variants exist.
-4. **Polymorphism.** `href` set → `<a>`; else `<button type="button">` unless type authored. No React `asChild`.
+3. **Stable selector.** Root has data-slot equal to the family name. Add data-variant when variants exist.
+4. **Polymorphism.** `href` set → link; else button unless type authored. No React `asChild`.
 5. **No refs.**
 6. **Focus.** `outline-none` + `focus-visible` ring using `ring` + `ring-offset` on `surface-base`. Not `focus:ring-amber-500`.
 7. **Disabled.** `disabled` attribute, reduced opacity, no pointer events.

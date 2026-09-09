@@ -2,7 +2,7 @@
 
 Cronus UI e dashboard Cooud em **`.cronus` nativo**.
 
-**Nao se escreve HTML.** So `.cronus`. O HTML, se existir, e por tras — saida do `cronus run`, gerada pelo kernel. Nao entra no repo. Sem `.html`, sem CSS, sem TSX, sem `style_block`, sem `template`.
+**Nao entra markup de pagina neste repo.** So `.cronus` (preview e imagem). A pagina, se existir, e por tras — saida do `cronus run`. Sem `style_block`, sem `template`.
 
 ## Harness
 

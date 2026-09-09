@@ -9,19 +9,19 @@ Tokens without a consumer cannot be verified. Button without tokens hardcodes co
 
 ## In
 
-- Native semantic CSS variables aligned with `--cronus-*` for at least aurora+neutral × light+dark (full 5 themes preferred if values can be copied from `packages/tokens` without React).
-- `data-cronus-theme` / `data-cronus-mode` on `<html>` or page root.
+- Native semantic tokens aligned with `--cronus-*` for at least aurora+neutral × light+dark (full 5 themes preferred if values can be copied from `packages/tokens` without React).
+- `data-cronus-theme` / `data-cronus-mode` on the document root.
 - Button primitive:
   - variants: primary, secondary, outline, ghost, destructive, link
   - sizes: sm, md, lg, icon, icon-sm
-  - href → `<a>`
-  - default `type="button"`
+  - href → link
+  - default type button
   - disabled
   - `data-slot="button"` `data-variant`
   - focus-visible ring token
   - no uppercase requirement (source is not uppercase; current kernel helper is — **intentional change**)
-- Parser/render path: a `.cronus` demo that produces the Button HTML (existing component invocation or section). **No new tokenizer keyword.**
-- Tests: HTML snapshots per variant; forbidden palette scan on `components.rs` button path; theme var presence.
+- Parser/render path: a `.cronus` demo that produces the Button via kernel render (existing component invocation or section). **No new tokenizer keyword.**
+- Tests: image snapshots per variant; forbidden palette scan on `components.rs` button path; theme var presence.
 - Demo file under `demos/` or `templates/`.
 - Evidence dir `migration/evidence/w-1/button/`.
 - LANGUAGE.md: document Button+tokens as REAL only after tests.

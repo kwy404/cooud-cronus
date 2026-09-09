@@ -1,5 +1,5 @@
 ## Cooud — dashboard.cooud.com
-## Native .cronus only. No TSX, no HTML, no CSS, no style_block, no template.
+## Native .cronus only. No markup, no style_block, no template.
 ## Kernel renders. Money is centavos.
 
 app "Cooud" {
