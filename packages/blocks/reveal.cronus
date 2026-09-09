@@ -1,0 +1,9 @@
+## Block Reveal
+## source: registry/reveal.json
+## type: registry:ui
+## registryDependencies: motion-presets
+## npm: motion@^12.23.0
+
+component RevealBlock layout:stack style:reveal {
+  label "Reveal"
+}

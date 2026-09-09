@@ -1,0 +1,9 @@
+## Block CurrencyInput
+## source: registry/currency-input.json
+## type: registry:ui
+## registryDependencies: cn, dropdown-menu
+## npm: lucide-react@^0.577.0
+
+component CurrencyInputBlock layout:stack style:currency-input {
+  label "CurrencyInput"
+}

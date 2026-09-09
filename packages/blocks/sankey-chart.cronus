@@ -1,0 +1,9 @@
+## Block SankeyChart
+## source: registry/sankey-chart.json
+## type: registry:ui
+## registryDependencies: chart, cn
+## npm: recharts@^3.9.2
+
+component SankeyChartBlock layout:stack style:sankey-chart {
+  label "SankeyChart"
+}

@@ -1,0 +1,9 @@
+## Particles
+## source: packages/ui/src/components/particles.tsx
+## wave 1 - forms
+## exports: Particles
+## slots: particles
+
+component Particles(label: text) layout:inline style:particles {
+  label "Particles"
+}

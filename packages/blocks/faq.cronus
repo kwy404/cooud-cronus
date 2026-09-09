@@ -1,0 +1,8 @@
+## Block Faq
+## source: registry/faq.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3
+
+component FaqBlock layout:stack style:faq {
+  label "Faq"
+}

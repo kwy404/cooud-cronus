@@ -1,0 +1,9 @@
+## Block Dock
+## source: registry/dock.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: motion@^12.23.0
+
+component DockBlock layout:stack style:dock {
+  label "Dock"
+}

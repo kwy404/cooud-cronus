@@ -1,0 +1,8 @@
+## Block Highlighter
+## source: registry/highlighter.json
+## type: registry:ui
+## registryDependencies: cn
+
+component HighlighterBlock layout:stack style:highlighter {
+  label "Highlighter"
+}

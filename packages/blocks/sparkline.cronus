@@ -1,0 +1,8 @@
+## Block Sparkline
+## source: registry/sparkline.json
+## type: registry:ui
+## registryDependencies: cn
+
+component SparklineBlock layout:stack style:sparkline {
+  label "Sparkline"
+}

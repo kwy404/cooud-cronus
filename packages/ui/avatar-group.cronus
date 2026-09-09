@@ -1,0 +1,16 @@
+## AvatarGroup
+## source: packages/ui/src/components/avatar-group.tsx
+## wave 3 - data & display
+## exports: AvatarGroupAvatar, AvatarGroup
+## slots: avatar-group, avatar-group-overflow
+## variants.size: sm, md, lg
+## defaults: size=md
+
+component AvatarGroup(label: text, size: text) layout:inline style:avatar-group {
+  label "AvatarGroup"
+  size "md"
+}
+
+component AvatarGroupAvatar(label: text) layout:inline style:avatar-group-avatar {
+  label "AvatarGroupAvatar"
+}

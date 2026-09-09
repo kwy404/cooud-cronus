@@ -1,0 +1,9 @@
+## Block Separator
+## source: registry/separator.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: @radix-ui/react-separator@^1.1.7
+
+component SeparatorBlock layout:stack style:separator {
+  label "Separator"
+}

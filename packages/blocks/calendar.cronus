@@ -1,0 +1,9 @@
+## Block Calendar
+## source: registry/calendar.json
+## type: registry:ui
+## registryDependencies: button, cn
+## npm: lucide-react@^0.577.0, react-day-picker@^10.0.1
+
+component CalendarBlock layout:stack style:calendar {
+  label "Calendar"
+}

@@ -1,0 +1,9 @@
+## HeatmapChart
+## source: packages/ui/src/components/heatmap-chart.tsx
+## wave 1 - forms
+## exports: HeatmapChart
+## slots: heatmap-chart
+
+component HeatmapChart(label: text) layout:stack style:heatmap-chart {
+  label "HeatmapChart"
+}

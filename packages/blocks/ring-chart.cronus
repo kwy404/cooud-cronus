@@ -1,0 +1,9 @@
+## Block RingChart
+## source: registry/ring-chart.json
+## type: registry:ui
+## registryDependencies: chart, cn
+## npm: recharts@^3.9.2
+
+component RingChartBlock layout:stack style:ring-chart {
+  label "RingChart"
+}

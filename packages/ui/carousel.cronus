@@ -1,0 +1,37 @@
+## Carousel
+## source: packages/ui/src/components/carousel.tsx
+## wave 0 - foundation
+## exports: CarouselAlign, CarouselOptions, Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, CarouselDots
+## slots: carousel, carousel-content, carousel-dot, carousel-dots, carousel-item, carousel-next, carousel-previous
+
+component Carousel(label: text) layout:stack style:carousel {
+  label "Carousel"
+}
+
+component CarouselAlign(label: text) layout:inline style:carousel-align {
+  label "CarouselAlign"
+}
+
+component CarouselOptions(label: text) layout:inline style:carousel-options {
+  label "CarouselOptions"
+}
+
+component CarouselContent(label: text) layout:inline style:carousel-content {
+  label "CarouselContent"
+}
+
+component CarouselItem(label: text) layout:inline style:carousel-item {
+  label "CarouselItem"
+}
+
+component CarouselPrevious(label: text) layout:inline style:carousel-previous {
+  label "CarouselPrevious"
+}
+
+component CarouselNext(label: text) layout:inline style:carousel-next {
+  label "CarouselNext"
+}
+
+component CarouselDots(label: text) layout:inline style:carousel-dots {
+  label "CarouselDots"
+}

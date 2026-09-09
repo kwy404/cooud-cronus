@@ -1,0 +1,9 @@
+## Block Banner
+## source: registry/banner.json
+## type: registry:ui
+## registryDependencies: button, cn
+## npm: class-variance-authority@^0.7.1, lucide-react@^0.577.0, motion@^12.23.0
+
+component BannerBlock layout:stack style:banner {
+  label "Banner"
+}

@@ -1,0 +1,8 @@
+## Block Orbit
+## source: registry/orbit.json
+## type: registry:ui
+## registryDependencies: cn
+
+component OrbitBlock layout:stack style:orbit {
+  label "Orbit"
+}

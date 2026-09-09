@@ -1,0 +1,8 @@
+## Block FeedbackForm
+## source: registry/feedback-form.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3
+
+component FeedbackFormBlock layout:stack style:feedback-form {
+  label "FeedbackForm"
+}

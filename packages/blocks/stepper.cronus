@@ -1,0 +1,9 @@
+## Block Stepper
+## source: registry/stepper.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: class-variance-authority@^0.7.1, lucide-react@^0.577.0
+
+component StepperBlock layout:stack style:stepper {
+  label "Stepper"
+}

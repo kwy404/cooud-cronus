@@ -1,0 +1,9 @@
+## Block AnimatedNumber
+## source: registry/animated-number.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: motion@^12.23.0
+
+component AnimatedNumberBlock layout:stack style:animated-number {
+  label "AnimatedNumber"
+}

@@ -1,0 +1,37 @@
+## DataTable
+## source: packages/ui/src/components/data-table.tsx
+## wave 1 - forms
+## exports: DataTableDensity, DataTableFacetedFilter, DataTableLabels, SELECTION_COLUMN_ID, DataTableSelectionColumnOptions, DataTableColumnHeaderLabels, DataTableColumnHeader, DataTable
+## slots: data-table, data-table-bulk-actions, data-table-column-header, data-table-container, data-table-faceted-filter, data-table-loading, data-table-pagination, data-table-toolbar
+
+component DataTable(label: text) layout:stack style:data-table {
+  label "DataTable"
+}
+
+component DataTableDensity(label: text) layout:inline style:data-table-density {
+  label "DataTableDensity"
+}
+
+component DataTableFacetedFilter(label: text) layout:inline style:data-table-faceted-filter {
+  label "DataTableFacetedFilter"
+}
+
+component DataTableLabels(label: text) layout:inline style:data-table-labels {
+  label "DataTableLabels"
+}
+
+component SELECTION_COLUMN_ID(label: text) layout:inline style:s-e-l-e-c-t-i-o-n_-c-o-l-u-m-n_-i-d {
+  label "SELECTION_COLUMN_ID"
+}
+
+component DataTableSelectionColumnOptions(label: text) layout:inline style:data-table-selection-column-options {
+  label "DataTableSelectionColumnOptions"
+}
+
+component DataTableColumnHeaderLabels(label: text) layout:inline style:data-table-column-header-labels {
+  label "DataTableColumnHeaderLabels"
+}
+
+component DataTableColumnHeader(label: text) layout:inline style:data-table-column-header {
+  label "DataTableColumnHeader"
+}

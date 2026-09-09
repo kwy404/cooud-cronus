@@ -1,0 +1,9 @@
+## Block GaugeChart
+## source: registry/gauge-chart.json
+## type: registry:ui
+## registryDependencies: chart, cn
+## npm: recharts@^3.9.2
+
+component GaugeChartBlock layout:stack style:gauge-chart {
+  label "GaugeChart"
+}

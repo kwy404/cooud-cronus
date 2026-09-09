@@ -1,0 +1,8 @@
+## Block About
+## source: registry/about.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+
+component AboutBlock layout:stack style:about {
+  label "About"
+}

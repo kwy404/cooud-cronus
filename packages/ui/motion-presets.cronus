@@ -1,0 +1,8 @@
+## Motion presets
+## source: packages/tokens + CONTRACT.md (single curve)
+## ease: cubic-bezier(.22,1,.36,1) --ease-out-quart
+
+component MotionPresets(label: text, variant: text) layout:inline style:motion-presets {
+  label "Motion presets"
+  variant "ease-out-quart"
+}

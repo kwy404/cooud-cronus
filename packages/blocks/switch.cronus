@@ -1,0 +1,9 @@
+## Block Switch
+## source: registry/switch.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: @radix-ui/react-switch@^1.2.5
+
+component SwitchBlock layout:stack style:switch {
+  label "Switch"
+}

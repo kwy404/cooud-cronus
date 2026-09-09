@@ -1,0 +1,9 @@
+## Block ScatterChart
+## source: registry/scatter-chart.json
+## type: registry:ui
+## registryDependencies: chart, cn
+## npm: recharts@^3.9.2
+
+component ScatterChartBlock layout:stack style:scatter-chart {
+  label "ScatterChart"
+}

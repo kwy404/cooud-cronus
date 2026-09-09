@@ -1,0 +1,45 @@
+## Drawer
+## source: packages/ui/src/components/drawer.tsx
+## wave 1 - forms
+## exports: Drawer, DrawerTrigger, DrawerPortal, DrawerClose, DrawerOverlay, DrawerContent, DrawerHeader, DrawerFooter, DrawerTitle, DrawerDescription
+## slots: drawer, drawer-content, drawer-description, drawer-footer, drawer-header, drawer-overlay, drawer-title
+
+component Drawer(label: text) layout:overlay style:drawer {
+  label "Drawer"
+}
+
+component DrawerTrigger(label: text) layout:inline style:drawer-trigger {
+  label "DrawerTrigger"
+}
+
+component DrawerPortal(label: text) layout:inline style:drawer-portal {
+  label "DrawerPortal"
+}
+
+component DrawerClose(label: text) layout:inline style:drawer-close {
+  label "DrawerClose"
+}
+
+component DrawerOverlay(label: text) layout:inline style:drawer-overlay {
+  label "DrawerOverlay"
+}
+
+component DrawerContent(label: text) layout:inline style:drawer-content {
+  label "DrawerContent"
+}
+
+component DrawerHeader(label: text) layout:inline style:drawer-header {
+  label "DrawerHeader"
+}
+
+component DrawerFooter(label: text) layout:inline style:drawer-footer {
+  label "DrawerFooter"
+}
+
+component DrawerTitle(label: text) layout:inline style:drawer-title {
+  label "DrawerTitle"
+}
+
+component DrawerDescription(label: text) layout:inline style:drawer-description {
+  label "DrawerDescription"
+}

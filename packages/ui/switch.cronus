@@ -1,0 +1,9 @@
+## Switch
+## source: packages/ui/src/components/switch.tsx
+## wave 1 - forms
+## exports: Switch
+## slots: switch
+
+component Switch(label: text) layout:inline style:switch {
+  label "Switch"
+}

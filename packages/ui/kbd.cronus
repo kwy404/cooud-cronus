@@ -1,0 +1,9 @@
+## Kbd
+## source: packages/ui/src/components/kbd.tsx
+## wave 1 - forms
+## exports: Kbd
+## slots: kbd
+
+component Kbd(label: text) layout:inline style:kbd {
+  label "Kbd"
+}

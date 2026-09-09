@@ -1,0 +1,9 @@
+## Block Timeline
+## source: registry/timeline.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: class-variance-authority@^0.7.1
+
+component TimelineBlock layout:stack style:timeline {
+  label "Timeline"
+}

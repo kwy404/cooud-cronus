@@ -1,0 +1,9 @@
+## Block FileDropzone
+## source: registry/file-dropzone.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: lucide-react@^0.577.0
+
+component FileDropzoneBlock layout:stack style:file-dropzone {
+  label "FileDropzone"
+}

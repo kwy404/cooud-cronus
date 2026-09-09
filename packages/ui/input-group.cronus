@@ -1,0 +1,13 @@
+## InputGroup
+## source: packages/ui/src/components/input-group.tsx
+## wave 1 - forms
+## exports: InputGroup, InputGroupAddon
+## slots: input-group, input-group-addon
+
+component InputGroup(label: text) layout:inline style:input-group {
+  label "InputGroup"
+}
+
+component InputGroupAddon(label: text) layout:inline style:input-group-addon {
+  label "InputGroupAddon"
+}

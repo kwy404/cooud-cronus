@@ -1,0 +1,9 @@
+## Input
+## source: packages/ui/src/components/input.tsx
+## wave 1 - forms
+## exports: Input
+## slots: input
+
+component Input(label: text) layout:inline style:input {
+  label "Input"
+}

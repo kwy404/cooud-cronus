@@ -1,0 +1,9 @@
+## Block NavigationMenu
+## source: registry/navigation-menu.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: @radix-ui/react-navigation-menu@^1.2.16, class-variance-authority@^0.7.1, lucide-react@^0.577.0
+
+component NavigationMenuBlock layout:stack style:navigation-menu {
+  label "NavigationMenu"
+}

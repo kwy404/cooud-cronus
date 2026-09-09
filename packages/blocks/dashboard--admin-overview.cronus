@@ -1,0 +1,9 @@
+## Block DashboardAdminOverview
+## source: registry/dashboard--admin-overview.json
+## type: registry:block
+## registryDependencies: demo-saas
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0, recharts@^3.9.2
+
+component DashboardAdminOverviewBlock layout:stack style:dashboard--admin-overview {
+  label "DashboardAdminOverview"
+}

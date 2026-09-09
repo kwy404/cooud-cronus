@@ -1,0 +1,8 @@
+## Block MagicLink
+## source: registry/magic-link.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+
+component MagicLinkBlock layout:stack style:magic-link {
+  label "MagicLink"
+}

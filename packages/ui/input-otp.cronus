@@ -1,0 +1,25 @@
+## InputOtp
+## source: packages/ui/src/components/input-otp.tsx
+## wave 1 - forms
+## exports: InputOtp, InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator
+## slots: input-otp, input-otp-group, input-otp-separator, input-otp-slot
+
+component InputOtp(label: text) layout:inline style:input-otp {
+  label "InputOtp"
+}
+
+component InputOTP(label: text) layout:inline style:input-o-t-p {
+  label "InputOTP"
+}
+
+component InputOTPGroup(label: text) layout:inline style:input-o-t-p-group {
+  label "InputOTPGroup"
+}
+
+component InputOTPSlot(label: text) layout:inline style:input-o-t-p-slot {
+  label "InputOTPSlot"
+}
+
+component InputOTPSeparator(label: text) layout:inline style:input-o-t-p-separator {
+  label "InputOTPSeparator"
+}

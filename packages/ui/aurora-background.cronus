@@ -1,0 +1,9 @@
+## AuroraBackground
+## source: packages/ui/src/components/aurora-background.tsx
+## wave 5 - layout & app navigation
+## exports: AuroraBackground
+## slots: aurora-background
+
+component AuroraBackground(label: text) layout:inline style:aurora-background {
+  label "AuroraBackground"
+}

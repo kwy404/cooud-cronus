@@ -1,0 +1,8 @@
+## Block PaymentMethod
+## source: registry/payment-method.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+
+component PaymentMethodBlock layout:stack style:payment-method {
+  label "PaymentMethod"
+}

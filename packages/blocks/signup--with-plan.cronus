@@ -1,0 +1,9 @@
+## Block SignupWithPlan
+## source: registry/signup--with-plan.json
+## type: registry:block
+## registryDependencies: auth-adapter, demo-saas
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+
+component SignupWithPlanBlock layout:stack style:signup--with-plan {
+  label "SignupWithPlan"
+}

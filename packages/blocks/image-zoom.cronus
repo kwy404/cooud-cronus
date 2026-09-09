@@ -1,0 +1,9 @@
+## Block ImageZoom
+## source: registry/image-zoom.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: class-variance-authority@^0.7.1, lucide-react@^0.577.0
+
+component ImageZoomBlock layout:stack style:image-zoom {
+  label "ImageZoom"
+}

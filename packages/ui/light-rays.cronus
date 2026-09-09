@@ -1,0 +1,9 @@
+## LightRays
+## source: packages/ui/src/components/light-rays.tsx
+## wave 1 - forms
+## exports: LightRays
+## slots: light-rays
+
+component LightRays(label: text) layout:inline style:light-rays {
+  label "LightRays"
+}

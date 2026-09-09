@@ -1,0 +1,13 @@
+## Dock
+## source: packages/ui/src/components/dock.tsx
+## wave 1 - forms
+## exports: DockItem, Dock
+## slots: dock, dock-item
+
+component Dock(label: text) layout:inline style:dock {
+  label "Dock"
+}
+
+component DockItem(label: text) layout:inline style:dock-item {
+  label "DockItem"
+}

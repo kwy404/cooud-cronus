@@ -1,0 +1,13 @@
+## PillNav
+## source: packages/ui/src/components/pill-nav.tsx
+## wave 1 - forms
+## exports: PillNavItem, PillNav
+## slots: pill-nav, pill-nav-item
+
+component PillNav(label: text) layout:inline style:pill-nav {
+  label "PillNav"
+}
+
+component PillNavItem(label: text) layout:inline style:pill-nav-item {
+  label "PillNavItem"
+}

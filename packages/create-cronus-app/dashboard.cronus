@@ -1,0 +1,20 @@
+## template dashboard — aponta para apps/dashboard (Cooud)
+
+app "Dashboard" {
+  port 4747
+  database sqlite "./cooud.db"
+  theme dark
+}
+
+style {
+  theme dark
+  accent white
+  font "Inter"
+}
+
+page "/" {
+  section kpi {
+    title "Saldo"
+    value "R$ 0,00"
+  }
+}

@@ -1,0 +1,21 @@
+## InviteDialog
+## source: packages/ui/src/components/invite-dialog.tsx
+## wave 1 - forms
+## exports: InviteDialogLabels, InviteResult, InviteRole, InviteDialog
+## slots: invite-dialog, invite-dialog-error, invite-dialog-send, invite-dialog-success
+
+component InviteDialog(label: text) layout:overlay style:invite-dialog {
+  label "InviteDialog"
+}
+
+component InviteDialogLabels(label: text) layout:inline style:invite-dialog-labels {
+  label "InviteDialogLabels"
+}
+
+component InviteResult(label: text) layout:inline style:invite-result {
+  label "InviteResult"
+}
+
+component InviteRole(label: text) layout:inline style:invite-role {
+  label "InviteRole"
+}

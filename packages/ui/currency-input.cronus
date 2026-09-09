@@ -1,0 +1,13 @@
+## CurrencyInput
+## source: packages/ui/src/components/currency-input.tsx
+## wave 1 - forms
+## exports: CurrencyInputMeta, CurrencyInput
+## slots: currency-input, currency-input-field, currency-input-prefix, currency-input-selector
+
+component CurrencyInput(label: text) layout:inline style:currency-input {
+  label "CurrencyInput"
+}
+
+component CurrencyInputMeta(label: text) layout:inline style:currency-input-meta {
+  label "CurrencyInputMeta"
+}

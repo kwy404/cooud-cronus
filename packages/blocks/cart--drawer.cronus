@@ -1,0 +1,9 @@
+## Block CartDrawer
+## source: registry/cart--drawer.json
+## type: registry:block
+## registryDependencies: demo-store
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+
+component CartDrawerBlock layout:stack style:cart--drawer {
+  label "CartDrawer"
+}

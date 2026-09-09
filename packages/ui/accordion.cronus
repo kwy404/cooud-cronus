@@ -1,0 +1,21 @@
+## Accordion
+## source: packages/ui/src/components/accordion.tsx
+## wave 2 - overlays & navigation
+## exports: Accordion, AccordionItem, AccordionTrigger, AccordionContent
+## slots: accordion-content, accordion-item, accordion-trigger
+
+component Accordion(label: text) layout:stack style:accordion {
+  label "Accordion"
+}
+
+component AccordionItem(label: text) layout:inline style:accordion-item {
+  label "AccordionItem"
+}
+
+component AccordionTrigger(label: text) layout:inline style:accordion-trigger {
+  label "AccordionTrigger"
+}
+
+component AccordionContent(label: text) layout:inline style:accordion-content {
+  label "AccordionContent"
+}

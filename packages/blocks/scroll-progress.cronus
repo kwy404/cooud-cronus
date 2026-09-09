@@ -1,0 +1,8 @@
+## Block ScrollProgress
+## source: registry/scroll-progress.json
+## type: registry:ui
+## registryDependencies: cn
+
+component ScrollProgressBlock layout:stack style:scroll-progress {
+  label "ScrollProgress"
+}

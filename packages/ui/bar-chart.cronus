@@ -1,0 +1,9 @@
+## BarChart
+## source: packages/ui/src/components/bar-chart.tsx
+## wave 0 - foundation
+## exports: BarChart
+## slots: bar-chart
+
+component BarChart(label: text) layout:stack style:bar-chart {
+  label "BarChart"
+}

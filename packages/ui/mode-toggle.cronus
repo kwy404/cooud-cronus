@@ -1,0 +1,17 @@
+## ModeToggle
+## source: packages/ui/src/components/mode-toggle.tsx
+## wave 1 - forms
+## exports: ModeToggleMode, ModeToggleSize, ModeToggle
+## slots: mode-toggle, mode-toggle-core, mode-toggle-rays
+
+component ModeToggle(label: text) layout:inline style:mode-toggle {
+  label "ModeToggle"
+}
+
+component ModeToggleMode(label: text) layout:inline style:mode-toggle-mode {
+  label "ModeToggleMode"
+}
+
+component ModeToggleSize(label: text) layout:inline style:mode-toggle-size {
+  label "ModeToggleSize"
+}

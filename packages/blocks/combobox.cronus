@@ -1,0 +1,9 @@
+## Block Combobox
+## source: registry/combobox.json
+## type: registry:ui
+## registryDependencies: button, cn, command, popover
+## npm: lucide-react@^0.577.0
+
+component ComboboxBlock layout:stack style:combobox {
+  label "Combobox"
+}

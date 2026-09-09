@@ -1,0 +1,9 @@
+## ComparisonSlider
+## source: packages/ui/src/components/comparison-slider.tsx
+## wave 1 - forms
+## exports: ComparisonSlider
+## slots: comparison-after, comparison-before, comparison-slider
+
+component ComparisonSlider(label: text) layout:inline style:comparison-slider {
+  label "ComparisonSlider"
+}

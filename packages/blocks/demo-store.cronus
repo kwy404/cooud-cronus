@@ -1,0 +1,7 @@
+## Block DemoStore
+## source: registry/demo-store.json
+## type: registry:lib
+
+component DemoStoreBlock layout:stack style:demo-store {
+  label "DemoStore"
+}

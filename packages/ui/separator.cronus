@@ -1,0 +1,9 @@
+## Separator
+## source: packages/ui/src/components/separator.tsx
+## wave 1 - forms
+## exports: Separator
+## slots: separator
+
+component Separator(label: text) layout:inline style:separator {
+  label "Separator"
+}

@@ -1,0 +1,7 @@
+## Block DemoSaas
+## source: registry/demo-saas.json
+## type: registry:lib
+
+component DemoSaasBlock layout:stack style:demo-saas {
+  label "DemoSaas"
+}

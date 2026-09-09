@@ -1,0 +1,9 @@
+## StarBorder
+## source: packages/ui/src/components/star-border.tsx
+## wave 1 - forms
+## exports: StarBorder
+## slots: star-border
+
+component StarBorder(label: text) layout:inline style:star-border {
+  label "StarBorder"
+}

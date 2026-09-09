@@ -1,0 +1,9 @@
+## Block Rating
+## source: registry/rating.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: class-variance-authority@^0.7.1, lucide-react@^0.577.0
+
+component RatingBlock layout:stack style:rating {
+  label "Rating"
+}

@@ -1,0 +1,21 @@
+## Toolbar
+## source: packages/ui/src/components/toolbar.tsx
+## wave 1 - forms
+## exports: Toolbar, ToolbarButton, ToolbarSeparator, ToolbarGroup
+## slots: toolbar, toolbar-button, toolbar-group, toolbar-separator
+
+component Toolbar(label: text) layout:inline style:toolbar {
+  label "Toolbar"
+}
+
+component ToolbarButton(label: text) layout:inline style:toolbar-button {
+  label "ToolbarButton"
+}
+
+component ToolbarSeparator(label: text) layout:inline style:toolbar-separator {
+  label "ToolbarSeparator"
+}
+
+component ToolbarGroup(label: text) layout:inline style:toolbar-group {
+  label "ToolbarGroup"
+}

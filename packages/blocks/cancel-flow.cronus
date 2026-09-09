@@ -1,0 +1,8 @@
+## Block CancelFlow
+## source: registry/cancel-flow.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+
+component CancelFlowBlock layout:stack style:cancel-flow {
+  label "CancelFlow"
+}

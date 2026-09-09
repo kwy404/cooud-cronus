@@ -1,0 +1,13 @@
+## CardStack
+## source: packages/ui/src/components/card-stack.tsx
+## wave 0 - foundation
+## exports: CardStackItem, CardStack
+## slots: card-stack, card-stack-item
+
+component CardStack(label: text) layout:inline style:card-stack {
+  label "CardStack"
+}
+
+component CardStackItem(label: text) layout:inline style:card-stack-item {
+  label "CardStackItem"
+}

@@ -1,0 +1,9 @@
+## Block NumberInput
+## source: registry/number-input.json
+## type: registry:ui
+## registryDependencies: button, cn, input
+## npm: lucide-react@^0.577.0
+
+component NumberInputBlock layout:stack style:number-input {
+  label "NumberInput"
+}

@@ -1,0 +1,9 @@
+## GridPattern
+## source: packages/ui/src/components/grid-pattern.tsx
+## wave 1 - forms
+## exports: GridPattern
+## slots: grid-pattern
+
+component GridPattern(label: text) layout:inline style:grid-pattern {
+  label "GridPattern"
+}

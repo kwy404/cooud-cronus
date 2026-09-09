@@ -1,0 +1,8 @@
+## Block GlassCard
+## source: registry/glass-card.json
+## type: registry:ui
+## registryDependencies: cn
+
+component GlassCardBlock layout:stack style:glass-card {
+  label "GlassCard"
+}

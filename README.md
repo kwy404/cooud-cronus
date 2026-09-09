@@ -1,60 +1,61 @@
-# cronus-ui-in-cronus-language
+# cooud-cronus
 
-Cronus UI autorado em `.cronus`. Destino da conversão.
+Cronus UI em `.cronus` + dashboard Cooud.
 
-Repo: [kwy404/cooud-cronus](https://github.com/kwy404/cooud-cronus) · **58** famílias em `output/components/` · showcase `output/preview/showcase.html`
+**Nao e um app Node.** Nao tem `node_modules`. Sem o compilador o `.cronus` e so fonte — nao quebra o git, mas nao executa.
 
-## Cooud Dashboard (`dashboard.cooud.com`)
+## Como nao quebrar
 
-Mesma superfície: rail de ícones, saldo **-R$ 0,23**, Auto + D3, Transações / Repasses, meta Titanium R$ 100.000, gráfico vazio “Este mês”.
+| Peca | Onde | Como entra no clone |
+|---|---|---|
+| Pacotes UI | `packages/ui` (173 `.cronus`) | ja no git |
+| Blocks | `packages/blocks` (307) | ja no git |
+| Tokens / theme | `packages/tokens` `packages/theme` | ja no git |
+| Stack / cli / mcp / ai-kit | `packages/` | ja no git |
+| create-cronus-app / create-cronus-stack | `packages/` | ja no git |
+| App dashboard | `apps/dashboard/app.cronus` | ja no git |
+| Compilador `cronus` | `compiler/cronus-kernel` → `bin/cronus.exe` | **nao** vai no git; `scripts/setup.ps1` clona + `cargo build` |
 
-Fonte nativa: `output/blocks/cooud-dashboard.cronus`  
-`cronus parse` → **Parsed 3 nodes** · App `"Cooud"` · 1 page · port 4747
+```powershell
+git clone https://github.com/kwy404/cooud-cronus.git
+cd cooud-cronus
+.\scripts\CRIAR-COMPILER.bat
+.\bin\cronus.exe parse .\apps\dashboard\app.cronus
+```
 
-![Cooud Dashboard](output/preview/cooud-dashboard.png)
+Precisa de **Rust** (`https://rustup.rs`) e **Git**. Sem isso o parse nao roda — os arquivos `.cronus` continuam no repo.
 
-## Prints — catálogo
+## Packages (tudo no git)
 
-### Wave 0 — Foundation
-Button, Input, Label, Badge, Card, Spinner, Skeleton, Separator, Kbd
+```
+packages/
+  tokens/              5 presets x light/dark (CSS vars do cronus-ui)
+  theme/               aurora / neutral / midnight / sunset / emerald
+  ui/                  173 familias (barrel inteiro, CVA variants, slots, exports)
+  blocks/              307 blocks do registry
+  stack/               scaffold nativo
+  cli/                 -> bin/cronus.exe (nao npm)
+  mcp/                 14 tools, sem Node
+  ai-kit/              doutrina
+  create-cronus-app/   templates default / dashboard / marketing
+  create-cronus-stack/ compose nativo
+apps/
+  dashboard/           dashboard.cooud.com
+compiler/              cronus-kernel (clone no setup)
+```
 
-![Wave 0](output/preview/showcase-w0.png)
+Regenerar o catalogo: `python scripts/gen-packages.py` (le `../cronus-ui`).
 
-### Wave 1 — Forms
-Textarea, Checkbox, Switch, Radio, Select, File dropzone
+## Cooud Dashboard
 
-![Wave 1](output/preview/showcase-w1.png)
+`cronus parse apps/dashboard/app.cronus` → App `"Cooud"` · 1 page · port 4747
 
-### Wave 2 — Overlays
-Tabs, Accordion, Dialog, Alert
+![Cooud Dashboard](docs/preview/cooud-dashboard.png)
 
-![Wave 2](output/preview/showcase-w2.png)
+## Catalogo
 
-### Wave 3 — Data
-Table, Metric, Avatar, Progress, Chart, Breadcrumb, Pagination, Empty
-
-![Wave 3](output/preview/showcase-w3.png)
-
-### Wave 4 — Premium
-GlassCard, GradientText, Shimmer
-
-![Wave 4](output/preview/showcase-w4.png)
-
-Catálogo completo (todas as waves): `output/CATALOG.md`
-
-## Testes
-
-| Suite | Resultado |
-|---|---|
-| `cargo test` kernel (baseline + W-1 temporário) | **220 passed**, 1 failed |
-| 11 testes W-1 Button/tokens | **passed** (revertidos do kernel; evidência no pack) |
-| `dump::detect` hero landing | **pré-existente** Windows `NotFound` |
-| `bun run lint` | **pré-existente** biome fora do PATH |
-
-## Pastas
-
-| Pasta | Papel |
-|---|---|
-| `cronus-ui` | fonte React — leitura |
-| `cronus-kernel` | runtime — leitura nesta PR |
-| `cronus-ui-in-cronus-language` | conversão `.cronus` |
+![Wave 0](docs/preview/showcase-w0.png)
+![Wave 1](docs/preview/showcase-w1.png)
+![Wave 2](docs/preview/showcase-w2.png)
+![Wave 3](docs/preview/showcase-w3.png)
+![Wave 4](docs/preview/showcase-w4.png)

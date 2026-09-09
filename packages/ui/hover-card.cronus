@@ -1,0 +1,17 @@
+## HoverCard
+## source: packages/ui/src/components/hover-card.tsx
+## wave 1 - forms
+## exports: HoverCard, HoverCardTrigger, HoverCardContent
+## slots: hover-card-content
+
+component HoverCard(label: text) layout:overlay style:hover-card {
+  label "HoverCard"
+}
+
+component HoverCardTrigger(label: text) layout:inline style:hover-card-trigger {
+  label "HoverCardTrigger"
+}
+
+component HoverCardContent(label: text) layout:inline style:hover-card-content {
+  label "HoverCardContent"
+}

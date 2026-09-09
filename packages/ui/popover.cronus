@@ -1,0 +1,21 @@
+## Popover
+## source: packages/ui/src/components/popover.tsx
+## wave 1 - forms
+## exports: Popover, PopoverTrigger, PopoverAnchor, PopoverContent
+## slots: popover-content
+
+component Popover(label: text) layout:overlay style:popover {
+  label "Popover"
+}
+
+component PopoverTrigger(label: text) layout:inline style:popover-trigger {
+  label "PopoverTrigger"
+}
+
+component PopoverAnchor(label: text) layout:inline style:popover-anchor {
+  label "PopoverAnchor"
+}
+
+component PopoverContent(label: text) layout:inline style:popover-content {
+  label "PopoverContent"
+}

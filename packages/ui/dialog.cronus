@@ -1,0 +1,45 @@
+## Dialog
+## source: packages/ui/src/components/dialog.tsx
+## wave 1 - forms
+## exports: Dialog, DialogTrigger, DialogPortal, DialogClose, DialogOverlay, DialogContent, DialogHeader, DialogFooter, DialogTitle, DialogDescription
+## slots: dialog-close, dialog-content, dialog-description, dialog-footer, dialog-header, dialog-overlay, dialog-title
+
+component Dialog(label: text) layout:overlay style:dialog {
+  label "Dialog"
+}
+
+component DialogTrigger(label: text) layout:inline style:dialog-trigger {
+  label "DialogTrigger"
+}
+
+component DialogPortal(label: text) layout:inline style:dialog-portal {
+  label "DialogPortal"
+}
+
+component DialogClose(label: text) layout:inline style:dialog-close {
+  label "DialogClose"
+}
+
+component DialogOverlay(label: text) layout:inline style:dialog-overlay {
+  label "DialogOverlay"
+}
+
+component DialogContent(label: text) layout:inline style:dialog-content {
+  label "DialogContent"
+}
+
+component DialogHeader(label: text) layout:inline style:dialog-header {
+  label "DialogHeader"
+}
+
+component DialogFooter(label: text) layout:inline style:dialog-footer {
+  label "DialogFooter"
+}
+
+component DialogTitle(label: text) layout:inline style:dialog-title {
+  label "DialogTitle"
+}
+
+component DialogDescription(label: text) layout:inline style:dialog-description {
+  label "DialogDescription"
+}

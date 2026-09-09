@@ -1,0 +1,13 @@
+## ScrollArea
+## source: packages/ui/src/components/scroll-area.tsx
+## wave 1 - forms
+## exports: ScrollArea, ScrollBar
+## slots: scroll-area, scroll-bar
+
+component ScrollArea(label: text) layout:inline style:scroll-area {
+  label "ScrollArea"
+}
+
+component ScrollBar(label: text) layout:inline style:scroll-bar {
+  label "ScrollBar"
+}

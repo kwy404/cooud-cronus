@@ -1,0 +1,9 @@
+## Block StatusDot
+## source: registry/status-dot.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: class-variance-authority@^0.7.1
+
+component StatusDotBlock layout:stack style:status-dot {
+  label "StatusDot"
+}

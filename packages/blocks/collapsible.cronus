@@ -1,0 +1,9 @@
+## Block Collapsible
+## source: registry/collapsible.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: @radix-ui/react-collapsible@^1.1.14
+
+component CollapsibleBlock layout:stack style:collapsible {
+  label "Collapsible"
+}

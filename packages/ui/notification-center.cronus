@@ -1,0 +1,21 @@
+## NotificationCenter
+## source: packages/ui/src/components/notification-center.tsx
+## wave 1 - forms
+## exports: NotificationItem, NotificationRow, NotificationList, NotificationCenter
+## slots: notification-badge, notification-center, notification-empty, notification-footer, notification-icon, notification-list, notification-row, notification-trigger, notification-unread-dot
+
+component NotificationCenter(label: text) layout:stack style:notification-center {
+  label "NotificationCenter"
+}
+
+component NotificationItem(label: text) layout:inline style:notification-item {
+  label "NotificationItem"
+}
+
+component NotificationRow(label: text) layout:inline style:notification-row {
+  label "NotificationRow"
+}
+
+component NotificationList(label: text) layout:inline style:notification-list {
+  label "NotificationList"
+}

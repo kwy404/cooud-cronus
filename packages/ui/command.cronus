@@ -1,0 +1,41 @@
+## Command
+## source: packages/ui/src/components/command.tsx
+## wave 1 - forms
+## exports: Command, CommandDialog, CommandInput, CommandList, CommandEmpty, CommandGroup, CommandItem, CommandShortcut, CommandSeparator
+## slots: command, command-empty, command-group, command-input, command-input-wrapper, command-item, command-list, command-separator, command-shortcut
+
+component Command(label: text) layout:overlay style:command {
+  label "Command"
+}
+
+component CommandDialog(label: text) layout:inline style:command-dialog {
+  label "CommandDialog"
+}
+
+component CommandInput(label: text) layout:inline style:command-input {
+  label "CommandInput"
+}
+
+component CommandList(label: text) layout:inline style:command-list {
+  label "CommandList"
+}
+
+component CommandEmpty(label: text) layout:inline style:command-empty {
+  label "CommandEmpty"
+}
+
+component CommandGroup(label: text) layout:inline style:command-group {
+  label "CommandGroup"
+}
+
+component CommandItem(label: text) layout:inline style:command-item {
+  label "CommandItem"
+}
+
+component CommandShortcut(label: text) layout:inline style:command-shortcut {
+  label "CommandShortcut"
+}
+
+component CommandSeparator(label: text) layout:inline style:command-separator {
+  label "CommandSeparator"
+}

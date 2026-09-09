@@ -1,0 +1,8 @@
+## Block HeatmapChart
+## source: registry/heatmap-chart.json
+## type: registry:ui
+## registryDependencies: cn, heatmap
+
+component HeatmapChartBlock layout:stack style:heatmap-chart {
+  label "HeatmapChart"
+}

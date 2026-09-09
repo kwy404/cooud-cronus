@@ -1,0 +1,9 @@
+## Block Drawer
+## source: registry/drawer.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: vaul@^1.1.2
+
+component DrawerBlock layout:stack style:drawer {
+  label "Drawer"
+}

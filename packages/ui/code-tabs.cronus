@@ -1,0 +1,13 @@
+## CodeTabs
+## source: packages/ui/src/components/code-tabs.tsx
+## wave 1 - forms
+## exports: CodeTabsItem, CodeTabs
+## slots: code-tabs, code-tabs-code, code-tabs-header, code-tabs-indicator, code-tabs-language, code-tabs-list, code-tabs-panel, code-tabs-panels, code-tabs-pre, code-tabs-trigger
+
+component CodeTabs(label: text) layout:inline style:code-tabs {
+  label "CodeTabs"
+}
+
+component CodeTabsItem(label: text) layout:inline style:code-tabs-item {
+  label "CodeTabsItem"
+}

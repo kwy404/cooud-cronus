@@ -1,0 +1,8 @@
+## Block NotificationPreferences
+## source: registry/notification-preferences.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3
+
+component NotificationPreferencesBlock layout:stack style:notification-preferences {
+  label "NotificationPreferences"
+}

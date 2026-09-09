@@ -1,0 +1,8 @@
+## Block TypingText
+## source: registry/typing-text.json
+## type: registry:ui
+## registryDependencies: cn
+
+component TypingTextBlock layout:stack style:typing-text {
+  label "TypingText"
+}

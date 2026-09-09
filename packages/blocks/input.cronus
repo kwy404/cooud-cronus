@@ -1,0 +1,8 @@
+## Block Input
+## source: registry/input.json
+## type: registry:ui
+## registryDependencies: cn
+
+component InputBlock layout:stack style:input {
+  label "Input"
+}

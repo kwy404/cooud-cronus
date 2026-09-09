@@ -1,0 +1,21 @@
+## Resizable
+## source: packages/ui/src/components/resizable.tsx
+## wave 1 - forms
+## exports: Resizable, ResizablePanelGroup, ResizablePanel, ResizableHandle
+## slots: resizable-handle, resizable-handle-grip, resizable-panel-group
+
+component Resizable(label: text) layout:inline style:resizable {
+  label "Resizable"
+}
+
+component ResizablePanelGroup(label: text) layout:inline style:resizable-panel-group {
+  label "ResizablePanelGroup"
+}
+
+component ResizablePanel(label: text) layout:inline style:resizable-panel {
+  label "ResizablePanel"
+}
+
+component ResizableHandle(label: text) layout:inline style:resizable-handle {
+  label "ResizableHandle"
+}

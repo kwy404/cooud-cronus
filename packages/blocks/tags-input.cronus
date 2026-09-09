@@ -1,0 +1,9 @@
+## Block TagsInput
+## source: registry/tags-input.json
+## type: registry:ui
+## registryDependencies: badge, cn
+## npm: lucide-react@^0.577.0
+
+component TagsInputBlock layout:stack style:tags-input {
+  label "TagsInput"
+}

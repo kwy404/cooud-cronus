@@ -1,0 +1,8 @@
+## Block CodeTabs
+## source: registry/code-tabs.json
+## type: registry:ui
+## registryDependencies: cn, copy-button, tabs
+
+component CodeTabsBlock layout:stack style:code-tabs {
+  label "CodeTabs"
+}

@@ -1,0 +1,9 @@
+## Block RichTextEditor
+## source: registry/rich-text-editor.json
+## type: registry:ui
+## registryDependencies: cn, separator, toggle
+## npm: @tiptap/react@^3.27.1, @tiptap/starter-kit@^3.27.1, lucide-react@^0.577.0
+
+component RichTextEditorBlock layout:stack style:rich-text-editor {
+  label "RichTextEditor"
+}

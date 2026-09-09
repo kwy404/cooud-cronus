@@ -1,0 +1,25 @@
+## LogoCarousel
+## source: packages/ui/src/components/logo-carousel.tsx
+## wave 1 - forms
+## exports: LogoCarouselItem, LogoCarouselVariant, LogoCarouselSize, LogoCarouselMotionPreference, LogoCarousel
+## slots: logo-carousel, logo-carousel-item
+
+component LogoCarousel(label: text) layout:inline style:logo-carousel {
+  label "LogoCarousel"
+}
+
+component LogoCarouselItem(label: text) layout:inline style:logo-carousel-item {
+  label "LogoCarouselItem"
+}
+
+component LogoCarouselVariant(label: text) layout:inline style:logo-carousel-variant {
+  label "LogoCarouselVariant"
+}
+
+component LogoCarouselSize(label: text) layout:inline style:logo-carousel-size {
+  label "LogoCarouselSize"
+}
+
+component LogoCarouselMotionPreference(label: text) layout:inline style:logo-carousel-motion-preference {
+  label "LogoCarouselMotionPreference"
+}

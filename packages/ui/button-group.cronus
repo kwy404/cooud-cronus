@@ -1,0 +1,9 @@
+## ButtonGroup
+## source: packages/ui/src/components/button-group.tsx
+## wave 0 - foundation
+## exports: ButtonGroup
+## slots: button-group
+
+component ButtonGroup(label: text) layout:inline style:button-group {
+  label "ButtonGroup"
+}

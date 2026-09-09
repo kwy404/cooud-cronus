@@ -1,0 +1,9 @@
+## Block Billing
+## source: registry/billing.json
+## type: registry:block
+## registryDependencies: demo-saas
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+
+component BillingBlock layout:stack style:billing {
+  label "Billing"
+}

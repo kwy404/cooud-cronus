@@ -1,0 +1,18 @@
+## @cooud-cronus/cli
+## Nao e o npm `cronus-ui`. O CLI e o binario Rust em bin/cronus.exe
+## build: scripts/setup.ps1  |  scripts/CRIAR-COMPILER.bat
+##
+## kernel: parse | run | build | new | compose | dump | lint
+## cronus-ui npm map:
+##   init      -> cronus new
+##   add       -> copy packages/ui/<name>.cronus
+##   compose   -> cronus compose
+##   theme     -> packages/theme + tokens
+##   list      -> packages/ui + packages/blocks
+##   upgrade   -> git pull deste repo
+##   diff      -> git diff
+##   add-page  -> page block em apps/
+
+app "Cli" {
+  port 4749
+}

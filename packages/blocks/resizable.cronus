@@ -1,0 +1,9 @@
+## Block Resizable
+## source: registry/resizable.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: lucide-react@^0.577.0, react-resizable-panels@^2.1.9
+
+component ResizableBlock layout:stack style:resizable {
+  label "Resizable"
+}

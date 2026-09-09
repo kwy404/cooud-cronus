@@ -1,0 +1,9 @@
+## Label
+## source: packages/ui/src/components/label.tsx
+## wave 1 - forms
+## exports: Label
+## slots: label
+
+component Label(label: text) layout:inline style:label {
+  label "Label"
+}

@@ -1,0 +1,13 @@
+## ColorPicker
+## source: packages/ui/src/components/color-picker.tsx
+## wave 1 - forms
+## exports: OklchColor, ColorPicker
+## slots: color-picker-area, color-picker-area-thumb, color-picker-channel, color-picker-content, color-picker-hue, color-picker-hue-thumb, color-picker-swatch, color-picker-swatch-button, color-picker-swatches, color-picker-trigger, color-picker-value
+
+component ColorPicker(label: text) layout:inline style:color-picker {
+  label "ColorPicker"
+}
+
+component OklchColor(label: text) layout:inline style:oklch-color {
+  label "OklchColor"
+}

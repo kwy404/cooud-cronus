@@ -1,0 +1,9 @@
+## Slider
+## source: packages/ui/src/components/slider.tsx
+## wave 1 - forms
+## exports: Slider
+## slots: slider
+
+component Slider(label: text) layout:inline style:slider {
+  label "Slider"
+}

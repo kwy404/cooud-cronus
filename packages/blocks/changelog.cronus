@@ -1,0 +1,8 @@
+## Block Changelog
+## source: registry/changelog.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3
+
+component ChangelogBlock layout:stack style:changelog {
+  label "Changelog"
+}

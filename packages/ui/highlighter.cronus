@@ -1,0 +1,9 @@
+## Highlighter
+## source: packages/ui/src/components/highlighter.tsx
+## wave 1 - forms
+## exports: Highlighter
+## slots: highlighter
+
+component Highlighter(label: text) layout:inline style:highlighter {
+  label "Highlighter"
+}

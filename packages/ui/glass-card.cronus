@@ -1,0 +1,9 @@
+## GlassCard
+## source: packages/ui/src/components/glass-card.tsx
+## wave 1 - forms
+## exports: GlassCard
+## slots: glass-card
+
+component GlassCard(label: text) layout:stack style:glass-card {
+  label "GlassCard"
+}

@@ -1,0 +1,9 @@
+## Block DataTable
+## source: registry/data-table.json
+## type: registry:ui
+## registryDependencies: badge, button, checkbox, cn, dropdown-menu, input, select, skeleton, table
+## npm: @tanstack/react-table@^8.21.3, lucide-react@^0.577.0
+
+component DataTableBlock layout:stack style:data-table {
+  label "DataTable"
+}

@@ -1,0 +1,9 @@
+## Reveal
+## source: packages/ui/src/components/reveal.tsx
+## wave 1 - forms
+## exports: Reveal
+## slots: reveal
+
+component Reveal(label: text) layout:inline style:reveal {
+  label "Reveal"
+}

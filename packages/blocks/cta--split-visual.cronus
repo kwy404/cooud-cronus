@@ -1,0 +1,8 @@
+## Block CtaSplitVisual
+## source: registry/cta--split-visual.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+
+component CtaSplitVisualBlock layout:stack style:cta--split-visual {
+  label "CtaSplitVisual"
+}

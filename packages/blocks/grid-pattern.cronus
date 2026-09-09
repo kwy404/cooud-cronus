@@ -1,0 +1,8 @@
+## Block GridPattern
+## source: registry/grid-pattern.json
+## type: registry:ui
+## registryDependencies: cn
+
+component GridPatternBlock layout:stack style:grid-pattern {
+  label "GridPattern"
+}

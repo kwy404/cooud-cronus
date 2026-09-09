@@ -1,0 +1,8 @@
+## Block FeatureMatrix
+## source: registry/feature-matrix.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+
+component FeatureMatrixBlock layout:stack style:feature-matrix {
+  label "FeatureMatrix"
+}

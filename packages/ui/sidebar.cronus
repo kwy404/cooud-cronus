@@ -1,0 +1,84 @@
+## Sidebar
+## source: packages/ui/src/components/sidebar.tsx
+## wave 1 - forms
+## exports: SidebarContextValue, SidebarProvider, Sidebar, SidebarTrigger, SidebarRail, SidebarInset, SidebarHeader, SidebarFooter, SidebarContent, SidebarSeparator, SidebarGroup, SidebarGroupLabel, SidebarGroupContent, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarMenuSub, SidebarMenuSubItem, SidebarMenuSubButton
+## slots: sidebar, sidebar-content, sidebar-footer, sidebar-group, sidebar-group-content, sidebar-group-label, sidebar-header, sidebar-inset, sidebar-menu, sidebar-menu-button, sidebar-menu-item, sidebar-menu-sub, sidebar-menu-sub-button, sidebar-menu-sub-item, sidebar-rail, sidebar-separator, sidebar-trigger, sidebar-wrapper
+## variants.size: sm, md, lg
+## defaults: size=md
+
+component Sidebar(label: text, size: text) layout:stack style:sidebar {
+  label "Sidebar"
+  size "md"
+}
+
+component SidebarContextValue(label: text) layout:inline style:sidebar-context-value {
+  label "SidebarContextValue"
+}
+
+component SidebarProvider(label: text) layout:inline style:sidebar-provider {
+  label "SidebarProvider"
+}
+
+component SidebarTrigger(label: text) layout:inline style:sidebar-trigger {
+  label "SidebarTrigger"
+}
+
+component SidebarRail(label: text) layout:inline style:sidebar-rail {
+  label "SidebarRail"
+}
+
+component SidebarInset(label: text) layout:inline style:sidebar-inset {
+  label "SidebarInset"
+}
+
+component SidebarHeader(label: text) layout:inline style:sidebar-header {
+  label "SidebarHeader"
+}
+
+component SidebarFooter(label: text) layout:inline style:sidebar-footer {
+  label "SidebarFooter"
+}
+
+component SidebarContent(label: text) layout:inline style:sidebar-content {
+  label "SidebarContent"
+}
+
+component SidebarSeparator(label: text) layout:inline style:sidebar-separator {
+  label "SidebarSeparator"
+}
+
+component SidebarGroup(label: text) layout:inline style:sidebar-group {
+  label "SidebarGroup"
+}
+
+component SidebarGroupLabel(label: text) layout:inline style:sidebar-group-label {
+  label "SidebarGroupLabel"
+}
+
+component SidebarGroupContent(label: text) layout:inline style:sidebar-group-content {
+  label "SidebarGroupContent"
+}
+
+component SidebarMenu(label: text) layout:inline style:sidebar-menu {
+  label "SidebarMenu"
+}
+
+component SidebarMenuItem(label: text) layout:inline style:sidebar-menu-item {
+  label "SidebarMenuItem"
+}
+
+component SidebarMenuButton(label: text) layout:inline style:sidebar-menu-button {
+  label "SidebarMenuButton"
+}
+
+component SidebarMenuSub(label: text) layout:inline style:sidebar-menu-sub {
+  label "SidebarMenuSub"
+}
+
+component SidebarMenuSubItem(label: text) layout:inline style:sidebar-menu-sub-item {
+  label "SidebarMenuSubItem"
+}
+
+component SidebarMenuSubButton(label: text) layout:inline style:sidebar-menu-sub-button {
+  label "SidebarMenuSubButton"
+}

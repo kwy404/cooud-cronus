@@ -1,0 +1,20 @@
+## template default — app minimo .cronus
+
+app "App" {
+  port 3000
+  theme dark
+}
+
+style {
+  theme dark
+  preset aurora
+  accent white
+  font "Inter"
+}
+
+page "/" {
+  section hero {
+    title "Cronus"
+    subtitle "Product UI in .cronus"
+  }
+}

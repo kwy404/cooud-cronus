@@ -1,0 +1,25 @@
+## Empty
+## source: packages/ui/src/components/empty.tsx
+## wave 1 - forms
+## exports: Empty, EmptyIcon, EmptyTitle, EmptyDescription, EmptyContent
+## slots: empty, empty-content, empty-description, empty-icon, empty-title
+
+component Empty(label: text) layout:stack style:empty {
+  label "Empty"
+}
+
+component EmptyIcon(label: text) layout:inline style:empty-icon {
+  label "EmptyIcon"
+}
+
+component EmptyTitle(label: text) layout:inline style:empty-title {
+  label "EmptyTitle"
+}
+
+component EmptyDescription(label: text) layout:inline style:empty-description {
+  label "EmptyDescription"
+}
+
+component EmptyContent(label: text) layout:inline style:empty-content {
+  label "EmptyContent"
+}

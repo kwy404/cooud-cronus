@@ -1,0 +1,9 @@
+## Block TimePicker
+## source: registry/time-picker.json
+## type: registry:ui
+## registryDependencies: button, cn, popover
+## npm: lucide-react@^0.577.0
+
+component TimePickerBlock layout:stack style:time-picker {
+  label "TimePicker"
+}

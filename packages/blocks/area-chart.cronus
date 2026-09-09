@@ -1,0 +1,9 @@
+## Block AreaChart
+## source: registry/area-chart.json
+## type: registry:ui
+## registryDependencies: chart, cn
+## npm: recharts@^3.9.2
+
+component AreaChartBlock layout:stack style:area-chart {
+  label "AreaChart"
+}

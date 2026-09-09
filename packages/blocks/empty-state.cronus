@@ -1,0 +1,8 @@
+## Block EmptyState
+## source: registry/empty-state.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+
+component EmptyStateBlock layout:stack style:empty-state {
+  label "EmptyState"
+}

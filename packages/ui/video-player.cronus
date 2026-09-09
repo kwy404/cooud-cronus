@@ -1,0 +1,15 @@
+## VideoPlayer
+## source: packages/ui/src/components/video-player.tsx
+## wave 1 - forms
+## exports: VideoPlayerLabels, VideoPlayer
+## slots: video-player, video-player-controls, video-player-fullscreen, video-player-mute, video-player-overlay-play, video-player-play, video-player-rate, video-player-seek, video-player-time, video-player-video, video-player-volume
+## variants.aspect: video, square, wide
+## defaults: aspect=video
+
+component VideoPlayer(label: text) layout:stack style:video-player {
+  label "VideoPlayer"
+}
+
+component VideoPlayerLabels(label: text) layout:inline style:video-player-labels {
+  label "VideoPlayerLabels"
+}

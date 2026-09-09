@@ -1,0 +1,8 @@
+## Block Magnetic
+## source: registry/magnetic.json
+## type: registry:ui
+## registryDependencies: cn
+
+component MagneticBlock layout:stack style:magnetic {
+  label "Magnetic"
+}

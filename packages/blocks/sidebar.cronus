@@ -1,0 +1,9 @@
+## Block Sidebar
+## source: registry/sidebar.json
+## type: registry:ui
+## registryDependencies: button, cn, scroll-area, separator, sheet, tooltip
+## npm: @radix-ui/react-slot@^1.2.3, class-variance-authority@^0.7.1
+
+component SidebarBlock layout:stack style:sidebar {
+  label "Sidebar"
+}

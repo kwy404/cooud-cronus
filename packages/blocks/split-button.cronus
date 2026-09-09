@@ -1,0 +1,9 @@
+## Block SplitButton
+## source: registry/split-button.json
+## type: registry:ui
+## registryDependencies: button, cn, dropdown-menu, spinner
+## npm: class-variance-authority@^0.7.1, lucide-react@^0.577.0
+
+component SplitButtonBlock layout:stack style:split-button {
+  label "SplitButton"
+}

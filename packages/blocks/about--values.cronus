@@ -1,0 +1,8 @@
+## Block AboutValues
+## source: registry/about--values.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+
+component AboutValuesBlock layout:stack style:about--values {
+  label "AboutValues"
+}

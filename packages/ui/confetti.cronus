@@ -1,0 +1,9 @@
+## Confetti
+## source: packages/ui/src/components/confetti.tsx
+## wave 1 - forms
+## exports: Confetti
+## slots: confetti
+
+component Confetti(label: text) layout:inline style:confetti {
+  label "Confetti"
+}

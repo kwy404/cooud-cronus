@@ -1,0 +1,9 @@
+## Block BarChart
+## source: registry/bar-chart.json
+## type: registry:ui
+## registryDependencies: chart, cn
+## npm: recharts@^3.9.2
+
+component BarChartBlock layout:stack style:bar-chart {
+  label "BarChart"
+}

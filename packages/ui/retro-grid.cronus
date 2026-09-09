@@ -1,0 +1,9 @@
+## RetroGrid
+## source: packages/ui/src/components/retro-grid.tsx
+## wave 1 - forms
+## exports: RetroGrid
+## slots: retro-grid
+
+component RetroGrid(label: text) layout:inline style:retro-grid {
+  label "RetroGrid"
+}

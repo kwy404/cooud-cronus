@@ -1,0 +1,13 @@
+## TreeView
+## source: packages/ui/src/components/tree-view.tsx
+## wave 1 - forms
+## exports: TreeNode, TreeView
+## slots: tree-view, tree-view-chevron, tree-view-group, tree-view-icon, tree-view-item, tree-view-item-trigger
+
+component TreeView(label: text) layout:inline style:tree-view {
+  label "TreeView"
+}
+
+component TreeNode(label: text) layout:inline style:tree-node {
+  label "TreeNode"
+}

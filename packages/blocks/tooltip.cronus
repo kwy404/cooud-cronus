@@ -1,0 +1,9 @@
+## Block Tooltip
+## source: registry/tooltip.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: @radix-ui/react-tooltip@^1.2.7
+
+component TooltipBlock layout:stack style:tooltip {
+  label "Tooltip"
+}

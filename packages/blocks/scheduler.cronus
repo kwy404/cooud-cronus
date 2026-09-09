@@ -1,0 +1,9 @@
+## Block Scheduler
+## source: registry/scheduler.json
+## type: registry:ui
+## registryDependencies: button, cn
+## npm: date-fns@^4.4.0, lucide-react@^0.577.0
+
+component SchedulerBlock layout:stack style:scheduler {
+  label "Scheduler"
+}

@@ -1,0 +1,9 @@
+## SparklesText
+## source: packages/ui/src/components/sparkles-text.tsx
+## wave 1 - forms
+## exports: SparklesText
+## slots: sparkles-text
+
+component SparklesText(label: text) layout:inline style:sparkles-text {
+  label "SparklesText"
+}

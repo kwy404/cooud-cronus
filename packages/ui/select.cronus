@@ -1,0 +1,45 @@
+## Select
+## source: packages/ui/src/components/select.tsx
+## wave 1 - forms
+## exports: Select, SelectGroup, SelectValue, SelectTrigger, SelectScrollUpButton, SelectScrollDownButton, SelectContent, SelectLabel, SelectItem, SelectSeparator
+## slots: select-content, select-item, select-label, select-scroll-down-button, select-scroll-up-button, select-separator, select-trigger
+
+component Select(label: text) layout:inline style:select {
+  label "Select"
+}
+
+component SelectGroup(label: text) layout:inline style:select-group {
+  label "SelectGroup"
+}
+
+component SelectValue(label: text) layout:inline style:select-value {
+  label "SelectValue"
+}
+
+component SelectTrigger(label: text) layout:inline style:select-trigger {
+  label "SelectTrigger"
+}
+
+component SelectScrollUpButton(label: text) layout:inline style:select-scroll-up-button {
+  label "SelectScrollUpButton"
+}
+
+component SelectScrollDownButton(label: text) layout:inline style:select-scroll-down-button {
+  label "SelectScrollDownButton"
+}
+
+component SelectContent(label: text) layout:inline style:select-content {
+  label "SelectContent"
+}
+
+component SelectLabel(label: text) layout:inline style:select-label {
+  label "SelectLabel"
+}
+
+component SelectItem(label: text) layout:inline style:select-item {
+  label "SelectItem"
+}
+
+component SelectSeparator(label: text) layout:inline style:select-separator {
+  label "SelectSeparator"
+}

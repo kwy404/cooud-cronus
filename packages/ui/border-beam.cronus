@@ -1,0 +1,9 @@
+## BorderBeam
+## source: packages/ui/src/components/border-beam.tsx
+## wave 0 - foundation
+## exports: BorderBeam
+## slots: border-beam
+
+component BorderBeam(label: text) layout:inline style:border-beam {
+  label "BorderBeam"
+}

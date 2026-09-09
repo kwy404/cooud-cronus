@@ -1,0 +1,8 @@
+## Block Waitlist
+## source: registry/waitlist.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+
+component WaitlistBlock layout:stack style:waitlist {
+  label "Waitlist"
+}

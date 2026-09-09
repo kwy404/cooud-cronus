@@ -1,0 +1,20 @@
+## Alert
+## source: packages/ui/src/components/alert.tsx
+## wave 2 - overlays & navigation
+## exports: Alert, AlertTitle, AlertDescription
+## slots: alert, alert-description, alert-title
+## variants.variant: default, info, success, warning, destructive
+## defaults: variant=default
+
+component Alert(label: text, variant: text) layout:inline style:alert {
+  label "Alert"
+  variant "default"
+}
+
+component AlertTitle(label: text) layout:inline style:alert-title {
+  label "AlertTitle"
+}
+
+component AlertDescription(label: text) layout:inline style:alert-description {
+  label "AlertDescription"
+}

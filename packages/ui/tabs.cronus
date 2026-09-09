@@ -1,0 +1,21 @@
+## Tabs
+## source: packages/ui/src/components/tabs.tsx
+## wave 1 - forms
+## exports: Tabs, TabsList, TabsTrigger, TabsContent
+## slots: tabs, tabs-content, tabs-list, tabs-trigger
+
+component Tabs(label: text) layout:stack style:tabs {
+  label "Tabs"
+}
+
+component TabsList(label: text) layout:inline style:tabs-list {
+  label "TabsList"
+}
+
+component TabsTrigger(label: text) layout:inline style:tabs-trigger {
+  label "TabsTrigger"
+}
+
+component TabsContent(label: text) layout:inline style:tabs-content {
+  label "TabsContent"
+}

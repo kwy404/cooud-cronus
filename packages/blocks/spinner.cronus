@@ -1,0 +1,9 @@
+## Block Spinner
+## source: registry/spinner.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: class-variance-authority@^0.7.1
+
+component SpinnerBlock layout:stack style:spinner {
+  label "Spinner"
+}

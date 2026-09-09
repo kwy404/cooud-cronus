@@ -1,0 +1,13 @@
+## Lightbox
+## source: packages/ui/src/components/lightbox.tsx
+## wave 1 - forms
+## exports: LightboxImage, Lightbox
+## slots: lightbox, lightbox-caption, lightbox-close, lightbox-counter, lightbox-image, lightbox-thumbnails
+
+component Lightbox(label: text) layout:overlay style:lightbox {
+  label "Lightbox"
+}
+
+component LightboxImage(label: text) layout:inline style:lightbox-image {
+  label "LightboxImage"
+}

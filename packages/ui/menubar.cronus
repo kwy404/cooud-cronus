@@ -1,0 +1,69 @@
+## Menubar
+## source: packages/ui/src/components/menubar.tsx
+## wave 1 - forms
+## exports: MenubarMenu, MenubarGroup, MenubarPortal, MenubarSub, MenubarRadioGroup, Menubar, MenubarTrigger, MenubarSubTrigger, MenubarSubContent, MenubarContent, MenubarItem, MenubarCheckboxItem, MenubarRadioItem, MenubarLabel, MenubarSeparator, MenubarShortcut
+## slots: menubar, menubar-checkbox-item, menubar-content, menubar-item, menubar-label, menubar-radio-item, menubar-separator, menubar-shortcut, menubar-sub-content, menubar-sub-trigger, menubar-trigger
+
+component Menubar(label: text) layout:overlay style:menubar {
+  label "Menubar"
+}
+
+component MenubarMenu(label: text) layout:inline style:menubar-menu {
+  label "MenubarMenu"
+}
+
+component MenubarGroup(label: text) layout:inline style:menubar-group {
+  label "MenubarGroup"
+}
+
+component MenubarPortal(label: text) layout:inline style:menubar-portal {
+  label "MenubarPortal"
+}
+
+component MenubarSub(label: text) layout:inline style:menubar-sub {
+  label "MenubarSub"
+}
+
+component MenubarRadioGroup(label: text) layout:inline style:menubar-radio-group {
+  label "MenubarRadioGroup"
+}
+
+component MenubarTrigger(label: text) layout:inline style:menubar-trigger {
+  label "MenubarTrigger"
+}
+
+component MenubarSubTrigger(label: text) layout:inline style:menubar-sub-trigger {
+  label "MenubarSubTrigger"
+}
+
+component MenubarSubContent(label: text) layout:inline style:menubar-sub-content {
+  label "MenubarSubContent"
+}
+
+component MenubarContent(label: text) layout:inline style:menubar-content {
+  label "MenubarContent"
+}
+
+component MenubarItem(label: text) layout:inline style:menubar-item {
+  label "MenubarItem"
+}
+
+component MenubarCheckboxItem(label: text) layout:inline style:menubar-checkbox-item {
+  label "MenubarCheckboxItem"
+}
+
+component MenubarRadioItem(label: text) layout:inline style:menubar-radio-item {
+  label "MenubarRadioItem"
+}
+
+component MenubarLabel(label: text) layout:inline style:menubar-label {
+  label "MenubarLabel"
+}
+
+component MenubarSeparator(label: text) layout:inline style:menubar-separator {
+  label "MenubarSeparator"
+}
+
+component MenubarShortcut(label: text) layout:inline style:menubar-shortcut {
+  label "MenubarShortcut"
+}

@@ -1,0 +1,9 @@
+## Block Fab
+## source: registry/fab.json
+## type: registry:ui
+## registryDependencies: cn, motion-presets
+## npm: motion@^12.23.0
+
+component FabBlock layout:stack style:fab {
+  label "Fab"
+}

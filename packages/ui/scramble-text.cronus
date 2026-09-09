@@ -1,0 +1,13 @@
+## ScrambleText
+## source: packages/ui/src/components/scramble-text.tsx
+## wave 1 - forms
+## exports: ScrambleTextMotionPreference, ScrambleText
+## slots: scramble-text
+
+component ScrambleText(label: text) layout:inline style:scramble-text {
+  label "ScrambleText"
+}
+
+component ScrambleTextMotionPreference(label: text) layout:inline style:scramble-text-motion-preference {
+  label "ScrambleTextMotionPreference"
+}

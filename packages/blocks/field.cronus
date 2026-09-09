@@ -1,0 +1,8 @@
+## Block Field
+## source: registry/field.json
+## type: registry:ui
+## registryDependencies: cn
+
+component FieldBlock layout:stack style:field {
+  label "Field"
+}

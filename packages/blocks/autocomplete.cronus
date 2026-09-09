@@ -1,0 +1,9 @@
+## Block Autocomplete
+## source: registry/autocomplete.json
+## type: registry:ui
+## registryDependencies: cn, command, popover, skeleton, spinner
+## npm: cmdk@^1.1.1
+
+component AutocompleteBlock layout:stack style:autocomplete {
+  label "Autocomplete"
+}

@@ -1,0 +1,9 @@
+## Block ShinyText
+## source: registry/shiny-text.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: @radix-ui/react-slot@^1.2.3
+
+component ShinyTextBlock layout:stack style:shiny-text {
+  label "ShinyText"
+}

@@ -1,0 +1,39 @@
+## Sheet
+## source: packages/ui/src/components/sheet.tsx
+## wave 1 - forms
+## exports: Sheet, SheetTrigger, SheetClose, SheetContent, SheetHeader, SheetFooter, SheetTitle, SheetDescription
+## slots: sheet-close, sheet-content, sheet-description, sheet-footer, sheet-header, sheet-overlay, sheet-title
+## variants.side: top, bottom, left, right
+## defaults: side=right
+
+component Sheet(label: text) layout:overlay style:sheet {
+  label "Sheet"
+}
+
+component SheetTrigger(label: text) layout:inline style:sheet-trigger {
+  label "SheetTrigger"
+}
+
+component SheetClose(label: text) layout:inline style:sheet-close {
+  label "SheetClose"
+}
+
+component SheetContent(label: text) layout:inline style:sheet-content {
+  label "SheetContent"
+}
+
+component SheetHeader(label: text) layout:inline style:sheet-header {
+  label "SheetHeader"
+}
+
+component SheetFooter(label: text) layout:inline style:sheet-footer {
+  label "SheetFooter"
+}
+
+component SheetTitle(label: text) layout:inline style:sheet-title {
+  label "SheetTitle"
+}
+
+component SheetDescription(label: text) layout:inline style:sheet-description {
+  label "SheetDescription"
+}

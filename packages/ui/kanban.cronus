@@ -1,0 +1,17 @@
+## Kanban
+## source: packages/ui/src/components/kanban.tsx
+## wave 1 - forms
+## exports: KanbanItem, KanbanColumn, Kanban
+## slots: kanban, kanban-card, kanban-card-body, kanban-card-description, kanban-card-overlay, kanban-card-title, kanban-column, kanban-column-count, kanban-column-header, kanban-column-list, kanban-column-title, kanban-drag-handle
+
+component Kanban(label: text) layout:stack style:kanban {
+  label "Kanban"
+}
+
+component KanbanItem(label: text) layout:inline style:kanban-item {
+  label "KanbanItem"
+}
+
+component KanbanColumn(label: text) layout:inline style:kanban-column {
+  label "KanbanColumn"
+}

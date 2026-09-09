@@ -1,0 +1,33 @@
+## Form
+## source: packages/ui/src/components/form.tsx
+## wave 1 - forms
+## exports: Form, FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage
+## slots: form-control, form-description, form-item, form-label, form-message
+
+component Form(label: text) layout:stack style:form {
+  label "Form"
+}
+
+component FormField(label: text) layout:inline style:form-field {
+  label "FormField"
+}
+
+component FormItem(label: text) layout:inline style:form-item {
+  label "FormItem"
+}
+
+component FormLabel(label: text) layout:inline style:form-label {
+  label "FormLabel"
+}
+
+component FormControl(label: text) layout:inline style:form-control {
+  label "FormControl"
+}
+
+component FormDescription(label: text) layout:inline style:form-description {
+  label "FormDescription"
+}
+
+component FormMessage(label: text) layout:inline style:form-message {
+  label "FormMessage"
+}

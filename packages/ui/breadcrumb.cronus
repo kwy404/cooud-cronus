@@ -1,0 +1,33 @@
+## Breadcrumb
+## source: packages/ui/src/components/breadcrumb.tsx
+## wave 0 - foundation
+## exports: Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator, BreadcrumbEllipsis
+## slots: breadcrumb, breadcrumb-ellipsis, breadcrumb-item, breadcrumb-link, breadcrumb-list, breadcrumb-page, breadcrumb-separator
+
+component Breadcrumb(label: text) layout:inline style:breadcrumb {
+  label "Breadcrumb"
+}
+
+component BreadcrumbList(label: text) layout:inline style:breadcrumb-list {
+  label "BreadcrumbList"
+}
+
+component BreadcrumbItem(label: text) layout:inline style:breadcrumb-item {
+  label "BreadcrumbItem"
+}
+
+component BreadcrumbLink(label: text) layout:inline style:breadcrumb-link {
+  label "BreadcrumbLink"
+}
+
+component BreadcrumbPage(label: text) layout:inline style:breadcrumb-page {
+  label "BreadcrumbPage"
+}
+
+component BreadcrumbSeparator(label: text) layout:inline style:breadcrumb-separator {
+  label "BreadcrumbSeparator"
+}
+
+component BreadcrumbEllipsis(label: text) layout:inline style:breadcrumb-ellipsis {
+  label "BreadcrumbEllipsis"
+}

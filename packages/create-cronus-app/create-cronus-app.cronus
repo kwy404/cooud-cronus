@@ -1,0 +1,13 @@
+## @cooud-cronus/create-cronus-app
+## Scaffold nativo. Nao e Next.js.
+## npm: create-cronus-app --template default|dashboard|marketing
+## nativo: cronus new <name>  +  copiar templates deste pacote
+##
+## templates: default, dashboard, marketing
+## themes: aurora, neutral, midnight, sunset, emerald
+## modes: dark, light
+
+app "CreateCronusApp" {
+  port 3000
+  theme dark
+}

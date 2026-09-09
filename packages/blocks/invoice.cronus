@@ -1,0 +1,9 @@
+## Block Invoice
+## source: registry/invoice.json
+## type: registry:block
+## registryDependencies: demo-store
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+
+component InvoiceBlock layout:stack style:invoice {
+  label "Invoice"
+}

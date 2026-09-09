@@ -1,0 +1,37 @@
+## MorphingPopover
+## source: packages/ui/src/components/morphing-popover.tsx
+## wave 1 - forms
+## exports: MorphingPopover, MorphingPopoverTrigger, MorphingPopoverContent, MorphingPopoverClose, MorphingPopoverHeader, MorphingPopoverBody, MorphingPopoverFooter, MorphingPopoverButton
+## slots: morphing-popover, morphing-popover-body, morphing-popover-button, morphing-popover-close, morphing-popover-content, morphing-popover-footer, morphing-popover-header, morphing-popover-trigger
+
+component MorphingPopover(label: text) layout:overlay style:morphing-popover {
+  label "MorphingPopover"
+}
+
+component MorphingPopoverTrigger(label: text) layout:inline style:morphing-popover-trigger {
+  label "MorphingPopoverTrigger"
+}
+
+component MorphingPopoverContent(label: text) layout:inline style:morphing-popover-content {
+  label "MorphingPopoverContent"
+}
+
+component MorphingPopoverClose(label: text) layout:inline style:morphing-popover-close {
+  label "MorphingPopoverClose"
+}
+
+component MorphingPopoverHeader(label: text) layout:inline style:morphing-popover-header {
+  label "MorphingPopoverHeader"
+}
+
+component MorphingPopoverBody(label: text) layout:inline style:morphing-popover-body {
+  label "MorphingPopoverBody"
+}
+
+component MorphingPopoverFooter(label: text) layout:inline style:morphing-popover-footer {
+  label "MorphingPopoverFooter"
+}
+
+component MorphingPopoverButton(label: text) layout:inline style:morphing-popover-button {
+  label "MorphingPopoverButton"
+}

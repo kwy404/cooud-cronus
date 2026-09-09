@@ -1,0 +1,17 @@
+## UsageMeter
+## source: packages/ui/src/components/usage-meter.tsx
+## wave 1 - forms
+## exports: UsageMeter, UsageMeterLinear, UsageMeterCircular
+## slots: usage-meter, usage-meter-fill, usage-meter-label, usage-meter-ring, usage-meter-ring-progress, usage-meter-track, usage-meter-value
+
+component UsageMeter(label: text) layout:inline style:usage-meter {
+  label "UsageMeter"
+}
+
+component UsageMeterLinear(label: text) layout:inline style:usage-meter-linear {
+  label "UsageMeterLinear"
+}
+
+component UsageMeterCircular(label: text) layout:inline style:usage-meter-circular {
+  label "UsageMeterCircular"
+}

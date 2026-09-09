@@ -1,0 +1,13 @@
+## ComposedChart
+## source: packages/ui/src/components/composed-chart.tsx
+## wave 1 - forms
+## exports: ComposedChartSeries, ComposedChart
+## slots: composed-chart
+
+component ComposedChart(label: text) layout:stack style:composed-chart {
+  label "ComposedChart"
+}
+
+component ComposedChartSeries(label: text) layout:inline style:composed-chart-series {
+  label "ComposedChartSeries"
+}

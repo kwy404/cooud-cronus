@@ -1,0 +1,9 @@
+## Ripple
+## source: packages/ui/src/components/ripple.tsx
+## wave 1 - forms
+## exports: Ripple
+## slots: ripple
+
+component Ripple(label: text) layout:inline style:ripple {
+  label "Ripple"
+}

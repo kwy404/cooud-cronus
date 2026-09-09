@@ -1,0 +1,43 @@
+## Stepper
+## source: packages/ui/src/components/stepper.tsx
+## wave 1 - forms
+## exports: StepperLabels, Stepper, StepperList, StepperItem, StepperIndicator, StepperSeparator, StepperTrigger, StepperTitle, StepperDescription
+## slots: stepper, stepper-description, stepper-indicator, stepper-item, stepper-item-state, stepper-list, stepper-separator, stepper-title, stepper-trigger
+## variants.state: completed, active, upcoming
+## defaults: state=upcoming
+
+component Stepper(label: text) layout:stack style:stepper {
+  label "Stepper"
+}
+
+component StepperLabels(label: text) layout:inline style:stepper-labels {
+  label "StepperLabels"
+}
+
+component StepperList(label: text) layout:inline style:stepper-list {
+  label "StepperList"
+}
+
+component StepperItem(label: text) layout:inline style:stepper-item {
+  label "StepperItem"
+}
+
+component StepperIndicator(label: text) layout:inline style:stepper-indicator {
+  label "StepperIndicator"
+}
+
+component StepperSeparator(label: text) layout:inline style:stepper-separator {
+  label "StepperSeparator"
+}
+
+component StepperTrigger(label: text) layout:inline style:stepper-trigger {
+  label "StepperTrigger"
+}
+
+component StepperTitle(label: text) layout:inline style:stepper-title {
+  label "StepperTitle"
+}
+
+component StepperDescription(label: text) layout:inline style:stepper-description {
+  label "StepperDescription"
+}

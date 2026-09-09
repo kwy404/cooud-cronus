@@ -1,0 +1,8 @@
+## Block GradientBorder
+## source: registry/gradient-border.json
+## type: registry:ui
+## registryDependencies: cn
+
+component GradientBorderBlock layout:stack style:gradient-border {
+  label "GradientBorder"
+}

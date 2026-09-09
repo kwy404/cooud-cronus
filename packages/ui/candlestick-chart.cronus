@@ -1,0 +1,9 @@
+## CandlestickChart
+## source: packages/ui/src/components/candlestick-chart.tsx
+## wave 0 - foundation
+## exports: CandlestickChart
+## slots: candlestick-chart, candlestick-marks
+
+component CandlestickChart(label: text) layout:stack style:candlestick-chart {
+  label "CandlestickChart"
+}

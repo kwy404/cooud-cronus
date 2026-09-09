@@ -1,0 +1,9 @@
+## DatePicker
+## source: packages/ui/src/components/date-picker.tsx
+## wave 1 - forms
+## exports: DatePicker
+## slots: date-picker-content, date-picker-trigger
+
+component DatePicker(label: text) layout:inline style:date-picker {
+  label "DatePicker"
+}

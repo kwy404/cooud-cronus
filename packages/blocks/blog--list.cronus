@@ -1,0 +1,8 @@
+## Block BlogList
+## source: registry/blog--list.json
+## type: registry:block
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+
+component BlogListBlock layout:stack style:blog--list {
+  label "BlogList"
+}

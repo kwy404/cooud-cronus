@@ -1,0 +1,9 @@
+## WordRotate
+## source: packages/ui/src/components/word-rotate.tsx
+## wave 1 - forms
+## exports: WordRotate
+## slots: word-rotate
+
+component WordRotate(label: text) layout:inline style:word-rotate {
+  label "WordRotate"
+}

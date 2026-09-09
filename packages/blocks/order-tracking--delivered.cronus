@@ -1,0 +1,9 @@
+## Block OrderTrackingDelivered
+## source: registry/order-tracking--delivered.json
+## type: registry:block
+## registryDependencies: demo-store
+## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+
+component OrderTrackingDeliveredBlock layout:stack style:order-tracking--delivered {
+  label "OrderTrackingDelivered"
+}

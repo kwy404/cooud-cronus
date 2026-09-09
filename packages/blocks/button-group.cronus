@@ -1,0 +1,8 @@
+## Block ButtonGroup
+## source: registry/button-group.json
+## type: registry:ui
+## registryDependencies: cn
+
+component ButtonGroupBlock layout:stack style:button-group {
+  label "ButtonGroup"
+}

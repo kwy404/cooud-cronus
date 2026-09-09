@@ -1,0 +1,9 @@
+## Block ScrollArea
+## source: registry/scroll-area.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: @radix-ui/react-scroll-area@^1.2.9
+
+component ScrollAreaBlock layout:stack style:scroll-area {
+  label "ScrollArea"
+}

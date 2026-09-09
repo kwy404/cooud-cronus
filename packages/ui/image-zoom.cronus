@@ -1,0 +1,13 @@
+## ImageZoom
+## source: packages/ui/src/components/image-zoom.tsx
+## wave 1 - forms
+## exports: ImageZoomLabels, ImageZoom
+## slots: image-zoom, image-zoom-content, image-zoom-indicator
+
+component ImageZoom(label: text) layout:inline style:image-zoom {
+  label "ImageZoom"
+}
+
+component ImageZoomLabels(label: text) layout:inline style:image-zoom-labels {
+  label "ImageZoomLabels"
+}

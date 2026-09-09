@@ -1,0 +1,9 @@
+## Block ExpandableTabs
+## source: registry/expandable-tabs.json
+## type: registry:ui
+## registryDependencies: cn
+## npm: motion@^12.23.0
+
+component ExpandableTabsBlock layout:stack style:expandable-tabs {
+  label "ExpandableTabs"
+}

@@ -1,0 +1,8 @@
+## Block Shimmer
+## source: registry/shimmer.json
+## type: registry:ui
+## registryDependencies: cn
+
+component ShimmerBlock layout:stack style:shimmer {
+  label "Shimmer"
+}

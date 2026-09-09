@@ -1,0 +1,13 @@
+## Marquee
+## source: packages/ui/src/components/marquee.tsx
+## wave 1 - forms
+## exports: MarqueeMotionPreference, Marquee
+## slots: marquee, marquee-group
+
+component Marquee(label: text) layout:inline style:marquee {
+  label "Marquee"
+}
+
+component MarqueeMotionPreference(label: text) layout:inline style:marquee-motion-preference {
+  label "MarqueeMotionPreference"
+}

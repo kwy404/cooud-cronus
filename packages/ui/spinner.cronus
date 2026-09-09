@@ -1,0 +1,12 @@
+## Spinner
+## source: packages/ui/src/components/spinner.tsx
+## wave 1 - forms
+## exports: Spinner
+## slots: spinner
+## variants.size: sm, md, lg
+## defaults: size=md
+
+component Spinner(label: text, size: text) layout:inline style:spinner {
+  label "Spinner"
+  size "md"
+}

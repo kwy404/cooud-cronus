@@ -1,0 +1,40 @@
+## Timeline
+## source: packages/ui/src/components/timeline.tsx
+## wave 1 - forms
+## exports: Timeline, TimelineItem, TimelineDot, TimelineConnector, TimelineContent, TimelineTitle, TimelineTime, TimelineDescription
+## slots: timeline, timeline-body, timeline-connector, timeline-content, timeline-description, timeline-dot, timeline-item, timeline-rail, timeline-time, timeline-title
+## variants.tone: default, primary, success, warning, error
+## variants.withIcon: true, false
+## defaults: tone=default withIcon=false
+
+component Timeline(label: text) layout:stack style:timeline {
+  label "Timeline"
+}
+
+component TimelineItem(label: text) layout:inline style:timeline-item {
+  label "TimelineItem"
+}
+
+component TimelineDot(label: text) layout:inline style:timeline-dot {
+  label "TimelineDot"
+}
+
+component TimelineConnector(label: text) layout:inline style:timeline-connector {
+  label "TimelineConnector"
+}
+
+component TimelineContent(label: text) layout:inline style:timeline-content {
+  label "TimelineContent"
+}
+
+component TimelineTitle(label: text) layout:inline style:timeline-title {
+  label "TimelineTitle"
+}
+
+component TimelineTime(label: text) layout:inline style:timeline-time {
+  label "TimelineTime"
+}
+
+component TimelineDescription(label: text) layout:inline style:timeline-description {
+  label "TimelineDescription"
+}
