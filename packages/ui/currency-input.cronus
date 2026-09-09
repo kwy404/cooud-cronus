@@ -1,13 +1,24 @@
 ## CurrencyInput
 ## source: packages/ui/src/components/currency-input.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: CurrencyInputMeta, CurrencyInput
 ## slots: currency-input, currency-input-field, currency-input-prefix, currency-input-selector
 
-component CurrencyInput(label: text) layout:inline style:currency-input {
+component CurrencyInput(label: text, disabled: boolean, value: text, invalid: boolean) layout:inline style:currency-input {
   label "CurrencyInput"
+  state value: text = ""
+  field "CurrencyInput"
+  action "focus"
+
+  test "fills CurrencyInput" {
+    fill value "x"
+  }
+  test "disabled CurrencyInput" {
+    expect visible "CurrencyInput"
+  }
 }
 
-component CurrencyInputMeta(label: text) layout:inline style:currency-input-meta {
+component CurrencyInputMeta(label: text, disabled: boolean) layout:inline style:currency-input-meta {
   label "CurrencyInputMeta"
+  action "click"
 }

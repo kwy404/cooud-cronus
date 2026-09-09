@@ -1,13 +1,24 @@
 ## ToggleGroup
 ## source: packages/ui/src/components/toggle-group.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: ToggleGroup, ToggleGroupItem
 ## slots: toggle-group, toggle-group-item
 
-component ToggleGroup(label: text) layout:inline style:toggle-group {
+component ToggleGroup(label: text, disabled: boolean, checked: boolean) layout:inline style:toggle-group {
   label "ToggleGroup"
+  state checked: boolean = false
+  action "toggle"
+  action "focus"
+
+  test "toggles ToggleGroup" {
+    click "ToggleGroup"
+  }
+  test "disabled ToggleGroup" {
+    expect visible "ToggleGroup"
+  }
 }
 
-component ToggleGroupItem(label: text) layout:inline style:toggle-group-item {
+component ToggleGroupItem(label: text, disabled: boolean) layout:inline style:toggle-group-item {
   label "ToggleGroupItem"
+  action "click"
 }

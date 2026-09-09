@@ -1,13 +1,24 @@
 ## ComposedChart
 ## source: packages/ui/src/components/composed-chart.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: ComposedChartSeries, ComposedChart
 ## slots: composed-chart
 
-component ComposedChart(label: text) layout:stack style:composed-chart {
+component ComposedChart(label: text, disabled: boolean) layout:stack style:composed-chart {
   label "ComposedChart"
+  columns "name, value, status"
+  item "Row"
+  action "focus"
+
+  test "shows ComposedChart" {
+    expect visible "ComposedChart"
+  }
+  test "disabled ComposedChart" {
+    expect visible "ComposedChart"
+  }
 }
 
-component ComposedChartSeries(label: text) layout:inline style:composed-chart-series {
+component ComposedChartSeries(label: text, disabled: boolean) layout:inline style:composed-chart-series {
   label "ComposedChartSeries"
+  action "click"
 }

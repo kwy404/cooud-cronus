@@ -1,8 +1,15 @@
 ## Block BlogPostWithSidebar
 ## source: registry/blog-post--with-sidebar.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3
+## behavior: marketing
 
-component BlogPostWithSidebarBlock layout:stack style:blog-post--with-sidebar {
-  label "BlogPostWithSidebar"
+component BlogPostWithSidebarBlock(label: text) layout:stack style:blog-post--with-sidebar {
+  title "Blog Post With Sidebar"
+  subtitle "WithSidebar"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

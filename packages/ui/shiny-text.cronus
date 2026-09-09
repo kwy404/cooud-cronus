@@ -1,9 +1,18 @@
 ## ShinyText
 ## source: packages/ui/src/components/shiny-text.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: ShinyText
 ## slots: shiny-text
 
-component ShinyText(label: text) layout:inline style:shiny-text {
+component ShinyText(label: text, disabled: boolean) layout:inline style:shiny-text {
   label "ShinyText"
+  action "click"
+  action "focus"
+
+  test "uses ShinyText" {
+    click "ShinyText"
+  }
+  test "disabled ShinyText" {
+    expect visible "ShinyText"
+  }
 }

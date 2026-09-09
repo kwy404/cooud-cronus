@@ -1,9 +1,19 @@
 ## FileDropzone
 ## source: packages/ui/src/components/file-dropzone.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: FileDropzone
 ## slots: file-dropzone
 
-component FileDropzone(label: text) layout:inline style:file-dropzone {
+component FileDropzone(label: text, disabled: boolean, value: text, invalid: boolean) layout:inline style:file-dropzone {
   label "FileDropzone"
+  state value: text = ""
+  field "FileDropzone"
+  action "focus"
+
+  test "fills FileDropzone" {
+    fill value "x"
+  }
+  test "disabled FileDropzone" {
+    expect visible "FileDropzone"
+  }
 }

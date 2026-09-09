@@ -1,8 +1,14 @@
 ## Block Particles
 ## source: registry/particles.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component ParticlesBlock layout:stack style:particles {
-  label "Particles"
+component ParticlesBlock(label: text) layout:stack style:particles {
+  title "Particles"
+  subtitle "Particles"
+  action "Particles"
+  test "use block" {
+    click "Particles"
+  }
 }

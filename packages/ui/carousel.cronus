@@ -1,37 +1,53 @@
 ## Carousel
 ## source: packages/ui/src/components/carousel.tsx
-## wave 0 - foundation
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: CarouselAlign, CarouselOptions, Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, CarouselDots
 ## slots: carousel, carousel-content, carousel-dot, carousel-dots, carousel-item, carousel-next, carousel-previous
 
-component Carousel(label: text) layout:stack style:carousel {
+component Carousel(label: text, disabled: boolean) layout:stack style:carousel {
   label "Carousel"
+  action "click"
+  action "focus"
+
+  test "uses Carousel" {
+    click "Carousel"
+  }
+  test "disabled Carousel" {
+    expect visible "Carousel"
+  }
 }
 
-component CarouselAlign(label: text) layout:inline style:carousel-align {
+component CarouselAlign(label: text, disabled: boolean) layout:inline style:carousel-align {
   label "CarouselAlign"
+  action "click"
 }
 
-component CarouselOptions(label: text) layout:inline style:carousel-options {
+component CarouselOptions(label: text, disabled: boolean) layout:inline style:carousel-options {
   label "CarouselOptions"
+  action "click"
 }
 
-component CarouselContent(label: text) layout:inline style:carousel-content {
+component CarouselContent(label: text, disabled: boolean) layout:inline style:carousel-content {
   label "CarouselContent"
+  action "click"
 }
 
-component CarouselItem(label: text) layout:inline style:carousel-item {
+component CarouselItem(label: text, disabled: boolean) layout:inline style:carousel-item {
   label "CarouselItem"
+  action "click"
 }
 
-component CarouselPrevious(label: text) layout:inline style:carousel-previous {
+component CarouselPrevious(label: text, disabled: boolean) layout:inline style:carousel-previous {
   label "CarouselPrevious"
+  action "click"
 }
 
-component CarouselNext(label: text) layout:inline style:carousel-next {
+component CarouselNext(label: text, disabled: boolean) layout:inline style:carousel-next {
   label "CarouselNext"
+  action "click"
 }
 
-component CarouselDots(label: text) layout:inline style:carousel-dots {
+component CarouselDots(label: text, disabled: boolean) layout:inline style:carousel-dots {
   label "CarouselDots"
+  action "click"
 }

@@ -1,9 +1,18 @@
 ## WordRotate
 ## source: packages/ui/src/components/word-rotate.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: WordRotate
 ## slots: word-rotate
 
-component WordRotate(label: text) layout:inline style:word-rotate {
+component WordRotate(label: text, disabled: boolean) layout:inline style:word-rotate {
   label "WordRotate"
+  action "click"
+  action "focus"
+
+  test "uses WordRotate" {
+    click "WordRotate"
+  }
+  test "disabled WordRotate" {
+    expect visible "WordRotate"
+  }
 }

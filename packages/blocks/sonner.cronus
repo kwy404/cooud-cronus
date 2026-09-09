@@ -1,8 +1,13 @@
 ## Block Sonner
 ## source: registry/sonner.json
 ## type: registry:ui
-## npm: @cronus-ui/theme@workspace:*, sonner@^2.0.7
+## behavior: card
 
-component SonnerBlock layout:stack style:sonner {
-  label "Sonner"
+component SonnerBlock(label: text) layout:stack style:sonner {
+  title "Sonner"
+  subtitle "Sonner"
+  action "Sonner"
+  test "use block" {
+    click "Sonner"
+  }
 }

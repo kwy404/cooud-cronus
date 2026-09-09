@@ -1,8 +1,15 @@
 ## Block PaymentMethod
 ## source: registry/payment-method.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: commerce
 
-component PaymentMethodBlock layout:stack style:payment-method {
-  label "PaymentMethod"
+component PaymentMethodBlock(label: text) layout:stack style:payment-method {
+  title "Payment Method"
+  subtitle "Payment Method"
+  field "Card"
+  value "$0"
+  action "Pay"
+  test "checkout" {
+    click "Pay"
+  }
 }

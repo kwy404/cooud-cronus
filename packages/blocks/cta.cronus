@@ -1,8 +1,15 @@
 ## Block Cta
 ## source: registry/cta.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component CtaBlock layout:stack style:cta {
-  label "Cta"
+component CtaBlock(label: text) layout:stack style:cta {
+  title "Cta"
+  subtitle "Cta"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

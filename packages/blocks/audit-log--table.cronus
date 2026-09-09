@@ -1,8 +1,13 @@
 ## Block AuditLogTable
 ## source: registry/audit-log--table.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: card
 
-component AuditLogTableBlock layout:stack style:audit-log--table {
-  label "AuditLogTable"
+component AuditLogTableBlock(label: text) layout:stack style:audit-log--table {
+  title "Audit Log Table"
+  subtitle "Table"
+  action "Audit Log Table"
+  test "use block" {
+    click "Audit Log Table"
+  }
 }

@@ -1,9 +1,14 @@
 ## Block Label
 ## source: registry/label.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: @radix-ui/react-label@^2.1.7
 
-component LabelBlock layout:stack style:label {
-  label "Label"
+component LabelBlock(label: text) layout:stack style:label {
+  title "Label"
+  subtitle "Label"
+  action "Label"
+  test "use block" {
+    click "Label"
+  }
 }

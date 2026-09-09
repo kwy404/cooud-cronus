@@ -1,9 +1,14 @@
 ## Block SegmentedControl
 ## source: registry/segmented-control.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: motion@^12.23.0
 
-component SegmentedControlBlock layout:stack style:segmented-control {
-  label "SegmentedControl"
+component SegmentedControlBlock(label: text) layout:stack style:segmented-control {
+  title "Segmented Control"
+  subtitle "Segmented Control"
+  action "Segmented Control"
+  test "use block" {
+    click "Segmented Control"
+  }
 }

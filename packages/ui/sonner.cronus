@@ -1,13 +1,23 @@
 ## Sonner
 ## source: packages/ui/src/components/sonner.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Sonner, Toaster
 ## slots: toaster
 
-component Sonner(label: text) layout:inline style:sonner {
+component Sonner(label: text, disabled: boolean) layout:inline style:sonner {
   label "Sonner"
+  action "click"
+  action "focus"
+
+  test "uses Sonner" {
+    click "Sonner"
+  }
+  test "disabled Sonner" {
+    expect visible "Sonner"
+  }
 }
 
-component Toaster(label: text) layout:inline style:toaster {
+component Toaster(label: text, disabled: boolean) layout:inline style:toaster {
   label "Toaster"
+  action "click"
 }

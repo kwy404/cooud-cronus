@@ -1,14 +1,22 @@
 ## Button
 ## source: packages/ui/src/components/button.tsx
-## wave 0 - foundation
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Button
 ## slots: button
 ## variants.variant: primary, secondary, outline, ghost, destructive, link
 ## variants.size: sm, md, lg, icon, icon-sm
-## defaults: variant=primary size=md
 
-component Button(label: text, variant: text, size: text) layout:inline style:button {
+component Button(label: text, disabled: boolean, variant: text, size: text) layout:inline style:button {
   label "Button"
   variant "primary"
   size "md"
+  action "click"
+  action "focus"
+
+  test "uses Button" {
+    click "Button"
+  }
+  test "disabled Button" {
+    expect visible "Button"
+  }
 }

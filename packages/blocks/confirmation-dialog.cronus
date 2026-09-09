@@ -1,9 +1,14 @@
 ## Block ConfirmationDialog
 ## source: registry/confirmation-dialog.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: alert-dialog, button, cn, spinner
-## npm: lucide-react@^0.577.0
 
-component ConfirmationDialogBlock layout:stack style:confirmation-dialog {
-  label "ConfirmationDialog"
+component ConfirmationDialogBlock(label: text) layout:stack style:confirmation-dialog {
+  title "Confirmation Dialog"
+  subtitle "Confirmation Dialog"
+  action "Confirmation Dialog"
+  test "use block" {
+    click "Confirmation Dialog"
+  }
 }

@@ -1,9 +1,16 @@
 ## Block ProfitLossChart
 ## source: registry/profit-loss-chart.json
 ## type: registry:ui
+## behavior: data
 ## registryDependencies: chart, cn
-## npm: recharts@^3.9.2
 
-component ProfitLossChartBlock layout:stack style:profit-loss-chart {
-  label "ProfitLossChart"
+component ProfitLossChartBlock(label: text) layout:stack style:profit-loss-chart {
+  title "Profit Loss Chart"
+  subtitle "Profit Loss Chart"
+  columns "name, value, status"
+  item "Row"
+  value "0"
+  test "reads ProfitLossChart" {
+    expect visible "Profit Loss Chart"
+  }
 }

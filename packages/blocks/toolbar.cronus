@@ -1,8 +1,14 @@
 ## Block Toolbar
 ## source: registry/toolbar.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component ToolbarBlock layout:stack style:toolbar {
-  label "Toolbar"
+component ToolbarBlock(label: text) layout:stack style:toolbar {
+  title "Toolbar"
+  subtitle "Toolbar"
+  action "Toolbar"
+  test "use block" {
+    click "Toolbar"
+  }
 }

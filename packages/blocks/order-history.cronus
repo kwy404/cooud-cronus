@@ -1,9 +1,16 @@
 ## Block OrderHistory
 ## source: registry/order-history.json
 ## type: registry:block
+## behavior: commerce
 ## registryDependencies: demo-store
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
-component OrderHistoryBlock layout:stack style:order-history {
-  label "OrderHistory"
+component OrderHistoryBlock(label: text) layout:stack style:order-history {
+  title "Order History"
+  subtitle "Order History"
+  field "Card"
+  value "$0"
+  action "Pay"
+  test "checkout" {
+    click "Pay"
+  }
 }

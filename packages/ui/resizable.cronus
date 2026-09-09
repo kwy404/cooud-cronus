@@ -1,21 +1,33 @@
 ## Resizable
 ## source: packages/ui/src/components/resizable.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Resizable, ResizablePanelGroup, ResizablePanel, ResizableHandle
 ## slots: resizable-handle, resizable-handle-grip, resizable-panel-group
 
-component Resizable(label: text) layout:inline style:resizable {
+component Resizable(label: text, disabled: boolean) layout:inline style:resizable {
   label "Resizable"
+  action "click"
+  action "focus"
+
+  test "uses Resizable" {
+    click "Resizable"
+  }
+  test "disabled Resizable" {
+    expect visible "Resizable"
+  }
 }
 
-component ResizablePanelGroup(label: text) layout:inline style:resizable-panel-group {
+component ResizablePanelGroup(label: text, disabled: boolean) layout:inline style:resizable-panel-group {
   label "ResizablePanelGroup"
+  action "click"
 }
 
-component ResizablePanel(label: text) layout:inline style:resizable-panel {
+component ResizablePanel(label: text, disabled: boolean) layout:inline style:resizable-panel {
   label "ResizablePanel"
+  action "click"
 }
 
-component ResizableHandle(label: text) layout:inline style:resizable-handle {
+component ResizableHandle(label: text, disabled: boolean) layout:inline style:resizable-handle {
   label "ResizableHandle"
+  action "click"
 }

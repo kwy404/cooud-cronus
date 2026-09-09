@@ -1,9 +1,14 @@
 ## Block AppShellChrome
 ## source: registry/app-shell-chrome.json
 ## type: registry:block
+## behavior: card
 ## registryDependencies: demo-saas
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
-component AppShellChromeBlock layout:stack style:app-shell-chrome {
-  label "AppShellChrome"
+component AppShellChromeBlock(label: text) layout:stack style:app-shell-chrome {
+  title "App Shell Chrome"
+  subtitle "App Shell Chrome"
+  action "App Shell Chrome"
+  test "use block" {
+    click "App Shell Chrome"
+  }
 }

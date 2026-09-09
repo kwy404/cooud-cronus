@@ -1,8 +1,14 @@
 ## Block GridPattern
 ## source: registry/grid-pattern.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component GridPatternBlock layout:stack style:grid-pattern {
-  label "GridPattern"
+component GridPatternBlock(label: text) layout:stack style:grid-pattern {
+  title "Grid Pattern"
+  subtitle "Grid Pattern"
+  action "Grid Pattern"
+  test "use block" {
+    click "Grid Pattern"
+  }
 }

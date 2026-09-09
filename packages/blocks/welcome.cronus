@@ -1,8 +1,13 @@
 ## Block Welcome
 ## source: registry/welcome.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: card
 
-component WelcomeBlock layout:stack style:welcome {
-  label "Welcome"
+component WelcomeBlock(label: text) layout:stack style:welcome {
+  title "Welcome"
+  subtitle "Welcome"
+  action "Welcome"
+  test "use block" {
+    click "Welcome"
+  }
 }

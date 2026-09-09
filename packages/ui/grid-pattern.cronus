@@ -1,9 +1,18 @@
 ## GridPattern
 ## source: packages/ui/src/components/grid-pattern.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: GridPattern
 ## slots: grid-pattern
 
-component GridPattern(label: text) layout:inline style:grid-pattern {
+component GridPattern(label: text, disabled: boolean) layout:inline style:grid-pattern {
   label "GridPattern"
+  action "click"
+  action "focus"
+
+  test "uses GridPattern" {
+    click "GridPattern"
+  }
+  test "disabled GridPattern" {
+    expect visible "GridPattern"
+  }
 }

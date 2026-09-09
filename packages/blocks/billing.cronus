@@ -1,9 +1,16 @@
 ## Block Billing
 ## source: registry/billing.json
 ## type: registry:block
+## behavior: commerce
 ## registryDependencies: demo-saas
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
-component BillingBlock layout:stack style:billing {
-  label "Billing"
+component BillingBlock(label: text) layout:stack style:billing {
+  title "Billing"
+  subtitle "Billing"
+  field "Card"
+  value "$0"
+  action "Pay"
+  test "checkout" {
+    click "Pay"
+  }
 }

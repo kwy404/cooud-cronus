@@ -1,9 +1,19 @@
 ## Block LoginMinimal
 ## source: registry/login--minimal.json
 ## type: registry:block
+## behavior: auth
 ## registryDependencies: auth-adapter
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
-component LoginMinimalBlock layout:stack style:login--minimal {
-  label "LoginMinimal"
+component LoginMinimalBlock(label: text) layout:stack style:login--minimal {
+  title "Login Minimal"
+  subtitle "Minimal"
+  state pending: boolean = false
+  field "Email"
+  field "Password"
+  action "Sign in"
+  link "Forgot password?" -> "/forgot-password"
+  test "submit auth" {
+    fill email "you@company.com"
+    click "Sign in"
+  }
 }

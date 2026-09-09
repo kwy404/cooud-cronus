@@ -1,8 +1,15 @@
 ## Block FeatureGridBento
 ## source: registry/feature-grid--bento.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component FeatureGridBentoBlock layout:stack style:feature-grid--bento {
-  label "FeatureGridBento"
+component FeatureGridBentoBlock(label: text) layout:stack style:feature-grid--bento {
+  title "Feature Grid Bento"
+  subtitle "Bento"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

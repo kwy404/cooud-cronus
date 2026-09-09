@@ -1,9 +1,18 @@
 ## CopyButton
 ## source: packages/ui/src/components/copy-button.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: CopyButton
 ## slots: copy-button
 
-component CopyButton(label: text) layout:inline style:copy-button {
+component CopyButton(label: text, disabled: boolean) layout:inline style:copy-button {
   label "CopyButton"
+  action "click"
+  action "focus"
+
+  test "uses CopyButton" {
+    click "CopyButton"
+  }
+  test "disabled CopyButton" {
+    expect visible "CopyButton"
+  }
 }

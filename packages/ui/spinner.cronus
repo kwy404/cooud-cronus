@@ -1,12 +1,20 @@
 ## Spinner
 ## source: packages/ui/src/components/spinner.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Spinner
 ## slots: spinner
 ## variants.size: sm, md, lg
-## defaults: size=md
 
-component Spinner(label: text, size: text) layout:inline style:spinner {
+component Spinner(label: text, disabled: boolean, size: text) layout:inline style:spinner {
   label "Spinner"
   size "md"
+  action "click"
+  action "focus"
+
+  test "uses Spinner" {
+    click "Spinner"
+  }
+  test "disabled Spinner" {
+    expect visible "Spinner"
+  }
 }

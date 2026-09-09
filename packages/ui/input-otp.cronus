@@ -1,25 +1,39 @@
 ## InputOtp
 ## source: packages/ui/src/components/input-otp.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: InputOtp, InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator
 ## slots: input-otp, input-otp-group, input-otp-separator, input-otp-slot
 
-component InputOtp(label: text) layout:inline style:input-otp {
+component InputOtp(label: text, disabled: boolean, value: text, invalid: boolean) layout:inline style:input-otp {
   label "InputOtp"
+  state value: text = ""
+  field "InputOtp"
+  action "focus"
+
+  test "fills InputOtp" {
+    fill value "x"
+  }
+  test "disabled InputOtp" {
+    expect visible "InputOtp"
+  }
 }
 
-component InputOTP(label: text) layout:inline style:input-o-t-p {
+component InputOTP(label: text, disabled: boolean) layout:inline style:input-o-t-p {
   label "InputOTP"
+  action "click"
 }
 
-component InputOTPGroup(label: text) layout:inline style:input-o-t-p-group {
+component InputOTPGroup(label: text, disabled: boolean) layout:inline style:input-o-t-p-group {
   label "InputOTPGroup"
+  action "click"
 }
 
-component InputOTPSlot(label: text) layout:inline style:input-o-t-p-slot {
+component InputOTPSlot(label: text, disabled: boolean) layout:inline style:input-o-t-p-slot {
   label "InputOTPSlot"
+  action "click"
 }
 
-component InputOTPSeparator(label: text) layout:inline style:input-o-t-p-separator {
+component InputOTPSeparator(label: text, disabled: boolean) layout:inline style:input-o-t-p-separator {
   label "InputOTPSeparator"
+  action "click"
 }

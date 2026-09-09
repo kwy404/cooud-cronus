@@ -1,8 +1,16 @@
 ## Block UsageMeter
 ## source: registry/usage-meter.json
 ## type: registry:ui
+## behavior: data
 ## registryDependencies: cn
 
-component UsageMeterBlock layout:stack style:usage-meter {
-  label "UsageMeter"
+component UsageMeterBlock(label: text) layout:stack style:usage-meter {
+  title "Usage Meter"
+  subtitle "Usage Meter"
+  columns "name, value, status"
+  item "Row"
+  value "0"
+  test "reads UsageMeter" {
+    expect visible "Usage Meter"
+  }
 }

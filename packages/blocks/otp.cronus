@@ -1,8 +1,18 @@
 ## Block Otp
 ## source: registry/otp.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: auth
 
-component OtpBlock layout:stack style:otp {
-  label "Otp"
+component OtpBlock(label: text) layout:stack style:otp {
+  title "Otp"
+  subtitle "Otp"
+  state pending: boolean = false
+  field "Email"
+  field "Password"
+  action "Sign in"
+  link "Forgot password?" -> "/forgot-password"
+  test "submit auth" {
+    fill email "you@company.com"
+    click "Sign in"
+  }
 }

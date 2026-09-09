@@ -1,8 +1,15 @@
 ## Block StatsCompactSummary
 ## source: registry/stats--compact-summary.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3
+## behavior: data
 
-component StatsCompactSummaryBlock layout:stack style:stats--compact-summary {
-  label "StatsCompactSummary"
+component StatsCompactSummaryBlock(label: text) layout:stack style:stats--compact-summary {
+  title "Stats Compact Summary"
+  subtitle "CompactSummary"
+  columns "name, value, status"
+  item "Row"
+  value "0"
+  test "reads StatsCompactSummary" {
+    expect visible "Stats Compact Summary"
+  }
 }

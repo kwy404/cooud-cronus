@@ -1,8 +1,14 @@
 ## Block AppShell
 ## source: registry/app-shell.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn, sidebar
 
-component AppShellBlock layout:stack style:app-shell {
-  label "AppShell"
+component AppShellBlock(label: text) layout:stack style:app-shell {
+  title "App Shell"
+  subtitle "App Shell"
+  action "App Shell"
+  test "use block" {
+    click "App Shell"
+  }
 }

@@ -1,17 +1,28 @@
 ## Terminal
 ## source: packages/ui/src/components/terminal.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: TerminalLine, TerminalMotionPreference, Terminal
 ## slots: terminal, terminal-body, terminal-chrome, terminal-cursor, terminal-line, terminal-prompt, terminal-screen, terminal-sizer, terminal-title, terminal-transcript
 
-component Terminal(label: text) layout:stack style:terminal {
+component Terminal(label: text, disabled: boolean) layout:inline style:terminal {
   label "Terminal"
+  action "click"
+  action "focus"
+
+  test "uses Terminal" {
+    click "Terminal"
+  }
+  test "disabled Terminal" {
+    expect visible "Terminal"
+  }
 }
 
-component TerminalLine(label: text) layout:inline style:terminal-line {
+component TerminalLine(label: text, disabled: boolean) layout:inline style:terminal-line {
   label "TerminalLine"
+  action "click"
 }
 
-component TerminalMotionPreference(label: text) layout:inline style:terminal-motion-preference {
+component TerminalMotionPreference(label: text, disabled: boolean) layout:inline style:terminal-motion-preference {
   label "TerminalMotionPreference"
+  action "click"
 }

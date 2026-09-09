@@ -1,9 +1,18 @@
 ## GradientBorder
 ## source: packages/ui/src/components/gradient-border.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: GradientBorder
 ## slots: gradient-border
 
-component GradientBorder(label: text) layout:inline style:gradient-border {
+component GradientBorder(label: text, disabled: boolean) layout:inline style:gradient-border {
   label "GradientBorder"
+  action "click"
+  action "focus"
+
+  test "uses GradientBorder" {
+    click "GradientBorder"
+  }
+  test "disabled GradientBorder" {
+    expect visible "GradientBorder"
+  }
 }

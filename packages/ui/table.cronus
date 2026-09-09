@@ -1,37 +1,54 @@
 ## Table
 ## source: packages/ui/src/components/table.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Table, TableHeader, TableBody, TableFooter, TableRow, TableHead, TableCell, TableCaption
 ## slots: table, table-body, table-caption, table-cell, table-container, table-footer, table-head, table-header, table-row
 
-component Table(label: text) layout:stack style:table {
+component Table(label: text, disabled: boolean) layout:stack style:table {
   label "Table"
+  columns "name, value, status"
+  item "Row"
+  action "focus"
+
+  test "shows Table" {
+    expect visible "Table"
+  }
+  test "disabled Table" {
+    expect visible "Table"
+  }
 }
 
-component TableHeader(label: text) layout:inline style:table-header {
+component TableHeader(label: text, disabled: boolean) layout:inline style:table-header {
   label "TableHeader"
+  action "click"
 }
 
-component TableBody(label: text) layout:inline style:table-body {
+component TableBody(label: text, disabled: boolean) layout:inline style:table-body {
   label "TableBody"
+  action "click"
 }
 
-component TableFooter(label: text) layout:inline style:table-footer {
+component TableFooter(label: text, disabled: boolean) layout:inline style:table-footer {
   label "TableFooter"
+  action "click"
 }
 
-component TableRow(label: text) layout:inline style:table-row {
+component TableRow(label: text, disabled: boolean) layout:inline style:table-row {
   label "TableRow"
+  action "click"
 }
 
-component TableHead(label: text) layout:inline style:table-head {
+component TableHead(label: text, disabled: boolean) layout:inline style:table-head {
   label "TableHead"
+  action "click"
 }
 
-component TableCell(label: text) layout:inline style:table-cell {
+component TableCell(label: text, disabled: boolean) layout:inline style:table-cell {
   label "TableCell"
+  action "click"
 }
 
-component TableCaption(label: text) layout:inline style:table-caption {
+component TableCaption(label: text, disabled: boolean) layout:inline style:table-caption {
   label "TableCaption"
+  action "click"
 }

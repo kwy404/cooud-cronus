@@ -1,9 +1,14 @@
 ## Block RadioGroup
 ## source: registry/radio-group.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: @radix-ui/react-radio-group@^1.3.7, lucide-react@^0.577.0
 
-component RadioGroupBlock layout:stack style:radio-group {
-  label "RadioGroup"
+component RadioGroupBlock(label: text) layout:stack style:radio-group {
+  title "Radio Group"
+  subtitle "Radio Group"
+  action "Radio Group"
+  test "use block" {
+    click "Radio Group"
+  }
 }

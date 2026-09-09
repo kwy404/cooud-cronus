@@ -1,45 +1,67 @@
 ## Dialog
 ## source: packages/ui/src/components/dialog.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Dialog, DialogTrigger, DialogPortal, DialogClose, DialogOverlay, DialogContent, DialogHeader, DialogFooter, DialogTitle, DialogDescription
 ## slots: dialog-close, dialog-content, dialog-description, dialog-footer, dialog-header, dialog-overlay, dialog-title
 
-component Dialog(label: text) layout:overlay style:dialog {
+component Dialog(label: text, disabled: boolean, open: boolean) layout:overlay style:dialog {
   label "Dialog"
+  state open: boolean = false
+  title "Dialog"
+  action "open"
+  action "close"
+  action "focus"
+
+  test "opens Dialog" {
+    click "open"
+    click "close"
+  }
+  test "disabled Dialog" {
+    expect visible "Dialog"
+  }
 }
 
-component DialogTrigger(label: text) layout:inline style:dialog-trigger {
+component DialogTrigger(label: text, disabled: boolean) layout:inline style:dialog-trigger {
   label "DialogTrigger"
+  action "click"
 }
 
-component DialogPortal(label: text) layout:inline style:dialog-portal {
+component DialogPortal(label: text, disabled: boolean) layout:inline style:dialog-portal {
   label "DialogPortal"
+  action "click"
 }
 
-component DialogClose(label: text) layout:inline style:dialog-close {
+component DialogClose(label: text, disabled: boolean) layout:inline style:dialog-close {
   label "DialogClose"
+  action "click"
 }
 
-component DialogOverlay(label: text) layout:inline style:dialog-overlay {
+component DialogOverlay(label: text, disabled: boolean) layout:inline style:dialog-overlay {
   label "DialogOverlay"
+  action "click"
 }
 
-component DialogContent(label: text) layout:inline style:dialog-content {
+component DialogContent(label: text, disabled: boolean) layout:inline style:dialog-content {
   label "DialogContent"
+  action "click"
 }
 
-component DialogHeader(label: text) layout:inline style:dialog-header {
+component DialogHeader(label: text, disabled: boolean) layout:inline style:dialog-header {
   label "DialogHeader"
+  action "click"
 }
 
-component DialogFooter(label: text) layout:inline style:dialog-footer {
+component DialogFooter(label: text, disabled: boolean) layout:inline style:dialog-footer {
   label "DialogFooter"
+  action "click"
 }
 
-component DialogTitle(label: text) layout:inline style:dialog-title {
+component DialogTitle(label: text, disabled: boolean) layout:inline style:dialog-title {
   label "DialogTitle"
+  action "click"
 }
 
-component DialogDescription(label: text) layout:inline style:dialog-description {
+component DialogDescription(label: text, disabled: boolean) layout:inline style:dialog-description {
   label "DialogDescription"
+  action "click"
 }

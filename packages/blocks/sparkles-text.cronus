@@ -1,8 +1,14 @@
 ## Block SparklesText
 ## source: registry/sparkles-text.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component SparklesTextBlock layout:stack style:sparkles-text {
-  label "SparklesText"
+component SparklesTextBlock(label: text) layout:stack style:sparkles-text {
+  title "Sparkles Text"
+  subtitle "Sparkles Text"
+  action "Sparkles Text"
+  test "use block" {
+    click "Sparkles Text"
+  }
 }

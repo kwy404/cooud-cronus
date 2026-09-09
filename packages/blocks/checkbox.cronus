@@ -1,9 +1,14 @@
 ## Block Checkbox
 ## source: registry/checkbox.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: @radix-ui/react-checkbox@^1.3.2, lucide-react@^0.577.0
 
-component CheckboxBlock layout:stack style:checkbox {
-  label "Checkbox"
+component CheckboxBlock(label: text) layout:stack style:checkbox {
+  title "Checkbox"
+  subtitle "Checkbox"
+  action "Checkbox"
+  test "use block" {
+    click "Checkbox"
+  }
 }

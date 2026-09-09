@@ -1,9 +1,18 @@
 ## AnimatedButton
 ## source: packages/ui/src/components/animated-button.tsx
-## wave 4 - premium & brand
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: AnimatedButton
 ## slots: animated-button
 
-component AnimatedButton(label: text) layout:inline style:animated-button {
+component AnimatedButton(label: text, disabled: boolean) layout:inline style:animated-button {
   label "AnimatedButton"
+  action "click"
+  action "focus"
+
+  test "uses AnimatedButton" {
+    click "AnimatedButton"
+  }
+  test "disabled AnimatedButton" {
+    expect visible "AnimatedButton"
+  }
 }

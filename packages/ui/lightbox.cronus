@@ -1,13 +1,27 @@
 ## Lightbox
 ## source: packages/ui/src/components/lightbox.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: LightboxImage, Lightbox
 ## slots: lightbox, lightbox-caption, lightbox-close, lightbox-counter, lightbox-image, lightbox-thumbnails
 
-component Lightbox(label: text) layout:overlay style:lightbox {
+component Lightbox(label: text, disabled: boolean, open: boolean) layout:overlay style:lightbox {
   label "Lightbox"
+  state open: boolean = false
+  title "Lightbox"
+  action "open"
+  action "close"
+  action "focus"
+
+  test "opens Lightbox" {
+    click "open"
+    click "close"
+  }
+  test "disabled Lightbox" {
+    expect visible "Lightbox"
+  }
 }
 
-component LightboxImage(label: text) layout:inline style:lightbox-image {
+component LightboxImage(label: text, disabled: boolean) layout:inline style:lightbox-image {
   label "LightboxImage"
+  action "click"
 }

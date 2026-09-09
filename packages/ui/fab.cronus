@@ -1,13 +1,23 @@
 ## Fab
 ## source: packages/ui/src/components/fab.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: FabAction, Fab
 ## slots: fab, fab-actions
 
-component Fab(label: text) layout:inline style:fab {
+component Fab(label: text, disabled: boolean) layout:inline style:fab {
   label "Fab"
+  action "click"
+  action "focus"
+
+  test "uses Fab" {
+    click "Fab"
+  }
+  test "disabled Fab" {
+    expect visible "Fab"
+  }
 }
 
-component FabAction(label: text) layout:inline style:fab-action {
+component FabAction(label: text, disabled: boolean) layout:inline style:fab-action {
   label "FabAction"
+  action "click"
 }

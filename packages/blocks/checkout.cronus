@@ -1,9 +1,16 @@
 ## Block Checkout
 ## source: registry/checkout.json
 ## type: registry:block
+## behavior: commerce
 ## registryDependencies: demo-store
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
-component CheckoutBlock layout:stack style:checkout {
-  label "Checkout"
+component CheckoutBlock(label: text) layout:stack style:checkout {
+  title "Checkout"
+  subtitle "Checkout"
+  field "Card"
+  value "$0"
+  action "Pay"
+  test "checkout" {
+    click "Pay"
+  }
 }

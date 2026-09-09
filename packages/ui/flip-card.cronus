@@ -1,25 +1,38 @@
 ## FlipCard
 ## source: packages/ui/src/components/flip-card.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: FlipCardTrigger, FlipCardAxis, FlipCard, FlipCardFront, FlipCardBack
 ## slots: flip-card, flip-card-back, flip-card-front
 
-component FlipCard(label: text) layout:stack style:flip-card {
+component FlipCard(label: text, disabled: boolean) layout:inline style:flip-card {
   label "FlipCard"
+  action "click"
+  action "focus"
+
+  test "uses FlipCard" {
+    click "FlipCard"
+  }
+  test "disabled FlipCard" {
+    expect visible "FlipCard"
+  }
 }
 
-component FlipCardTrigger(label: text) layout:inline style:flip-card-trigger {
+component FlipCardTrigger(label: text, disabled: boolean) layout:inline style:flip-card-trigger {
   label "FlipCardTrigger"
+  action "click"
 }
 
-component FlipCardAxis(label: text) layout:inline style:flip-card-axis {
+component FlipCardAxis(label: text, disabled: boolean) layout:inline style:flip-card-axis {
   label "FlipCardAxis"
+  action "click"
 }
 
-component FlipCardFront(label: text) layout:inline style:flip-card-front {
+component FlipCardFront(label: text, disabled: boolean) layout:inline style:flip-card-front {
   label "FlipCardFront"
+  action "click"
 }
 
-component FlipCardBack(label: text) layout:inline style:flip-card-back {
+component FlipCardBack(label: text, disabled: boolean) layout:inline style:flip-card-back {
   label "FlipCardBack"
+  action "click"
 }

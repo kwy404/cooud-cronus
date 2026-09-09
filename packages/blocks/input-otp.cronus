@@ -1,9 +1,19 @@
 ## Block InputOtp
 ## source: registry/input-otp.json
 ## type: registry:ui
+## behavior: auth
 ## registryDependencies: cn
-## npm: input-otp@^1.4.2, lucide-react@^0.577.0
 
-component InputOtpBlock layout:stack style:input-otp {
-  label "InputOtp"
+component InputOtpBlock(label: text) layout:stack style:input-otp {
+  title "Input Otp"
+  subtitle "Input Otp"
+  state pending: boolean = false
+  field "Email"
+  field "Password"
+  action "Sign in"
+  link "Forgot password?" -> "/forgot-password"
+  test "submit auth" {
+    fill email "you@company.com"
+    click "Sign in"
+  }
 }

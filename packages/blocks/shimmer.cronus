@@ -1,8 +1,14 @@
 ## Block Shimmer
 ## source: registry/shimmer.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component ShimmerBlock layout:stack style:shimmer {
-  label "Shimmer"
+component ShimmerBlock(label: text) layout:stack style:shimmer {
+  title "Shimmer"
+  subtitle "Shimmer"
+  action "Shimmer"
+  test "use block" {
+    click "Shimmer"
+  }
 }

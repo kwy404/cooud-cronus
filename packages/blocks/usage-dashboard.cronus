@@ -1,9 +1,16 @@
 ## Block UsageDashboard
 ## source: registry/usage-dashboard.json
 ## type: registry:block
+## behavior: data
 ## registryDependencies: demo-saas
-## npm: @cronus-ui/ui@0.7.3
 
-component UsageDashboardBlock layout:stack style:usage-dashboard {
-  label "UsageDashboard"
+component UsageDashboardBlock(label: text) layout:stack style:usage-dashboard {
+  title "Usage Dashboard"
+  subtitle "Usage Dashboard"
+  columns "name, value, status"
+  item "Row"
+  value "0"
+  test "reads UsageDashboard" {
+    expect visible "Usage Dashboard"
+  }
 }

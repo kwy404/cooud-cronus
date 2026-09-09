@@ -1,8 +1,13 @@
 ## Block SuccessState
 ## source: registry/success-state.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: empty
 
-component SuccessStateBlock layout:stack style:success-state {
-  label "SuccessState"
+component SuccessStateBlock(label: text) layout:stack style:success-state {
+  title "Success State"
+  subtitle "Success State"
+  action "Go home" -> "/"
+  test "empty" {
+    click "Go home"
+  }
 }

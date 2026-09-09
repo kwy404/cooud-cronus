@@ -1,8 +1,15 @@
 ## Block CtaSplitVisual
 ## source: registry/cta--split-visual.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component CtaSplitVisualBlock layout:stack style:cta--split-visual {
-  label "CtaSplitVisual"
+component CtaSplitVisualBlock(label: text) layout:stack style:cta--split-visual {
+  title "Cta Split Visual"
+  subtitle "SplitVisual"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

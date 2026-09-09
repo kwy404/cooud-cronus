@@ -1,8 +1,14 @@
 ## Block Masonry
 ## source: registry/masonry.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component MasonryBlock layout:stack style:masonry {
-  label "Masonry"
+component MasonryBlock(label: text) layout:stack style:masonry {
+  title "Masonry"
+  subtitle "Masonry"
+  action "Masonry"
+  test "use block" {
+    click "Masonry"
+  }
 }

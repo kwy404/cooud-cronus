@@ -1,13 +1,23 @@
 ## TableOfContents
 ## source: packages/ui/src/components/table-of-contents.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: TableOfContentsItem, TableOfContents
 ## slots: table-of-contents, table-of-contents-indicator, table-of-contents-link, table-of-contents-list
 
-component TableOfContents(label: text) layout:inline style:table-of-contents {
+component TableOfContents(label: text, disabled: boolean) layout:inline style:table-of-contents {
   label "TableOfContents"
+  action "click"
+  action "focus"
+
+  test "uses TableOfContents" {
+    click "TableOfContents"
+  }
+  test "disabled TableOfContents" {
+    expect visible "TableOfContents"
+  }
 }
 
-component TableOfContentsItem(label: text) layout:inline style:table-of-contents-item {
+component TableOfContentsItem(label: text, disabled: boolean) layout:inline style:table-of-contents-item {
   label "TableOfContentsItem"
+  action "click"
 }

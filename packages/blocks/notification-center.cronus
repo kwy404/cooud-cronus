@@ -1,9 +1,14 @@
 ## Block NotificationCenter
 ## source: registry/notification-center.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: avatar, badge, button, cn, popover, scroll-area
-## npm: lucide-react@^0.577.0
 
-component NotificationCenterBlock layout:stack style:notification-center {
-  label "NotificationCenter"
+component NotificationCenterBlock(label: text) layout:stack style:notification-center {
+  title "Notification Center"
+  subtitle "Notification Center"
+  action "Notification Center"
+  test "use block" {
+    click "Notification Center"
+  }
 }

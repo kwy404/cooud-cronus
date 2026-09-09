@@ -1,8 +1,15 @@
 ## Block LogoCloud
 ## source: registry/logo-cloud.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component LogoCloudBlock layout:stack style:logo-cloud {
-  label "LogoCloud"
+component LogoCloudBlock(label: text) layout:stack style:logo-cloud {
+  title "Logo Cloud"
+  subtitle "Logo Cloud"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

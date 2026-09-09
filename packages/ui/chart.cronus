@@ -1,45 +1,63 @@
 ## Chart
 ## source: packages/ui/src/components/chart.tsx
-## wave 0 - foundation
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Chart, ChartConfig, ChartSeries, ChartContainer, ChartCursor, ChartLegend, ChartLegendContent, ChartStyle, ChartTooltip, ChartTooltipContent
 ## slots: chart, chart-cursor
 
-component Chart(label: text) layout:stack style:chart {
+component Chart(label: text, disabled: boolean) layout:stack style:chart {
   label "Chart"
+  action "click"
+  action "focus"
+
+  test "uses Chart" {
+    click "Chart"
+  }
+  test "disabled Chart" {
+    expect visible "Chart"
+  }
 }
 
-component ChartConfig(label: text) layout:inline style:chart-config {
+component ChartConfig(label: text, disabled: boolean) layout:inline style:chart-config {
   label "ChartConfig"
+  action "click"
 }
 
-component ChartSeries(label: text) layout:inline style:chart-series {
+component ChartSeries(label: text, disabled: boolean) layout:inline style:chart-series {
   label "ChartSeries"
+  action "click"
 }
 
-component ChartContainer(label: text) layout:inline style:chart-container {
+component ChartContainer(label: text, disabled: boolean) layout:inline style:chart-container {
   label "ChartContainer"
+  action "click"
 }
 
-component ChartCursor(label: text) layout:inline style:chart-cursor {
+component ChartCursor(label: text, disabled: boolean) layout:inline style:chart-cursor {
   label "ChartCursor"
+  action "click"
 }
 
-component ChartLegend(label: text) layout:inline style:chart-legend {
+component ChartLegend(label: text, disabled: boolean) layout:inline style:chart-legend {
   label "ChartLegend"
+  action "click"
 }
 
-component ChartLegendContent(label: text) layout:inline style:chart-legend-content {
+component ChartLegendContent(label: text, disabled: boolean) layout:inline style:chart-legend-content {
   label "ChartLegendContent"
+  action "click"
 }
 
-component ChartStyle(label: text) layout:inline style:chart-style {
+component ChartStyle(label: text, disabled: boolean) layout:inline style:chart-style {
   label "ChartStyle"
+  action "click"
 }
 
-component ChartTooltip(label: text) layout:inline style:chart-tooltip {
+component ChartTooltip(label: text, disabled: boolean) layout:inline style:chart-tooltip {
   label "ChartTooltip"
+  action "click"
 }
 
-component ChartTooltipContent(label: text) layout:inline style:chart-tooltip-content {
+component ChartTooltipContent(label: text, disabled: boolean) layout:inline style:chart-tooltip-content {
   label "ChartTooltipContent"
+  action "click"
 }

@@ -1,9 +1,14 @@
 ## Block WorkspaceSwitcher
 ## source: registry/workspace-switcher.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: avatar, cn, dropdown-menu
-## npm: lucide-react@^0.577.0
 
-component WorkspaceSwitcherBlock layout:stack style:workspace-switcher {
-  label "WorkspaceSwitcher"
+component WorkspaceSwitcherBlock(label: text) layout:stack style:workspace-switcher {
+  title "Workspace Switcher"
+  subtitle "Workspace Switcher"
+  action "Workspace Switcher"
+  test "use block" {
+    click "Workspace Switcher"
+  }
 }

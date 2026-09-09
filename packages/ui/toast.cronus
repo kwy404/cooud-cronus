@@ -1,8 +1,16 @@
 ## Toast
-## source: packages/ui/src/components/sonner.tsx (toast surface)
-## aliases: sonner
+## source: packages/ui/src/components/sonner.tsx
+## behavior: overlay lifecycle
 
-component Toast(label: text, variant: text) layout:overlay style:toast {
+component Toast(label: text, variant: text, disabled: boolean) layout:overlay style:toast {
   label "Toast"
   variant "lifecycle"
+  state open: boolean = false
+  title "Toast"
+  action "open"
+  action "close"
+  test "shows toast" {
+    click "open"
+    click "close"
+  }
 }

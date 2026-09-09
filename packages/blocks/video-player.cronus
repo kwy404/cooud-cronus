@@ -1,9 +1,14 @@
 ## Block VideoPlayer
 ## source: registry/video-player.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: class-variance-authority@^0.7.1, lucide-react@^0.577.0
 
-component VideoPlayerBlock layout:stack style:video-player {
-  label "VideoPlayer"
+component VideoPlayerBlock(label: text) layout:stack style:video-player {
+  title "Video Player"
+  subtitle "Video Player"
+  action "Video Player"
+  test "use block" {
+    click "Video Player"
+  }
 }

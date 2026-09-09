@@ -1,8 +1,15 @@
 ## Block StatsPipelineFunnel
 ## source: registry/stats--pipeline-funnel.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: data
 
-component StatsPipelineFunnelBlock layout:stack style:stats--pipeline-funnel {
-  label "StatsPipelineFunnel"
+component StatsPipelineFunnelBlock(label: text) layout:stack style:stats--pipeline-funnel {
+  title "Stats Pipeline Funnel"
+  subtitle "PipelineFunnel"
+  columns "name, value, status"
+  item "Row"
+  value "0"
+  test "reads StatsPipelineFunnel" {
+    expect visible "Stats Pipeline Funnel"
+  }
 }

@@ -1,8 +1,15 @@
 ## Block About
 ## source: registry/about.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component AboutBlock layout:stack style:about {
-  label "About"
+component AboutBlock(label: text) layout:stack style:about {
+  title "About"
+  subtitle "About"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

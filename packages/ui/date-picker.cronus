@@ -1,9 +1,19 @@
 ## DatePicker
 ## source: packages/ui/src/components/date-picker.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: DatePicker
 ## slots: date-picker-content, date-picker-trigger
 
-component DatePicker(label: text) layout:inline style:date-picker {
+component DatePicker(label: text, disabled: boolean, value: text, invalid: boolean) layout:inline style:date-picker {
   label "DatePicker"
+  state value: text = ""
+  field "DatePicker"
+  action "focus"
+
+  test "fills DatePicker" {
+    fill value "x"
+  }
+  test "disabled DatePicker" {
+    expect visible "DatePicker"
+  }
 }

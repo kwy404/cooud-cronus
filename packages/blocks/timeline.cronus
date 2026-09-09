@@ -1,9 +1,14 @@
 ## Block Timeline
 ## source: registry/timeline.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: class-variance-authority@^0.7.1
 
-component TimelineBlock layout:stack style:timeline {
-  label "Timeline"
+component TimelineBlock(label: text) layout:stack style:timeline {
+  title "Timeline"
+  subtitle "Timeline"
+  action "Timeline"
+  test "use block" {
+    click "Timeline"
+  }
 }

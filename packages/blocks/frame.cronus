@@ -1,9 +1,14 @@
 ## Block Frame
 ## source: registry/frame.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: class-variance-authority@^0.7.1
 
-component FrameBlock layout:stack style:frame {
-  label "Frame"
+component FrameBlock(label: text) layout:stack style:frame {
+  title "Frame"
+  subtitle "Frame"
+  action "Frame"
+  test "use block" {
+    click "Frame"
+  }
 }

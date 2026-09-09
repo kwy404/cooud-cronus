@@ -1,9 +1,14 @@
 ## Block ProductDetailMinimal
 ## source: registry/product-detail--minimal.json
 ## type: registry:block
+## behavior: card
 ## registryDependencies: demo-store
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
-component ProductDetailMinimalBlock layout:stack style:product-detail--minimal {
-  label "ProductDetailMinimal"
+component ProductDetailMinimalBlock(label: text) layout:stack style:product-detail--minimal {
+  title "Product Detail Minimal"
+  subtitle "Minimal"
+  action "Product Detail Minimal"
+  test "use block" {
+    click "Product Detail Minimal"
+  }
 }

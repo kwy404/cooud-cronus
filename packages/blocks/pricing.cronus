@@ -1,8 +1,15 @@
 ## Block Pricing
 ## source: registry/pricing.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component PricingBlock layout:stack style:pricing {
-  label "Pricing"
+component PricingBlock(label: text) layout:stack style:pricing {
+  title "Pricing"
+  subtitle "Pricing"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

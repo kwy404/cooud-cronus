@@ -1,8 +1,18 @@
 ## Block MagicLinkSent
 ## source: registry/magic-link--sent.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: auth
 
-component MagicLinkSentBlock layout:stack style:magic-link--sent {
-  label "MagicLinkSent"
+component MagicLinkSentBlock(label: text) layout:stack style:magic-link--sent {
+  title "Magic Link Sent"
+  subtitle "Sent"
+  state pending: boolean = false
+  field "Email"
+  field "Password"
+  action "Sign in"
+  link "Forgot password?" -> "/forgot-password"
+  test "submit auth" {
+    fill email "you@company.com"
+    click "Sign in"
+  }
 }

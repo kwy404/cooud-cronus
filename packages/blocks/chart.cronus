@@ -1,9 +1,16 @@
 ## Block Chart
 ## source: registry/chart.json
 ## type: registry:ui
+## behavior: data
 ## registryDependencies: cn
-## npm: recharts@^3.9.2
 
-component ChartBlock layout:stack style:chart {
-  label "Chart"
+component ChartBlock(label: text) layout:stack style:chart {
+  title "Chart"
+  subtitle "Chart"
+  columns "name, value, status"
+  item "Row"
+  value "0"
+  test "reads Chart" {
+    expect visible "Chart"
+  }
 }

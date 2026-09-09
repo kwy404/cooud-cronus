@@ -1,9 +1,14 @@
 ## Block InviteDialog
 ## source: registry/invite-dialog.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: button, cn, copy-button, dialog, field, input, select, spinner
-## npm: lucide-react@^0.577.0
 
-component InviteDialogBlock layout:stack style:invite-dialog {
-  label "InviteDialog"
+component InviteDialogBlock(label: text) layout:stack style:invite-dialog {
+  title "Invite Dialog"
+  subtitle "Invite Dialog"
+  action "Invite Dialog"
+  test "use block" {
+    click "Invite Dialog"
+  }
 }

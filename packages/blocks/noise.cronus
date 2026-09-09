@@ -1,8 +1,14 @@
 ## Block Noise
 ## source: registry/noise.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component NoiseBlock layout:stack style:noise {
-  label "Noise"
+component NoiseBlock(label: text) layout:stack style:noise {
+  title "Noise"
+  subtitle "Noise"
+  action "Noise"
+  test "use block" {
+    click "Noise"
+  }
 }

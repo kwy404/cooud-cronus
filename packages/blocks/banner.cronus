@@ -1,9 +1,14 @@
 ## Block Banner
 ## source: registry/banner.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: button, cn
-## npm: class-variance-authority@^0.7.1, lucide-react@^0.577.0, motion@^12.23.0
 
-component BannerBlock layout:stack style:banner {
-  label "Banner"
+component BannerBlock(label: text) layout:stack style:banner {
+  title "Banner"
+  subtitle "Banner"
+  action "Banner"
+  test "use block" {
+    click "Banner"
+  }
 }

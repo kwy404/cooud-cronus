@@ -1,21 +1,33 @@
 ## Metric
 ## source: packages/ui/src/components/metric.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Metric, MetricLabel, MetricValue, MetricDelta
 ## slots: metric, metric-delta, metric-label, metric-value
 
-component Metric(label: text) layout:inline style:metric {
+component Metric(label: text, disabled: boolean) layout:inline style:metric {
   label "Metric"
+  action "click"
+  action "focus"
+
+  test "uses Metric" {
+    click "Metric"
+  }
+  test "disabled Metric" {
+    expect visible "Metric"
+  }
 }
 
-component MetricLabel(label: text) layout:inline style:metric-label {
+component MetricLabel(label: text, disabled: boolean) layout:inline style:metric-label {
   label "MetricLabel"
+  action "click"
 }
 
-component MetricValue(label: text) layout:inline style:metric-value {
+component MetricValue(label: text, disabled: boolean) layout:inline style:metric-value {
   label "MetricValue"
+  action "click"
 }
 
-component MetricDelta(label: text) layout:inline style:metric-delta {
+component MetricDelta(label: text, disabled: boolean) layout:inline style:metric-delta {
   label "MetricDelta"
+  action "click"
 }

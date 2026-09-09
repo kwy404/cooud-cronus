@@ -1,17 +1,32 @@
 ## HoverCard
 ## source: packages/ui/src/components/hover-card.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: HoverCard, HoverCardTrigger, HoverCardContent
 ## slots: hover-card-content
 
-component HoverCard(label: text) layout:overlay style:hover-card {
+component HoverCard(label: text, disabled: boolean, open: boolean) layout:overlay style:hover-card {
   label "HoverCard"
+  state open: boolean = false
+  title "HoverCard"
+  action "open"
+  action "close"
+  action "focus"
+
+  test "opens HoverCard" {
+    click "open"
+    click "close"
+  }
+  test "disabled HoverCard" {
+    expect visible "HoverCard"
+  }
 }
 
-component HoverCardTrigger(label: text) layout:inline style:hover-card-trigger {
+component HoverCardTrigger(label: text, disabled: boolean) layout:inline style:hover-card-trigger {
   label "HoverCardTrigger"
+  action "click"
 }
 
-component HoverCardContent(label: text) layout:inline style:hover-card-content {
+component HoverCardContent(label: text, disabled: boolean) layout:inline style:hover-card-content {
   label "HoverCardContent"
+  action "click"
 }

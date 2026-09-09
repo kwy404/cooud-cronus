@@ -1,8 +1,18 @@
 ## Block MagicLink
 ## source: registry/magic-link.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: auth
 
-component MagicLinkBlock layout:stack style:magic-link {
-  label "MagicLink"
+component MagicLinkBlock(label: text) layout:stack style:magic-link {
+  title "Magic Link"
+  subtitle "Magic Link"
+  state pending: boolean = false
+  field "Email"
+  field "Password"
+  action "Sign in"
+  link "Forgot password?" -> "/forgot-password"
+  test "submit auth" {
+    fill email "you@company.com"
+    click "Sign in"
+  }
 }

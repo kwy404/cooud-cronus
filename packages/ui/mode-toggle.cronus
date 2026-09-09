@@ -1,17 +1,28 @@
 ## ModeToggle
 ## source: packages/ui/src/components/mode-toggle.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: ModeToggleMode, ModeToggleSize, ModeToggle
 ## slots: mode-toggle, mode-toggle-core, mode-toggle-rays
 
-component ModeToggle(label: text) layout:inline style:mode-toggle {
+component ModeToggle(label: text, disabled: boolean) layout:inline style:mode-toggle {
   label "ModeToggle"
+  action "click"
+  action "focus"
+
+  test "uses ModeToggle" {
+    click "ModeToggle"
+  }
+  test "disabled ModeToggle" {
+    expect visible "ModeToggle"
+  }
 }
 
-component ModeToggleMode(label: text) layout:inline style:mode-toggle-mode {
+component ModeToggleMode(label: text, disabled: boolean) layout:inline style:mode-toggle-mode {
   label "ModeToggleMode"
+  action "click"
 }
 
-component ModeToggleSize(label: text) layout:inline style:mode-toggle-size {
+component ModeToggleSize(label: text, disabled: boolean) layout:inline style:mode-toggle-size {
   label "ModeToggleSize"
+  action "click"
 }

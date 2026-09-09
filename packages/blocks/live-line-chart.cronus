@@ -1,9 +1,16 @@
 ## Block LiveLineChart
 ## source: registry/live-line-chart.json
 ## type: registry:ui
+## behavior: data
 ## registryDependencies: chart, cn
-## npm: recharts@^3.9.2
 
-component LiveLineChartBlock layout:stack style:live-line-chart {
-  label "LiveLineChart"
+component LiveLineChartBlock(label: text) layout:stack style:live-line-chart {
+  title "Live Line Chart"
+  subtitle "Live Line Chart"
+  columns "name, value, status"
+  item "Row"
+  value "0"
+  test "reads LiveLineChart" {
+    expect visible "Live Line Chart"
+  }
 }

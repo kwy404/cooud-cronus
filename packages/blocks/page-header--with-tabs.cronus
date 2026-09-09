@@ -1,8 +1,13 @@
 ## Block PageHeaderWithTabs
 ## source: registry/page-header--with-tabs.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3
+## behavior: card
 
-component PageHeaderWithTabsBlock layout:stack style:page-header--with-tabs {
-  label "PageHeaderWithTabs"
+component PageHeaderWithTabsBlock(label: text) layout:stack style:page-header--with-tabs {
+  title "Page Header With Tabs"
+  subtitle "WithTabs"
+  action "Page Header With Tabs"
+  test "use block" {
+    click "Page Header With Tabs"
+  }
 }

@@ -1,9 +1,14 @@
 ## Block Carousel
 ## source: registry/carousel.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: button, cn
-## npm: lucide-react@^0.577.0
 
-component CarouselBlock layout:stack style:carousel {
-  label "Carousel"
+component CarouselBlock(label: text) layout:stack style:carousel {
+  title "Carousel"
+  subtitle "Carousel"
+  action "Carousel"
+  test "use block" {
+    click "Carousel"
+  }
 }

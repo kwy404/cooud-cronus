@@ -1,25 +1,38 @@
 ## LogoCarousel
 ## source: packages/ui/src/components/logo-carousel.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: LogoCarouselItem, LogoCarouselVariant, LogoCarouselSize, LogoCarouselMotionPreference, LogoCarousel
 ## slots: logo-carousel, logo-carousel-item
 
-component LogoCarousel(label: text) layout:inline style:logo-carousel {
+component LogoCarousel(label: text, disabled: boolean) layout:inline style:logo-carousel {
   label "LogoCarousel"
+  action "click"
+  action "focus"
+
+  test "uses LogoCarousel" {
+    click "LogoCarousel"
+  }
+  test "disabled LogoCarousel" {
+    expect visible "LogoCarousel"
+  }
 }
 
-component LogoCarouselItem(label: text) layout:inline style:logo-carousel-item {
+component LogoCarouselItem(label: text, disabled: boolean) layout:inline style:logo-carousel-item {
   label "LogoCarouselItem"
+  action "click"
 }
 
-component LogoCarouselVariant(label: text) layout:inline style:logo-carousel-variant {
+component LogoCarouselVariant(label: text, disabled: boolean) layout:inline style:logo-carousel-variant {
   label "LogoCarouselVariant"
+  action "click"
 }
 
-component LogoCarouselSize(label: text) layout:inline style:logo-carousel-size {
+component LogoCarouselSize(label: text, disabled: boolean) layout:inline style:logo-carousel-size {
   label "LogoCarouselSize"
+  action "click"
 }
 
-component LogoCarouselMotionPreference(label: text) layout:inline style:logo-carousel-motion-preference {
+component LogoCarouselMotionPreference(label: text, disabled: boolean) layout:inline style:logo-carousel-motion-preference {
   label "LogoCarouselMotionPreference"
+  action "click"
 }

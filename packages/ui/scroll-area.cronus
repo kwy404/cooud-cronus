@@ -1,13 +1,23 @@
 ## ScrollArea
 ## source: packages/ui/src/components/scroll-area.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: ScrollArea, ScrollBar
 ## slots: scroll-area, scroll-bar
 
-component ScrollArea(label: text) layout:inline style:scroll-area {
+component ScrollArea(label: text, disabled: boolean) layout:inline style:scroll-area {
   label "ScrollArea"
+  action "click"
+  action "focus"
+
+  test "uses ScrollArea" {
+    click "ScrollArea"
+  }
+  test "disabled ScrollArea" {
+    expect visible "ScrollArea"
+  }
 }
 
-component ScrollBar(label: text) layout:inline style:scroll-bar {
+component ScrollBar(label: text, disabled: boolean) layout:inline style:scroll-bar {
   label "ScrollBar"
+  action "click"
 }

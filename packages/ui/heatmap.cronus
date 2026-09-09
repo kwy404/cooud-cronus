@@ -1,13 +1,23 @@
 ## Heatmap
 ## source: packages/ui/src/components/heatmap.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: HeatmapDay, Heatmap
 ## slots: heatmap, heatmap-day, heatmap-legend, heatmap-legend-swatch
 
-component Heatmap(label: text) layout:stack style:heatmap {
+component Heatmap(label: text, disabled: boolean) layout:inline style:heatmap {
   label "Heatmap"
+  action "click"
+  action "focus"
+
+  test "uses Heatmap" {
+    click "Heatmap"
+  }
+  test "disabled Heatmap" {
+    expect visible "Heatmap"
+  }
 }
 
-component HeatmapDay(label: text) layout:inline style:heatmap-day {
+component HeatmapDay(label: text, disabled: boolean) layout:inline style:heatmap-day {
   label "HeatmapDay"
+  action "click"
 }

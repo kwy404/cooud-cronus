@@ -1,8 +1,14 @@
 ## Block SessionsTable
 ## source: registry/sessions--table.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: settings
 
-component SessionsTableBlock layout:stack style:sessions--table {
-  label "SessionsTable"
+component SessionsTableBlock(label: text) layout:stack style:sessions--table {
+  title "Sessions Table"
+  subtitle "Table"
+  field "Name"
+  action "Save"
+  test "save settings" {
+    click "Save"
+  }
 }

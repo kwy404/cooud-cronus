@@ -1,9 +1,14 @@
 ## Block ContextMenu
 ## source: registry/context-menu.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: @radix-ui/react-context-menu@^2.2.18, lucide-react@^0.577.0
 
-component ContextMenuBlock layout:stack style:context-menu {
-  label "ContextMenu"
+component ContextMenuBlock(label: text) layout:stack style:context-menu {
+  title "Context Menu"
+  subtitle "Context Menu"
+  action "Context Menu"
+  test "use block" {
+    click "Context Menu"
+  }
 }

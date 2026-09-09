@@ -1,33 +1,48 @@
 ## Form
 ## source: packages/ui/src/components/form.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Form, FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage
 ## slots: form-control, form-description, form-item, form-label, form-message
 
-component Form(label: text) layout:stack style:form {
+component Form(label: text, disabled: boolean) layout:stack style:form {
   label "Form"
+  action "click"
+  action "focus"
+
+  test "uses Form" {
+    click "Form"
+  }
+  test "disabled Form" {
+    expect visible "Form"
+  }
 }
 
-component FormField(label: text) layout:inline style:form-field {
+component FormField(label: text, disabled: boolean) layout:inline style:form-field {
   label "FormField"
+  action "click"
 }
 
-component FormItem(label: text) layout:inline style:form-item {
+component FormItem(label: text, disabled: boolean) layout:inline style:form-item {
   label "FormItem"
+  action "click"
 }
 
-component FormLabel(label: text) layout:inline style:form-label {
+component FormLabel(label: text, disabled: boolean) layout:inline style:form-label {
   label "FormLabel"
+  action "click"
 }
 
-component FormControl(label: text) layout:inline style:form-control {
+component FormControl(label: text, disabled: boolean) layout:inline style:form-control {
   label "FormControl"
+  action "click"
 }
 
-component FormDescription(label: text) layout:inline style:form-description {
+component FormDescription(label: text, disabled: boolean) layout:inline style:form-description {
   label "FormDescription"
+  action "click"
 }
 
-component FormMessage(label: text) layout:inline style:form-message {
+component FormMessage(label: text, disabled: boolean) layout:inline style:form-message {
   label "FormMessage"
+  action "click"
 }

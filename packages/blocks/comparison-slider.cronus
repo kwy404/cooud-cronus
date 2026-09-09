@@ -1,9 +1,14 @@
 ## Block ComparisonSlider
 ## source: registry/comparison-slider.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: lucide-react@^0.577.0
 
-component ComparisonSliderBlock layout:stack style:comparison-slider {
-  label "ComparisonSlider"
+component ComparisonSliderBlock(label: text) layout:stack style:comparison-slider {
+  title "Comparison Slider"
+  subtitle "Comparison Slider"
+  action "Comparison Slider"
+  test "use block" {
+    click "Comparison Slider"
+  }
 }

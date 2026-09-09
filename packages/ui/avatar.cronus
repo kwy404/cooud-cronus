@@ -1,17 +1,28 @@
 ## Avatar
 ## source: packages/ui/src/components/avatar.tsx
-## wave 3 - data & display
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Avatar, AvatarImage, AvatarFallback
 ## slots: avatar, avatar-fallback, avatar-image
 
-component Avatar(label: text) layout:inline style:avatar {
+component Avatar(label: text, disabled: boolean) layout:inline style:avatar {
   label "Avatar"
+  action "click"
+  action "focus"
+
+  test "uses Avatar" {
+    click "Avatar"
+  }
+  test "disabled Avatar" {
+    expect visible "Avatar"
+  }
 }
 
-component AvatarImage(label: text) layout:inline style:avatar-image {
+component AvatarImage(label: text, disabled: boolean) layout:inline style:avatar-image {
   label "AvatarImage"
+  action "click"
 }
 
-component AvatarFallback(label: text) layout:inline style:avatar-fallback {
+component AvatarFallback(label: text, disabled: boolean) layout:inline style:avatar-fallback {
   label "AvatarFallback"
+  action "click"
 }

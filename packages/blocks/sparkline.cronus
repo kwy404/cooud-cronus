@@ -1,8 +1,14 @@
 ## Block Sparkline
 ## source: registry/sparkline.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component SparklineBlock layout:stack style:sparkline {
-  label "Sparkline"
+component SparklineBlock(label: text) layout:stack style:sparkline {
+  title "Sparkline"
+  subtitle "Sparkline"
+  action "Sparkline"
+  test "use block" {
+    click "Sparkline"
+  }
 }

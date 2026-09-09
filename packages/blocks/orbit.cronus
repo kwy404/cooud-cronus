@@ -1,8 +1,14 @@
 ## Block Orbit
 ## source: registry/orbit.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component OrbitBlock layout:stack style:orbit {
-  label "Orbit"
+component OrbitBlock(label: text) layout:stack style:orbit {
+  title "Orbit"
+  subtitle "Orbit"
+  action "Orbit"
+  test "use block" {
+    click "Orbit"
+  }
 }

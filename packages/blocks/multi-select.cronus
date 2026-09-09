@@ -1,9 +1,14 @@
 ## Block MultiSelect
 ## source: registry/multi-select.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: badge, cn, command, popover
-## npm: lucide-react@^0.577.0
 
-component MultiSelectBlock layout:stack style:multi-select {
-  label "MultiSelect"
+component MultiSelectBlock(label: text) layout:stack style:multi-select {
+  title "Multi Select"
+  subtitle "Multi Select"
+  action "Multi Select"
+  test "use block" {
+    click "Multi Select"
+  }
 }

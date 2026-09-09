@@ -1,8 +1,15 @@
 ## Block HeroAtmosphere
 ## source: registry/hero--atmosphere.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component HeroAtmosphereBlock layout:stack style:hero--atmosphere {
-  label "HeroAtmosphere"
+component HeroAtmosphereBlock(label: text) layout:stack style:hero--atmosphere {
+  title "Hero Atmosphere"
+  subtitle "Atmosphere"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

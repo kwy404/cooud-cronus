@@ -1,17 +1,28 @@
 ## UsageMeter
 ## source: packages/ui/src/components/usage-meter.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: UsageMeter, UsageMeterLinear, UsageMeterCircular
 ## slots: usage-meter, usage-meter-fill, usage-meter-label, usage-meter-ring, usage-meter-ring-progress, usage-meter-track, usage-meter-value
 
-component UsageMeter(label: text) layout:inline style:usage-meter {
+component UsageMeter(label: text, disabled: boolean) layout:inline style:usage-meter {
   label "UsageMeter"
+  action "click"
+  action "focus"
+
+  test "uses UsageMeter" {
+    click "UsageMeter"
+  }
+  test "disabled UsageMeter" {
+    expect visible "UsageMeter"
+  }
 }
 
-component UsageMeterLinear(label: text) layout:inline style:usage-meter-linear {
+component UsageMeterLinear(label: text, disabled: boolean) layout:inline style:usage-meter-linear {
   label "UsageMeterLinear"
+  action "click"
 }
 
-component UsageMeterCircular(label: text) layout:inline style:usage-meter-circular {
+component UsageMeterCircular(label: text, disabled: boolean) layout:inline style:usage-meter-circular {
   label "UsageMeterCircular"
+  action "click"
 }

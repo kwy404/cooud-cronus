@@ -1,9 +1,19 @@
 ## LiveLineChart
 ## source: packages/ui/src/components/live-line-chart.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: LiveLineChart
 ## slots: live-line-chart
 
-component LiveLineChart(label: text) layout:stack style:live-line-chart {
+component LiveLineChart(label: text, disabled: boolean) layout:stack style:live-line-chart {
   label "LiveLineChart"
+  columns "name, value, status"
+  item "Row"
+  action "focus"
+
+  test "shows LiveLineChart" {
+    expect visible "LiveLineChart"
+  }
+  test "disabled LiveLineChart" {
+    expect visible "LiveLineChart"
+  }
 }

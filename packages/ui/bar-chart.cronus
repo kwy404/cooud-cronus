@@ -1,9 +1,19 @@
 ## BarChart
 ## source: packages/ui/src/components/bar-chart.tsx
-## wave 0 - foundation
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: BarChart
 ## slots: bar-chart
 
-component BarChart(label: text) layout:stack style:bar-chart {
+component BarChart(label: text, disabled: boolean) layout:stack style:bar-chart {
   label "BarChart"
+  columns "name, value, status"
+  item "Row"
+  action "focus"
+
+  test "shows BarChart" {
+    expect visible "BarChart"
+  }
+  test "disabled BarChart" {
+    expect visible "BarChart"
+  }
 }

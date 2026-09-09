@@ -1,8 +1,15 @@
 ## Block InvoiceReceipt
 ## source: registry/invoice--receipt.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3
+## behavior: commerce
 
-component InvoiceReceiptBlock layout:stack style:invoice--receipt {
-  label "InvoiceReceipt"
+component InvoiceReceiptBlock(label: text) layout:stack style:invoice--receipt {
+  title "Invoice Receipt"
+  subtitle "Receipt"
+  field "Card"
+  value "$0"
+  action "Pay"
+  test "checkout" {
+    click "Pay"
+  }
 }

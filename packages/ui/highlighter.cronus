@@ -1,9 +1,18 @@
 ## Highlighter
 ## source: packages/ui/src/components/highlighter.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Highlighter
 ## slots: highlighter
 
-component Highlighter(label: text) layout:inline style:highlighter {
+component Highlighter(label: text, disabled: boolean) layout:inline style:highlighter {
   label "Highlighter"
+  action "click"
+  action "focus"
+
+  test "uses Highlighter" {
+    click "Highlighter"
+  }
+  test "disabled Highlighter" {
+    expect visible "Highlighter"
+  }
 }

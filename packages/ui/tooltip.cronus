@@ -1,21 +1,37 @@
 ## Tooltip
 ## source: packages/ui/src/components/tooltip.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: TooltipProvider, Tooltip, TooltipTrigger, TooltipContent
 ## slots: tooltip, tooltip-content, tooltip-provider
 
-component Tooltip(label: text) layout:overlay style:tooltip {
+component Tooltip(label: text, disabled: boolean, open: boolean) layout:overlay style:tooltip {
   label "Tooltip"
+  state open: boolean = false
+  title "Tooltip"
+  action "open"
+  action "close"
+  action "focus"
+
+  test "opens Tooltip" {
+    click "open"
+    click "close"
+  }
+  test "disabled Tooltip" {
+    expect visible "Tooltip"
+  }
 }
 
-component TooltipProvider(label: text) layout:inline style:tooltip-provider {
+component TooltipProvider(label: text, disabled: boolean) layout:inline style:tooltip-provider {
   label "TooltipProvider"
+  action "click"
 }
 
-component TooltipTrigger(label: text) layout:inline style:tooltip-trigger {
+component TooltipTrigger(label: text, disabled: boolean) layout:inline style:tooltip-trigger {
   label "TooltipTrigger"
+  action "click"
 }
 
-component TooltipContent(label: text) layout:inline style:tooltip-content {
+component TooltipContent(label: text, disabled: boolean) layout:inline style:tooltip-content {
   label "TooltipContent"
+  action "click"
 }

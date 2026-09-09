@@ -1,9 +1,19 @@
 ## Textarea
 ## source: packages/ui/src/components/textarea.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Textarea
 ## slots: textarea
 
-component Textarea(label: text) layout:inline style:textarea {
+component Textarea(label: text, disabled: boolean, value: text, invalid: boolean) layout:inline style:textarea {
   label "Textarea"
+  state value: text = ""
+  field "Textarea"
+  action "focus"
+
+  test "fills Textarea" {
+    fill value "x"
+  }
+  test "disabled Textarea" {
+    expect visible "Textarea"
+  }
 }

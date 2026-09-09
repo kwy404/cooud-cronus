@@ -1,9 +1,18 @@
 ## AnimatedList
 ## source: packages/ui/src/components/animated-list.tsx
-## wave 6 - motion harvest
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: AnimatedList
 ## slots: animated-list, animated-list-item
 
-component AnimatedList(label: text) layout:inline style:animated-list {
+component AnimatedList(label: text, disabled: boolean) layout:inline style:animated-list {
   label "AnimatedList"
+  action "click"
+  action "focus"
+
+  test "uses AnimatedList" {
+    click "AnimatedList"
+  }
+  test "disabled AnimatedList" {
+    expect visible "AnimatedList"
+  }
 }

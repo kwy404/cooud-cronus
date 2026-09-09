@@ -1,9 +1,14 @@
 ## Block AnimatedList
 ## source: registry/animated-list.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: motion@^12.23.0
 
-component AnimatedListBlock layout:stack style:animated-list {
-  label "AnimatedList"
+component AnimatedListBlock(label: text) layout:stack style:animated-list {
+  title "Animated List"
+  subtitle "Animated List"
+  action "Animated List"
+  test "use block" {
+    click "Animated List"
+  }
 }

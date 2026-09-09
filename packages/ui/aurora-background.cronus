@@ -1,9 +1,18 @@
 ## AuroraBackground
 ## source: packages/ui/src/components/aurora-background.tsx
-## wave 5 - layout & app navigation
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: AuroraBackground
 ## slots: aurora-background
 
-component AuroraBackground(label: text) layout:inline style:aurora-background {
+component AuroraBackground(label: text, disabled: boolean) layout:inline style:aurora-background {
   label "AuroraBackground"
+  action "click"
+  action "focus"
+
+  test "uses AuroraBackground" {
+    click "AuroraBackground"
+  }
+  test "disabled AuroraBackground" {
+    expect visible "AuroraBackground"
+  }
 }

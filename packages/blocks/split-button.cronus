@@ -1,9 +1,14 @@
 ## Block SplitButton
 ## source: registry/split-button.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: button, cn, dropdown-menu, spinner
-## npm: class-variance-authority@^0.7.1, lucide-react@^0.577.0
 
-component SplitButtonBlock layout:stack style:split-button {
-  label "SplitButton"
+component SplitButtonBlock(label: text) layout:stack style:split-button {
+  title "Split Button"
+  subtitle "Split Button"
+  action "Split Button"
+  test "use block" {
+    click "Split Button"
+  }
 }

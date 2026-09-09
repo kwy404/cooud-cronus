@@ -1,9 +1,14 @@
 ## Block CreditCardInput
 ## source: registry/credit-card-input.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: lucide-react@^0.577.0
 
-component CreditCardInputBlock layout:stack style:credit-card-input {
-  label "CreditCardInput"
+component CreditCardInputBlock(label: text) layout:stack style:credit-card-input {
+  title "Credit Card Input"
+  subtitle "Credit Card Input"
+  action "Credit Card Input"
+  test "use block" {
+    click "Credit Card Input"
+  }
 }

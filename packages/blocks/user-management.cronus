@@ -1,8 +1,13 @@
 ## Block UserManagement
 ## source: registry/user-management.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: card
 
-component UserManagementBlock layout:stack style:user-management {
-  label "UserManagement"
+component UserManagementBlock(label: text) layout:stack style:user-management {
+  title "User Management"
+  subtitle "User Management"
+  action "User Management"
+  test "use block" {
+    click "User Management"
+  }
 }

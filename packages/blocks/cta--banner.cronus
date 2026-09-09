@@ -1,8 +1,15 @@
 ## Block CtaBanner
 ## source: registry/cta--banner.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component CtaBannerBlock layout:stack style:cta--banner {
-  label "CtaBanner"
+component CtaBannerBlock(label: text) layout:stack style:cta--banner {
+  title "Cta Banner"
+  subtitle "Banner"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

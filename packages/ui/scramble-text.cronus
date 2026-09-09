@@ -1,13 +1,23 @@
 ## ScrambleText
 ## source: packages/ui/src/components/scramble-text.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: ScrambleTextMotionPreference, ScrambleText
 ## slots: scramble-text
 
-component ScrambleText(label: text) layout:inline style:scramble-text {
+component ScrambleText(label: text, disabled: boolean) layout:inline style:scramble-text {
   label "ScrambleText"
+  action "click"
+  action "focus"
+
+  test "uses ScrambleText" {
+    click "ScrambleText"
+  }
+  test "disabled ScrambleText" {
+    expect visible "ScrambleText"
+  }
 }
 
-component ScrambleTextMotionPreference(label: text) layout:inline style:scramble-text-motion-preference {
+component ScrambleTextMotionPreference(label: text, disabled: boolean) layout:inline style:scramble-text-motion-preference {
   label "ScrambleTextMotionPreference"
+  action "click"
 }

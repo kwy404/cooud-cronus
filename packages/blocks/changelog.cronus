@@ -1,8 +1,13 @@
 ## Block Changelog
 ## source: registry/changelog.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3
+## behavior: card
 
-component ChangelogBlock layout:stack style:changelog {
-  label "Changelog"
+component ChangelogBlock(label: text) layout:stack style:changelog {
+  title "Changelog"
+  subtitle "Changelog"
+  action "Changelog"
+  test "use block" {
+    click "Changelog"
+  }
 }

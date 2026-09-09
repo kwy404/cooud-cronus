@@ -1,9 +1,16 @@
 ## Block AreaChart
 ## source: registry/area-chart.json
 ## type: registry:ui
+## behavior: data
 ## registryDependencies: chart, cn
-## npm: recharts@^3.9.2
 
-component AreaChartBlock layout:stack style:area-chart {
-  label "AreaChart"
+component AreaChartBlock(label: text) layout:stack style:area-chart {
+  title "Area Chart"
+  subtitle "Area Chart"
+  columns "name, value, status"
+  item "Row"
+  value "0"
+  test "reads AreaChart" {
+    expect visible "Area Chart"
+  }
 }

@@ -1,8 +1,13 @@
 ## Block ActivityFeed
 ## source: registry/activity-feed.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: card
 
-component ActivityFeedBlock layout:stack style:activity-feed {
-  label "ActivityFeed"
+component ActivityFeedBlock(label: text) layout:stack style:activity-feed {
+  title "Activity Feed"
+  subtitle "Activity Feed"
+  action "Activity Feed"
+  test "use block" {
+    click "Activity Feed"
+  }
 }

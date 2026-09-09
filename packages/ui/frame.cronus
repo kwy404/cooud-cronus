@@ -1,9 +1,18 @@
 ## Frame
 ## source: packages/ui/src/components/frame.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Frame
 ## slots: frame, frame-address-bar, frame-chrome, frame-content
 
-component Frame(label: text) layout:inline style:frame {
+component Frame(label: text, disabled: boolean) layout:inline style:frame {
   label "Frame"
+  action "click"
+  action "focus"
+
+  test "uses Frame" {
+    click "Frame"
+  }
+  test "disabled Frame" {
+    expect visible "Frame"
+  }
 }

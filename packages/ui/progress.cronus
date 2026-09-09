@@ -1,9 +1,18 @@
 ## Progress
 ## source: packages/ui/src/components/progress.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Progress
 ## slots: progress
 
-component Progress(label: text) layout:inline style:progress {
+component Progress(label: text, disabled: boolean) layout:inline style:progress {
   label "Progress"
+  action "click"
+  action "focus"
+
+  test "uses Progress" {
+    click "Progress"
+  }
+  test "disabled Progress" {
+    expect visible "Progress"
+  }
 }

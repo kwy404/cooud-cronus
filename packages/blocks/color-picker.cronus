@@ -1,8 +1,14 @@
 ## Block ColorPicker
 ## source: registry/color-picker.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: button, cn, input, label, popover
 
-component ColorPickerBlock layout:stack style:color-picker {
-  label "ColorPicker"
+component ColorPickerBlock(label: text) layout:stack style:color-picker {
+  title "Color Picker"
+  subtitle "Color Picker"
+  action "Color Picker"
+  test "use block" {
+    click "Color Picker"
+  }
 }

@@ -1,8 +1,13 @@
 ## Block Maintenance
 ## source: registry/maintenance.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: empty
 
-component MaintenanceBlock layout:stack style:maintenance {
-  label "Maintenance"
+component MaintenanceBlock(label: text) layout:stack style:maintenance {
+  title "Maintenance"
+  subtitle "Maintenance"
+  action "Go home" -> "/"
+  test "empty" {
+    click "Go home"
+  }
 }

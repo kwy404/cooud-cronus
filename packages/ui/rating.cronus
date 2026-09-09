@@ -1,12 +1,20 @@
 ## Rating
 ## source: packages/ui/src/components/rating.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Rating
 ## slots: rating, rating-item, rating-star
 ## variants.size: sm, md, lg
-## defaults: size=md
 
-component Rating(label: text, size: text) layout:inline style:rating {
+component Rating(label: text, disabled: boolean, size: text) layout:inline style:rating {
   label "Rating"
   size "md"
+  action "click"
+  action "focus"
+
+  test "uses Rating" {
+    click "Rating"
+  }
+  test "disabled Rating" {
+    expect visible "Rating"
+  }
 }

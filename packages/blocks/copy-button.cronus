@@ -1,9 +1,14 @@
 ## Block CopyButton
 ## source: registry/copy-button.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: button, cn
-## npm: lucide-react@^0.577.0
 
-component CopyButtonBlock layout:stack style:copy-button {
-  label "CopyButton"
+component CopyButtonBlock(label: text) layout:stack style:copy-button {
+  title "Copy Button"
+  subtitle "Copy Button"
+  action "Copy Button"
+  test "use block" {
+    click "Copy Button"
+  }
 }

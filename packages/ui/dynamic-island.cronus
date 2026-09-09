@@ -1,13 +1,23 @@
 ## DynamicIsland
 ## source: packages/ui/src/components/dynamic-island.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: DynamicIslandView, DynamicIsland
 ## slots: dynamic-island, dynamic-island-shell, dynamic-island-trigger
 
-component DynamicIsland(label: text) layout:inline style:dynamic-island {
+component DynamicIsland(label: text, disabled: boolean) layout:inline style:dynamic-island {
   label "DynamicIsland"
+  action "click"
+  action "focus"
+
+  test "uses DynamicIsland" {
+    click "DynamicIsland"
+  }
+  test "disabled DynamicIsland" {
+    expect visible "DynamicIsland"
+  }
 }
 
-component DynamicIslandView(label: text) layout:inline style:dynamic-island-view {
+component DynamicIslandView(label: text, disabled: boolean) layout:inline style:dynamic-island-view {
   label "DynamicIslandView"
+  action "click"
 }

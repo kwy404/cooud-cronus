@@ -1,7 +1,13 @@
 ## Block DemoStore
 ## source: registry/demo-store.json
 ## type: registry:lib
+## behavior: card
 
-component DemoStoreBlock layout:stack style:demo-store {
-  label "DemoStore"
+component DemoStoreBlock(label: text) layout:stack style:demo-store {
+  title "Demo Store"
+  subtitle "Demo Store"
+  action "Demo Store"
+  test "use block" {
+    click "Demo Store"
+  }
 }

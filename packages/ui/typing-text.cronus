@@ -1,13 +1,23 @@
 ## TypingText
 ## source: packages/ui/src/components/typing-text.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: TypingTextMotionPreference, TypingText
 ## slots: typing-text
 
-component TypingText(label: text) layout:inline style:typing-text {
+component TypingText(label: text, disabled: boolean) layout:inline style:typing-text {
   label "TypingText"
+  action "click"
+  action "focus"
+
+  test "uses TypingText" {
+    click "TypingText"
+  }
+  test "disabled TypingText" {
+    expect visible "TypingText"
+  }
 }
 
-component TypingTextMotionPreference(label: text) layout:inline style:typing-text-motion-preference {
+component TypingTextMotionPreference(label: text, disabled: boolean) layout:inline style:typing-text-motion-preference {
   label "TypingTextMotionPreference"
+  action "click"
 }

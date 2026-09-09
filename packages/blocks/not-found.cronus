@@ -1,8 +1,13 @@
 ## Block NotFound
 ## source: registry/not-found.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: empty
 
-component NotFoundBlock layout:stack style:not-found {
-  label "NotFound"
+component NotFoundBlock(label: text) layout:stack style:not-found {
+  title "Not Found"
+  subtitle "Not Found"
+  action "Go home" -> "/"
+  test "empty" {
+    click "Go home"
+  }
 }

@@ -1,9 +1,18 @@
 ## FlickeringGrid
 ## source: packages/ui/src/components/flickering-grid.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: FlickeringGrid
 ## slots: flickering-grid
 
-component FlickeringGrid(label: text) layout:inline style:flickering-grid {
+component FlickeringGrid(label: text, disabled: boolean) layout:inline style:flickering-grid {
   label "FlickeringGrid"
+  action "click"
+  action "focus"
+
+  test "uses FlickeringGrid" {
+    click "FlickeringGrid"
+  }
+  test "disabled FlickeringGrid" {
+    expect visible "FlickeringGrid"
+  }
 }

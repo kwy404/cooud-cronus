@@ -1,6 +1,6 @@
 ## Chip
 ## source: packages/ui/src/components/chip.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: ChipLabels, Chip, ChipGroup
 ## slots: chip, chip-avatar, chip-check, chip-group, chip-icon, chip-remove
 ## variants.variant: solid, soft, outline
@@ -8,18 +8,28 @@
 ## variants.size: sm, md, lg
 ## variants.interactive: true, false
 ## variants.selected: true, false
-## defaults: variant=soft color=neutral size=md interactive=false selected=false
 
-component Chip(label: text, variant: text, size: text) layout:inline style:chip {
+component Chip(label: text, disabled: boolean, variant: text, size: text) layout:inline style:chip {
   label "Chip"
   variant "soft"
   size "md"
+  action "click"
+  action "focus"
+
+  test "uses Chip" {
+    click "Chip"
+  }
+  test "disabled Chip" {
+    expect visible "Chip"
+  }
 }
 
-component ChipLabels(label: text) layout:inline style:chip-labels {
+component ChipLabels(label: text, disabled: boolean) layout:inline style:chip-labels {
   label "ChipLabels"
+  action "click"
 }
 
-component ChipGroup(label: text) layout:inline style:chip-group {
+component ChipGroup(label: text, disabled: boolean) layout:inline style:chip-group {
   label "ChipGroup"
+  action "click"
 }

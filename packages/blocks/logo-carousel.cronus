@@ -1,9 +1,14 @@
 ## Block LogoCarousel
 ## source: registry/logo-carousel.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn, motion-presets
-## npm: motion@^12.23.0
 
-component LogoCarouselBlock layout:stack style:logo-carousel {
-  label "LogoCarousel"
+component LogoCarouselBlock(label: text) layout:stack style:logo-carousel {
+  title "Logo Carousel"
+  subtitle "Logo Carousel"
+  action "Logo Carousel"
+  test "use block" {
+    click "Logo Carousel"
+  }
 }

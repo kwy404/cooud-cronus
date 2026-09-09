@@ -1,8 +1,15 @@
 ## Block Waitlist
 ## source: registry/waitlist.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component WaitlistBlock layout:stack style:waitlist {
-  label "Waitlist"
+component WaitlistBlock(label: text) layout:stack style:waitlist {
+  title "Waitlist"
+  subtitle "Waitlist"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

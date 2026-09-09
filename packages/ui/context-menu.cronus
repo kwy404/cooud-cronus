@@ -1,65 +1,92 @@
 ## ContextMenu
 ## source: packages/ui/src/components/context-menu.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: ContextMenu, ContextMenuTrigger, ContextMenuGroup, ContextMenuPortal, ContextMenuSub, ContextMenuRadioGroup, ContextMenuSubTrigger, ContextMenuSubContent, ContextMenuContent, ContextMenuItem, ContextMenuCheckboxItem, ContextMenuRadioItem, ContextMenuLabel, ContextMenuSeparator, ContextMenuShortcut
 ## slots: context-menu-checkbox-item, context-menu-content, context-menu-item, context-menu-label, context-menu-radio-item, context-menu-separator, context-menu-shortcut, context-menu-sub-content, context-menu-sub-trigger
 
-component ContextMenu(label: text) layout:overlay style:context-menu {
+component ContextMenu(label: text, disabled: boolean, open: boolean) layout:overlay style:context-menu {
   label "ContextMenu"
+  state open: boolean = false
+  title "ContextMenu"
+  action "open"
+  action "close"
+  action "focus"
+
+  test "opens ContextMenu" {
+    click "open"
+    click "close"
+  }
+  test "disabled ContextMenu" {
+    expect visible "ContextMenu"
+  }
 }
 
-component ContextMenuTrigger(label: text) layout:inline style:context-menu-trigger {
+component ContextMenuTrigger(label: text, disabled: boolean) layout:inline style:context-menu-trigger {
   label "ContextMenuTrigger"
+  action "click"
 }
 
-component ContextMenuGroup(label: text) layout:inline style:context-menu-group {
+component ContextMenuGroup(label: text, disabled: boolean) layout:inline style:context-menu-group {
   label "ContextMenuGroup"
+  action "click"
 }
 
-component ContextMenuPortal(label: text) layout:inline style:context-menu-portal {
+component ContextMenuPortal(label: text, disabled: boolean) layout:inline style:context-menu-portal {
   label "ContextMenuPortal"
+  action "click"
 }
 
-component ContextMenuSub(label: text) layout:inline style:context-menu-sub {
+component ContextMenuSub(label: text, disabled: boolean) layout:inline style:context-menu-sub {
   label "ContextMenuSub"
+  action "click"
 }
 
-component ContextMenuRadioGroup(label: text) layout:inline style:context-menu-radio-group {
+component ContextMenuRadioGroup(label: text, disabled: boolean) layout:inline style:context-menu-radio-group {
   label "ContextMenuRadioGroup"
+  action "click"
 }
 
-component ContextMenuSubTrigger(label: text) layout:inline style:context-menu-sub-trigger {
+component ContextMenuSubTrigger(label: text, disabled: boolean) layout:inline style:context-menu-sub-trigger {
   label "ContextMenuSubTrigger"
+  action "click"
 }
 
-component ContextMenuSubContent(label: text) layout:inline style:context-menu-sub-content {
+component ContextMenuSubContent(label: text, disabled: boolean) layout:inline style:context-menu-sub-content {
   label "ContextMenuSubContent"
+  action "click"
 }
 
-component ContextMenuContent(label: text) layout:inline style:context-menu-content {
+component ContextMenuContent(label: text, disabled: boolean) layout:inline style:context-menu-content {
   label "ContextMenuContent"
+  action "click"
 }
 
-component ContextMenuItem(label: text) layout:inline style:context-menu-item {
+component ContextMenuItem(label: text, disabled: boolean) layout:inline style:context-menu-item {
   label "ContextMenuItem"
+  action "click"
 }
 
-component ContextMenuCheckboxItem(label: text) layout:inline style:context-menu-checkbox-item {
+component ContextMenuCheckboxItem(label: text, disabled: boolean) layout:inline style:context-menu-checkbox-item {
   label "ContextMenuCheckboxItem"
+  action "click"
 }
 
-component ContextMenuRadioItem(label: text) layout:inline style:context-menu-radio-item {
+component ContextMenuRadioItem(label: text, disabled: boolean) layout:inline style:context-menu-radio-item {
   label "ContextMenuRadioItem"
+  action "click"
 }
 
-component ContextMenuLabel(label: text) layout:inline style:context-menu-label {
+component ContextMenuLabel(label: text, disabled: boolean) layout:inline style:context-menu-label {
   label "ContextMenuLabel"
+  action "click"
 }
 
-component ContextMenuSeparator(label: text) layout:inline style:context-menu-separator {
+component ContextMenuSeparator(label: text, disabled: boolean) layout:inline style:context-menu-separator {
   label "ContextMenuSeparator"
+  action "click"
 }
 
-component ContextMenuShortcut(label: text) layout:inline style:context-menu-shortcut {
+component ContextMenuShortcut(label: text, disabled: boolean) layout:inline style:context-menu-shortcut {
   label "ContextMenuShortcut"
+  action "click"
 }

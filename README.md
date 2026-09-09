@@ -17,7 +17,7 @@ Ultimo run: `harness/report.md`
 - markup no repo: **PASS** (0 hits, 0 arquivos proibidos)
 - `cronus parse` + `validate` dashboard: **PASS**
 - parse de todos os `.cronus`: **564/564 PASS**
-- catalogo UI 173 / blocks 307: presente, **contrato** (nao visual VERIFIED)
+- catalogo UI 173 / blocks 307: **comportamento nativo** (params, state, field/action, tests). Parse 564/564.
 
 ## Cooud (end to end nativo)
 

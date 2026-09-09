@@ -1,9 +1,14 @@
 ## Block Pagination
 ## source: registry/pagination.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: button, cn
-## npm: lucide-react@^0.577.0
 
-component PaginationBlock layout:stack style:pagination {
-  label "Pagination"
+component PaginationBlock(label: text) layout:stack style:pagination {
+  title "Pagination"
+  subtitle "Pagination"
+  action "Pagination"
+  test "use block" {
+    click "Pagination"
+  }
 }

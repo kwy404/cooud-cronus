@@ -1,9 +1,14 @@
 ## Block Marquee
 ## source: registry/marquee.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: motion@^12.23.0
 
-component MarqueeBlock layout:stack style:marquee {
-  label "Marquee"
+component MarqueeBlock(label: text) layout:stack style:marquee {
+  title "Marquee"
+  subtitle "Marquee"
+  action "Marquee"
+  test "use block" {
+    click "Marquee"
+  }
 }

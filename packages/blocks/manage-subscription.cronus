@@ -1,8 +1,13 @@
 ## Block ManageSubscription
 ## source: registry/manage-subscription.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: card
 
-component ManageSubscriptionBlock layout:stack style:manage-subscription {
-  label "ManageSubscription"
+component ManageSubscriptionBlock(label: text) layout:stack style:manage-subscription {
+  title "Manage Subscription"
+  subtitle "Manage Subscription"
+  action "Manage Subscription"
+  test "use block" {
+    click "Manage Subscription"
+  }
 }

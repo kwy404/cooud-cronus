@@ -1,9 +1,14 @@
 ## Block Slider
 ## source: registry/slider.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: @radix-ui/react-slider@^1.3.5
 
-component SliderBlock layout:stack style:slider {
-  label "Slider"
+component SliderBlock(label: text) layout:stack style:slider {
+  title "Slider"
+  subtitle "Slider"
+  action "Slider"
+  test "use block" {
+    click "Slider"
+  }
 }

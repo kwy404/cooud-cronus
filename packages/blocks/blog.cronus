@@ -1,8 +1,15 @@
 ## Block Blog
 ## source: registry/blog.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component BlogBlock layout:stack style:blog {
-  label "Blog"
+component BlogBlock(label: text) layout:stack style:blog {
+  title "Blog"
+  subtitle "Blog"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

@@ -1,9 +1,14 @@
 ## Block Badge
 ## source: registry/badge.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: class-variance-authority@^0.7.1
 
-component BadgeBlock layout:stack style:badge {
-  label "Badge"
+component BadgeBlock(label: text) layout:stack style:badge {
+  title "Badge"
+  subtitle "Badge"
+  action "Badge"
+  test "use block" {
+    click "Badge"
+  }
 }

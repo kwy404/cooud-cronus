@@ -1,9 +1,14 @@
 ## Block Progress
 ## source: registry/progress.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: @radix-ui/react-progress@^1.1.7
 
-component ProgressBlock layout:stack style:progress {
-  label "Progress"
+component ProgressBlock(label: text) layout:stack style:progress {
+  title "Progress"
+  subtitle "Progress"
+  action "Progress"
+  test "use block" {
+    click "Progress"
+  }
 }

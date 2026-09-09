@@ -1,9 +1,14 @@
 ## Block SignaturePad
 ## source: registry/signature-pad.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: button, cn
-## npm: lucide-react@^0.577.0
 
-component SignaturePadBlock layout:stack style:signature-pad {
-  label "SignaturePad"
+component SignaturePadBlock(label: text) layout:stack style:signature-pad {
+  title "Signature Pad"
+  subtitle "Signature Pad"
+  action "Signature Pad"
+  test "use block" {
+    click "Signature Pad"
+  }
 }

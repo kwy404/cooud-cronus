@@ -1,13 +1,23 @@
 ## CardStack
 ## source: packages/ui/src/components/card-stack.tsx
-## wave 0 - foundation
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: CardStackItem, CardStack
 ## slots: card-stack, card-stack-item
 
-component CardStack(label: text) layout:inline style:card-stack {
+component CardStack(label: text, disabled: boolean) layout:inline style:card-stack {
   label "CardStack"
+  action "click"
+  action "focus"
+
+  test "uses CardStack" {
+    click "CardStack"
+  }
+  test "disabled CardStack" {
+    expect visible "CardStack"
+  }
 }
 
-component CardStackItem(label: text) layout:inline style:card-stack-item {
+component CardStackItem(label: text, disabled: boolean) layout:inline style:card-stack-item {
   label "CardStackItem"
+  action "click"
 }

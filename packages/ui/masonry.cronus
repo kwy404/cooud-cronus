@@ -1,13 +1,23 @@
 ## Masonry
 ## source: packages/ui/src/components/masonry.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: MasonryColumns, Masonry
 ## slots: masonry
 
-component Masonry(label: text) layout:inline style:masonry {
+component Masonry(label: text, disabled: boolean) layout:inline style:masonry {
   label "Masonry"
+  action "click"
+  action "focus"
+
+  test "uses Masonry" {
+    click "Masonry"
+  }
+  test "disabled Masonry" {
+    expect visible "Masonry"
+  }
 }
 
-component MasonryColumns(label: text) layout:inline style:masonry-columns {
+component MasonryColumns(label: text, disabled: boolean) layout:inline style:masonry-columns {
   label "MasonryColumns"
+  action "click"
 }

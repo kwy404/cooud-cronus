@@ -1,17 +1,29 @@
 ## CreditCardInput
 ## source: packages/ui/src/components/credit-card-input.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: CardBrand, CreditCardValue, CreditCardInput
 ## slots: credit-card-input
 
-component CreditCardInput(label: text) layout:inline style:credit-card-input {
+component CreditCardInput(label: text, disabled: boolean, value: text, invalid: boolean) layout:inline style:credit-card-input {
   label "CreditCardInput"
+  state value: text = ""
+  field "CreditCardInput"
+  action "focus"
+
+  test "fills CreditCardInput" {
+    fill value "x"
+  }
+  test "disabled CreditCardInput" {
+    expect visible "CreditCardInput"
+  }
 }
 
-component CardBrand(label: text) layout:inline style:card-brand {
+component CardBrand(label: text, disabled: boolean) layout:inline style:card-brand {
   label "CardBrand"
+  action "click"
 }
 
-component CreditCardValue(label: text) layout:inline style:credit-card-value {
+component CreditCardValue(label: text, disabled: boolean) layout:inline style:credit-card-value {
   label "CreditCardValue"
+  action "click"
 }

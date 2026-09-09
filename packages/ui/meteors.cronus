@@ -1,9 +1,18 @@
 ## Meteors
 ## source: packages/ui/src/components/meteors.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Meteors
 ## slots: meteors
 
-component Meteors(label: text) layout:inline style:meteors {
+component Meteors(label: text, disabled: boolean) layout:inline style:meteors {
   label "Meteors"
+  action "click"
+  action "focus"
+
+  test "uses Meteors" {
+    click "Meteors"
+  }
+  test "disabled Meteors" {
+    expect visible "Meteors"
+  }
 }

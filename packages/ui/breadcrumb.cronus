@@ -1,33 +1,50 @@
 ## Breadcrumb
 ## source: packages/ui/src/components/breadcrumb.tsx
-## wave 0 - foundation
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator, BreadcrumbEllipsis
 ## slots: breadcrumb, breadcrumb-ellipsis, breadcrumb-item, breadcrumb-link, breadcrumb-list, breadcrumb-page, breadcrumb-separator
 
-component Breadcrumb(label: text) layout:inline style:breadcrumb {
+component Breadcrumb(label: text, disabled: boolean) layout:stack style:breadcrumb {
   label "Breadcrumb"
+  item "Home" -> "/"
+  item "Next" -> "/next"
+  action "navigate"
+  action "focus"
+
+  test "navigates Breadcrumb" {
+    click "Home"
+  }
+  test "disabled Breadcrumb" {
+    expect visible "Breadcrumb"
+  }
 }
 
-component BreadcrumbList(label: text) layout:inline style:breadcrumb-list {
+component BreadcrumbList(label: text, disabled: boolean) layout:inline style:breadcrumb-list {
   label "BreadcrumbList"
+  action "click"
 }
 
-component BreadcrumbItem(label: text) layout:inline style:breadcrumb-item {
+component BreadcrumbItem(label: text, disabled: boolean) layout:inline style:breadcrumb-item {
   label "BreadcrumbItem"
+  action "click"
 }
 
-component BreadcrumbLink(label: text) layout:inline style:breadcrumb-link {
+component BreadcrumbLink(label: text, disabled: boolean) layout:inline style:breadcrumb-link {
   label "BreadcrumbLink"
+  action "click"
 }
 
-component BreadcrumbPage(label: text) layout:inline style:breadcrumb-page {
+component BreadcrumbPage(label: text, disabled: boolean) layout:inline style:breadcrumb-page {
   label "BreadcrumbPage"
+  action "click"
 }
 
-component BreadcrumbSeparator(label: text) layout:inline style:breadcrumb-separator {
+component BreadcrumbSeparator(label: text, disabled: boolean) layout:inline style:breadcrumb-separator {
   label "BreadcrumbSeparator"
+  action "click"
 }
 
-component BreadcrumbEllipsis(label: text) layout:inline style:breadcrumb-ellipsis {
+component BreadcrumbEllipsis(label: text, disabled: boolean) layout:inline style:breadcrumb-ellipsis {
   label "BreadcrumbEllipsis"
+  action "click"
 }

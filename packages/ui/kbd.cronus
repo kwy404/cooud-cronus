@@ -1,9 +1,18 @@
 ## Kbd
 ## source: packages/ui/src/components/kbd.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Kbd
 ## slots: kbd
 
-component Kbd(label: text) layout:inline style:kbd {
+component Kbd(label: text, disabled: boolean) layout:inline style:kbd {
   label "Kbd"
+  action "click"
+  action "focus"
+
+  test "uses Kbd" {
+    click "Kbd"
+  }
+  test "disabled Kbd" {
+    expect visible "Kbd"
+  }
 }

@@ -1,9 +1,14 @@
 ## Block Sidebar
 ## source: registry/sidebar.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: button, cn, scroll-area, separator, sheet, tooltip
-## npm: @radix-ui/react-slot@^1.2.3, class-variance-authority@^0.7.1
 
-component SidebarBlock layout:stack style:sidebar {
-  label "Sidebar"
+component SidebarBlock(label: text) layout:stack style:sidebar {
+  title "Sidebar"
+  subtitle "Sidebar"
+  action "Sidebar"
+  test "use block" {
+    click "Sidebar"
+  }
 }

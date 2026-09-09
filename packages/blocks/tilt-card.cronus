@@ -1,8 +1,14 @@
 ## Block TiltCard
 ## source: registry/tilt-card.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component TiltCardBlock layout:stack style:tilt-card {
-  label "TiltCard"
+component TiltCardBlock(label: text) layout:stack style:tilt-card {
+  title "Tilt Card"
+  subtitle "Tilt Card"
+  action "Tilt Card"
+  test "use block" {
+    click "Tilt Card"
+  }
 }

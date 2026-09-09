@@ -1,14 +1,23 @@
 ## Toggle
 ## source: packages/ui/src/components/toggle.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Toggle
 ## slots: toggle
 ## variants.variant: default, outline
 ## variants.size: sm, md, lg
-## defaults: variant=default size=md
 
-component Toggle(label: text, variant: text, size: text) layout:inline style:toggle {
+component Toggle(label: text, disabled: boolean, variant: text, size: text, checked: boolean) layout:inline style:toggle {
   label "Toggle"
   variant "default"
   size "md"
+  state checked: boolean = false
+  action "toggle"
+  action "focus"
+
+  test "toggles Toggle" {
+    click "Toggle"
+  }
+  test "disabled Toggle" {
+    expect visible "Toggle"
+  }
 }

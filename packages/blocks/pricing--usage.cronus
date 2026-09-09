@@ -1,8 +1,15 @@
 ## Block PricingUsage
 ## source: registry/pricing--usage.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component PricingUsageBlock layout:stack style:pricing--usage {
-  label "PricingUsage"
+component PricingUsageBlock(label: text) layout:stack style:pricing--usage {
+  title "Pricing Usage"
+  subtitle "Usage"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

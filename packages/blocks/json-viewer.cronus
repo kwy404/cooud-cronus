@@ -1,9 +1,14 @@
 ## Block JsonViewer
 ## source: registry/json-viewer.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn, copy-button
-## npm: lucide-react@^0.577.0
 
-component JsonViewerBlock layout:stack style:json-viewer {
-  label "JsonViewer"
+component JsonViewerBlock(label: text) layout:stack style:json-viewer {
+  title "Json Viewer"
+  subtitle "Json Viewer"
+  action "Json Viewer"
+  test "use block" {
+    click "Json Viewer"
+  }
 }

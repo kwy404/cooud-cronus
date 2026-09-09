@@ -1,13 +1,23 @@
 ## SplitButton
 ## source: packages/ui/src/components/split-button.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: SplitButtonItem, SplitButton
 ## slots: split-button
 
-component SplitButton(label: text) layout:inline style:split-button {
+component SplitButton(label: text, disabled: boolean) layout:inline style:split-button {
   label "SplitButton"
+  action "click"
+  action "focus"
+
+  test "uses SplitButton" {
+    click "SplitButton"
+  }
+  test "disabled SplitButton" {
+    expect visible "SplitButton"
+  }
 }
 
-component SplitButtonItem(label: text) layout:inline style:split-button-item {
+component SplitButtonItem(label: text, disabled: boolean) layout:inline style:split-button-item {
   label "SplitButtonItem"
+  action "click"
 }

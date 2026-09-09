@@ -1,9 +1,18 @@
 ## Label
 ## source: packages/ui/src/components/label.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Label
 ## slots: label
 
-component Label(label: text) layout:inline style:label {
+component Label(label: text, disabled: boolean) layout:inline style:label {
   label "Label"
+  action "click"
+  action "focus"
+
+  test "uses Label" {
+    click "Label"
+  }
+  test "disabled Label" {
+    expect visible "Label"
+  }
 }

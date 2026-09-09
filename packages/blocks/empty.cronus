@@ -1,8 +1,14 @@
 ## Block Empty
 ## source: registry/empty.json
 ## type: registry:ui
+## behavior: empty
 ## registryDependencies: cn
 
-component EmptyBlock layout:stack style:empty {
-  label "Empty"
+component EmptyBlock(label: text) layout:stack style:empty {
+  title "Empty"
+  subtitle "Empty"
+  action "Go home" -> "/"
+  test "empty" {
+    click "Go home"
+  }
 }

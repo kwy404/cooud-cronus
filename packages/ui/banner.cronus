@@ -1,13 +1,21 @@
 ## Banner
 ## source: packages/ui/src/components/banner.tsx
-## wave 0 - foundation
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Banner
 ## slots: banner, banner-action, banner-content, banner-description, banner-dismiss, banner-title
 ## variants.variant: default, brand, info, success, warning, error
 ## variants.align: start, center
-## defaults: variant=default align=center
 
-component Banner(label: text, variant: text) layout:stack style:banner {
+component Banner(label: text, disabled: boolean, variant: text) layout:stack style:banner {
   label "Banner"
   variant "default"
+  action "click"
+  action "focus"
+
+  test "uses Banner" {
+    click "Banner"
+  }
+  test "disabled Banner" {
+    expect visible "Banner"
+  }
 }

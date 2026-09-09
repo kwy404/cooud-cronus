@@ -1,9 +1,14 @@
 ## Block TextEffect
 ## source: registry/text-effect.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: motion@^12.23.0
 
-component TextEffectBlock layout:stack style:text-effect {
-  label "TextEffect"
+component TextEffectBlock(label: text) layout:stack style:text-effect {
+  title "Text Effect"
+  subtitle "Text Effect"
+  action "Text Effect"
+  test "use block" {
+    click "Text Effect"
+  }
 }

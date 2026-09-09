@@ -1,8 +1,13 @@
 ## Block KanbanBoardCompact
 ## source: registry/kanban-board--compact.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: card
 
-component KanbanBoardCompactBlock layout:stack style:kanban-board--compact {
-  label "KanbanBoardCompact"
+component KanbanBoardCompactBlock(label: text) layout:stack style:kanban-board--compact {
+  title "Kanban Board Compact"
+  subtitle "Compact"
+  action "Kanban Board Compact"
+  test "use block" {
+    click "Kanban Board Compact"
+  }
 }

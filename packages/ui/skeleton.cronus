@@ -1,9 +1,18 @@
 ## Skeleton
 ## source: packages/ui/src/components/skeleton.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Skeleton
 ## slots: skeleton
 
-component Skeleton(label: text) layout:inline style:skeleton {
+component Skeleton(label: text, disabled: boolean) layout:inline style:skeleton {
   label "Skeleton"
+  action "click"
+  action "focus"
+
+  test "uses Skeleton" {
+    click "Skeleton"
+  }
+  test "disabled Skeleton" {
+    expect visible "Skeleton"
+  }
 }

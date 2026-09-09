@@ -1,69 +1,97 @@
 ## Menubar
 ## source: packages/ui/src/components/menubar.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: MenubarMenu, MenubarGroup, MenubarPortal, MenubarSub, MenubarRadioGroup, Menubar, MenubarTrigger, MenubarSubTrigger, MenubarSubContent, MenubarContent, MenubarItem, MenubarCheckboxItem, MenubarRadioItem, MenubarLabel, MenubarSeparator, MenubarShortcut
 ## slots: menubar, menubar-checkbox-item, menubar-content, menubar-item, menubar-label, menubar-radio-item, menubar-separator, menubar-shortcut, menubar-sub-content, menubar-sub-trigger, menubar-trigger
 
-component Menubar(label: text) layout:overlay style:menubar {
+component Menubar(label: text, disabled: boolean, open: boolean) layout:overlay style:menubar {
   label "Menubar"
+  state open: boolean = false
+  title "Menubar"
+  action "open"
+  action "close"
+  action "focus"
+
+  test "opens Menubar" {
+    click "open"
+    click "close"
+  }
+  test "disabled Menubar" {
+    expect visible "Menubar"
+  }
 }
 
-component MenubarMenu(label: text) layout:inline style:menubar-menu {
+component MenubarMenu(label: text, disabled: boolean) layout:inline style:menubar-menu {
   label "MenubarMenu"
+  action "click"
 }
 
-component MenubarGroup(label: text) layout:inline style:menubar-group {
+component MenubarGroup(label: text, disabled: boolean) layout:inline style:menubar-group {
   label "MenubarGroup"
+  action "click"
 }
 
-component MenubarPortal(label: text) layout:inline style:menubar-portal {
+component MenubarPortal(label: text, disabled: boolean) layout:inline style:menubar-portal {
   label "MenubarPortal"
+  action "click"
 }
 
-component MenubarSub(label: text) layout:inline style:menubar-sub {
+component MenubarSub(label: text, disabled: boolean) layout:inline style:menubar-sub {
   label "MenubarSub"
+  action "click"
 }
 
-component MenubarRadioGroup(label: text) layout:inline style:menubar-radio-group {
+component MenubarRadioGroup(label: text, disabled: boolean) layout:inline style:menubar-radio-group {
   label "MenubarRadioGroup"
+  action "click"
 }
 
-component MenubarTrigger(label: text) layout:inline style:menubar-trigger {
+component MenubarTrigger(label: text, disabled: boolean) layout:inline style:menubar-trigger {
   label "MenubarTrigger"
+  action "click"
 }
 
-component MenubarSubTrigger(label: text) layout:inline style:menubar-sub-trigger {
+component MenubarSubTrigger(label: text, disabled: boolean) layout:inline style:menubar-sub-trigger {
   label "MenubarSubTrigger"
+  action "click"
 }
 
-component MenubarSubContent(label: text) layout:inline style:menubar-sub-content {
+component MenubarSubContent(label: text, disabled: boolean) layout:inline style:menubar-sub-content {
   label "MenubarSubContent"
+  action "click"
 }
 
-component MenubarContent(label: text) layout:inline style:menubar-content {
+component MenubarContent(label: text, disabled: boolean) layout:inline style:menubar-content {
   label "MenubarContent"
+  action "click"
 }
 
-component MenubarItem(label: text) layout:inline style:menubar-item {
+component MenubarItem(label: text, disabled: boolean) layout:inline style:menubar-item {
   label "MenubarItem"
+  action "click"
 }
 
-component MenubarCheckboxItem(label: text) layout:inline style:menubar-checkbox-item {
+component MenubarCheckboxItem(label: text, disabled: boolean) layout:inline style:menubar-checkbox-item {
   label "MenubarCheckboxItem"
+  action "click"
 }
 
-component MenubarRadioItem(label: text) layout:inline style:menubar-radio-item {
+component MenubarRadioItem(label: text, disabled: boolean) layout:inline style:menubar-radio-item {
   label "MenubarRadioItem"
+  action "click"
 }
 
-component MenubarLabel(label: text) layout:inline style:menubar-label {
+component MenubarLabel(label: text, disabled: boolean) layout:inline style:menubar-label {
   label "MenubarLabel"
+  action "click"
 }
 
-component MenubarSeparator(label: text) layout:inline style:menubar-separator {
+component MenubarSeparator(label: text, disabled: boolean) layout:inline style:menubar-separator {
   label "MenubarSeparator"
+  action "click"
 }
 
-component MenubarShortcut(label: text) layout:inline style:menubar-shortcut {
+component MenubarShortcut(label: text, disabled: boolean) layout:inline style:menubar-shortcut {
   label "MenubarShortcut"
+  action "click"
 }

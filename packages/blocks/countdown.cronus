@@ -1,8 +1,14 @@
 ## Block Countdown
 ## source: registry/countdown.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component CountdownBlock layout:stack style:countdown {
-  label "Countdown"
+component CountdownBlock(label: text) layout:stack style:countdown {
+  title "Countdown"
+  subtitle "Countdown"
+  action "Countdown"
+  test "use block" {
+    click "Countdown"
+  }
 }

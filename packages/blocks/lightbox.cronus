@@ -1,9 +1,14 @@
 ## Block Lightbox
 ## source: registry/lightbox.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn, dialog
-## npm: lucide-react@^0.577.0
 
-component LightboxBlock layout:stack style:lightbox {
-  label "Lightbox"
+component LightboxBlock(label: text) layout:stack style:lightbox {
+  title "Lightbox"
+  subtitle "Lightbox"
+  action "Lightbox"
+  test "use block" {
+    click "Lightbox"
+  }
 }

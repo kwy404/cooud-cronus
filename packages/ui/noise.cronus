@@ -1,9 +1,18 @@
 ## Noise
 ## source: packages/ui/src/components/noise.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Noise
 ## slots: noise
 
-component Noise(label: text) layout:inline style:noise {
+component Noise(label: text, disabled: boolean) layout:inline style:noise {
   label "Noise"
+  action "click"
+  action "focus"
+
+  test "uses Noise" {
+    click "Noise"
+  }
+  test "disabled Noise" {
+    expect visible "Noise"
+  }
 }

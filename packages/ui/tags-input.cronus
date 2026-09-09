@@ -1,9 +1,19 @@
 ## TagsInput
 ## source: packages/ui/src/components/tags-input.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: TagsInput
 ## slots: tags-input, tags-input-field, tags-input-remove
 
-component TagsInput(label: text) layout:inline style:tags-input {
+component TagsInput(label: text, disabled: boolean, value: text, invalid: boolean) layout:inline style:tags-input {
   label "TagsInput"
+  state value: text = ""
+  field "TagsInput"
+  action "focus"
+
+  test "fills TagsInput" {
+    fill value "x"
+  }
+  test "disabled TagsInput" {
+    expect visible "TagsInput"
+  }
 }

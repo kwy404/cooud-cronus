@@ -1,37 +1,54 @@
 ## DataTable
 ## source: packages/ui/src/components/data-table.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: DataTableDensity, DataTableFacetedFilter, DataTableLabels, SELECTION_COLUMN_ID, DataTableSelectionColumnOptions, DataTableColumnHeaderLabels, DataTableColumnHeader, DataTable
 ## slots: data-table, data-table-bulk-actions, data-table-column-header, data-table-container, data-table-faceted-filter, data-table-loading, data-table-pagination, data-table-toolbar
 
-component DataTable(label: text) layout:stack style:data-table {
+component DataTable(label: text, disabled: boolean) layout:stack style:data-table {
   label "DataTable"
+  columns "name, value, status"
+  item "Row"
+  action "focus"
+
+  test "shows DataTable" {
+    expect visible "DataTable"
+  }
+  test "disabled DataTable" {
+    expect visible "DataTable"
+  }
 }
 
-component DataTableDensity(label: text) layout:inline style:data-table-density {
+component DataTableDensity(label: text, disabled: boolean) layout:inline style:data-table-density {
   label "DataTableDensity"
+  action "click"
 }
 
-component DataTableFacetedFilter(label: text) layout:inline style:data-table-faceted-filter {
+component DataTableFacetedFilter(label: text, disabled: boolean) layout:inline style:data-table-faceted-filter {
   label "DataTableFacetedFilter"
+  action "click"
 }
 
-component DataTableLabels(label: text) layout:inline style:data-table-labels {
+component DataTableLabels(label: text, disabled: boolean) layout:inline style:data-table-labels {
   label "DataTableLabels"
+  action "click"
 }
 
-component SELECTION_COLUMN_ID(label: text) layout:inline style:s-e-l-e-c-t-i-o-n_-c-o-l-u-m-n_-i-d {
+component SELECTION_COLUMN_ID(label: text, disabled: boolean) layout:inline style:s-e-l-e-c-t-i-o-n_-c-o-l-u-m-n_-i-d {
   label "SELECTION_COLUMN_ID"
+  action "click"
 }
 
-component DataTableSelectionColumnOptions(label: text) layout:inline style:data-table-selection-column-options {
+component DataTableSelectionColumnOptions(label: text, disabled: boolean) layout:inline style:data-table-selection-column-options {
   label "DataTableSelectionColumnOptions"
+  action "click"
 }
 
-component DataTableColumnHeaderLabels(label: text) layout:inline style:data-table-column-header-labels {
+component DataTableColumnHeaderLabels(label: text, disabled: boolean) layout:inline style:data-table-column-header-labels {
   label "DataTableColumnHeaderLabels"
+  action "click"
 }
 
-component DataTableColumnHeader(label: text) layout:inline style:data-table-column-header {
+component DataTableColumnHeader(label: text, disabled: boolean) layout:inline style:data-table-column-header {
   label "DataTableColumnHeader"
+  action "click"
 }

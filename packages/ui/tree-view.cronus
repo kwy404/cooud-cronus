@@ -1,13 +1,24 @@
 ## TreeView
 ## source: packages/ui/src/components/tree-view.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: TreeNode, TreeView
 ## slots: tree-view, tree-view-chevron, tree-view-group, tree-view-icon, tree-view-item, tree-view-item-trigger
 
-component TreeView(label: text) layout:inline style:tree-view {
+component TreeView(label: text, disabled: boolean) layout:stack style:tree-view {
   label "TreeView"
+  columns "name, value, status"
+  item "Row"
+  action "focus"
+
+  test "shows TreeView" {
+    expect visible "TreeView"
+  }
+  test "disabled TreeView" {
+    expect visible "TreeView"
+  }
 }
 
-component TreeNode(label: text) layout:inline style:tree-node {
+component TreeNode(label: text, disabled: boolean) layout:inline style:tree-node {
   label "TreeNode"
+  action "click"
 }

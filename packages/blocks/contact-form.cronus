@@ -1,8 +1,15 @@
 ## Block ContactForm
 ## source: registry/contact-form.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component ContactFormBlock layout:stack style:contact-form {
-  label "ContactForm"
+component ContactFormBlock(label: text) layout:stack style:contact-form {
+  title "Contact Form"
+  subtitle "Contact Form"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

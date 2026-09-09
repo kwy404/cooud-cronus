@@ -1,11 +1,19 @@
 ## ProgressiveBlur
 ## source: packages/ui/src/components/progressive-blur.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: ProgressiveBlur
 ## slots: progressive-blur
 ## variants.side: top, bottom
-## defaults: side=bottom
 
-component ProgressiveBlur(label: text) layout:inline style:progressive-blur {
+component ProgressiveBlur(label: text, disabled: boolean) layout:inline style:progressive-blur {
   label "ProgressiveBlur"
+  action "click"
+  action "focus"
+
+  test "uses ProgressiveBlur" {
+    click "ProgressiveBlur"
+  }
+  test "disabled ProgressiveBlur" {
+    expect visible "ProgressiveBlur"
+  }
 }

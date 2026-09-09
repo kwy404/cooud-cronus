@@ -1,9 +1,18 @@
 ## BorderBeam
 ## source: packages/ui/src/components/border-beam.tsx
-## wave 0 - foundation
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: BorderBeam
 ## slots: border-beam
 
-component BorderBeam(label: text) layout:inline style:border-beam {
+component BorderBeam(label: text, disabled: boolean) layout:inline style:border-beam {
   label "BorderBeam"
+  action "click"
+  action "focus"
+
+  test "uses BorderBeam" {
+    click "BorderBeam"
+  }
+  test "disabled BorderBeam" {
+    expect visible "BorderBeam"
+  }
 }

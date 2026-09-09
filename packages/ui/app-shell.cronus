@@ -1,9 +1,20 @@
 ## AppShell
 ## source: packages/ui/src/components/app-shell.tsx
-## wave 5 - layout & app navigation
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: AppShell
 ## slots: app-shell-body, app-shell-content, app-shell-header
 
-component AppShell(label: text) layout:stack style:app-shell {
+component AppShell(label: text, disabled: boolean) layout:stack style:app-shell {
   label "AppShell"
+  item "Home" -> "/"
+  item "Next" -> "/next"
+  action "navigate"
+  action "focus"
+
+  test "navigates AppShell" {
+    click "Home"
+  }
+  test "disabled AppShell" {
+    expect visible "AppShell"
+  }
 }

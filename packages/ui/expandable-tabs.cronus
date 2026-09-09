@@ -1,13 +1,26 @@
 ## ExpandableTabs
 ## source: packages/ui/src/components/expandable-tabs.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: ExpandableTab, ExpandableTabs
 ## slots: expandable-tabs, expandable-tabs-item
 
-component ExpandableTabs(label: text) layout:inline style:expandable-tabs {
+component ExpandableTabs(label: text, disabled: boolean, value: text) layout:stack style:expandable-tabs {
   label "ExpandableTabs"
+  state value: text = "one"
+  tab "one"
+  tab "two"
+  tab "three"
+  action "focus"
+
+  test "switches ExpandableTabs" {
+    click "two"
+  }
+  test "disabled ExpandableTabs" {
+    expect visible "ExpandableTabs"
+  }
 }
 
-component ExpandableTab(label: text) layout:inline style:expandable-tab {
+component ExpandableTab(label: text, disabled: boolean) layout:inline style:expandable-tab {
   label "ExpandableTab"
+  action "click"
 }

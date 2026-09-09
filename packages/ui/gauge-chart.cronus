@@ -1,9 +1,19 @@
 ## GaugeChart
 ## source: packages/ui/src/components/gauge-chart.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: GaugeChart
 ## slots: gauge-chart
 
-component GaugeChart(label: text) layout:stack style:gauge-chart {
+component GaugeChart(label: text, disabled: boolean) layout:stack style:gauge-chart {
   label "GaugeChart"
+  columns "name, value, status"
+  item "Row"
+  action "focus"
+
+  test "shows GaugeChart" {
+    expect visible "GaugeChart"
+  }
+  test "disabled GaugeChart" {
+    expect visible "GaugeChart"
+  }
 }

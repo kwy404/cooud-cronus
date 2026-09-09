@@ -1,21 +1,35 @@
 ## Toolbar
 ## source: packages/ui/src/components/toolbar.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Toolbar, ToolbarButton, ToolbarSeparator, ToolbarGroup
 ## slots: toolbar, toolbar-button, toolbar-group, toolbar-separator
 
-component Toolbar(label: text) layout:inline style:toolbar {
+component Toolbar(label: text, disabled: boolean) layout:stack style:toolbar {
   label "Toolbar"
+  item "Home" -> "/"
+  item "Next" -> "/next"
+  action "navigate"
+  action "focus"
+
+  test "navigates Toolbar" {
+    click "Home"
+  }
+  test "disabled Toolbar" {
+    expect visible "Toolbar"
+  }
 }
 
-component ToolbarButton(label: text) layout:inline style:toolbar-button {
+component ToolbarButton(label: text, disabled: boolean) layout:inline style:toolbar-button {
   label "ToolbarButton"
+  action "click"
 }
 
-component ToolbarSeparator(label: text) layout:inline style:toolbar-separator {
+component ToolbarSeparator(label: text, disabled: boolean) layout:inline style:toolbar-separator {
   label "ToolbarSeparator"
+  action "click"
 }
 
-component ToolbarGroup(label: text) layout:inline style:toolbar-group {
+component ToolbarGroup(label: text, disabled: boolean) layout:inline style:toolbar-group {
   label "ToolbarGroup"
+  action "click"
 }

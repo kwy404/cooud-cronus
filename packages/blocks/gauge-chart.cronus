@@ -1,9 +1,16 @@
 ## Block GaugeChart
 ## source: registry/gauge-chart.json
 ## type: registry:ui
+## behavior: data
 ## registryDependencies: chart, cn
-## npm: recharts@^3.9.2
 
-component GaugeChartBlock layout:stack style:gauge-chart {
-  label "GaugeChart"
+component GaugeChartBlock(label: text) layout:stack style:gauge-chart {
+  title "Gauge Chart"
+  subtitle "Gauge Chart"
+  columns "name, value, status"
+  item "Row"
+  value "0"
+  test "reads GaugeChart" {
+    expect visible "Gauge Chart"
+  }
 }

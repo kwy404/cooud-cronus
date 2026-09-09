@@ -1,8 +1,15 @@
 ## Block HeroSplit
 ## source: registry/hero--split.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component HeroSplitBlock layout:stack style:hero--split {
-  label "HeroSplit"
+component HeroSplitBlock(label: text) layout:stack style:hero--split {
+  title "Hero Split"
+  subtitle "Split"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

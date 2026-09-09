@@ -1,9 +1,14 @@
 ## Block Switch
 ## source: registry/switch.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: @radix-ui/react-switch@^1.2.5
 
-component SwitchBlock layout:stack style:switch {
-  label "Switch"
+component SwitchBlock(label: text) layout:stack style:switch {
+  title "Switch"
+  subtitle "Switch"
+  action "Switch"
+  test "use block" {
+    click "Switch"
+  }
 }

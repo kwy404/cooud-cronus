@@ -1,9 +1,19 @@
 ## LineChart
 ## source: packages/ui/src/components/line-chart.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: LineChart
 ## slots: line-chart
 
-component LineChart(label: text) layout:stack style:line-chart {
+component LineChart(label: text, disabled: boolean) layout:stack style:line-chart {
   label "LineChart"
+  columns "name, value, status"
+  item "Row"
+  action "focus"
+
+  test "shows LineChart" {
+    expect visible "LineChart"
+  }
+  test "disabled LineChart" {
+    expect visible "LineChart"
+  }
 }

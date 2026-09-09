@@ -1,9 +1,18 @@
 ## Magnetic
 ## source: packages/ui/src/components/magnetic.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Magnetic
 ## slots: magnetic, magnetic-target
 
-component Magnetic(label: text) layout:inline style:magnetic {
+component Magnetic(label: text, disabled: boolean) layout:inline style:magnetic {
   label "Magnetic"
+  action "click"
+  action "focus"
+
+  test "uses Magnetic" {
+    click "Magnetic"
+  }
+  test "disabled Magnetic" {
+    expect visible "Magnetic"
+  }
 }

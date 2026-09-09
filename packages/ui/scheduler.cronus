@@ -1,17 +1,29 @@
 ## Scheduler
 ## source: packages/ui/src/components/scheduler.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: SchedulerEventColor, SchedulerEvent, Scheduler
 ## slots: scheduler, scheduler-event, scheduler-event-overflow, scheduler-grid, scheduler-title, scheduler-weekdays
 
-component Scheduler(label: text) layout:stack style:scheduler {
+component Scheduler(label: text, disabled: boolean) layout:stack style:scheduler {
   label "Scheduler"
+  columns "name, value, status"
+  item "Row"
+  action "focus"
+
+  test "shows Scheduler" {
+    expect visible "Scheduler"
+  }
+  test "disabled Scheduler" {
+    expect visible "Scheduler"
+  }
 }
 
-component SchedulerEventColor(label: text) layout:inline style:scheduler-event-color {
+component SchedulerEventColor(label: text, disabled: boolean) layout:inline style:scheduler-event-color {
   label "SchedulerEventColor"
+  action "click"
 }
 
-component SchedulerEvent(label: text) layout:inline style:scheduler-event {
+component SchedulerEvent(label: text, disabled: boolean) layout:inline style:scheduler-event {
   label "SchedulerEvent"
+  action "click"
 }

@@ -1,9 +1,16 @@
 ## Block Dashboard
 ## source: registry/dashboard.json
 ## type: registry:block
+## behavior: data
 ## registryDependencies: demo-saas
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0, recharts@^3.9.2
 
-component DashboardBlock layout:stack style:dashboard {
-  label "Dashboard"
+component DashboardBlock(label: text) layout:stack style:dashboard {
+  title "Dashboard"
+  subtitle "Dashboard"
+  columns "name, value, status"
+  item "Row"
+  value "0"
+  test "reads Dashboard" {
+    expect visible "Dashboard"
+  }
 }

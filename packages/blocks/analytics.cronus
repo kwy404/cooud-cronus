@@ -1,9 +1,16 @@
 ## Block Analytics
 ## source: registry/analytics.json
 ## type: registry:block
+## behavior: data
 ## registryDependencies: demo-saas
-## npm: @cronus-ui/ui@0.7.3
 
-component AnalyticsBlock layout:stack style:analytics {
-  label "Analytics"
+component AnalyticsBlock(label: text) layout:stack style:analytics {
+  title "Analytics"
+  subtitle "Analytics"
+  columns "name, value, status"
+  item "Row"
+  value "0"
+  test "reads Analytics" {
+    expect visible "Analytics"
+  }
 }

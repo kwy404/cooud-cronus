@@ -1,9 +1,19 @@
 ## Input
 ## source: packages/ui/src/components/input.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Input
 ## slots: input
 
-component Input(label: text) layout:inline style:input {
+component Input(label: text, disabled: boolean, value: text, invalid: boolean) layout:inline style:input {
   label "Input"
+  state value: text = ""
+  field "Input"
+  action "focus"
+
+  test "fills Input" {
+    fill value "x"
+  }
+  test "disabled Input" {
+    expect visible "Input"
+  }
 }

@@ -1,45 +1,64 @@
 ## Select
 ## source: packages/ui/src/components/select.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Select, SelectGroup, SelectValue, SelectTrigger, SelectScrollUpButton, SelectScrollDownButton, SelectContent, SelectLabel, SelectItem, SelectSeparator
 ## slots: select-content, select-item, select-label, select-scroll-down-button, select-scroll-up-button, select-separator, select-trigger
 
-component Select(label: text) layout:inline style:select {
+component Select(label: text, disabled: boolean, value: text, invalid: boolean) layout:inline style:select {
   label "Select"
+  state value: text = ""
+  field "Select"
+  action "focus"
+
+  test "fills Select" {
+    fill value "x"
+  }
+  test "disabled Select" {
+    expect visible "Select"
+  }
 }
 
-component SelectGroup(label: text) layout:inline style:select-group {
+component SelectGroup(label: text, disabled: boolean) layout:inline style:select-group {
   label "SelectGroup"
+  action "click"
 }
 
-component SelectValue(label: text) layout:inline style:select-value {
+component SelectValue(label: text, disabled: boolean) layout:inline style:select-value {
   label "SelectValue"
+  action "click"
 }
 
-component SelectTrigger(label: text) layout:inline style:select-trigger {
+component SelectTrigger(label: text, disabled: boolean) layout:inline style:select-trigger {
   label "SelectTrigger"
+  action "click"
 }
 
-component SelectScrollUpButton(label: text) layout:inline style:select-scroll-up-button {
+component SelectScrollUpButton(label: text, disabled: boolean) layout:inline style:select-scroll-up-button {
   label "SelectScrollUpButton"
+  action "click"
 }
 
-component SelectScrollDownButton(label: text) layout:inline style:select-scroll-down-button {
+component SelectScrollDownButton(label: text, disabled: boolean) layout:inline style:select-scroll-down-button {
   label "SelectScrollDownButton"
+  action "click"
 }
 
-component SelectContent(label: text) layout:inline style:select-content {
+component SelectContent(label: text, disabled: boolean) layout:inline style:select-content {
   label "SelectContent"
+  action "click"
 }
 
-component SelectLabel(label: text) layout:inline style:select-label {
+component SelectLabel(label: text, disabled: boolean) layout:inline style:select-label {
   label "SelectLabel"
+  action "click"
 }
 
-component SelectItem(label: text) layout:inline style:select-item {
+component SelectItem(label: text, disabled: boolean) layout:inline style:select-item {
   label "SelectItem"
+  action "click"
 }
 
-component SelectSeparator(label: text) layout:inline style:select-separator {
+component SelectSeparator(label: text, disabled: boolean) layout:inline style:select-separator {
   label "SelectSeparator"
+  action "click"
 }

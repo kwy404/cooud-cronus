@@ -1,8 +1,14 @@
 ## Block Confetti
 ## source: registry/confetti.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component ConfettiBlock layout:stack style:confetti {
-  label "Confetti"
+component ConfettiBlock(label: text) layout:stack style:confetti {
+  title "Confetti"
+  subtitle "Confetti"
+  action "Confetti"
+  test "use block" {
+    click "Confetti"
+  }
 }

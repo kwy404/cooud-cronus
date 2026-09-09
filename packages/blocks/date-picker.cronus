@@ -1,9 +1,14 @@
 ## Block DatePicker
 ## source: registry/date-picker.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: button, calendar, cn, popover
-## npm: date-fns@^4.4.0, lucide-react@^0.577.0, react-day-picker@^10.0.1
 
-component DatePickerBlock layout:stack style:date-picker {
-  label "DatePicker"
+component DatePickerBlock(label: text) layout:stack style:date-picker {
+  title "Date Picker"
+  subtitle "Date Picker"
+  action "Date Picker"
+  test "use block" {
+    click "Date Picker"
+  }
 }

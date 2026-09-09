@@ -1,40 +1,56 @@
 ## Timeline
 ## source: packages/ui/src/components/timeline.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Timeline, TimelineItem, TimelineDot, TimelineConnector, TimelineContent, TimelineTitle, TimelineTime, TimelineDescription
 ## slots: timeline, timeline-body, timeline-connector, timeline-content, timeline-description, timeline-dot, timeline-item, timeline-rail, timeline-time, timeline-title
 ## variants.tone: default, primary, success, warning, error
 ## variants.withIcon: true, false
-## defaults: tone=default withIcon=false
 
-component Timeline(label: text) layout:stack style:timeline {
+component Timeline(label: text, disabled: boolean) layout:stack style:timeline {
   label "Timeline"
+  columns "name, value, status"
+  item "Row"
+  action "focus"
+
+  test "shows Timeline" {
+    expect visible "Timeline"
+  }
+  test "disabled Timeline" {
+    expect visible "Timeline"
+  }
 }
 
-component TimelineItem(label: text) layout:inline style:timeline-item {
+component TimelineItem(label: text, disabled: boolean) layout:inline style:timeline-item {
   label "TimelineItem"
+  action "click"
 }
 
-component TimelineDot(label: text) layout:inline style:timeline-dot {
+component TimelineDot(label: text, disabled: boolean) layout:inline style:timeline-dot {
   label "TimelineDot"
+  action "click"
 }
 
-component TimelineConnector(label: text) layout:inline style:timeline-connector {
+component TimelineConnector(label: text, disabled: boolean) layout:inline style:timeline-connector {
   label "TimelineConnector"
+  action "click"
 }
 
-component TimelineContent(label: text) layout:inline style:timeline-content {
+component TimelineContent(label: text, disabled: boolean) layout:inline style:timeline-content {
   label "TimelineContent"
+  action "click"
 }
 
-component TimelineTitle(label: text) layout:inline style:timeline-title {
+component TimelineTitle(label: text, disabled: boolean) layout:inline style:timeline-title {
   label "TimelineTitle"
+  action "click"
 }
 
-component TimelineTime(label: text) layout:inline style:timeline-time {
+component TimelineTime(label: text, disabled: boolean) layout:inline style:timeline-time {
   label "TimelineTime"
+  action "click"
 }
 
-component TimelineDescription(label: text) layout:inline style:timeline-description {
+component TimelineDescription(label: text, disabled: boolean) layout:inline style:timeline-description {
   label "TimelineDescription"
+  action "click"
 }

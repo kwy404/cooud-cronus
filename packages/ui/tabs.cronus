@@ -1,21 +1,36 @@
 ## Tabs
 ## source: packages/ui/src/components/tabs.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Tabs, TabsList, TabsTrigger, TabsContent
 ## slots: tabs, tabs-content, tabs-list, tabs-trigger
 
-component Tabs(label: text) layout:stack style:tabs {
+component Tabs(label: text, disabled: boolean, value: text) layout:stack style:tabs {
   label "Tabs"
+  state value: text = "one"
+  tab "one"
+  tab "two"
+  tab "three"
+  action "focus"
+
+  test "switches Tabs" {
+    click "two"
+  }
+  test "disabled Tabs" {
+    expect visible "Tabs"
+  }
 }
 
-component TabsList(label: text) layout:inline style:tabs-list {
+component TabsList(label: text, disabled: boolean) layout:inline style:tabs-list {
   label "TabsList"
+  action "click"
 }
 
-component TabsTrigger(label: text) layout:inline style:tabs-trigger {
+component TabsTrigger(label: text, disabled: boolean) layout:inline style:tabs-trigger {
   label "TabsTrigger"
+  action "click"
 }
 
-component TabsContent(label: text) layout:inline style:tabs-content {
+component TabsContent(label: text, disabled: boolean) layout:inline style:tabs-content {
   label "TabsContent"
+  action "click"
 }

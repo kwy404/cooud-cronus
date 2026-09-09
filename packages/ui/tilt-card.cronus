@@ -1,9 +1,18 @@
 ## TiltCard
 ## source: packages/ui/src/components/tilt-card.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: TiltCard
 ## slots: tilt-card
 
-component TiltCard(label: text) layout:stack style:tilt-card {
+component TiltCard(label: text, disabled: boolean) layout:inline style:tilt-card {
   label "TiltCard"
+  action "click"
+  action "focus"
+
+  test "uses TiltCard" {
+    click "TiltCard"
+  }
+  test "disabled TiltCard" {
+    expect visible "TiltCard"
+  }
 }

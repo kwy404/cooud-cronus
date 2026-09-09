@@ -1,20 +1,30 @@
 ## Alert
 ## source: packages/ui/src/components/alert.tsx
-## wave 2 - overlays & navigation
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Alert, AlertTitle, AlertDescription
 ## slots: alert, alert-description, alert-title
 ## variants.variant: default, info, success, warning, destructive
-## defaults: variant=default
 
-component Alert(label: text, variant: text) layout:inline style:alert {
+component Alert(label: text, disabled: boolean, variant: text) layout:inline style:alert {
   label "Alert"
   variant "default"
+  action "click"
+  action "focus"
+
+  test "uses Alert" {
+    click "Alert"
+  }
+  test "disabled Alert" {
+    expect visible "Alert"
+  }
 }
 
-component AlertTitle(label: text) layout:inline style:alert-title {
+component AlertTitle(label: text, disabled: boolean) layout:inline style:alert-title {
   label "AlertTitle"
+  action "click"
 }
 
-component AlertDescription(label: text) layout:inline style:alert-description {
+component AlertDescription(label: text, disabled: boolean) layout:inline style:alert-description {
   label "AlertDescription"
+  action "click"
 }

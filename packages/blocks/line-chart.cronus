@@ -1,9 +1,16 @@
 ## Block LineChart
 ## source: registry/line-chart.json
 ## type: registry:ui
+## behavior: data
 ## registryDependencies: chart, cn
-## npm: recharts@^3.9.2
 
-component LineChartBlock layout:stack style:line-chart {
-  label "LineChart"
+component LineChartBlock(label: text) layout:stack style:line-chart {
+  title "Line Chart"
+  subtitle "Line Chart"
+  columns "name, value, status"
+  item "Row"
+  value "0"
+  test "reads LineChart" {
+    expect visible "Line Chart"
+  }
 }

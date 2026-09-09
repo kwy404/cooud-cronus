@@ -1,17 +1,28 @@
 ## Orbit
 ## source: packages/ui/src/components/orbit.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Orbit, OrbitRing, OrbitItem
 ## slots: orbit, orbit-holder, orbit-item, orbit-positioner, orbit-ring
 
-component Orbit(label: text) layout:inline style:orbit {
+component Orbit(label: text, disabled: boolean) layout:inline style:orbit {
   label "Orbit"
+  action "click"
+  action "focus"
+
+  test "uses Orbit" {
+    click "Orbit"
+  }
+  test "disabled Orbit" {
+    expect visible "Orbit"
+  }
 }
 
-component OrbitRing(label: text) layout:inline style:orbit-ring {
+component OrbitRing(label: text, disabled: boolean) layout:inline style:orbit-ring {
   label "OrbitRing"
+  action "click"
 }
 
-component OrbitItem(label: text) layout:inline style:orbit-item {
+component OrbitItem(label: text, disabled: boolean) layout:inline style:orbit-item {
   label "OrbitItem"
+  action "click"
 }

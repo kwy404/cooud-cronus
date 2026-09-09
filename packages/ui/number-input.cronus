@@ -1,9 +1,19 @@
 ## NumberInput
 ## source: packages/ui/src/components/number-input.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: NumberInput
 ## slots: number-input, number-input-decrement, number-input-field, number-input-increment
 
-component NumberInput(label: text) layout:inline style:number-input {
+component NumberInput(label: text, disabled: boolean, value: text, invalid: boolean) layout:inline style:number-input {
   label "NumberInput"
+  state value: text = ""
+  field "NumberInput"
+  action "focus"
+
+  test "fills NumberInput" {
+    fill value "x"
+  }
+  test "disabled NumberInput" {
+    expect visible "NumberInput"
+  }
 }

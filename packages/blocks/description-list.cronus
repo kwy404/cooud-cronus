@@ -1,9 +1,14 @@
 ## Block DescriptionList
 ## source: registry/description-list.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: class-variance-authority@^0.7.1
 
-component DescriptionListBlock layout:stack style:description-list {
-  label "DescriptionList"
+component DescriptionListBlock(label: text) layout:stack style:description-list {
+  title "Description List"
+  subtitle "Description List"
+  action "Description List"
+  test "use block" {
+    click "Description List"
+  }
 }

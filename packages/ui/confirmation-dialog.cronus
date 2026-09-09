@@ -1,9 +1,22 @@
 ## ConfirmationDialog
 ## source: packages/ui/src/components/confirmation-dialog.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: ConfirmationDialog
 ## slots: confirmation-dialog, confirmation-dialog-confirm, confirmation-dialog-error, confirmation-dialog-icon
 
-component ConfirmationDialog(label: text) layout:overlay style:confirmation-dialog {
+component ConfirmationDialog(label: text, disabled: boolean, open: boolean) layout:overlay style:confirmation-dialog {
   label "ConfirmationDialog"
+  state open: boolean = false
+  title "ConfirmationDialog"
+  action "open"
+  action "close"
+  action "focus"
+
+  test "opens ConfirmationDialog" {
+    click "open"
+    click "close"
+  }
+  test "disabled ConfirmationDialog" {
+    expect visible "ConfirmationDialog"
+  }
 }

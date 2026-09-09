@@ -1,21 +1,37 @@
 ## InviteDialog
 ## source: packages/ui/src/components/invite-dialog.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: InviteDialogLabels, InviteResult, InviteRole, InviteDialog
 ## slots: invite-dialog, invite-dialog-error, invite-dialog-send, invite-dialog-success
 
-component InviteDialog(label: text) layout:overlay style:invite-dialog {
+component InviteDialog(label: text, disabled: boolean, open: boolean) layout:overlay style:invite-dialog {
   label "InviteDialog"
+  state open: boolean = false
+  title "InviteDialog"
+  action "open"
+  action "close"
+  action "focus"
+
+  test "opens InviteDialog" {
+    click "open"
+    click "close"
+  }
+  test "disabled InviteDialog" {
+    expect visible "InviteDialog"
+  }
 }
 
-component InviteDialogLabels(label: text) layout:inline style:invite-dialog-labels {
+component InviteDialogLabels(label: text, disabled: boolean) layout:inline style:invite-dialog-labels {
   label "InviteDialogLabels"
+  action "click"
 }
 
-component InviteResult(label: text) layout:inline style:invite-result {
+component InviteResult(label: text, disabled: boolean) layout:inline style:invite-result {
   label "InviteResult"
+  action "click"
 }
 
-component InviteRole(label: text) layout:inline style:invite-role {
+component InviteRole(label: text, disabled: boolean) layout:inline style:invite-role {
   label "InviteRole"
+  action "click"
 }

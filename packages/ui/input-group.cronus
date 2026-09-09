@@ -1,13 +1,23 @@
 ## InputGroup
 ## source: packages/ui/src/components/input-group.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: InputGroup, InputGroupAddon
 ## slots: input-group, input-group-addon
 
-component InputGroup(label: text) layout:inline style:input-group {
+component InputGroup(label: text, disabled: boolean) layout:inline style:input-group {
   label "InputGroup"
+  action "click"
+  action "focus"
+
+  test "uses InputGroup" {
+    click "InputGroup"
+  }
+  test "disabled InputGroup" {
+    expect visible "InputGroup"
+  }
 }
 
-component InputGroupAddon(label: text) layout:inline style:input-group-addon {
+component InputGroupAddon(label: text, disabled: boolean) layout:inline style:input-group-addon {
   label "InputGroupAddon"
+  action "click"
 }

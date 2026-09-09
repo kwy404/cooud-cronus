@@ -1,21 +1,33 @@
 ## NotificationCenter
 ## source: packages/ui/src/components/notification-center.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: NotificationItem, NotificationRow, NotificationList, NotificationCenter
 ## slots: notification-badge, notification-center, notification-empty, notification-footer, notification-icon, notification-list, notification-row, notification-trigger, notification-unread-dot
 
-component NotificationCenter(label: text) layout:stack style:notification-center {
+component NotificationCenter(label: text, disabled: boolean) layout:inline style:notification-center {
   label "NotificationCenter"
+  action "click"
+  action "focus"
+
+  test "uses NotificationCenter" {
+    click "NotificationCenter"
+  }
+  test "disabled NotificationCenter" {
+    expect visible "NotificationCenter"
+  }
 }
 
-component NotificationItem(label: text) layout:inline style:notification-item {
+component NotificationItem(label: text, disabled: boolean) layout:inline style:notification-item {
   label "NotificationItem"
+  action "click"
 }
 
-component NotificationRow(label: text) layout:inline style:notification-row {
+component NotificationRow(label: text, disabled: boolean) layout:inline style:notification-row {
   label "NotificationRow"
+  action "click"
 }
 
-component NotificationList(label: text) layout:inline style:notification-list {
+component NotificationList(label: text, disabled: boolean) layout:inline style:notification-list {
   label "NotificationList"
+  action "click"
 }

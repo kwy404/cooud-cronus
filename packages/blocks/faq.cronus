@@ -1,8 +1,15 @@
 ## Block Faq
 ## source: registry/faq.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3
+## behavior: marketing
 
-component FaqBlock layout:stack style:faq {
-  label "Faq"
+component FaqBlock(label: text) layout:stack style:faq {
+  title "Faq"
+  subtitle "Faq"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

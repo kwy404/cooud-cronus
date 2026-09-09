@@ -1,9 +1,14 @@
 ## Block Button
 ## source: registry/button.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: @radix-ui/react-slot@^1.2.3, class-variance-authority@^0.7.1
 
-component ButtonBlock layout:stack style:button {
-  label "Button"
+component ButtonBlock(label: text) layout:stack style:button {
+  title "Button"
+  subtitle "Button"
+  action "Button"
+  test "use block" {
+    click "Button"
+  }
 }

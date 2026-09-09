@@ -1,37 +1,57 @@
 ## MorphingPopover
 ## source: packages/ui/src/components/morphing-popover.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: MorphingPopover, MorphingPopoverTrigger, MorphingPopoverContent, MorphingPopoverClose, MorphingPopoverHeader, MorphingPopoverBody, MorphingPopoverFooter, MorphingPopoverButton
 ## slots: morphing-popover, morphing-popover-body, morphing-popover-button, morphing-popover-close, morphing-popover-content, morphing-popover-footer, morphing-popover-header, morphing-popover-trigger
 
-component MorphingPopover(label: text) layout:overlay style:morphing-popover {
+component MorphingPopover(label: text, disabled: boolean, open: boolean) layout:overlay style:morphing-popover {
   label "MorphingPopover"
+  state open: boolean = false
+  title "MorphingPopover"
+  action "open"
+  action "close"
+  action "focus"
+
+  test "opens MorphingPopover" {
+    click "open"
+    click "close"
+  }
+  test "disabled MorphingPopover" {
+    expect visible "MorphingPopover"
+  }
 }
 
-component MorphingPopoverTrigger(label: text) layout:inline style:morphing-popover-trigger {
+component MorphingPopoverTrigger(label: text, disabled: boolean) layout:inline style:morphing-popover-trigger {
   label "MorphingPopoverTrigger"
+  action "click"
 }
 
-component MorphingPopoverContent(label: text) layout:inline style:morphing-popover-content {
+component MorphingPopoverContent(label: text, disabled: boolean) layout:inline style:morphing-popover-content {
   label "MorphingPopoverContent"
+  action "click"
 }
 
-component MorphingPopoverClose(label: text) layout:inline style:morphing-popover-close {
+component MorphingPopoverClose(label: text, disabled: boolean) layout:inline style:morphing-popover-close {
   label "MorphingPopoverClose"
+  action "click"
 }
 
-component MorphingPopoverHeader(label: text) layout:inline style:morphing-popover-header {
+component MorphingPopoverHeader(label: text, disabled: boolean) layout:inline style:morphing-popover-header {
   label "MorphingPopoverHeader"
+  action "click"
 }
 
-component MorphingPopoverBody(label: text) layout:inline style:morphing-popover-body {
+component MorphingPopoverBody(label: text, disabled: boolean) layout:inline style:morphing-popover-body {
   label "MorphingPopoverBody"
+  action "click"
 }
 
-component MorphingPopoverFooter(label: text) layout:inline style:morphing-popover-footer {
+component MorphingPopoverFooter(label: text, disabled: boolean) layout:inline style:morphing-popover-footer {
   label "MorphingPopoverFooter"
+  action "click"
 }
 
-component MorphingPopoverButton(label: text) layout:inline style:morphing-popover-button {
+component MorphingPopoverButton(label: text, disabled: boolean) layout:inline style:morphing-popover-button {
   label "MorphingPopoverButton"
+  action "click"
 }

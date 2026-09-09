@@ -1,9 +1,14 @@
 ## Block Fab
 ## source: registry/fab.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn, motion-presets
-## npm: motion@^12.23.0
 
-component FabBlock layout:stack style:fab {
-  label "Fab"
+component FabBlock(label: text) layout:stack style:fab {
+  title "Fab"
+  subtitle "Fab"
+  action "Fab"
+  test "use block" {
+    click "Fab"
+  }
 }

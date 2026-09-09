@@ -1,41 +1,62 @@
 ## Command
 ## source: packages/ui/src/components/command.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Command, CommandDialog, CommandInput, CommandList, CommandEmpty, CommandGroup, CommandItem, CommandShortcut, CommandSeparator
 ## slots: command, command-empty, command-group, command-input, command-input-wrapper, command-item, command-list, command-separator, command-shortcut
 
-component Command(label: text) layout:overlay style:command {
+component Command(label: text, disabled: boolean, open: boolean) layout:overlay style:command {
   label "Command"
+  state open: boolean = false
+  title "Command"
+  action "open"
+  action "close"
+  action "focus"
+
+  test "opens Command" {
+    click "open"
+    click "close"
+  }
+  test "disabled Command" {
+    expect visible "Command"
+  }
 }
 
-component CommandDialog(label: text) layout:inline style:command-dialog {
+component CommandDialog(label: text, disabled: boolean) layout:inline style:command-dialog {
   label "CommandDialog"
+  action "click"
 }
 
-component CommandInput(label: text) layout:inline style:command-input {
+component CommandInput(label: text, disabled: boolean) layout:inline style:command-input {
   label "CommandInput"
+  action "click"
 }
 
-component CommandList(label: text) layout:inline style:command-list {
+component CommandList(label: text, disabled: boolean) layout:inline style:command-list {
   label "CommandList"
+  action "click"
 }
 
-component CommandEmpty(label: text) layout:inline style:command-empty {
+component CommandEmpty(label: text, disabled: boolean) layout:inline style:command-empty {
   label "CommandEmpty"
+  action "click"
 }
 
-component CommandGroup(label: text) layout:inline style:command-group {
+component CommandGroup(label: text, disabled: boolean) layout:inline style:command-group {
   label "CommandGroup"
+  action "click"
 }
 
-component CommandItem(label: text) layout:inline style:command-item {
+component CommandItem(label: text, disabled: boolean) layout:inline style:command-item {
   label "CommandItem"
+  action "click"
 }
 
-component CommandShortcut(label: text) layout:inline style:command-shortcut {
+component CommandShortcut(label: text, disabled: boolean) layout:inline style:command-shortcut {
   label "CommandShortcut"
+  action "click"
 }
 
-component CommandSeparator(label: text) layout:inline style:command-separator {
+component CommandSeparator(label: text, disabled: boolean) layout:inline style:command-separator {
   label "CommandSeparator"
+  action "click"
 }

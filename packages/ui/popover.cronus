@@ -1,21 +1,37 @@
 ## Popover
 ## source: packages/ui/src/components/popover.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Popover, PopoverTrigger, PopoverAnchor, PopoverContent
 ## slots: popover-content
 
-component Popover(label: text) layout:overlay style:popover {
+component Popover(label: text, disabled: boolean, open: boolean) layout:overlay style:popover {
   label "Popover"
+  state open: boolean = false
+  title "Popover"
+  action "open"
+  action "close"
+  action "focus"
+
+  test "opens Popover" {
+    click "open"
+    click "close"
+  }
+  test "disabled Popover" {
+    expect visible "Popover"
+  }
 }
 
-component PopoverTrigger(label: text) layout:inline style:popover-trigger {
+component PopoverTrigger(label: text, disabled: boolean) layout:inline style:popover-trigger {
   label "PopoverTrigger"
+  action "click"
 }
 
-component PopoverAnchor(label: text) layout:inline style:popover-anchor {
+component PopoverAnchor(label: text, disabled: boolean) layout:inline style:popover-anchor {
   label "PopoverAnchor"
+  action "click"
 }
 
-component PopoverContent(label: text) layout:inline style:popover-content {
+component PopoverContent(label: text, disabled: boolean) layout:inline style:popover-content {
   label "PopoverContent"
+  action "click"
 }

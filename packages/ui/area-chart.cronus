@@ -1,9 +1,19 @@
 ## AreaChart
 ## source: packages/ui/src/components/area-chart.tsx
-## wave 5 - layout & app navigation
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: AreaChart
 ## slots: area-chart
 
-component AreaChart(label: text) layout:stack style:area-chart {
+component AreaChart(label: text, disabled: boolean) layout:stack style:area-chart {
   label "AreaChart"
+  columns "name, value, status"
+  item "Row"
+  action "focus"
+
+  test "shows AreaChart" {
+    expect visible "AreaChart"
+  }
+  test "disabled AreaChart" {
+    expect visible "AreaChart"
+  }
 }

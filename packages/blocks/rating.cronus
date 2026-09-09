@@ -1,9 +1,14 @@
 ## Block Rating
 ## source: registry/rating.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: class-variance-authority@^0.7.1, lucide-react@^0.577.0
 
-component RatingBlock layout:stack style:rating {
-  label "Rating"
+component RatingBlock(label: text) layout:stack style:rating {
+  title "Rating"
+  subtitle "Rating"
+  action "Rating"
+  test "use block" {
+    click "Rating"
+  }
 }

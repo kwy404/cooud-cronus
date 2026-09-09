@@ -1,9 +1,18 @@
 ## Sparkline
 ## source: packages/ui/src/components/sparkline.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Sparkline
 ## slots: sparkline-area, sparkline-bar, sparkline-line
 
-component Sparkline(label: text) layout:inline style:sparkline {
+component Sparkline(label: text, disabled: boolean) layout:inline style:sparkline {
   label "Sparkline"
+  action "click"
+  action "focus"
+
+  test "uses Sparkline" {
+    click "Sparkline"
+  }
+  test "disabled Sparkline" {
+    expect visible "Sparkline"
+  }
 }

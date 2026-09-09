@@ -1,8 +1,14 @@
 ## Block RetroGrid
 ## source: registry/retro-grid.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component RetroGridBlock layout:stack style:retro-grid {
-  label "RetroGrid"
+component RetroGridBlock(label: text) layout:stack style:retro-grid {
+  title "Retro Grid"
+  subtitle "Retro Grid"
+  action "Retro Grid"
+  test "use block" {
+    click "Retro Grid"
+  }
 }

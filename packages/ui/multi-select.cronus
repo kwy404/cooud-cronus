@@ -1,9 +1,19 @@
 ## MultiSelect
 ## source: packages/ui/src/components/multi-select.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: MultiSelect
 ## slots: multi-select-chip-remove, multi-select-clear, multi-select-indicator, multi-select-trigger
 
-component MultiSelect(label: text) layout:inline style:multi-select {
+component MultiSelect(label: text, disabled: boolean, value: text, invalid: boolean) layout:inline style:multi-select {
   label "MultiSelect"
+  state value: text = ""
+  field "MultiSelect"
+  action "focus"
+
+  test "fills MultiSelect" {
+    fill value "x"
+  }
+  test "disabled MultiSelect" {
+    expect visible "MultiSelect"
+  }
 }

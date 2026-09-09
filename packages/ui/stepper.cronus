@@ -1,43 +1,62 @@
 ## Stepper
 ## source: packages/ui/src/components/stepper.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: StepperLabels, Stepper, StepperList, StepperItem, StepperIndicator, StepperSeparator, StepperTrigger, StepperTitle, StepperDescription
 ## slots: stepper, stepper-description, stepper-indicator, stepper-item, stepper-item-state, stepper-list, stepper-separator, stepper-title, stepper-trigger
 ## variants.state: completed, active, upcoming
-## defaults: state=upcoming
 
-component Stepper(label: text) layout:stack style:stepper {
+component Stepper(label: text, disabled: boolean, value: text) layout:stack style:stepper {
   label "Stepper"
+  state value: text = "one"
+  tab "one"
+  tab "two"
+  tab "three"
+  action "focus"
+
+  test "switches Stepper" {
+    click "two"
+  }
+  test "disabled Stepper" {
+    expect visible "Stepper"
+  }
 }
 
-component StepperLabels(label: text) layout:inline style:stepper-labels {
+component StepperLabels(label: text, disabled: boolean) layout:inline style:stepper-labels {
   label "StepperLabels"
+  action "click"
 }
 
-component StepperList(label: text) layout:inline style:stepper-list {
+component StepperList(label: text, disabled: boolean) layout:inline style:stepper-list {
   label "StepperList"
+  action "click"
 }
 
-component StepperItem(label: text) layout:inline style:stepper-item {
+component StepperItem(label: text, disabled: boolean) layout:inline style:stepper-item {
   label "StepperItem"
+  action "click"
 }
 
-component StepperIndicator(label: text) layout:inline style:stepper-indicator {
+component StepperIndicator(label: text, disabled: boolean) layout:inline style:stepper-indicator {
   label "StepperIndicator"
+  action "click"
 }
 
-component StepperSeparator(label: text) layout:inline style:stepper-separator {
+component StepperSeparator(label: text, disabled: boolean) layout:inline style:stepper-separator {
   label "StepperSeparator"
+  action "click"
 }
 
-component StepperTrigger(label: text) layout:inline style:stepper-trigger {
+component StepperTrigger(label: text, disabled: boolean) layout:inline style:stepper-trigger {
   label "StepperTrigger"
+  action "click"
 }
 
-component StepperTitle(label: text) layout:inline style:stepper-title {
+component StepperTitle(label: text, disabled: boolean) layout:inline style:stepper-title {
   label "StepperTitle"
+  action "click"
 }
 
-component StepperDescription(label: text) layout:inline style:stepper-description {
+component StepperDescription(label: text, disabled: boolean) layout:inline style:stepper-description {
   label "StepperDescription"
+  action "click"
 }

@@ -1,8 +1,14 @@
 ## Block Table
 ## source: registry/table.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component TableBlock layout:stack style:table {
-  label "Table"
+component TableBlock(label: text) layout:stack style:table {
+  title "Table"
+  subtitle "Table"
+  action "Table"
+  test "use block" {
+    click "Table"
+  }
 }

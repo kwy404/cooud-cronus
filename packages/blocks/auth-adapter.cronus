@@ -1,7 +1,18 @@
 ## Block AuthAdapter
 ## source: registry/auth-adapter.json
 ## type: registry:lib
+## behavior: auth
 
-component AuthAdapterBlock layout:stack style:auth-adapter {
-  label "AuthAdapter"
+component AuthAdapterBlock(label: text) layout:stack style:auth-adapter {
+  title "Auth Adapter"
+  subtitle "Auth Adapter"
+  state pending: boolean = false
+  field "Email"
+  field "Password"
+  action "Sign in"
+  link "Forgot password?" -> "/forgot-password"
+  test "submit auth" {
+    fill email "you@company.com"
+    click "Sign in"
+  }
 }

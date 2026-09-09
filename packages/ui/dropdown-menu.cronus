@@ -1,65 +1,92 @@
 ## DropdownMenu
 ## source: packages/ui/src/components/dropdown-menu.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: DropdownMenu, DropdownMenuTrigger, DropdownMenuGroup, DropdownMenuPortal, DropdownMenuSub, DropdownMenuRadioGroup, DropdownMenuSubTrigger, DropdownMenuSubContent, DropdownMenuContent, DropdownMenuItem, DropdownMenuCheckboxItem, DropdownMenuRadioItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuShortcut
 ## slots: dropdown-menu-checkbox-item, dropdown-menu-content, dropdown-menu-item, dropdown-menu-label, dropdown-menu-radio-item, dropdown-menu-separator, dropdown-menu-shortcut, dropdown-menu-sub-content, dropdown-menu-sub-trigger
 
-component DropdownMenu(label: text) layout:overlay style:dropdown-menu {
+component DropdownMenu(label: text, disabled: boolean, open: boolean) layout:overlay style:dropdown-menu {
   label "DropdownMenu"
+  state open: boolean = false
+  title "DropdownMenu"
+  action "open"
+  action "close"
+  action "focus"
+
+  test "opens DropdownMenu" {
+    click "open"
+    click "close"
+  }
+  test "disabled DropdownMenu" {
+    expect visible "DropdownMenu"
+  }
 }
 
-component DropdownMenuTrigger(label: text) layout:inline style:dropdown-menu-trigger {
+component DropdownMenuTrigger(label: text, disabled: boolean) layout:inline style:dropdown-menu-trigger {
   label "DropdownMenuTrigger"
+  action "click"
 }
 
-component DropdownMenuGroup(label: text) layout:inline style:dropdown-menu-group {
+component DropdownMenuGroup(label: text, disabled: boolean) layout:inline style:dropdown-menu-group {
   label "DropdownMenuGroup"
+  action "click"
 }
 
-component DropdownMenuPortal(label: text) layout:inline style:dropdown-menu-portal {
+component DropdownMenuPortal(label: text, disabled: boolean) layout:inline style:dropdown-menu-portal {
   label "DropdownMenuPortal"
+  action "click"
 }
 
-component DropdownMenuSub(label: text) layout:inline style:dropdown-menu-sub {
+component DropdownMenuSub(label: text, disabled: boolean) layout:inline style:dropdown-menu-sub {
   label "DropdownMenuSub"
+  action "click"
 }
 
-component DropdownMenuRadioGroup(label: text) layout:inline style:dropdown-menu-radio-group {
+component DropdownMenuRadioGroup(label: text, disabled: boolean) layout:inline style:dropdown-menu-radio-group {
   label "DropdownMenuRadioGroup"
+  action "click"
 }
 
-component DropdownMenuSubTrigger(label: text) layout:inline style:dropdown-menu-sub-trigger {
+component DropdownMenuSubTrigger(label: text, disabled: boolean) layout:inline style:dropdown-menu-sub-trigger {
   label "DropdownMenuSubTrigger"
+  action "click"
 }
 
-component DropdownMenuSubContent(label: text) layout:inline style:dropdown-menu-sub-content {
+component DropdownMenuSubContent(label: text, disabled: boolean) layout:inline style:dropdown-menu-sub-content {
   label "DropdownMenuSubContent"
+  action "click"
 }
 
-component DropdownMenuContent(label: text) layout:inline style:dropdown-menu-content {
+component DropdownMenuContent(label: text, disabled: boolean) layout:inline style:dropdown-menu-content {
   label "DropdownMenuContent"
+  action "click"
 }
 
-component DropdownMenuItem(label: text) layout:inline style:dropdown-menu-item {
+component DropdownMenuItem(label: text, disabled: boolean) layout:inline style:dropdown-menu-item {
   label "DropdownMenuItem"
+  action "click"
 }
 
-component DropdownMenuCheckboxItem(label: text) layout:inline style:dropdown-menu-checkbox-item {
+component DropdownMenuCheckboxItem(label: text, disabled: boolean) layout:inline style:dropdown-menu-checkbox-item {
   label "DropdownMenuCheckboxItem"
+  action "click"
 }
 
-component DropdownMenuRadioItem(label: text) layout:inline style:dropdown-menu-radio-item {
+component DropdownMenuRadioItem(label: text, disabled: boolean) layout:inline style:dropdown-menu-radio-item {
   label "DropdownMenuRadioItem"
+  action "click"
 }
 
-component DropdownMenuLabel(label: text) layout:inline style:dropdown-menu-label {
+component DropdownMenuLabel(label: text, disabled: boolean) layout:inline style:dropdown-menu-label {
   label "DropdownMenuLabel"
+  action "click"
 }
 
-component DropdownMenuSeparator(label: text) layout:inline style:dropdown-menu-separator {
+component DropdownMenuSeparator(label: text, disabled: boolean) layout:inline style:dropdown-menu-separator {
   label "DropdownMenuSeparator"
+  action "click"
 }
 
-component DropdownMenuShortcut(label: text) layout:inline style:dropdown-menu-shortcut {
+component DropdownMenuShortcut(label: text, disabled: boolean) layout:inline style:dropdown-menu-shortcut {
   label "DropdownMenuShortcut"
+  action "click"
 }

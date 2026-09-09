@@ -1,21 +1,33 @@
 ## Field
 ## source: packages/ui/src/components/field.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Field, FieldLabel, FieldDescription, FieldError
 ## slots: field, field-description, field-error, field-label
 
-component Field(label: text) layout:stack style:field {
+component Field(label: text, disabled: boolean) layout:stack style:field {
   label "Field"
+  action "click"
+  action "focus"
+
+  test "uses Field" {
+    click "Field"
+  }
+  test "disabled Field" {
+    expect visible "Field"
+  }
 }
 
-component FieldLabel(label: text) layout:inline style:field-label {
+component FieldLabel(label: text, disabled: boolean) layout:inline style:field-label {
   label "FieldLabel"
+  action "click"
 }
 
-component FieldDescription(label: text) layout:inline style:field-description {
+component FieldDescription(label: text, disabled: boolean) layout:inline style:field-description {
   label "FieldDescription"
+  action "click"
 }
 
-component FieldError(label: text) layout:inline style:field-error {
+component FieldError(label: text, disabled: boolean) layout:inline style:field-error {
   label "FieldError"
+  action "click"
 }

@@ -1,8 +1,18 @@
 ## Calendar
 ## source: packages/ui/src/components/calendar.tsx
-## wave 0 - foundation
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Calendar
 
-component Calendar(label: text) layout:stack style:calendar {
+component Calendar(label: text, disabled: boolean) layout:stack style:calendar {
   label "Calendar"
+  columns "name, value, status"
+  item "Row"
+  action "focus"
+
+  test "shows Calendar" {
+    expect visible "Calendar"
+  }
+  test "disabled Calendar" {
+    expect visible "Calendar"
+  }
 }

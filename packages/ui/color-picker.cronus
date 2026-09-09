@@ -1,13 +1,24 @@
 ## ColorPicker
 ## source: packages/ui/src/components/color-picker.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: OklchColor, ColorPicker
 ## slots: color-picker-area, color-picker-area-thumb, color-picker-channel, color-picker-content, color-picker-hue, color-picker-hue-thumb, color-picker-swatch, color-picker-swatch-button, color-picker-swatches, color-picker-trigger, color-picker-value
 
-component ColorPicker(label: text) layout:inline style:color-picker {
+component ColorPicker(label: text, disabled: boolean, value: text, invalid: boolean) layout:inline style:color-picker {
   label "ColorPicker"
+  state value: text = ""
+  field "ColorPicker"
+  action "focus"
+
+  test "fills ColorPicker" {
+    fill value "x"
+  }
+  test "disabled ColorPicker" {
+    expect visible "ColorPicker"
+  }
 }
 
-component OklchColor(label: text) layout:inline style:oklch-color {
+component OklchColor(label: text, disabled: boolean) layout:inline style:oklch-color {
   label "OklchColor"
+  action "click"
 }

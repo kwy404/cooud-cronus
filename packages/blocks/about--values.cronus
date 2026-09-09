@@ -1,8 +1,15 @@
 ## Block AboutValues
 ## source: registry/about--values.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component AboutValuesBlock layout:stack style:about--values {
-  label "AboutValues"
+component AboutValuesBlock(label: text) layout:stack style:about--values {
+  title "About Values"
+  subtitle "Values"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

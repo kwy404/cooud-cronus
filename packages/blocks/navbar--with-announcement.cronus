@@ -1,8 +1,15 @@
 ## Block NavbarWithAnnouncement
 ## source: registry/navbar--with-announcement.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component NavbarWithAnnouncementBlock layout:stack style:navbar--with-announcement {
-  label "NavbarWithAnnouncement"
+component NavbarWithAnnouncementBlock(label: text) layout:stack style:navbar--with-announcement {
+  title "Navbar With Announcement"
+  subtitle "WithAnnouncement"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

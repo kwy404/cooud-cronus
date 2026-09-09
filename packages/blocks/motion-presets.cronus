@@ -1,8 +1,13 @@
 ## Block MotionPresets
 ## source: registry/motion-presets.json
 ## type: registry:ui
-## npm: motion@^12.23.0
+## behavior: card
 
-component MotionPresetsBlock layout:stack style:motion-presets {
-  label "MotionPresets"
+component MotionPresetsBlock(label: text) layout:stack style:motion-presets {
+  title "Motion Presets"
+  subtitle "Motion Presets"
+  action "Motion Presets"
+  test "use block" {
+    click "Motion Presets"
+  }
 }

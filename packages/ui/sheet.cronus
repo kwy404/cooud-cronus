@@ -1,39 +1,58 @@
 ## Sheet
 ## source: packages/ui/src/components/sheet.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Sheet, SheetTrigger, SheetClose, SheetContent, SheetHeader, SheetFooter, SheetTitle, SheetDescription
 ## slots: sheet-close, sheet-content, sheet-description, sheet-footer, sheet-header, sheet-overlay, sheet-title
 ## variants.side: top, bottom, left, right
-## defaults: side=right
 
-component Sheet(label: text) layout:overlay style:sheet {
+component Sheet(label: text, disabled: boolean, open: boolean) layout:overlay style:sheet {
   label "Sheet"
+  state open: boolean = false
+  title "Sheet"
+  action "open"
+  action "close"
+  action "focus"
+
+  test "opens Sheet" {
+    click "open"
+    click "close"
+  }
+  test "disabled Sheet" {
+    expect visible "Sheet"
+  }
 }
 
-component SheetTrigger(label: text) layout:inline style:sheet-trigger {
+component SheetTrigger(label: text, disabled: boolean) layout:inline style:sheet-trigger {
   label "SheetTrigger"
+  action "click"
 }
 
-component SheetClose(label: text) layout:inline style:sheet-close {
+component SheetClose(label: text, disabled: boolean) layout:inline style:sheet-close {
   label "SheetClose"
+  action "click"
 }
 
-component SheetContent(label: text) layout:inline style:sheet-content {
+component SheetContent(label: text, disabled: boolean) layout:inline style:sheet-content {
   label "SheetContent"
+  action "click"
 }
 
-component SheetHeader(label: text) layout:inline style:sheet-header {
+component SheetHeader(label: text, disabled: boolean) layout:inline style:sheet-header {
   label "SheetHeader"
+  action "click"
 }
 
-component SheetFooter(label: text) layout:inline style:sheet-footer {
+component SheetFooter(label: text, disabled: boolean) layout:inline style:sheet-footer {
   label "SheetFooter"
+  action "click"
 }
 
-component SheetTitle(label: text) layout:inline style:sheet-title {
+component SheetTitle(label: text, disabled: boolean) layout:inline style:sheet-title {
   label "SheetTitle"
+  action "click"
 }
 
-component SheetDescription(label: text) layout:inline style:sheet-description {
+component SheetDescription(label: text, disabled: boolean) layout:inline style:sheet-description {
   label "SheetDescription"
+  action "click"
 }

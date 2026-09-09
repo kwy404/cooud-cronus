@@ -1,8 +1,14 @@
 ## Block InputGroup
 ## source: registry/input-group.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component InputGroupBlock layout:stack style:input-group {
-  label "InputGroup"
+component InputGroupBlock(label: text) layout:stack style:input-group {
+  title "Input Group"
+  subtitle "Input Group"
+  action "Input Group"
+  test "use block" {
+    click "Input Group"
+  }
 }

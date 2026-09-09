@@ -1,8 +1,16 @@
 ## Block BorderBeam
 ## source: registry/border-beam.json
 ## type: registry:ui
+## behavior: commerce
 ## registryDependencies: cn
 
-component BorderBeamBlock layout:stack style:border-beam {
-  label "BorderBeam"
+component BorderBeamBlock(label: text) layout:stack style:border-beam {
+  title "Border Beam"
+  subtitle "Border Beam"
+  field "Card"
+  value "$0"
+  action "Pay"
+  test "checkout" {
+    click "Pay"
+  }
 }

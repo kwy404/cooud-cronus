@@ -1,13 +1,23 @@
 ## Marquee
 ## source: packages/ui/src/components/marquee.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: MarqueeMotionPreference, Marquee
 ## slots: marquee, marquee-group
 
-component Marquee(label: text) layout:inline style:marquee {
+component Marquee(label: text, disabled: boolean) layout:inline style:marquee {
   label "Marquee"
+  action "click"
+  action "focus"
+
+  test "uses Marquee" {
+    click "Marquee"
+  }
+  test "disabled Marquee" {
+    expect visible "Marquee"
+  }
 }
 
-component MarqueeMotionPreference(label: text) layout:inline style:marquee-motion-preference {
+component MarqueeMotionPreference(label: text, disabled: boolean) layout:inline style:marquee-motion-preference {
   label "MarqueeMotionPreference"
+  action "click"
 }

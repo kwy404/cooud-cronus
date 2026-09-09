@@ -1,9 +1,14 @@
 ## Block ToggleGroup
 ## source: registry/toggle-group.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn, toggle
-## npm: @radix-ui/react-toggle-group@^1.1.10, class-variance-authority@^0.7.1
 
-component ToggleGroupBlock layout:stack style:toggle-group {
-  label "ToggleGroup"
+component ToggleGroupBlock(label: text) layout:stack style:toggle-group {
+  title "Toggle Group"
+  subtitle "Toggle Group"
+  action "Toggle Group"
+  test "use block" {
+    click "Toggle Group"
+  }
 }

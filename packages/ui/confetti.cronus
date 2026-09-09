@@ -1,9 +1,18 @@
 ## Confetti
 ## source: packages/ui/src/components/confetti.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Confetti
 ## slots: confetti
 
-component Confetti(label: text) layout:inline style:confetti {
+component Confetti(label: text, disabled: boolean) layout:inline style:confetti {
   label "Confetti"
+  action "click"
+  action "focus"
+
+  test "uses Confetti" {
+    click "Confetti"
+  }
+  test "disabled Confetti" {
+    expect visible "Confetti"
+  }
 }

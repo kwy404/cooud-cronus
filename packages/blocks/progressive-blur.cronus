@@ -1,9 +1,14 @@
 ## Block ProgressiveBlur
 ## source: registry/progressive-blur.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: class-variance-authority@^0.7.1
 
-component ProgressiveBlurBlock layout:stack style:progressive-blur {
-  label "ProgressiveBlur"
+component ProgressiveBlurBlock(label: text) layout:stack style:progressive-blur {
+  title "Progressive Blur"
+  subtitle "Progressive Blur"
+  action "Progressive Blur"
+  test "use block" {
+    click "Progressive Blur"
+  }
 }

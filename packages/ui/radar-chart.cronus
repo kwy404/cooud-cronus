@@ -1,9 +1,19 @@
 ## RadarChart
 ## source: packages/ui/src/components/radar-chart.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: RadarChart
 ## slots: radar-chart
 
-component RadarChart(label: text) layout:stack style:radar-chart {
+component RadarChart(label: text, disabled: boolean) layout:stack style:radar-chart {
   label "RadarChart"
+  columns "name, value, status"
+  item "Row"
+  action "focus"
+
+  test "shows RadarChart" {
+    expect visible "RadarChart"
+  }
+  test "disabled RadarChart" {
+    expect visible "RadarChart"
+  }
 }

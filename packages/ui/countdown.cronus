@@ -1,13 +1,23 @@
 ## Countdown
 ## source: packages/ui/src/components/countdown.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: CountdownLabels, Countdown
 ## slots: countdown, countdown-label, countdown-unit, countdown-value
 
-component Countdown(label: text) layout:inline style:countdown {
+component Countdown(label: text, disabled: boolean) layout:inline style:countdown {
   label "Countdown"
+  action "click"
+  action "focus"
+
+  test "uses Countdown" {
+    click "Countdown"
+  }
+  test "disabled Countdown" {
+    expect visible "Countdown"
+  }
 }
 
-component CountdownLabels(label: text) layout:inline style:countdown-labels {
+component CountdownLabels(label: text, disabled: boolean) layout:inline style:countdown-labels {
   label "CountdownLabels"
+  action "click"
 }

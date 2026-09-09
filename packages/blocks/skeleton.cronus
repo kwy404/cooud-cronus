@@ -1,8 +1,14 @@
 ## Block Skeleton
 ## source: registry/skeleton.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component SkeletonBlock layout:stack style:skeleton {
-  label "Skeleton"
+component SkeletonBlock(label: text) layout:stack style:skeleton {
+  title "Skeleton"
+  subtitle "Skeleton"
+  action "Skeleton"
+  test "use block" {
+    click "Skeleton"
+  }
 }

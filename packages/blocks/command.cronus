@@ -1,9 +1,14 @@
 ## Block Command
 ## source: registry/command.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn, dialog
-## npm: cmdk@^1.1.1, lucide-react@^0.577.0
 
-component CommandBlock layout:stack style:command {
-  label "Command"
+component CommandBlock(label: text) layout:stack style:command {
+  title "Command"
+  subtitle "Command"
+  action "Command"
+  test "use block" {
+    click "Command"
+  }
 }

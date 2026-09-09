@@ -1,9 +1,18 @@
 ## GradientText
 ## source: packages/ui/src/components/gradient-text.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: GradientText
 ## slots: gradient-text
 
-component GradientText(label: text) layout:inline style:gradient-text {
+component GradientText(label: text, disabled: boolean) layout:inline style:gradient-text {
   label "GradientText"
+  action "click"
+  action "focus"
+
+  test "uses GradientText" {
+    click "GradientText"
+  }
+  test "disabled GradientText" {
+    expect visible "GradientText"
+  }
 }

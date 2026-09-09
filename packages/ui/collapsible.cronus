@@ -1,17 +1,31 @@
 ## Collapsible
 ## source: packages/ui/src/components/collapsible.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Collapsible, CollapsibleTrigger, CollapsibleContent
 ## slots: collapsible-content
 
-component Collapsible(label: text) layout:inline style:collapsible {
+component Collapsible(label: text, disabled: boolean, value: text) layout:stack style:collapsible {
   label "Collapsible"
+  state value: text = "one"
+  tab "one"
+  tab "two"
+  tab "three"
+  action "focus"
+
+  test "switches Collapsible" {
+    click "two"
+  }
+  test "disabled Collapsible" {
+    expect visible "Collapsible"
+  }
 }
 
-component CollapsibleTrigger(label: text) layout:inline style:collapsible-trigger {
+component CollapsibleTrigger(label: text, disabled: boolean) layout:inline style:collapsible-trigger {
   label "CollapsibleTrigger"
+  action "click"
 }
 
-component CollapsibleContent(label: text) layout:inline style:collapsible-content {
+component CollapsibleContent(label: text, disabled: boolean) layout:inline style:collapsible-content {
   label "CollapsibleContent"
+  action "click"
 }

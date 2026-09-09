@@ -1,8 +1,14 @@
 ## Block ButtonGroup
 ## source: registry/button-group.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component ButtonGroupBlock layout:stack style:button-group {
-  label "ButtonGroup"
+component ButtonGroupBlock(label: text) layout:stack style:button-group {
+  title "Button Group"
+  subtitle "Button Group"
+  action "Button Group"
+  test "use block" {
+    click "Button Group"
+  }
 }

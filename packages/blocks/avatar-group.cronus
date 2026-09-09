@@ -1,9 +1,14 @@
 ## Block AvatarGroup
 ## source: registry/avatar-group.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: avatar, cn
-## npm: class-variance-authority@^0.7.1
 
-component AvatarGroupBlock layout:stack style:avatar-group {
-  label "AvatarGroup"
+component AvatarGroupBlock(label: text) layout:stack style:avatar-group {
+  title "Avatar Group"
+  subtitle "Avatar Group"
+  action "Avatar Group"
+  test "use block" {
+    click "Avatar Group"
+  }
 }

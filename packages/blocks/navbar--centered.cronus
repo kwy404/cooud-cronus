@@ -1,8 +1,15 @@
 ## Block NavbarCentered
 ## source: registry/navbar--centered.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component NavbarCenteredBlock layout:stack style:navbar--centered {
-  label "NavbarCentered"
+component NavbarCenteredBlock(label: text) layout:stack style:navbar--centered {
+  title "Navbar Centered"
+  subtitle "Centered"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

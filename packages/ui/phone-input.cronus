@@ -1,17 +1,29 @@
 ## PhoneInput
 ## source: packages/ui/src/components/phone-input.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: PhoneCountry, DEFAULT_PHONE_COUNTRIES, PhoneInput
 ## slots: phone-input, phone-input-content, phone-input-country, phone-input-field
 
-component PhoneInput(label: text) layout:inline style:phone-input {
+component PhoneInput(label: text, disabled: boolean, value: text, invalid: boolean) layout:inline style:phone-input {
   label "PhoneInput"
+  state value: text = ""
+  field "PhoneInput"
+  action "focus"
+
+  test "fills PhoneInput" {
+    fill value "x"
+  }
+  test "disabled PhoneInput" {
+    expect visible "PhoneInput"
+  }
 }
 
-component PhoneCountry(label: text) layout:inline style:phone-country {
+component PhoneCountry(label: text, disabled: boolean) layout:inline style:phone-country {
   label "PhoneCountry"
+  action "click"
 }
 
-component DEFAULT_PHONE_COUNTRIES(label: text) layout:inline style:d-e-f-a-u-l-t_-p-h-o-n-e_-c-o-u-n-t-r-i-e-s {
+component DEFAULT_PHONE_COUNTRIES(label: text, disabled: boolean) layout:inline style:d-e-f-a-u-l-t_-p-h-o-n-e_-c-o-u-n-t-r-i-e-s {
   label "DEFAULT_PHONE_COUNTRIES"
+  action "click"
 }

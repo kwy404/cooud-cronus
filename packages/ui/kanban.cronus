@@ -1,17 +1,29 @@
 ## Kanban
 ## source: packages/ui/src/components/kanban.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: KanbanItem, KanbanColumn, Kanban
 ## slots: kanban, kanban-card, kanban-card-body, kanban-card-description, kanban-card-overlay, kanban-card-title, kanban-column, kanban-column-count, kanban-column-header, kanban-column-list, kanban-column-title, kanban-drag-handle
 
-component Kanban(label: text) layout:stack style:kanban {
+component Kanban(label: text, disabled: boolean) layout:stack style:kanban {
   label "Kanban"
+  columns "name, value, status"
+  item "Row"
+  action "focus"
+
+  test "shows Kanban" {
+    expect visible "Kanban"
+  }
+  test "disabled Kanban" {
+    expect visible "Kanban"
+  }
 }
 
-component KanbanItem(label: text) layout:inline style:kanban-item {
+component KanbanItem(label: text, disabled: boolean) layout:inline style:kanban-item {
   label "KanbanItem"
+  action "click"
 }
 
-component KanbanColumn(label: text) layout:inline style:kanban-column {
+component KanbanColumn(label: text, disabled: boolean) layout:inline style:kanban-column {
   label "KanbanColumn"
+  action "click"
 }

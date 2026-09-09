@@ -1,9 +1,18 @@
 ## GlareHover
 ## source: packages/ui/src/components/glare-hover.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: GlareHover
 ## slots: glare-hover
 
-component GlareHover(label: text) layout:inline style:glare-hover {
+component GlareHover(label: text, disabled: boolean) layout:inline style:glare-hover {
   label "GlareHover"
+  action "click"
+  action "focus"
+
+  test "uses GlareHover" {
+    click "GlareHover"
+  }
+  test "disabled GlareHover" {
+    expect visible "GlareHover"
+  }
 }

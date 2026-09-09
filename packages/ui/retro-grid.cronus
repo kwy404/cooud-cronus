@@ -1,9 +1,18 @@
 ## RetroGrid
 ## source: packages/ui/src/components/retro-grid.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: RetroGrid
 ## slots: retro-grid
 
-component RetroGrid(label: text) layout:inline style:retro-grid {
+component RetroGrid(label: text, disabled: boolean) layout:inline style:retro-grid {
   label "RetroGrid"
+  action "click"
+  action "focus"
+
+  test "uses RetroGrid" {
+    click "RetroGrid"
+  }
+  test "disabled RetroGrid" {
+    expect visible "RetroGrid"
+  }
 }

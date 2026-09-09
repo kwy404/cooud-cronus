@@ -1,9 +1,14 @@
 ## Block Breadcrumb
 ## source: registry/breadcrumb.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: @radix-ui/react-slot@^1.2.3, lucide-react@^0.577.0
 
-component BreadcrumbBlock layout:stack style:breadcrumb {
-  label "Breadcrumb"
+component BreadcrumbBlock(label: text) layout:stack style:breadcrumb {
+  title "Breadcrumb"
+  subtitle "Breadcrumb"
+  action "Breadcrumb"
+  test "use block" {
+    click "Breadcrumb"
+  }
 }

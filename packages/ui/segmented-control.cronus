@@ -1,13 +1,26 @@
 ## SegmentedControl
 ## source: packages/ui/src/components/segmented-control.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: SegmentedControl, SegmentedControlItem
 ## slots: segmented-control, segmented-control-item, segmented-control-thumb
 
-component SegmentedControl(label: text) layout:inline style:segmented-control {
+component SegmentedControl(label: text, disabled: boolean, value: text) layout:stack style:segmented-control {
   label "SegmentedControl"
+  state value: text = "one"
+  tab "one"
+  tab "two"
+  tab "three"
+  action "focus"
+
+  test "switches SegmentedControl" {
+    click "two"
+  }
+  test "disabled SegmentedControl" {
+    expect visible "SegmentedControl"
+  }
 }
 
-component SegmentedControlItem(label: text) layout:inline style:segmented-control-item {
+component SegmentedControlItem(label: text, disabled: boolean) layout:inline style:segmented-control-item {
   label "SegmentedControlItem"
+  action "click"
 }

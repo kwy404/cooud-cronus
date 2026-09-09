@@ -1,8 +1,13 @@
 ## Block ApiKeysCreate
 ## source: registry/api-keys--create.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: card
 
-component ApiKeysCreateBlock layout:stack style:api-keys--create {
-  label "ApiKeysCreate"
+component ApiKeysCreateBlock(label: text) layout:stack style:api-keys--create {
+  title "Api Keys Create"
+  subtitle "Create"
+  action "Api Keys Create"
+  test "use block" {
+    click "Api Keys Create"
+  }
 }

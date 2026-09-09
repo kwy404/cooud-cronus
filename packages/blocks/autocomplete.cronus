@@ -1,9 +1,14 @@
 ## Block Autocomplete
 ## source: registry/autocomplete.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn, command, popover, skeleton, spinner
-## npm: cmdk@^1.1.1
 
-component AutocompleteBlock layout:stack style:autocomplete {
-  label "Autocomplete"
+component AutocompleteBlock(label: text) layout:stack style:autocomplete {
+  title "Autocomplete"
+  subtitle "Autocomplete"
+  action "Autocomplete"
+  test "use block" {
+    click "Autocomplete"
+  }
 }

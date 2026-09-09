@@ -1,9 +1,19 @@
 ## Block Signup
 ## source: registry/signup.json
 ## type: registry:block
+## behavior: auth
 ## registryDependencies: auth-adapter, demo-saas
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
 
-component SignupBlock layout:stack style:signup {
-  label "Signup"
+component SignupBlock(label: text) layout:stack style:signup {
+  title "Signup"
+  subtitle "Signup"
+  state pending: boolean = false
+  field "Email"
+  field "Password"
+  action "Sign in"
+  link "Forgot password?" -> "/forgot-password"
+  test "submit auth" {
+    fill email "you@company.com"
+    click "Sign in"
+  }
 }

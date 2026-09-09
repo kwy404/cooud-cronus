@@ -1,8 +1,13 @@
 ## Block EmptyState
 ## source: registry/empty-state.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: empty
 
-component EmptyStateBlock layout:stack style:empty-state {
-  label "EmptyState"
+component EmptyStateBlock(label: text) layout:stack style:empty-state {
+  title "Empty State"
+  subtitle "Empty State"
+  action "Go home" -> "/"
+  test "empty" {
+    click "Go home"
+  }
 }

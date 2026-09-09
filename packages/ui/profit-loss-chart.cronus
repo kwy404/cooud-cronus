@@ -1,9 +1,19 @@
 ## ProfitLossChart
 ## source: packages/ui/src/components/profit-loss-chart.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: ProfitLossChart
 ## slots: profit-loss-chart
 
-component ProfitLossChart(label: text) layout:stack style:profit-loss-chart {
+component ProfitLossChart(label: text, disabled: boolean) layout:stack style:profit-loss-chart {
   label "ProfitLossChart"
+  columns "name, value, status"
+  item "Row"
+  action "focus"
+
+  test "shows ProfitLossChart" {
+    expect visible "ProfitLossChart"
+  }
+  test "disabled ProfitLossChart" {
+    expect visible "ProfitLossChart"
+  }
 }

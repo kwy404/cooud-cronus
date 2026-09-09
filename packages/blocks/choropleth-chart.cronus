@@ -1,8 +1,16 @@
 ## Block ChoroplethChart
 ## source: registry/choropleth-chart.json
 ## type: registry:ui
+## behavior: data
 ## registryDependencies: cn
 
-component ChoroplethChartBlock layout:stack style:choropleth-chart {
-  label "ChoroplethChart"
+component ChoroplethChartBlock(label: text) layout:stack style:choropleth-chart {
+  title "Choropleth Chart"
+  subtitle "Choropleth Chart"
+  columns "name, value, status"
+  item "Row"
+  value "0"
+  test "reads ChoroplethChart" {
+    expect visible "Choropleth Chart"
+  }
 }

@@ -1,9 +1,16 @@
 ## Block FunnelChart
 ## source: registry/funnel-chart.json
 ## type: registry:ui
+## behavior: data
 ## registryDependencies: chart, cn
-## npm: recharts@^3.9.2
 
-component FunnelChartBlock layout:stack style:funnel-chart {
-  label "FunnelChart"
+component FunnelChartBlock(label: text) layout:stack style:funnel-chart {
+  title "Funnel Chart"
+  subtitle "Funnel Chart"
+  columns "name, value, status"
+  item "Row"
+  value "0"
+  test "reads FunnelChart" {
+    expect visible "Funnel Chart"
+  }
 }

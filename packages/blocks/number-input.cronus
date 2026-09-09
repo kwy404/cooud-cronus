@@ -1,9 +1,14 @@
 ## Block NumberInput
 ## source: registry/number-input.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: button, cn, input
-## npm: lucide-react@^0.577.0
 
-component NumberInputBlock layout:stack style:number-input {
-  label "NumberInput"
+component NumberInputBlock(label: text) layout:stack style:number-input {
+  title "Number Input"
+  subtitle "Number Input"
+  action "Number Input"
+  test "use block" {
+    click "Number Input"
+  }
 }

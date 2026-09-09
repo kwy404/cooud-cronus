@@ -1,9 +1,14 @@
 ## Block Metric
 ## source: registry/metric.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: lucide-react@^0.577.0
 
-component MetricBlock layout:stack style:metric {
-  label "Metric"
+component MetricBlock(label: text) layout:stack style:metric {
+  title "Metric"
+  subtitle "Metric"
+  action "Metric"
+  test "use block" {
+    click "Metric"
+  }
 }

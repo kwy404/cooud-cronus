@@ -1,8 +1,15 @@
 ## Block Hero
 ## source: registry/hero.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component HeroBlock layout:stack style:hero {
-  label "Hero"
+component HeroBlock(label: text) layout:stack style:hero {
+  title "Hero"
+  subtitle "Hero"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

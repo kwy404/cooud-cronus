@@ -1,33 +1,50 @@
 ## Pagination
 ## source: packages/ui/src/components/pagination.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationPrevious, PaginationNext, PaginationEllipsis
 ## slots: pagination, pagination-content, pagination-ellipsis, pagination-item, pagination-link, pagination-next, pagination-previous
 
-component Pagination(label: text) layout:inline style:pagination {
+component Pagination(label: text, disabled: boolean) layout:stack style:pagination {
   label "Pagination"
+  item "Home" -> "/"
+  item "Next" -> "/next"
+  action "navigate"
+  action "focus"
+
+  test "navigates Pagination" {
+    click "Home"
+  }
+  test "disabled Pagination" {
+    expect visible "Pagination"
+  }
 }
 
-component PaginationContent(label: text) layout:inline style:pagination-content {
+component PaginationContent(label: text, disabled: boolean) layout:inline style:pagination-content {
   label "PaginationContent"
+  action "click"
 }
 
-component PaginationItem(label: text) layout:inline style:pagination-item {
+component PaginationItem(label: text, disabled: boolean) layout:inline style:pagination-item {
   label "PaginationItem"
+  action "click"
 }
 
-component PaginationLink(label: text) layout:inline style:pagination-link {
+component PaginationLink(label: text, disabled: boolean) layout:inline style:pagination-link {
   label "PaginationLink"
+  action "click"
 }
 
-component PaginationPrevious(label: text) layout:inline style:pagination-previous {
+component PaginationPrevious(label: text, disabled: boolean) layout:inline style:pagination-previous {
   label "PaginationPrevious"
+  action "click"
 }
 
-component PaginationNext(label: text) layout:inline style:pagination-next {
+component PaginationNext(label: text, disabled: boolean) layout:inline style:pagination-next {
   label "PaginationNext"
+  action "click"
 }
 
-component PaginationEllipsis(label: text) layout:inline style:pagination-ellipsis {
+component PaginationEllipsis(label: text, disabled: boolean) layout:inline style:pagination-ellipsis {
   label "PaginationEllipsis"
+  action "click"
 }

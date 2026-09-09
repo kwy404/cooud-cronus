@@ -1,8 +1,14 @@
 ## Block AspectRatio
 ## source: registry/aspect-ratio.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component AspectRatioBlock layout:stack style:aspect-ratio {
-  label "AspectRatio"
+component AspectRatioBlock(label: text) layout:stack style:aspect-ratio {
+  title "Aspect Ratio"
+  subtitle "Aspect Ratio"
+  action "Aspect Ratio"
+  test "use block" {
+    click "Aspect Ratio"
+  }
 }

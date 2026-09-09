@@ -1,9 +1,18 @@
 ## LightRays
 ## source: packages/ui/src/components/light-rays.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: LightRays
 ## slots: light-rays
 
-component LightRays(label: text) layout:inline style:light-rays {
+component LightRays(label: text, disabled: boolean) layout:inline style:light-rays {
   label "LightRays"
+  action "click"
+  action "focus"
+
+  test "uses LightRays" {
+    click "LightRays"
+  }
+  test "disabled LightRays" {
+    expect visible "LightRays"
+  }
 }

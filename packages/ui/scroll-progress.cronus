@@ -1,9 +1,18 @@
 ## ScrollProgress
 ## source: packages/ui/src/components/scroll-progress.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: ScrollProgress
 ## slots: scroll-progress, scroll-progress-fill, scroll-progress-ring, scroll-progress-value
 
-component ScrollProgress(label: text) layout:inline style:scroll-progress {
+component ScrollProgress(label: text, disabled: boolean) layout:inline style:scroll-progress {
   label "ScrollProgress"
+  action "click"
+  action "focus"
+
+  test "uses ScrollProgress" {
+    click "ScrollProgress"
+  }
+  test "disabled ScrollProgress" {
+    expect visible "ScrollProgress"
+  }
 }

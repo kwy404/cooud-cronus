@@ -1,8 +1,15 @@
 ## Block HeroCompact
 ## source: registry/hero--compact.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component HeroCompactBlock layout:stack style:hero--compact {
-  label "HeroCompact"
+component HeroCompactBlock(label: text) layout:stack style:hero--compact {
+  title "Hero Compact"
+  subtitle "Compact"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

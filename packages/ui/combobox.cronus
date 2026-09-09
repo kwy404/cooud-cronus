@@ -1,9 +1,22 @@
 ## Combobox
 ## source: packages/ui/src/components/combobox.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Combobox
 ## slots: combobox-content, combobox-trigger
 
-component Combobox(label: text) layout:overlay style:combobox {
+component Combobox(label: text, disabled: boolean, open: boolean) layout:overlay style:combobox {
   label "Combobox"
+  state open: boolean = false
+  title "Combobox"
+  action "open"
+  action "close"
+  action "focus"
+
+  test "opens Combobox" {
+    click "open"
+    click "close"
+  }
+  test "disabled Combobox" {
+    expect visible "Combobox"
+  }
 }

@@ -1,9 +1,19 @@
 ## Slider
 ## source: packages/ui/src/components/slider.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Slider
 ## slots: slider
 
-component Slider(label: text) layout:inline style:slider {
+component Slider(label: text, disabled: boolean, value: text, invalid: boolean) layout:inline style:slider {
   label "Slider"
+  state value: text = ""
+  field "Slider"
+  action "focus"
+
+  test "fills Slider" {
+    fill value "x"
+  }
+  test "disabled Slider" {
+    expect visible "Slider"
+  }
 }

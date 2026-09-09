@@ -1,9 +1,18 @@
 ## Ripple
 ## source: packages/ui/src/components/ripple.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Ripple
 ## slots: ripple
 
-component Ripple(label: text) layout:inline style:ripple {
+component Ripple(label: text, disabled: boolean) layout:inline style:ripple {
   label "Ripple"
+  action "click"
+  action "focus"
+
+  test "uses Ripple" {
+    click "Ripple"
+  }
+  test "disabled Ripple" {
+    expect visible "Ripple"
+  }
 }

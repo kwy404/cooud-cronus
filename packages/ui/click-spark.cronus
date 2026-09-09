@@ -1,9 +1,18 @@
 ## ClickSpark
 ## source: packages/ui/src/components/click-spark.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: ClickSpark
 ## slots: click-spark
 
-component ClickSpark(label: text) layout:inline style:click-spark {
+component ClickSpark(label: text, disabled: boolean) layout:inline style:click-spark {
   label "ClickSpark"
+  action "click"
+  action "focus"
+
+  test "uses ClickSpark" {
+    click "ClickSpark"
+  }
+  test "disabled ClickSpark" {
+    expect visible "ClickSpark"
+  }
 }

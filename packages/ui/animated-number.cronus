@@ -1,9 +1,18 @@
 ## AnimatedNumber
 ## source: packages/ui/src/components/animated-number.tsx
-## wave 6 - motion harvest
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: AnimatedNumber
 ## slots: animated-number
 
-component AnimatedNumber(label: text) layout:inline style:animated-number {
+component AnimatedNumber(label: text, disabled: boolean) layout:inline style:animated-number {
   label "AnimatedNumber"
+  action "click"
+  action "focus"
+
+  test "uses AnimatedNumber" {
+    click "AnimatedNumber"
+  }
+  test "disabled AnimatedNumber" {
+    expect visible "AnimatedNumber"
+  }
 }

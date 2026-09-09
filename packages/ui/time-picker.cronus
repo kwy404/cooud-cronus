@@ -1,13 +1,24 @@
 ## TimePicker
 ## source: packages/ui/src/components/time-picker.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: TimeValue, TimePicker
 ## slots: time-picker, time-picker-column, time-picker-content, time-picker-done, time-picker-now, time-picker-option
 
-component TimePicker(label: text) layout:inline style:time-picker {
+component TimePicker(label: text, disabled: boolean, value: text, invalid: boolean) layout:inline style:time-picker {
   label "TimePicker"
+  state value: text = ""
+  field "TimePicker"
+  action "focus"
+
+  test "fills TimePicker" {
+    fill value "x"
+  }
+  test "disabled TimePicker" {
+    expect visible "TimePicker"
+  }
 }
 
-component TimeValue(label: text) layout:inline style:time-value {
+component TimeValue(label: text, disabled: boolean) layout:inline style:time-value {
   label "TimeValue"
+  action "click"
 }

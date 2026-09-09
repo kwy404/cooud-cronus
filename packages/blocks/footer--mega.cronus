@@ -1,8 +1,15 @@
 ## Block FooterMega
 ## source: registry/footer--mega.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component FooterMegaBlock layout:stack style:footer--mega {
-  label "FooterMega"
+component FooterMegaBlock(label: text) layout:stack style:footer--mega {
+  title "Footer Mega"
+  subtitle "Mega"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

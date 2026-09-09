@@ -1,9 +1,14 @@
 ## Block AnimatedButton
 ## source: registry/animated-button.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: button, cn, motion-presets
-## npm: motion@^12.23.0
 
-component AnimatedButtonBlock layout:stack style:animated-button {
-  label "AnimatedButton"
+component AnimatedButtonBlock(label: text) layout:stack style:animated-button {
+  title "Animated Button"
+  subtitle "Animated Button"
+  action "Animated Button"
+  test "use block" {
+    click "Animated Button"
+  }
 }

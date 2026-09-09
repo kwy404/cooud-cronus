@@ -1,8 +1,14 @@
 ## Block DotPattern
 ## source: registry/dot-pattern.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component DotPatternBlock layout:stack style:dot-pattern {
-  label "DotPattern"
+component DotPatternBlock(label: text) layout:stack style:dot-pattern {
+  title "Dot Pattern"
+  subtitle "Dot Pattern"
+  action "Dot Pattern"
+  test "use block" {
+    click "Dot Pattern"
+  }
 }

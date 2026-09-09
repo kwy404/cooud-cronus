@@ -1,8 +1,15 @@
 ## Block Testimonials
 ## source: registry/testimonials.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component TestimonialsBlock layout:stack style:testimonials {
-  label "Testimonials"
+component TestimonialsBlock(label: text) layout:stack style:testimonials {
+  title "Testimonials"
+  subtitle "Testimonials"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

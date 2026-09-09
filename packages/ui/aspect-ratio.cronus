@@ -1,9 +1,18 @@
 ## AspectRatio
 ## source: packages/ui/src/components/aspect-ratio.tsx
-## wave 5 - layout & app navigation
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: AspectRatio
 ## slots: aspect-ratio
 
-component AspectRatio(label: text) layout:inline style:aspect-ratio {
+component AspectRatio(label: text, disabled: boolean) layout:inline style:aspect-ratio {
   label "AspectRatio"
+  action "click"
+  action "focus"
+
+  test "uses AspectRatio" {
+    click "AspectRatio"
+  }
+  test "disabled AspectRatio" {
+    expect visible "AspectRatio"
+  }
 }

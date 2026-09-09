@@ -1,8 +1,13 @@
 ## Block FeedbackForm
 ## source: registry/feedback-form.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3
+## behavior: card
 
-component FeedbackFormBlock layout:stack style:feedback-form {
-  label "FeedbackForm"
+component FeedbackFormBlock(label: text) layout:stack style:feedback-form {
+  title "Feedback Form"
+  subtitle "Feedback Form"
+  action "Feedback Form"
+  test "use block" {
+    click "Feedback Form"
+  }
 }

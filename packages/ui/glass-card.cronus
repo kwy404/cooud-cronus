@@ -1,9 +1,18 @@
 ## GlassCard
 ## source: packages/ui/src/components/glass-card.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: GlassCard
 ## slots: glass-card
 
-component GlassCard(label: text) layout:stack style:glass-card {
+component GlassCard(label: text, disabled: boolean) layout:inline style:glass-card {
   label "GlassCard"
+  action "click"
+  action "focus"
+
+  test "uses GlassCard" {
+    click "GlassCard"
+  }
+  test "disabled GlassCard" {
+    expect visible "GlassCard"
+  }
 }

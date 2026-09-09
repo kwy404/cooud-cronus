@@ -1,13 +1,23 @@
 ## Dock
 ## source: packages/ui/src/components/dock.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: DockItem, Dock
 ## slots: dock, dock-item
 
-component Dock(label: text) layout:inline style:dock {
+component Dock(label: text, disabled: boolean) layout:inline style:dock {
   label "Dock"
+  action "click"
+  action "focus"
+
+  test "uses Dock" {
+    click "Dock"
+  }
+  test "disabled Dock" {
+    expect visible "Dock"
+  }
 }
 
-component DockItem(label: text) layout:inline style:dock-item {
+component DockItem(label: text, disabled: boolean) layout:inline style:dock-item {
   label "DockItem"
+  action "click"
 }

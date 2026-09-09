@@ -1,16 +1,25 @@
 ## AvatarGroup
 ## source: packages/ui/src/components/avatar-group.tsx
-## wave 3 - data & display
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: AvatarGroupAvatar, AvatarGroup
 ## slots: avatar-group, avatar-group-overflow
 ## variants.size: sm, md, lg
-## defaults: size=md
 
-component AvatarGroup(label: text, size: text) layout:inline style:avatar-group {
+component AvatarGroup(label: text, disabled: boolean, size: text) layout:inline style:avatar-group {
   label "AvatarGroup"
   size "md"
+  action "click"
+  action "focus"
+
+  test "uses AvatarGroup" {
+    click "AvatarGroup"
+  }
+  test "disabled AvatarGroup" {
+    expect visible "AvatarGroup"
+  }
 }
 
-component AvatarGroupAvatar(label: text) layout:inline style:avatar-group-avatar {
+component AvatarGroupAvatar(label: text, disabled: boolean) layout:inline style:avatar-group-avatar {
   label "AvatarGroupAvatar"
+  action "click"
 }

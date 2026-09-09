@@ -1,8 +1,16 @@
 ## Block StarBorder
 ## source: registry/star-border.json
 ## type: registry:ui
+## behavior: commerce
 ## registryDependencies: cn
 
-component StarBorderBlock layout:stack style:star-border {
-  label "StarBorder"
+component StarBorderBlock(label: text) layout:stack style:star-border {
+  title "Star Border"
+  subtitle "Star Border"
+  field "Card"
+  value "$0"
+  action "Pay"
+  test "checkout" {
+    click "Pay"
+  }
 }

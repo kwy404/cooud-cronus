@@ -1,41 +1,62 @@
 ## AlertDialog
 ## source: packages/ui/src/components/alert-dialog.tsx
-## wave 2 - overlays & navigation
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogFooter, AlertDialogTitle, AlertDialogDescription, AlertDialogAction, AlertDialogCancel
 ## slots: alert-dialog-action, alert-dialog-cancel, alert-dialog-content, alert-dialog-description, alert-dialog-footer, alert-dialog-header, alert-dialog-overlay, alert-dialog-title
 
-component AlertDialog(label: text) layout:overlay style:alert-dialog {
+component AlertDialog(label: text, disabled: boolean, open: boolean) layout:overlay style:alert-dialog {
   label "AlertDialog"
+  state open: boolean = false
+  title "AlertDialog"
+  action "open"
+  action "close"
+  action "focus"
+
+  test "opens AlertDialog" {
+    click "open"
+    click "close"
+  }
+  test "disabled AlertDialog" {
+    expect visible "AlertDialog"
+  }
 }
 
-component AlertDialogTrigger(label: text) layout:inline style:alert-dialog-trigger {
+component AlertDialogTrigger(label: text, disabled: boolean) layout:inline style:alert-dialog-trigger {
   label "AlertDialogTrigger"
+  action "click"
 }
 
-component AlertDialogContent(label: text) layout:inline style:alert-dialog-content {
+component AlertDialogContent(label: text, disabled: boolean) layout:inline style:alert-dialog-content {
   label "AlertDialogContent"
+  action "click"
 }
 
-component AlertDialogHeader(label: text) layout:inline style:alert-dialog-header {
+component AlertDialogHeader(label: text, disabled: boolean) layout:inline style:alert-dialog-header {
   label "AlertDialogHeader"
+  action "click"
 }
 
-component AlertDialogFooter(label: text) layout:inline style:alert-dialog-footer {
+component AlertDialogFooter(label: text, disabled: boolean) layout:inline style:alert-dialog-footer {
   label "AlertDialogFooter"
+  action "click"
 }
 
-component AlertDialogTitle(label: text) layout:inline style:alert-dialog-title {
+component AlertDialogTitle(label: text, disabled: boolean) layout:inline style:alert-dialog-title {
   label "AlertDialogTitle"
+  action "click"
 }
 
-component AlertDialogDescription(label: text) layout:inline style:alert-dialog-description {
+component AlertDialogDescription(label: text, disabled: boolean) layout:inline style:alert-dialog-description {
   label "AlertDialogDescription"
+  action "click"
 }
 
-component AlertDialogAction(label: text) layout:inline style:alert-dialog-action {
+component AlertDialogAction(label: text, disabled: boolean) layout:inline style:alert-dialog-action {
   label "AlertDialogAction"
+  action "click"
 }
 
-component AlertDialogCancel(label: text) layout:inline style:alert-dialog-cancel {
+component AlertDialogCancel(label: text, disabled: boolean) layout:inline style:alert-dialog-cancel {
   label "AlertDialogCancel"
+  action "click"
 }

@@ -1,7 +1,13 @@
 ## Block DemoSaas
 ## source: registry/demo-saas.json
 ## type: registry:lib
+## behavior: card
 
-component DemoSaasBlock layout:stack style:demo-saas {
-  label "DemoSaas"
+component DemoSaasBlock(label: text) layout:stack style:demo-saas {
+  title "Demo Saas"
+  subtitle "Demo Saas"
+  action "Demo Saas"
+  test "use block" {
+    click "Demo Saas"
+  }
 }

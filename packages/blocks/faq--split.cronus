@@ -1,8 +1,15 @@
 ## Block FaqSplit
 ## source: registry/faq--split.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3
+## behavior: marketing
 
-component FaqSplitBlock layout:stack style:faq--split {
-  label "FaqSplit"
+component FaqSplitBlock(label: text) layout:stack style:faq--split {
+  title "Faq Split"
+  subtitle "Split"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

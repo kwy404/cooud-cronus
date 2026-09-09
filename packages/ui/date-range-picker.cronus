@@ -1,17 +1,29 @@
 ## DateRangePicker
 ## source: packages/ui/src/components/date-range-picker.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: DateRange, DateRangePreset, DateRangePicker
 ## slots: date-range-picker-calendar, date-range-picker-content, date-range-picker-preset, date-range-picker-presets, date-range-picker-trigger
 
-component DateRangePicker(label: text) layout:inline style:date-range-picker {
+component DateRangePicker(label: text, disabled: boolean, value: text, invalid: boolean) layout:inline style:date-range-picker {
   label "DateRangePicker"
+  state value: text = ""
+  field "DateRangePicker"
+  action "focus"
+
+  test "fills DateRangePicker" {
+    fill value "x"
+  }
+  test "disabled DateRangePicker" {
+    expect visible "DateRangePicker"
+  }
 }
 
-component DateRange(label: text) layout:inline style:date-range {
+component DateRange(label: text, disabled: boolean) layout:inline style:date-range {
   label "DateRange"
+  action "click"
 }
 
-component DateRangePreset(label: text) layout:inline style:date-range-preset {
+component DateRangePreset(label: text, disabled: boolean) layout:inline style:date-range-preset {
   label "DateRangePreset"
+  action "click"
 }

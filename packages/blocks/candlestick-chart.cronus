@@ -1,9 +1,16 @@
 ## Block CandlestickChart
 ## source: registry/candlestick-chart.json
 ## type: registry:ui
+## behavior: data
 ## registryDependencies: chart, cn
-## npm: recharts@^3.9.2
 
-component CandlestickChartBlock layout:stack style:candlestick-chart {
-  label "CandlestickChart"
+component CandlestickChartBlock(label: text) layout:stack style:candlestick-chart {
+  title "Candlestick Chart"
+  subtitle "Candlestick Chart"
+  columns "name, value, status"
+  item "Row"
+  value "0"
+  test "reads CandlestickChart" {
+    expect visible "Candlestick Chart"
+  }
 }

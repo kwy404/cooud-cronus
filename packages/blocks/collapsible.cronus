@@ -1,9 +1,14 @@
 ## Block Collapsible
 ## source: registry/collapsible.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: @radix-ui/react-collapsible@^1.1.14
 
-component CollapsibleBlock layout:stack style:collapsible {
-  label "Collapsible"
+component CollapsibleBlock(label: text) layout:stack style:collapsible {
+  title "Collapsible"
+  subtitle "Collapsible"
+  action "Collapsible"
+  test "use block" {
+    click "Collapsible"
+  }
 }

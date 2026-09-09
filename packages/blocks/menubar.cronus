@@ -1,9 +1,14 @@
 ## Block Menubar
 ## source: registry/menubar.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: @radix-ui/react-menubar@^1.1.18, lucide-react@^0.577.0
 
-component MenubarBlock layout:stack style:menubar {
-  label "Menubar"
+component MenubarBlock(label: text) layout:stack style:menubar {
+  title "Menubar"
+  subtitle "Menubar"
+  action "Menubar"
+  test "use block" {
+    click "Menubar"
+  }
 }

@@ -1,8 +1,16 @@
 ## Block SunburstChart
 ## source: registry/sunburst-chart.json
 ## type: registry:ui
+## behavior: data
 ## registryDependencies: cn
 
-component SunburstChartBlock layout:stack style:sunburst-chart {
-  label "SunburstChart"
+component SunburstChartBlock(label: text) layout:stack style:sunburst-chart {
+  title "Sunburst Chart"
+  subtitle "Sunburst Chart"
+  columns "name, value, status"
+  item "Row"
+  value "0"
+  test "reads SunburstChart" {
+    expect visible "Sunburst Chart"
+  }
 }

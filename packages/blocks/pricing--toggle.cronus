@@ -1,8 +1,15 @@
 ## Block PricingToggle
 ## source: registry/pricing--toggle.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component PricingToggleBlock layout:stack style:pricing--toggle {
-  label "PricingToggle"
+component PricingToggleBlock(label: text) layout:stack style:pricing--toggle {
+  title "Pricing Toggle"
+  subtitle "Toggle"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

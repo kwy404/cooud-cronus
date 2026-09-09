@@ -1,8 +1,13 @@
 ## Block ReviewsCompact
 ## source: registry/reviews--compact.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: card
 
-component ReviewsCompactBlock layout:stack style:reviews--compact {
-  label "ReviewsCompact"
+component ReviewsCompactBlock(label: text) layout:stack style:reviews--compact {
+  title "Reviews Compact"
+  subtitle "Compact"
+  action "Reviews Compact"
+  test "use block" {
+    click "Reviews Compact"
+  }
 }

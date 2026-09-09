@@ -1,8 +1,14 @@
 ## Block ScrambleText
 ## source: registry/scramble-text.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component ScrambleTextBlock layout:stack style:scramble-text {
-  label "ScrambleText"
+component ScrambleTextBlock(label: text) layout:stack style:scramble-text {
+  title "Scramble Text"
+  subtitle "Scramble Text"
+  action "Scramble Text"
+  test "use block" {
+    click "Scramble Text"
+  }
 }

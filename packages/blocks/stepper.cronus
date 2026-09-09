@@ -1,9 +1,14 @@
 ## Block Stepper
 ## source: registry/stepper.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: class-variance-authority@^0.7.1, lucide-react@^0.577.0
 
-component StepperBlock layout:stack style:stepper {
-  label "Stepper"
+component StepperBlock(label: text) layout:stack style:stepper {
+  title "Stepper"
+  subtitle "Stepper"
+  action "Stepper"
+  test "use block" {
+    click "Stepper"
+  }
 }

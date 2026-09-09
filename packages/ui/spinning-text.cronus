@@ -1,9 +1,18 @@
 ## SpinningText
 ## source: packages/ui/src/components/spinning-text.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: SpinningText
 ## slots: spinning-text
 
-component SpinningText(label: text) layout:inline style:spinning-text {
+component SpinningText(label: text, disabled: boolean) layout:inline style:spinning-text {
   label "SpinningText"
+  action "click"
+  action "focus"
+
+  test "uses SpinningText" {
+    click "SpinningText"
+  }
+  test "disabled SpinningText" {
+    expect visible "SpinningText"
+  }
 }

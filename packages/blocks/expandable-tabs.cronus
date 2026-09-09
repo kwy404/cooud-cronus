@@ -1,9 +1,14 @@
 ## Block ExpandableTabs
 ## source: registry/expandable-tabs.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: motion@^12.23.0
 
-component ExpandableTabsBlock layout:stack style:expandable-tabs {
-  label "ExpandableTabs"
+component ExpandableTabsBlock(label: text) layout:stack style:expandable-tabs {
+  title "Expandable Tabs"
+  subtitle "Expandable Tabs"
+  action "Expandable Tabs"
+  test "use block" {
+    click "Expandable Tabs"
+  }
 }

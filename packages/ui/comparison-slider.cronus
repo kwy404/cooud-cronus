@@ -1,9 +1,18 @@
 ## ComparisonSlider
 ## source: packages/ui/src/components/comparison-slider.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: ComparisonSlider
 ## slots: comparison-after, comparison-before, comparison-slider
 
-component ComparisonSlider(label: text) layout:inline style:comparison-slider {
+component ComparisonSlider(label: text, disabled: boolean) layout:inline style:comparison-slider {
   label "ComparisonSlider"
+  action "click"
+  action "focus"
+
+  test "uses ComparisonSlider" {
+    click "ComparisonSlider"
+  }
+  test "disabled ComparisonSlider" {
+    expect visible "ComparisonSlider"
+  }
 }

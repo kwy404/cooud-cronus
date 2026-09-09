@@ -1,9 +1,14 @@
 ## Block Kanban
 ## source: registry/kanban.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: badge, cn
-## npm: @dnd-kit/core@^6.3.1, @dnd-kit/sortable@^10.0.0, @dnd-kit/utilities@^3.2.2, lucide-react@^0.577.0
 
-component KanbanBlock layout:stack style:kanban {
-  label "Kanban"
+component KanbanBlock(label: text) layout:stack style:kanban {
+  title "Kanban"
+  subtitle "Kanban"
+  action "Kanban"
+  test "use block" {
+    click "Kanban"
+  }
 }

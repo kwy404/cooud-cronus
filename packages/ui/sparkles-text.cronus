@@ -1,9 +1,18 @@
 ## SparklesText
 ## source: packages/ui/src/components/sparkles-text.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: SparklesText
 ## slots: sparkles-text
 
-component SparklesText(label: text) layout:inline style:sparkles-text {
+component SparklesText(label: text, disabled: boolean) layout:inline style:sparkles-text {
   label "SparklesText"
+  action "click"
+  action "focus"
+
+  test "uses SparklesText" {
+    click "SparklesText"
+  }
+  test "disabled SparklesText" {
+    expect visible "SparklesText"
+  }
 }

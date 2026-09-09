@@ -1,8 +1,13 @@
 ## Block CommentThread
 ## source: registry/comment-thread.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: card
 
-component CommentThreadBlock layout:stack style:comment-thread {
-  label "CommentThread"
+component CommentThreadBlock(label: text) layout:stack style:comment-thread {
+  title "Comment Thread"
+  subtitle "Comment Thread"
+  action "Comment Thread"
+  test "use block" {
+    click "Comment Thread"
+  }
 }

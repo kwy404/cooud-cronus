@@ -1,8 +1,14 @@
 ## Block AccountSecurity
 ## source: registry/account-security.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: settings
 
-component AccountSecurityBlock layout:stack style:account-security {
-  label "AccountSecurity"
+component AccountSecurityBlock(label: text) layout:stack style:account-security {
+  title "Account Security"
+  subtitle "Account Security"
+  field "Name"
+  action "Save"
+  test "save settings" {
+    click "Save"
+  }
 }

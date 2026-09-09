@@ -1,9 +1,14 @@
 ## Block MorphingPopover
 ## source: registry/morphing-popover.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: lucide-react@^0.577.0, motion@^12.23.0
 
-component MorphingPopoverBlock layout:stack style:morphing-popover {
-  label "MorphingPopover"
+component MorphingPopoverBlock(label: text) layout:stack style:morphing-popover {
+  title "Morphing Popover"
+  subtitle "Morphing Popover"
+  action "Morphing Popover"
+  test "use block" {
+    click "Morphing Popover"
+  }
 }

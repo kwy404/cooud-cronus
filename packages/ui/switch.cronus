@@ -1,9 +1,19 @@
 ## Switch
 ## source: packages/ui/src/components/switch.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Switch
 ## slots: switch
 
-component Switch(label: text) layout:inline style:switch {
+component Switch(label: text, disabled: boolean, checked: boolean) layout:inline style:switch {
   label "Switch"
+  state checked: boolean = false
+  action "toggle"
+  action "focus"
+
+  test "toggles Switch" {
+    click "Switch"
+  }
+  test "disabled Switch" {
+    expect visible "Switch"
+  }
 }

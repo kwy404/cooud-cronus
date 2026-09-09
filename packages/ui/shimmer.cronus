@@ -1,9 +1,18 @@
 ## Shimmer
 ## source: packages/ui/src/components/shimmer.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Shimmer
 ## slots: shimmer
 
-component Shimmer(label: text) layout:inline style:shimmer {
+component Shimmer(label: text, disabled: boolean) layout:inline style:shimmer {
   label "Shimmer"
+  action "click"
+  action "focus"
+
+  test "uses Shimmer" {
+    click "Shimmer"
+  }
+  test "disabled Shimmer" {
+    expect visible "Shimmer"
+  }
 }

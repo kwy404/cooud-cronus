@@ -1,8 +1,14 @@
 ## Block Terminal
 ## source: registry/terminal.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn, copy-button
 
-component TerminalBlock layout:stack style:terminal {
-  label "Terminal"
+component TerminalBlock(label: text) layout:stack style:terminal {
+  title "Terminal"
+  subtitle "Terminal"
+  action "Terminal"
+  test "use block" {
+    click "Terminal"
+  }
 }

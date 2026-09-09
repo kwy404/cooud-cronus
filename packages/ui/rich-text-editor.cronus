@@ -1,9 +1,18 @@
 ## RichTextEditor
 ## source: packages/ui/src/components/rich-text-editor.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: RichTextEditor
 ## slots: rich-text-editor, rich-text-editor-content-wrapper, rich-text-editor-placeholder, rich-text-editor-toolbar
 
-component RichTextEditor(label: text) layout:stack style:rich-text-editor {
+component RichTextEditor(label: text, disabled: boolean) layout:inline style:rich-text-editor {
   label "RichTextEditor"
+  action "click"
+  action "focus"
+
+  test "uses RichTextEditor" {
+    click "RichTextEditor"
+  }
+  test "disabled RichTextEditor" {
+    expect visible "RichTextEditor"
+  }
 }

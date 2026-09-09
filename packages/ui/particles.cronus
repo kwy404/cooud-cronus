@@ -1,9 +1,18 @@
 ## Particles
 ## source: packages/ui/src/components/particles.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Particles
 ## slots: particles
 
-component Particles(label: text) layout:inline style:particles {
+component Particles(label: text, disabled: boolean) layout:inline style:particles {
   label "Particles"
+  action "click"
+  action "focus"
+
+  test "uses Particles" {
+    click "Particles"
+  }
+  test "disabled Particles" {
+    expect visible "Particles"
+  }
 }

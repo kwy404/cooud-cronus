@@ -1,9 +1,14 @@
 ## Block DynamicIsland
 ## source: registry/dynamic-island.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: motion@^12.23.0
 
-component DynamicIslandBlock layout:stack style:dynamic-island {
-  label "DynamicIsland"
+component DynamicIslandBlock(label: text) layout:stack style:dynamic-island {
+  title "Dynamic Island"
+  subtitle "Dynamic Island"
+  action "Dynamic Island"
+  test "use block" {
+    click "Dynamic Island"
+  }
 }

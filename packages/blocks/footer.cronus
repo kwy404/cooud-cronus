@@ -1,8 +1,15 @@
 ## Block Footer
 ## source: registry/footer.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component FooterBlock layout:stack style:footer {
-  label "Footer"
+component FooterBlock(label: text) layout:stack style:footer {
+  title "Footer"
+  subtitle "Footer"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

@@ -1,21 +1,36 @@
 ## Accordion
 ## source: packages/ui/src/components/accordion.tsx
-## wave 2 - overlays & navigation
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Accordion, AccordionItem, AccordionTrigger, AccordionContent
 ## slots: accordion-content, accordion-item, accordion-trigger
 
-component Accordion(label: text) layout:stack style:accordion {
+component Accordion(label: text, disabled: boolean, value: text) layout:stack style:accordion {
   label "Accordion"
+  state value: text = "one"
+  tab "one"
+  tab "two"
+  tab "three"
+  action "focus"
+
+  test "switches Accordion" {
+    click "two"
+  }
+  test "disabled Accordion" {
+    expect visible "Accordion"
+  }
 }
 
-component AccordionItem(label: text) layout:inline style:accordion-item {
+component AccordionItem(label: text, disabled: boolean) layout:inline style:accordion-item {
   label "AccordionItem"
+  action "click"
 }
 
-component AccordionTrigger(label: text) layout:inline style:accordion-trigger {
+component AccordionTrigger(label: text, disabled: boolean) layout:inline style:accordion-trigger {
   label "AccordionTrigger"
+  action "click"
 }
 
-component AccordionContent(label: text) layout:inline style:accordion-content {
+component AccordionContent(label: text, disabled: boolean) layout:inline style:accordion-content {
   label "AccordionContent"
+  action "click"
 }

@@ -1,9 +1,19 @@
 ## FloatingLabelInput
 ## source: packages/ui/src/components/floating-label-input.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: FloatingLabelInput
 ## slots: floating-label-input, floating-label-input-end, floating-label-input-helper, floating-label-input-label, floating-label-input-start
 
-component FloatingLabelInput(label: text) layout:inline style:floating-label-input {
+component FloatingLabelInput(label: text, disabled: boolean, value: text, invalid: boolean) layout:inline style:floating-label-input {
   label "FloatingLabelInput"
+  state value: text = ""
+  field "FloatingLabelInput"
+  action "focus"
+
+  test "fills FloatingLabelInput" {
+    fill value "x"
+  }
+  test "disabled FloatingLabelInput" {
+    expect visible "FloatingLabelInput"
+  }
 }

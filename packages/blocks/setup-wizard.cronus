@@ -1,8 +1,13 @@
 ## Block SetupWizard
 ## source: registry/setup-wizard.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3
+## behavior: card
 
-component SetupWizardBlock layout:stack style:setup-wizard {
-  label "SetupWizard"
+component SetupWizardBlock(label: text) layout:stack style:setup-wizard {
+  title "Setup Wizard"
+  subtitle "Setup Wizard"
+  action "Setup Wizard"
+  test "use block" {
+    click "Setup Wizard"
+  }
 }

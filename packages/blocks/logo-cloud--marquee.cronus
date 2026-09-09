@@ -1,8 +1,15 @@
 ## Block LogoCloudMarquee
 ## source: registry/logo-cloud--marquee.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component LogoCloudMarqueeBlock layout:stack style:logo-cloud--marquee {
-  label "LogoCloudMarquee"
+component LogoCloudMarqueeBlock(label: text) layout:stack style:logo-cloud--marquee {
+  title "Logo Cloud Marquee"
+  subtitle "Marquee"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

@@ -1,9 +1,18 @@
 ## ButtonGroup
 ## source: packages/ui/src/components/button-group.tsx
-## wave 0 - foundation
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: ButtonGroup
 ## slots: button-group
 
-component ButtonGroup(label: text) layout:inline style:button-group {
+component ButtonGroup(label: text, disabled: boolean) layout:inline style:button-group {
   label "ButtonGroup"
+  action "click"
+  action "focus"
+
+  test "uses ButtonGroup" {
+    click "ButtonGroup"
+  }
+  test "disabled ButtonGroup" {
+    expect visible "ButtonGroup"
+  }
 }

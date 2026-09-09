@@ -1,9 +1,18 @@
 ## Separator
 ## source: packages/ui/src/components/separator.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Separator
 ## slots: separator
 
-component Separator(label: text) layout:inline style:separator {
+component Separator(label: text, disabled: boolean) layout:inline style:separator {
   label "Separator"
+  action "click"
+  action "focus"
+
+  test "uses Separator" {
+    click "Separator"
+  }
+  test "disabled Separator" {
+    expect visible "Separator"
+  }
 }

@@ -1,84 +1,112 @@
 ## Sidebar
 ## source: packages/ui/src/components/sidebar.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: SidebarContextValue, SidebarProvider, Sidebar, SidebarTrigger, SidebarRail, SidebarInset, SidebarHeader, SidebarFooter, SidebarContent, SidebarSeparator, SidebarGroup, SidebarGroupLabel, SidebarGroupContent, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarMenuSub, SidebarMenuSubItem, SidebarMenuSubButton
 ## slots: sidebar, sidebar-content, sidebar-footer, sidebar-group, sidebar-group-content, sidebar-group-label, sidebar-header, sidebar-inset, sidebar-menu, sidebar-menu-button, sidebar-menu-item, sidebar-menu-sub, sidebar-menu-sub-button, sidebar-menu-sub-item, sidebar-rail, sidebar-separator, sidebar-trigger, sidebar-wrapper
 ## variants.size: sm, md, lg
-## defaults: size=md
 
-component Sidebar(label: text, size: text) layout:stack style:sidebar {
+component Sidebar(label: text, disabled: boolean, size: text) layout:stack style:sidebar {
   label "Sidebar"
   size "md"
+  item "Home" -> "/"
+  item "Next" -> "/next"
+  action "navigate"
+  action "focus"
+
+  test "navigates Sidebar" {
+    click "Home"
+  }
+  test "disabled Sidebar" {
+    expect visible "Sidebar"
+  }
 }
 
-component SidebarContextValue(label: text) layout:inline style:sidebar-context-value {
+component SidebarContextValue(label: text, disabled: boolean) layout:inline style:sidebar-context-value {
   label "SidebarContextValue"
+  action "click"
 }
 
-component SidebarProvider(label: text) layout:inline style:sidebar-provider {
+component SidebarProvider(label: text, disabled: boolean) layout:inline style:sidebar-provider {
   label "SidebarProvider"
+  action "click"
 }
 
-component SidebarTrigger(label: text) layout:inline style:sidebar-trigger {
+component SidebarTrigger(label: text, disabled: boolean) layout:inline style:sidebar-trigger {
   label "SidebarTrigger"
+  action "click"
 }
 
-component SidebarRail(label: text) layout:inline style:sidebar-rail {
+component SidebarRail(label: text, disabled: boolean) layout:inline style:sidebar-rail {
   label "SidebarRail"
+  action "click"
 }
 
-component SidebarInset(label: text) layout:inline style:sidebar-inset {
+component SidebarInset(label: text, disabled: boolean) layout:inline style:sidebar-inset {
   label "SidebarInset"
+  action "click"
 }
 
-component SidebarHeader(label: text) layout:inline style:sidebar-header {
+component SidebarHeader(label: text, disabled: boolean) layout:inline style:sidebar-header {
   label "SidebarHeader"
+  action "click"
 }
 
-component SidebarFooter(label: text) layout:inline style:sidebar-footer {
+component SidebarFooter(label: text, disabled: boolean) layout:inline style:sidebar-footer {
   label "SidebarFooter"
+  action "click"
 }
 
-component SidebarContent(label: text) layout:inline style:sidebar-content {
+component SidebarContent(label: text, disabled: boolean) layout:inline style:sidebar-content {
   label "SidebarContent"
+  action "click"
 }
 
-component SidebarSeparator(label: text) layout:inline style:sidebar-separator {
+component SidebarSeparator(label: text, disabled: boolean) layout:inline style:sidebar-separator {
   label "SidebarSeparator"
+  action "click"
 }
 
-component SidebarGroup(label: text) layout:inline style:sidebar-group {
+component SidebarGroup(label: text, disabled: boolean) layout:inline style:sidebar-group {
   label "SidebarGroup"
+  action "click"
 }
 
-component SidebarGroupLabel(label: text) layout:inline style:sidebar-group-label {
+component SidebarGroupLabel(label: text, disabled: boolean) layout:inline style:sidebar-group-label {
   label "SidebarGroupLabel"
+  action "click"
 }
 
-component SidebarGroupContent(label: text) layout:inline style:sidebar-group-content {
+component SidebarGroupContent(label: text, disabled: boolean) layout:inline style:sidebar-group-content {
   label "SidebarGroupContent"
+  action "click"
 }
 
-component SidebarMenu(label: text) layout:inline style:sidebar-menu {
+component SidebarMenu(label: text, disabled: boolean) layout:inline style:sidebar-menu {
   label "SidebarMenu"
+  action "click"
 }
 
-component SidebarMenuItem(label: text) layout:inline style:sidebar-menu-item {
+component SidebarMenuItem(label: text, disabled: boolean) layout:inline style:sidebar-menu-item {
   label "SidebarMenuItem"
+  action "click"
 }
 
-component SidebarMenuButton(label: text) layout:inline style:sidebar-menu-button {
+component SidebarMenuButton(label: text, disabled: boolean) layout:inline style:sidebar-menu-button {
   label "SidebarMenuButton"
+  action "click"
 }
 
-component SidebarMenuSub(label: text) layout:inline style:sidebar-menu-sub {
+component SidebarMenuSub(label: text, disabled: boolean) layout:inline style:sidebar-menu-sub {
   label "SidebarMenuSub"
+  action "click"
 }
 
-component SidebarMenuSubItem(label: text) layout:inline style:sidebar-menu-sub-item {
+component SidebarMenuSubItem(label: text, disabled: boolean) layout:inline style:sidebar-menu-sub-item {
   label "SidebarMenuSubItem"
+  action "click"
 }
 
-component SidebarMenuSubButton(label: text) layout:inline style:sidebar-menu-sub-button {
+component SidebarMenuSubButton(label: text, disabled: boolean) layout:inline style:sidebar-menu-sub-button {
   label "SidebarMenuSubButton"
+  action "click"
 }

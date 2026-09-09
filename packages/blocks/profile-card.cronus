@@ -1,8 +1,14 @@
 ## Block ProfileCard
 ## source: registry/profile-card.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3
+## behavior: settings
 
-component ProfileCardBlock layout:stack style:profile-card {
-  label "ProfileCard"
+component ProfileCardBlock(label: text) layout:stack style:profile-card {
+  title "Profile Card"
+  subtitle "Profile Card"
+  field "Name"
+  action "Save"
+  test "save settings" {
+    click "Save"
+  }
 }

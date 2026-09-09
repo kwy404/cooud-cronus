@@ -1,13 +1,24 @@
 ## SankeyChart
 ## source: packages/ui/src/components/sankey-chart.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: SankeyChartData, SankeyChart
 ## slots: sankey-chart
 
-component SankeyChart(label: text) layout:stack style:sankey-chart {
+component SankeyChart(label: text, disabled: boolean) layout:stack style:sankey-chart {
   label "SankeyChart"
+  columns "name, value, status"
+  item "Row"
+  action "focus"
+
+  test "shows SankeyChart" {
+    expect visible "SankeyChart"
+  }
+  test "disabled SankeyChart" {
+    expect visible "SankeyChart"
+  }
 }
 
-component SankeyChartData(label: text) layout:inline style:sankey-chart-data {
+component SankeyChartData(label: text, disabled: boolean) layout:inline style:sankey-chart-data {
   label "SankeyChartData"
+  action "click"
 }

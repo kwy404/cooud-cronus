@@ -1,8 +1,18 @@
 ## Block OtpSplit
 ## source: registry/otp--split.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: auth
 
-component OtpSplitBlock layout:stack style:otp--split {
-  label "OtpSplit"
+component OtpSplitBlock(label: text) layout:stack style:otp--split {
+  title "Otp Split"
+  subtitle "Split"
+  state pending: boolean = false
+  field "Email"
+  field "Password"
+  action "Sign in"
+  link "Forgot password?" -> "/forgot-password"
+  test "submit auth" {
+    fill email "you@company.com"
+    click "Sign in"
+  }
 }

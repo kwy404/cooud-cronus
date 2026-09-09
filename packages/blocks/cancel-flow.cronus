@@ -1,8 +1,13 @@
 ## Block CancelFlow
 ## source: registry/cancel-flow.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: card
 
-component CancelFlowBlock layout:stack style:cancel-flow {
-  label "CancelFlow"
+component CancelFlowBlock(label: text) layout:stack style:cancel-flow {
+  title "Cancel Flow"
+  subtitle "Cancel Flow"
+  action "Cancel Flow"
+  test "use block" {
+    click "Cancel Flow"
+  }
 }

@@ -1,9 +1,16 @@
 ## Block SankeyChart
 ## source: registry/sankey-chart.json
 ## type: registry:ui
+## behavior: data
 ## registryDependencies: chart, cn
-## npm: recharts@^3.9.2
 
-component SankeyChartBlock layout:stack style:sankey-chart {
-  label "SankeyChart"
+component SankeyChartBlock(label: text) layout:stack style:sankey-chart {
+  title "Sankey Chart"
+  subtitle "Sankey Chart"
+  columns "name, value, status"
+  item "Row"
+  value "0"
+  test "reads SankeyChart" {
+    expect visible "Sankey Chart"
+  }
 }

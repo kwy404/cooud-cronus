@@ -1,8 +1,15 @@
 ## Block TestimonialsGrid
 ## source: registry/testimonials--grid.json
 ## type: registry:block
-## npm: @cronus-ui/ui@0.7.3, lucide-react@^0.577.0
+## behavior: marketing
 
-component TestimonialsGridBlock layout:stack style:testimonials--grid {
-  label "TestimonialsGrid"
+component TestimonialsGridBlock(label: text) layout:stack style:testimonials--grid {
+  title "Testimonials Grid"
+  subtitle "Grid"
+  action "Get started"
+  action "Learn more"
+  cta "Get started"
+  test "cta" {
+    click "Get started"
+  }
 }

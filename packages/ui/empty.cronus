@@ -1,25 +1,38 @@
 ## Empty
 ## source: packages/ui/src/components/empty.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Empty, EmptyIcon, EmptyTitle, EmptyDescription, EmptyContent
 ## slots: empty, empty-content, empty-description, empty-icon, empty-title
 
-component Empty(label: text) layout:stack style:empty {
+component Empty(label: text, disabled: boolean) layout:stack style:empty {
   label "Empty"
+  action "click"
+  action "focus"
+
+  test "uses Empty" {
+    click "Empty"
+  }
+  test "disabled Empty" {
+    expect visible "Empty"
+  }
 }
 
-component EmptyIcon(label: text) layout:inline style:empty-icon {
+component EmptyIcon(label: text, disabled: boolean) layout:inline style:empty-icon {
   label "EmptyIcon"
+  action "click"
 }
 
-component EmptyTitle(label: text) layout:inline style:empty-title {
+component EmptyTitle(label: text, disabled: boolean) layout:inline style:empty-title {
   label "EmptyTitle"
+  action "click"
 }
 
-component EmptyDescription(label: text) layout:inline style:empty-description {
+component EmptyDescription(label: text, disabled: boolean) layout:inline style:empty-description {
   label "EmptyDescription"
+  action "click"
 }
 
-component EmptyContent(label: text) layout:inline style:empty-content {
+component EmptyContent(label: text, disabled: boolean) layout:inline style:empty-content {
   label "EmptyContent"
+  action "click"
 }

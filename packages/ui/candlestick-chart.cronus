@@ -1,9 +1,19 @@
 ## CandlestickChart
 ## source: packages/ui/src/components/candlestick-chart.tsx
-## wave 0 - foundation
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: CandlestickChart
 ## slots: candlestick-chart, candlestick-marks
 
-component CandlestickChart(label: text) layout:stack style:candlestick-chart {
+component CandlestickChart(label: text, disabled: boolean) layout:stack style:candlestick-chart {
   label "CandlestickChart"
+  columns "name, value, status"
+  item "Row"
+  action "focus"
+
+  test "shows CandlestickChart" {
+    expect visible "CandlestickChart"
+  }
+  test "disabled CandlestickChart" {
+    expect visible "CandlestickChart"
+  }
 }

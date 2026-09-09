@@ -1,45 +1,67 @@
 ## Drawer
 ## source: packages/ui/src/components/drawer.tsx
-## wave 1 - forms
+## behavior: native component (state, items, tests). Kernel renders.
 ## exports: Drawer, DrawerTrigger, DrawerPortal, DrawerClose, DrawerOverlay, DrawerContent, DrawerHeader, DrawerFooter, DrawerTitle, DrawerDescription
 ## slots: drawer, drawer-content, drawer-description, drawer-footer, drawer-header, drawer-overlay, drawer-title
 
-component Drawer(label: text) layout:overlay style:drawer {
+component Drawer(label: text, disabled: boolean, open: boolean) layout:overlay style:drawer {
   label "Drawer"
+  state open: boolean = false
+  title "Drawer"
+  action "open"
+  action "close"
+  action "focus"
+
+  test "opens Drawer" {
+    click "open"
+    click "close"
+  }
+  test "disabled Drawer" {
+    expect visible "Drawer"
+  }
 }
 
-component DrawerTrigger(label: text) layout:inline style:drawer-trigger {
+component DrawerTrigger(label: text, disabled: boolean) layout:inline style:drawer-trigger {
   label "DrawerTrigger"
+  action "click"
 }
 
-component DrawerPortal(label: text) layout:inline style:drawer-portal {
+component DrawerPortal(label: text, disabled: boolean) layout:inline style:drawer-portal {
   label "DrawerPortal"
+  action "click"
 }
 
-component DrawerClose(label: text) layout:inline style:drawer-close {
+component DrawerClose(label: text, disabled: boolean) layout:inline style:drawer-close {
   label "DrawerClose"
+  action "click"
 }
 
-component DrawerOverlay(label: text) layout:inline style:drawer-overlay {
+component DrawerOverlay(label: text, disabled: boolean) layout:inline style:drawer-overlay {
   label "DrawerOverlay"
+  action "click"
 }
 
-component DrawerContent(label: text) layout:inline style:drawer-content {
+component DrawerContent(label: text, disabled: boolean) layout:inline style:drawer-content {
   label "DrawerContent"
+  action "click"
 }
 
-component DrawerHeader(label: text) layout:inline style:drawer-header {
+component DrawerHeader(label: text, disabled: boolean) layout:inline style:drawer-header {
   label "DrawerHeader"
+  action "click"
 }
 
-component DrawerFooter(label: text) layout:inline style:drawer-footer {
+component DrawerFooter(label: text, disabled: boolean) layout:inline style:drawer-footer {
   label "DrawerFooter"
+  action "click"
 }
 
-component DrawerTitle(label: text) layout:inline style:drawer-title {
+component DrawerTitle(label: text, disabled: boolean) layout:inline style:drawer-title {
   label "DrawerTitle"
+  action "click"
 }
 
-component DrawerDescription(label: text) layout:inline style:drawer-description {
+component DrawerDescription(label: text, disabled: boolean) layout:inline style:drawer-description {
   label "DrawerDescription"
+  action "click"
 }

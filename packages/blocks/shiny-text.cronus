@@ -1,9 +1,14 @@
 ## Block ShinyText
 ## source: registry/shiny-text.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
-## npm: @radix-ui/react-slot@^1.2.3
 
-component ShinyTextBlock layout:stack style:shiny-text {
-  label "ShinyText"
+component ShinyTextBlock(label: text) layout:stack style:shiny-text {
+  title "Shiny Text"
+  subtitle "Shiny Text"
+  action "Shiny Text"
+  test "use block" {
+    click "Shiny Text"
+  }
 }

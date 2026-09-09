@@ -1,8 +1,14 @@
 ## Block TableOfContents
 ## source: registry/table-of-contents.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component TableOfContentsBlock layout:stack style:table-of-contents {
-  label "TableOfContents"
+component TableOfContentsBlock(label: text) layout:stack style:table-of-contents {
+  title "Table Of Contents"
+  subtitle "Table Of Contents"
+  action "Table Of Contents"
+  test "use block" {
+    click "Table Of Contents"
+  }
 }

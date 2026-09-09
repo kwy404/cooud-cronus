@@ -1,8 +1,14 @@
 ## Block ClickSpark
 ## source: registry/click-spark.json
 ## type: registry:ui
+## behavior: card
 ## registryDependencies: cn
 
-component ClickSparkBlock layout:stack style:click-spark {
-  label "ClickSpark"
+component ClickSparkBlock(label: text) layout:stack style:click-spark {
+  title "Click Spark"
+  subtitle "Click Spark"
+  action "Click Spark"
+  test "use block" {
+    click "Click Spark"
+  }
 }
