@@ -1,0 +1,32 @@
+# SDD: CRONUS-native UI contract (from cronus-ui CONTRACT.md)
+status: active-draft
+authority: migration-ui-contract
+date: 2026-09-08
+
+Preserve **intent**. Drop React mechanics.
+
+## Rules
+
+1. **Semantic tokens only.** Primitives use `--cronus-*` (or documented aliases that resolve to them). Forbidden: Tailwind palette scales (`bg-zinc-900`, `text-neutral-500`, `bg-amber-500`) and raw hex in primitive renderers. Allowed: `color-mix` on a semantic var; `text-white`/`bg-black` on a surface the primitive owns, with a comment (ADR 0001).
+2. **Variants explicit.** Named enums, defaulted, testable. Export the set in the SDD/tests (CVA equivalent).
+3. **Stable selector.** Root has `data-slot="<name>"`. Add `data-variant` when variants exist.
+4. **Polymorphism.** `href` set → `<a>`; else `<button type="button">` unless type authored. No React `asChild`.
+5. **No refs.**
+6. **Focus.** `outline-none` + `focus-visible` ring using `ring` + `ring-offset` on `surface-base`. Not `focus:ring-amber-500`.
+7. **Disabled.** `disabled` attribute, reduced opacity, no pointer events.
+8. **A11y.** Real elements; `aria-*` when needed; Spinner `role="status"`; Skeleton `aria-hidden`.
+9. **RTL.** Logical CSS. No `pl-`/`text-left` in primitives.
+10. **i18n.** Primitive chrome strings are authored in `.cronus` or passed as params. No hardcoded “Loading” without a default param.
+11. **Looks** (ADR 0004). `data-cronus-look` orthogonal to theme/mode. Do not fork variant enums per look.
+12. **Motion.** Honor `prefers-reduced-motion`. Single curve target: `cubic-bezier(.22,1,.36,1)` (source taste).
+13. **Forbidden-color lint.** Tests fail if primitive HTML/CSS contains palette-scale classes or hex (except documented owned-surface exceptions).
+
+## Token roles to implement (minimum for Button)
+
+primary, primary-foreground, primary-text (strong), surface-base, surface-overlay, fg, fg-secondary, border, border-strong, ring, error, radius.
+
+Full ThemeTokens list in `packages/tokens/src/tokens.ts` — port in Wave −1, not all required for first HTML snapshot if CSS vars exist and Button only consumes the subset above.
+
+## Contrast
+
+Source `*-strong` tokens exist because fill colors fail AA as small text. Button `link` must use primary-text. Destructive uses color-mix on error (source button.tsx).

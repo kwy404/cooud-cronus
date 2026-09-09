@@ -1,0 +1,7 @@
+## Metric — data
+## source: packages/ui/src/components/metric.tsx
+
+component Metric layout:inline style:metric {
+  label "Metric"
+  variant "value"
+}

@@ -1,0 +1,7 @@
+## Command — overlays
+## source: packages/ui/src/components/command.tsx
+
+component Command layout:inline style:command {
+  label "Command"
+  variant "palette cmdk"
+}

@@ -1,0 +1,7 @@
+## Breadcrumb — data
+## source: packages/ui/src/components/breadcrumb.tsx
+
+component Breadcrumb layout:inline style:breadcrumb {
+  label "Breadcrumb"
+  variant "items"
+}

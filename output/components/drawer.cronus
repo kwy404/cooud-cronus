@@ -1,0 +1,7 @@
+## Drawer — overlays
+## source: packages/ui/src/components/drawer.tsx
+
+component Drawer layout:inline style:drawer {
+  label "Drawer"
+  variant "vaul-like"
+}

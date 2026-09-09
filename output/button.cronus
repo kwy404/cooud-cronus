@@ -1,0 +1,33 @@
+## W-1 — semantic tokens + Button primitive
+## Invokes the kernel Button via component layout:inline (no new keyword).
+
+app "ButtonParity" {
+  port 5299
+}
+
+style {
+  theme dark
+  preset aurora
+}
+
+component SaveButton layout:inline style:primary {
+  label "Save"
+}
+
+component CancelButton layout:inline style:ghost {
+  label "Cancel"
+}
+
+component DeleteButton layout:inline style:destructive {
+  label "Delete"
+}
+
+component DocsLink layout:inline style:link {
+  label "Docs"
+}
+
+page "/" type:custom {
+  section stats {
+    title "Button parity"
+  }
+}

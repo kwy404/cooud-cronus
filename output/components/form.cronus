@@ -1,0 +1,7 @@
+## Form — forms
+## source: packages/ui/src/components/form.tsx
+
+component Form layout:inline style:form {
+  label "Form"
+  variant "native validation — no RHF/Zod"
+}

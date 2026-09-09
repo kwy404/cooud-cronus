@@ -1,0 +1,66 @@
+# SDD: First vertical slice — W-1-TOKENS-BUTTON
+status: specified
+authority: migration-first-slice
+date: 2026-09-08
+
+## Why this slice
+
+Tokens without a consumer cannot be verified. Button without tokens hardcodes color. Kernel already has `components.rs::button` and CSS vars — the slice **converges** that helper (and theme tokens) to cronus-ui contract instead of inventing a parallel widget.
+
+## In
+
+- Native semantic CSS variables aligned with `--cronus-*` for at least aurora+neutral × light+dark (full 5 themes preferred if values can be copied from `packages/tokens` without React).
+- `data-cronus-theme` / `data-cronus-mode` on `<html>` or page root.
+- Button primitive:
+  - variants: primary, secondary, outline, ghost, destructive, link
+  - sizes: sm, md, lg, icon, icon-sm
+  - href → `<a>`
+  - default `type="button"`
+  - disabled
+  - `data-slot="button"` `data-variant`
+  - focus-visible ring token
+  - no uppercase requirement (source is not uppercase; current kernel helper is — **intentional change**)
+- Parser/render path: a `.cronus` demo that produces the Button HTML (existing component invocation or section). **No new tokenizer keyword.**
+- Tests: HTML snapshots per variant; forbidden palette scan on `components.rs` button path; theme var presence.
+- Demo file under `demos/` or `templates/`.
+- Evidence dir `migration/evidence/w-1/button/`.
+- LANGUAGE.md: document Button+tokens as REAL only after tests.
+
+## Out
+
+- Input and rest of Wave 0
+- Looks (brutalist/glass) — inventory only this slice
+- Runtime override API completeness (minimal CSS var override in tests is enough)
+- CLI theme command
+- Keyboard overlay harness
+- Pixel-perfect vs www gallery
+
+## Characterization of source Button (`packages/ui/src/components/button.tsx`)
+
+- CVA variants/sizes as above
+- `asChild` via Slot
+- `data-slot="button"` `data-variant`
+- type default `button` unless asChild
+- destructive: `bg-[color-mix(in_oklch,var(--cronus-error),black_30%)] text-white`
+- link: `text-primary-strong`
+- focus-visible ring 2 / ring-offset 2 / ring-offset-surface-base
+- disabled opacity 50 pointer-events none
+- active scale 0.98
+- ease `var(--ease-out-quart)`
+
+## Characterization of current kernel button (`src/components.rs::button`)
+
+- variants primary/secondary/ghost/danger/outline — **rename danger→destructive, add link**
+- sizes sm/md/lg — **add icon, icon-sm**
+- CSS vars `--foreground` / `--background` / `--border` / `--danger` — **map or replace with `--cronus-*`**
+- uppercase + tracking-wide — **drop to match source**
+- no data-slot, no disabled, no type, no focus-visible ring
+- `icon_button` uses amber/neutral palette — **out of slice except must not be used by the demo**
+
+## Acceptance
+
+See `FIRST-DELIVERABLE.md` §10. Status VERIFIED only when that list holds.
+
+## Next after VERIFIED
+
+Wave 0 remainder starting with Input+Label (kernel `input()` currently hardcodes `#0a0a0a` / amber focus — same contract failure).

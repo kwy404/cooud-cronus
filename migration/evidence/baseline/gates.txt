@@ -1,0 +1,14 @@
+﻿kernel_cargo_test:
+  result: PRE-EXISTING FAIL
+  passed: 209
+  failed: 1
+  ignored: 0
+  failure: dump::detect::tests::test_hero_extraction_developer_landing
+  reason: Os { code: 3, NotFound } — path missing on this Windows checkout (not caused by migration)
+  warnings: 7 unexpected_cfgs generated-contracts; 1 unused assignment in server/response.rs
+  duration_compile: ~2m43s
+  duration_tests: 1.89s
+
+source_lint:
+  bun run lint: FAIL biome not on PATH
+  bunx biome: attempted; see ui-lint.log

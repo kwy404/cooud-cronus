@@ -1,0 +1,7 @@
+## Badge — foundation
+## source: packages/ui/src/components/badge.tsx
+
+component Badge layout:inline style:badge {
+  label "Badge"
+  variant "default"
+}

@@ -1,0 +1,30 @@
+# SDD: Parity acceptance
+status: active-draft
+authority: migration-acceptance
+date: 2026-09-08
+
+## Statuses
+
+NOT_STARTED · INVENTORIED · SPECIFIED · KERNEL_GAP · IMPLEMENTING · FUNCTIONAL_PARITY · VISUAL_PARITY · VERIFIED · BLOCKED · INTENTIONAL_DIFFERENCE
+
+**Only VERIFIED counts as migrated.** FUNCTIONAL_PARITY without evidence is not done.
+
+## Score
+
+`verified / (total - intentional_difference)` for release. Blocked > 0 blocks a “complete” claim.
+
+## Release gates (full migration)
+
+Copied from master prompt §21. Counts in `migration/FINAL-REPORT.md`. Table:
+
+`Category | Total | Verified | Intentional Difference | Blocked`
+
+## Slice gate
+
+`07-first-slice.sdd` + `FIRST-DELIVERABLE.md` §10. Rows `TOKENS`, `THEME` (minimal), `W0-BUTTON`.
+
+## Pro / visx / registry blocks
+
+- `PRO` default INTENTIONAL_DIFFERENCE pending product decision (ADR 0005/0006).
+- visx subpath: separate rows; not silent drop.
+- Registry blocks: compose wave, not Wave 0.

@@ -1,0 +1,7 @@
+## AnimatedButton — premium
+## source: packages/ui/src/components/animated-button.tsx
+
+component AnimatedButton layout:inline style:animated-button {
+  label "AnimatedButton"
+  variant "reduced-motion"
+}

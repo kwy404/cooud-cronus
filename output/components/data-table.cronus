@@ -1,0 +1,7 @@
+## DataTable — data
+## source: packages/ui/src/components/data-table.tsx
+
+component DataTable layout:inline style:data-table {
+  label "DataTable"
+  variant "sort"
+}

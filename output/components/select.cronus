@@ -1,0 +1,7 @@
+## Select — forms
+## source: packages/ui/src/components/select.tsx
+
+component Select layout:inline style:select {
+  label "Select"
+  variant "trigger"
+}

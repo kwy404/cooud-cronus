@@ -1,0 +1,7 @@
+## Separator — foundation
+## source: packages/ui/src/components/separator.tsx
+
+component Separator layout:inline style:separator {
+  label "Separator"
+  variant "horizontal"
+}

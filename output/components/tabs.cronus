@@ -1,0 +1,7 @@
+## Tabs — overlays
+## source: packages/ui/src/components/tabs.tsx
+
+component Tabs layout:inline style:tabs {
+  label "Tabs"
+  variant "list"
+}

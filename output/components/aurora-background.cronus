@@ -1,0 +1,7 @@
+## AuroraBackground — premium
+## source: packages/ui/src/components/aurora-background.tsx
+
+component AuroraBackground layout:inline style:aurora-background {
+  label "AuroraBackground"
+  variant "reduced-motion"
+}
